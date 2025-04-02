@@ -1,15 +1,20 @@
 ---
 const { title } = Astro.props;
+import "../styles/global.css";
+import "../styles/header-footer.css";
 import Head from "../components/Head.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<!doctype html>
-<html lang="en">
+<html>
 	<Head title={title} />
 	<body>
+		<Header />
 		<article class="micro">
 			<slot />
 		</article>
+		<Footer />
 	</body>
 </html>
 

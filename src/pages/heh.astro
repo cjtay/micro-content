@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Nu from "../assets/heh/nulite.png";
+---
+
+<Layout title="NUH Health Education Hub">
+	<h1 class="font-bold text-red-500 text-4xl">
+		Complimentary Health Talks By NUH Health Education Hub
+	</h1>
+	<h2>
+		Theme for November: Diabetes <br />
+		Upcoming Talks on Zoom
+	</h2>
+
+	<h5>
+		Every Friday, 1:00 pm - 2:00 pm<br />
+
+		Take a step towards a healthier you.
+	</h5>
+
+	<div class="btn-center-wrapper">
+		<a
+			href="https://for.sg/nuh-heh-nov1b"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<button class="btn btn-default">Register here!</button>
+		</a>
+	</div>
+
+	<hr />
+	<h2>(Online via Zoom) New Medications Used in Diabetes</h2>
+	<p>
+		Learn about new developments, emerging therapies and gain insights into the
+		future of diabetes care and management, by leveraging the potential of these
+		cutting-edge innovations!
+	</p>
+
+	<Image src={Nu} alt="Nu Lite" class="small-img" format="webp" quality={20} />
+</Layout>

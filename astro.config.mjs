@@ -1,5 +1,18 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import tailwindcss from '@tailwindcss/vite';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  compressHTML: false,
+  vite: {
+    build: {
+      minify: false,
+      cssMinify: false,
+    },
+    plugins: [
+      tailwindcss(),
+    ],
+  },
+  build: {
+    inlineStylesheets: 'always', // Ensures all styles are inlined
+  },
+});

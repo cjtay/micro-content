@@ -1,0 +1,26 @@
+.micro img {
+	width: 100%;
+	display: block;
+	margin: 1rem auto;
+	border-radius: 0.5rem;
+}
+
+img.small-img {
+    width: auto; /* Adjust the width as needed */
+    height: 250px;
+    margin-right: auto;
+}
+
+img.big-img {
+    width: auto; /* Adjust the width as needed */
+    height: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 1024px) {
+    img.big-img {
+        width: 90%; /* Adjust the width as needed */
+  
+    }
+
+}

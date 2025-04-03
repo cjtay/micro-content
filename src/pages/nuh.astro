@@ -1,0 +1,116 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Zone from "../assets/nuh/nuh_campus_map.webp";
+import Wayfinding from "../assets/nuh/wayfinding.webp";
+import N1 from "../assets/nuh/n1.png";
+import N2 from "../assets/nuh/n2.png";
+import N3 from "../assets/nuh/n3.png";
+import N4 from "../assets/nuh/n4.png";
+---
+
+<Layout title="NUH Wayfinder">
+	<h1 class="font-bold text-red-500 text-4xl">Getting To and Around NUH</h1>
+	<Image
+		src={Wayfinding}
+		alt="Nu Lite"
+		class="big-img"
+		format="webp"
+		quality={20}
+	/>
+	<hr />
+	<h2>New Zone System for Getting Around NUH</h2>
+	<p>
+		NUH's new zone-based wayfinding system helps you get around the campus
+		easily. Watch the short video to find out more!
+	</p>
+	<Image src={Zone} alt="Nu Lite" class="big-img" format="webp" quality={20} />
+
+
+	<h2>Directions to NUH Pharmacy</h2>
+	<p>
+		Follow the sequence of the photos to make your way to NUH Pharmacy from Kent
+		Ridge MRT station.
+	</p>
+	<section>
+		<div class="pb-12">
+			<div class="gap-4 sm:grid sm:grid-cols-2 ">
+				<Image
+					src={N1}
+					alt="Nu Lite"
+					class="hidden col-span-1 sm:block rounded-lg"
+					format="webp"
+					quality={20}
+				/>
+
+				<Image
+					src={N2}
+					alt="Nu Lite"
+					class="hidden col-span-1 sm:block rounded-lg"
+					format="webp"
+					quality={20}
+				/>
+				<Image
+					src={N3}
+					alt="Nu Lite"
+					class="hidden col-span-1 sm:block rounded-lg"
+					format="webp"
+					quality={20}
+				/>
+				<Image
+					src={N4}
+					alt="Nu Lite"
+					class="hidden col-span-1 sm:block rounded-lg"
+					format="webp"
+					quality={20}
+				/>
+			</div>
+		</div>
+	</section>
+
+	<div class="youtube-embed-container">
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.801294152591!2d103.78314449999999!3d1.2937083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1a5180e324bb%3A0xb9734b40675a0ca3!2sNational%20University%20Hospital!5e0!3m2!1sen!2ssg!4v1743652592758!5m2!1sen!2ssg"
+			width="800"
+			height="600"
+			style="border:0;"
+			allowfullscreen=""
+			loading="lazy"
+			referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</div>
+	<h2>How to Getting Around NUH</h2>
+	<p>Visit NUH website for more information on how to get around the campus.</p>
+    <div class="flex flex-row space-x-4 justify-center">
+
+
+	<div class="btn-center-wrapper">
+		<a
+			href="https://www.nuh.com.sg/care-at-nuh/facilities-and-amenities/facilities"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<button class="btn btn-alternative">Location facilities</button>
+		</a>
+	</div>
+	<div class="btn-center-wrapper">
+		<a
+			href="https://www.nuh.com.sg/care-at-nuh/facilities-and-amenities/amenities"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<button class="btn btn-alternative">Locate amenities</button>
+		</a>
+	</div>
+</div>
+    <div class="youtube-embed-container">
+		<iframe
+			width="560"
+			height="315"
+			src="https://www.youtube.com/embed/lA5fGX8-Wts?si=0DVrjeGQ5o-0p-7l"
+			title="YouTube video player"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			referrerpolicy="strict-origin-when-cross-origin"
+			allowfullscreen></iframe>
+	</div>
+</Layout>

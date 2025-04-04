@@ -11,13 +11,17 @@ import N4 from "../assets/nuh/n4.png";
 
 <Layout title="NUH Wayfinder">
 	<h1 class="font-bold text-red-500 text-4xl">Getting To and Around NUH</h1>
+	<div class="img-container">
 	<Image
-		src={Wayfinding}
-		alt="Nu Lite"
-		class="big-img"
-		format="webp"
-		quality={20}
+	src={Wayfinding}
+	alt="NUH Wayfinding Map"
+	class="big-img"
+	format="webp"
+	quality={20}
 	/>
+</div>
+
+
 	<hr />
 	<h2>New Zone System for Getting Around NUH</h2>
 	<p>
@@ -114,3 +118,19 @@ import N4 from "../assets/nuh/n4.png";
 			allowfullscreen></iframe>
 	</div>
 </Layout>
+
+<style>
+	/* Mobile styles */
+	.img-container {
+		display: none;
+	}
+	
+	
+	/* Desktop styles (min-width: 768px) */
+	@media (min-width: 768px) {
+		.img-container {
+			display: block;
+		}
+		
+	}
+	</style>

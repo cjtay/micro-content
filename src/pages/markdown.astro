@@ -1,0 +1,176 @@
+---
+---
+
+Here’s the full HTML format for the Markdown references, designed for easy use in a webpage:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Reference Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        code {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 2px 4px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        table th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Markdown Reference Guide</h1>
+
+    <h2>Headers</h2>
+    <p><code># Header 1</code> creates the largest header, and <code>## Header 2</code> is the second level, up to <code>###### Header 6</code>.</p>
+
+    <h2>Emphasis</h2>
+    <p><code>*italic*</code> or <code>_italic_</code> renders <em>italic</em> text.</p>
+    <p><code>**bold**</code> or <code>__bold__</code> renders <strong>bold</strong> text.</p>
+    <p><code>***bold and italic***</code> renders <strong><em>bold and italic</em></strong> text.</p>
+
+    <h2>Lists</h2>
+    <h3>Unordered Lists</h3>
+    <pre><code>- Item 1
+- Item 2
+    - Sub-item 2.1</code></pre>
+    <p>Renders as:</p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2
+            <ul>
+                <li>Sub-item 2.1</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Ordered Lists</h3>
+    <pre><code>1. First
+2. Second</code></pre>
+    <p>Renders as:</p>
+    <ol>
+        <li>First</li>
+        <li>Second</li>
+    </ol>
+
+    <h2>Links</h2>
+    <pre><code>[Link Text](http://example.com)</code></pre>
+    <p>Renders as: <a href="http://example.com">Link Text</a></p>
+
+    <h2>Images</h2>
+    <pre><code>![Alt Text](/images/example.jpg)</code></pre>
+    <p>Displays an image with <code>Alt Text</code>:</p>
+    <img src="/images/example.jpg" alt="Alt Text" style="max-width: 100%;">
+
+    <h2>Blockquotes</h2>
+    <pre><code>&gt; Blockquote</code></pre>
+    <p>Renders as:</p>
+    <blockquote>This is a blockquote.</blockquote>
+
+    <h2>Code</h2>
+    <h3>Inline Code</h3>
+    <p><code>`code`</code> renders as <code>code</code>.</p>
+    <h3>Code Blocks</h3>
+    <pre><code>```
+Code block
+```</code></pre>
+    <p>Renders as:</p>
+    <pre>Code block</pre>
+
+    <h2>Horizontal Lines</h2>
+    <pre><code>---</code></pre>
+    <p>Renders as:</p>
+    <hr>
+
+    <h2>Tables</h2>
+    <pre><code>| Header 1 | Header 2 |
+|----------|----------|
+| Row 1    | Data     |
+| Row 2    | Data     |</code></pre>
+    <p>Renders as:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1</td>
+                <td>Data</td>
+            </tr>
+            <tr>
+                <td>Row 2</td>
+                <td>Data</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Strikethrough</h2>
+    <pre><code>~~strikethrough~~</code></pre>
+    <p>Renders as: <del>strikethrough</del></p>
+
+    <h2>Task Lists</h2>
+    <pre><code>- [ ] Task
+- [x] Completed Task</code></pre>
+    <p>Renders as:</p>
+    <ul>
+        <li><input type="checkbox" disabled> Task</li>
+        <li><input type="checkbox" disabled checked> Completed Task</li>
+    </ul>
+
+    <h2>Escaping Characters</h2>
+    <pre><code>\*literal asterisk\*</code></pre>
+    <p>Renders as: *literal asterisk*</p>
+
+    <h2>Footnotes</h2>
+    <pre><code>This is a footnote reference[^1].
+[^1]: This is the footnote.</code></pre>
+    <p>Renders as:</p>
+    <p>This is a footnote reference<sup>1</sup>.</p>
+    <p><small>1. This is the footnote.</small></p>
+
+    <h2>Syntax Highlighting</h2>
+    <pre><code>```python
+def hello_world():
+    print("Hello, World!")
+```</code></pre>
+    <p>Renders as:</p>
+    <pre><code>def hello_world():
+    print("Hello, World!")</code></pre>
+</body>
+</html>
+```
+
+This HTML file will generate a webpage that comprehensively explains Markdown syntax with rendered examples. Simply copy and save it as an `.html` file, and open it in a browser to view the guide.

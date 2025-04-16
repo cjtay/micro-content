@@ -11,6 +11,11 @@ export default defineConfig({
     plugins: [
       tailwindcss(),
     ],
+    resolve: {
+      alias: {
+        '@': '/src'
+      }
+    }
   },
   build: {
     inlineStylesheets: 'always', // Ensures all styles are inlined

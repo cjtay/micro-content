@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
+import IndexLayout from "../../layouts/IndexLayout.astro";
 
 const allPils = await getCollection("pils");
 
@@ -22,58 +22,26 @@ const pils = allPils
 	.slice(0, 8);
 ---
 
-<Layout title="micro-content">
-	<section
-		aria-label="micro-content"
-		class="py-8 lg:py-16 "
-	>
-		<div class="px-4 mx-auto max-w-screen-xl">
-			<h1 class="mb-4">PIL micro-content</h1>
-			<p class="mb-8">For review purpose only</p>
-			<div
-				class={`grid gap-6 justify-items-center py-8 ${
-					pils.length === 1
-						? "grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1"
-						: pils.length === 2
-							? "grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2"
-							: pils.length === 3
-								? "grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-								: "grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
-				}`}
-			>
-				{
-					pils.map((m) => (
-						<article class="max-w-md">
-							
-							<h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
-								<a href={`/events/${m.id}`}>{m.data.title}</a>
-							</h2>
+<IndexLayout title="micro-content">
+	<section aria-label="micro-content" class="py-8  max-w-8/12 mx-auto">
+		<h1 class="text-2xl font-bold">PIL micro-content</h1>
+		<p class="mb-8">For review purpose only</p>
+		<div>
+			{
+				pils.map((m) => (
+					<ul role="list" class="divide-y divide-gray-200 !list-none ">
+						<li>
+							<h6>
+								<a href={`/pil/${m.id}`}>{m.data.title}</a>
+							</h6>
 							<p class="mb-4 text-gray-500 dark:text-gray-400">
 								{m.data.description}
 							</p>
-							<a
-								href={`/pil/${m.id}`}
-								class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
-							>
-								Read
-								<svg
-									aria-hidden="true"
-									class="w-5 h-5 ml-2"
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 20 20"
-									fill="currentColor"
-								>
-									<path
-										fill-rule="evenodd"
-										d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-										clip-rule="evenodd"
-									/>
-								</svg>
-							</a>
-						</article>
-					))
-				}
-			</div>
+					
+						</li>
+					</ul>
+				))
+			}
 		</div>
 	</section>
-</Layout>
+</IndexLayout>

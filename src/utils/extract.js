@@ -1,18 +1,30 @@
-const fs = require('fs-extra');
-const path = require('path');
+import fs from 'fs-extra';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { createRequire } from 'module';
+
+// Create a require function for CommonJS modules
+const require = createRequire(import.meta.url);
 const pdfParse = require('pdf-parse');
 const AsposePdf = require('asposepdfnodejs');
+
+// Get __dirname equivalent in ESM
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 //
 // Configuration
 //
-const PDF_FOLDER = './pdfs';
-const OUTPUT_FOLDER = './output';
-const OUTPUT_IMAGE_FOLDER = path.join(OUTPUT_FOLDER, 'images');
+const PDF_FOLDER = './src/utils/pdfs';
+const CONTENT_FOLDER = './src/content/pil'; // Updated to match your collection path
+const ASSETS_FOLDER = './src/assets';
+const IMAGE_FOLDER = path.join(ASSETS_FOLDER, 'images');
 
-// Ensure both output directories exist
-fs.ensureDirSync(OUTPUT_FOLDER);
-fs.ensureDirSync(OUTPUT_IMAGE_FOLDER);
+// Ensure all required directories exist
+fs.ensureDirSync(PDF_FOLDER);
+fs.ensureDirSync(CONTENT_FOLDER);
+fs.ensureDirSync(ASSETS_FOLDER);
+fs.ensureDirSync(IMAGE_FOLDER);
 
 async function processAllPDFs() {
   console.log('Starting PDF extraction process...');
@@ -29,7 +41,7 @@ async function processAllPDFs() {
     
     const fileNameWithoutExt = path.basename(file, '.pdf');
     // Create subfolder for this document's images
-    const documentImageFolder = path.join(OUTPUT_IMAGE_FOLDER, fileNameWithoutExt);
+    const documentImageFolder = path.join(IMAGE_FOLDER, fileNameWithoutExt);
     fs.ensureDirSync(documentImageFolder);
 
     // Process each file - extract images and then create markdown with text and image references
@@ -53,7 +65,7 @@ async function processAllPDFs() {
 async function processPDF(filename, extractedImages) {
   const filePath = path.join(PDF_FOLDER, filename);
   const fileNameWithoutExt = path.basename(filename, '.pdf');
-  const outputPath = path.join(OUTPUT_FOLDER, `${fileNameWithoutExt}.md`);
+  const outputPath = path.join(CONTENT_FOLDER, `${fileNameWithoutExt}.md`);
 
   // Read and parse the PDF to extract text
   const dataBuffer = fs.readFileSync(filePath);
@@ -71,7 +83,7 @@ async function processPDF(filename, extractedImages) {
   const cleanedText = cleanExtractedText(data.text, data);
 
   // Prepare markdown frontmatter
-  const creationDate = new Date().toISOString().split('T')[0];
+  const creationDate = new Date().toISOString();
   const slug = fileNameWithoutExt.toLowerCase().replace(/\s+/g, '-');
 
   // Try to extract a title from the content
@@ -86,14 +98,14 @@ async function processPDF(filename, extractedImages) {
     fileNameWithoutExt
   );
 
+  // Update frontmatter to match your collection schema
   const markdown = `---
 title: "${title}"
 description: "Extracted from ${filename}"
 slug: "${slug}"
-date: "${creationDate}"
-draft: false
-category: "documentation"
 tags: ["pdf", "extracted"]
+category: "documentation"
+pubDate: ${creationDate}
 ---
 
 ${processedTextWithImages}
@@ -104,7 +116,6 @@ ${processedTextWithImages}
   fs.writeFileSync(outputPath, markdown);
 }
 
-// Updated function to extract images that doesn't rely on splitting a string
 async function processPDFImages(filename, documentImageFolder) {
   const filePath = path.join(PDF_FOLDER, filename);
   const fileNameWithoutExt = path.basename(filename, '.pdf');
@@ -142,8 +153,8 @@ async function processPDFImages(filename, documentImageFolder) {
         extractedImages.push({
           fullPath: path.join(documentImageFolder, file),
           fileName: file,
-          // Create a relative path from markdown file to image subfolder
-          relativePath: path.posix.join('images', fileNameWithoutExt, file)
+          // Update path to use the correct relative path for AstroJS
+          relativePath: `/src/assets/images/${fileNameWithoutExt}/${file}`
         });
       });
     }
@@ -188,6 +199,7 @@ function insertImagesInMarkdown(markdownText, images, documentName) {
         // Add the image with alt text based on the heading
         const headingText = line.replace(/^#+ /, '').trim();
         const altText = `${documentName} - ${headingText}`;
+        
         resultLines.push(`![${altText}](${images[imageIndex].relativePath})`);
         
         // Add a blank line after the image
@@ -227,7 +239,7 @@ function extractTitle(text, filename) {
   const lines = text.split('\n');
   let title = '';
   let processedLines = [...lines];
-
+  
   // Find the first heading (line starting with "# ")
   const h1Match = text.match(/^#\s+(.+)$/m);
   if (h1Match) {
@@ -328,3 +340,6 @@ function cleanExtractedText(text, pdfData) {
 
 // Run the full process
 processAllPDFs().catch(console.error);
+
+// Export the function for potential import in other files
+export default processAllPDFs;

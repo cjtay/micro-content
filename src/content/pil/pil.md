@@ -4,7 +4,7 @@ description: "Extracted from pil.pdf"
 slug: "pil"
 tags: ["pdf", "extracted"]
 category: "documentation"
-pubDate: 2025-04-12
+pubDate: 2025-04-16T04:53:35.702Z
 ---
 
 # About the treatment
@@ -14,12 +14,12 @@ Concurrently given with radiation, capecitabine (antimetabolite chemotherapy) is
 • Capecitabine is to be taken twice a day by mouth fom days 1 to 5 of your 7-day cycle.
 • On days 6 and 7, you won’t be having any anti-cancer treatment. Take this time to rest and recover.
 
-![pil - Illustration 1](images/pil/pil_image01.jpg)
+![pil - Illustration 1](/src/assets/images/pil/pil_image01.jpg)
 
 
 # Side Effects
 
-![pil - Side Effects](images/pil/pil_image02.jpg)
+![pil - Side Effects](/src/assets/images/pil/pil_image02.jpg)
 
 Chemotherapy is often linked to so many side effects. While it is true that chemotherapy drugs often  cause a wide range of side effects, most of these side effects are temporary and can be minimised or  prevented. Remember that different drugs cause different side effects, and each person experiences  different side effects to varying degrees.
 ### Common Side Effects

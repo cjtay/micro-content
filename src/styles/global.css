@@ -126,13 +126,13 @@ a:hover {
 	margin-bottom: 1rem;
 	font-size: 1rem;
 	list-style-type: disc;
-	padding-left: 1.25rem;
+	/* padding-left: 1.25rem; */
 }
 .micro ol {
 	margin-top: 0.25rem;
 	margin-bottom: 1rem;
 	font-size: 1rem;
-	padding-left: 1.25rem;
+	/* padding-left: 1.25rem; */
 }
 .micro li {
 	line-height: 1.5;
@@ -191,7 +191,7 @@ hr {
 	}
 	.micro ul {
 		font-size: 1.1rem;
-		padding-left: 1.15rem;
+
 	}
 	.micro li {
 		line-height: 1.6;

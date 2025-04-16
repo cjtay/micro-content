@@ -2,7 +2,7 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import { render } from "astro:content";
 
-import NarrowLayout from "../../layouts/Layout.astro";
+import NarrowLayout from "../../layouts/PilLayout.astro";
 
 export async function getStaticPaths() {
   const pils = await getCollection("pils");
@@ -20,26 +20,5 @@ const { Content } = await render(pil);
 
 <NarrowLayout title={`${pil.data.title}`}>
   <Content />
-  <div class="mt-2 text-center">
-    <a
-      href="/"
-      title=""
-      class="inline-flex items-center text-lg font-medium text-primary-600 hover:underline dark:text-primary-500"
-    >
-      <svg
-        aria-hidden="true"
-        class="w-5 h-5 ml-2"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M9.707 3.293a1 1 0 00-1.414 0l-6 6a1 1 0 000 1.414l6 6a1 1 0 001.414-1.414L5.414 11H17a1 1 0 100-2H5.414l4.293-4.293a1 1 0 000-1.414z"
-          clip-rule="evenodd"></path>
-      </svg>
 
-      Back
-    </a>
-  </div>
 </NarrowLayout>

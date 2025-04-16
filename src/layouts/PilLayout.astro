@@ -1,0 +1,32 @@
+---
+const { title } = Astro.props;
+import "../styles/global.css";
+import "../styles/header-footer.css";
+import "../styles/embed.css";
+import "../styles/button.css";
+import "../styles/images.css";
+import Head from "../components/Head.astro";
+import Header from "../components/Header.astro";
+import HeaderNcis from "../components/Header-ncis.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html>
+	<Head title={title} />
+	<body>
+		<HeaderNcis />
+		<article class="micro">
+			<slot />
+		</article>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>

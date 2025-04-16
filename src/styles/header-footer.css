@@ -26,6 +26,14 @@ header {
     margin-bottom: 4px; 
     margin-top: 6px;
     }
+    img.logo-ncis {
+    width: auto; /* Adjust the width as needed */
+    height: 42px;
+    margin-left: 12px;
+    margin-right: auto;
+    margin-bottom: 4px; 
+    margin-top: 6px;
+    }
     
     .mobile-width-svg {
       display: block;
@@ -82,6 +90,14 @@ header {
     height: 80px;
     
     }
+
+    img.logo-ncis {
+
+      height: 64px;
+    
+      }
+
+    
 
     .footer {
       display: block;

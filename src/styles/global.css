@@ -42,6 +42,25 @@
 	}
 }
 
+@layer components {
+	.micro table {
+	  @apply table-auto w-full my-6 border border-gray-200 rounded-lg bg-white;
+	  border-collapse: collapse;
+	  font-size: 1rem;
+	}
+	.micro th,
+	.micro td {
+	  @apply px-4 py-2 border border-gray-200 text-left align-top;
+	}
+	.micro th {
+	  @apply bg-blue-50 font-semibold text-gray-700;
+	}
+	.micro tr:nth-child(even) {
+	  @apply bg-gray-50;
+	}
+  }
+  
+
 /* Main */
 
 body {

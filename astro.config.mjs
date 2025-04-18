@@ -1,5 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
+// Import the typography plugin
+import typography from '@tailwindcss/typography';
 
 export default defineConfig({
   compressHTML: false,

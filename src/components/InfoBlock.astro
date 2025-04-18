@@ -1,0 +1,52 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  icon?: string;
+}
+
+const { title, description, icon = 'H' } = Astro.props;
+
+// Determine icon type directly in frontmatter for cleaner template logic
+const isH = icon === 'H';
+const isSvgString = typeof icon === 'string' && icon.trim().startsWith('<svg');
+const isImagePath = typeof icon === 'string' && /\.(svg|png|jpg|jpeg|webp|gif)$/i.test(icon);
+// Check if it's a fallback case (exists, but isn't one of the specific types)
+const isFallback = typeof icon === 'string' && icon && !isH && !isSvgString && !isImagePath;
+---
+<div class="not-prose flex items-start space-x-3 p-4 bg-white rounded-lg border border-gray-200 shadow-sm my-6">
+  {/* Icon Rendering - Using conditional logic directly in the template */}
+
+  {/* Case 1: 'H' Icon */}
+  {isH && (
+    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center border border-gray-300">
+      <span class="font-bold text-gray-700 text-lg leading-none select-none">H</span>
+    </div>
+  )}
+
+  {/* Case 2: SVG String */}
+  {isSvgString && (
+    <div class="flex-shrink-0 w-8 h-8 flex items-center justify-center text-gray-700" set:html={icon}></div>
+  )}
+
+  {/* Case 3: Image Path */}
+  {isImagePath && (
+    <div class="flex-shrink-0 w-8 h-8 flex items-center justify-center">
+      <img src={icon} alt={title} class="w-6 h-6 object-contain" />
+    </div>
+  )}
+
+  {/* Case 4: Fallback Text Icon */}
+  {isFallback && (
+     <div class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center border border-gray-300">
+      <span class="font-bold text-gray-700 text-sm select-none">{icon.substring(0, 2)}</span>
+    </div>
+  )}
+  {/* End Icon Rendering */}
+
+  {/* Text Content */}
+  <div class="flex-grow pt-0.5">
+    <h3 class="font-bold text-base text-gray-800 mb-1 leading-tight">{title}</h3>
+    <p class="text-sm text-gray-600 my-0">{description}</p>
+  </div>
+</div>

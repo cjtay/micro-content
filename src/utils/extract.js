@@ -1,34 +1,35 @@
-import fs from 'fs-extra';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import AsposePdf from 'asposepdfnodejs';
-import { parse as csvParse } from 'csv-parse/sync';
+import fs from "fs-extra";
+import path from "path";
+import { fileURLToPath } from "url";
+import AsposePdf from "asposepdfnodejs";
+import { parse as csvParse } from "csv-parse/sync";
 
-const PDFFOLDER = './src/utils/pdfs';
-const CONTENTFOLDER = './src/content/pil';
-const TMPFOLDER = './tmp_pdf_tables';
+const PDFFOLDER = "./src/utils/pdfs";
+const CONTENTFOLDER = "./src/content/pil";
+const TMPFOLDER = "./tmp_pdf_tables";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const SECTION_HEADERS = [
-  'About the treatment',
-  'Treatment details',
-  'Side Effects',
-  'Common Side Effects',
-  'Other Common Side Effects',
-  'Occasional Side Effects',
-  'Rare Side Effects',
-  'Food & Drink',
-  'Pregnancy, Contraception and Breastfeeding',
-  'Fertility',
-  'Immunisations',
-  'Alcohol',
-  'Exercise'
+	"About the treatment",
+	"Treatment details",
+	"Side Effects",
+	"Common Side Effects",
+	"Other Common Side Effects",
+	"Occasional Side Effects",
+	"Rare Side Effects",
+	"Food & Drink",
+	"Pregnancy, Contraception and Breastfeeding",
+	"Fertility",
+	"Immunisations",
+	"Alcohol",
+	"Exercise",
 ];
 
 // The fixed disclaimer to always append at the bottom
-const FIXED_DISCLAIMER = '> _Patient Information Use and Disclaimer: this is not a complete list of side effects. Always consult your healthcare provider to ensure the information displayed on this page applies to your personal circumstances._';
+const FIXED_DISCLAIMER =
+	"> _Patient Information Use and Disclaimer: this is not a complete list of side effects. Always consult your healthcare provider to ensure the information displayed on this page applies to your personal circumstances._";
 
 const CONTACT_SECTION = `
 ---
@@ -57,64 +58,79 @@ fs.ensureDirSync(CONTENTFOLDER);
 fs.ensureDirSync(TMPFOLDER);
 
 async function processAllPDFs() {
-  const files = fs.readdirSync(PDFFOLDER).filter(file => file.toLowerCase().endsWith('.pdf'));
-  for (const file of files) {
-    try {
-      await processPDF(file);
-      console.log(`✓ Processed ${file}`);
-    } catch (err) {
-      console.error(`✗ Error processing ${file}: ${err.message}`);
-    }
-  }
+	const files = fs
+		.readdirSync(PDFFOLDER)
+		.filter((file) => file.toLowerCase().endsWith(".pdf"));
+	for (const file of files) {
+		try {
+			await processPDF(file);
+			console.log(`✓ Processed ${file}`);
+		} catch (err) {
+			console.error(`✗ Error processing ${file}: ${err.message}`);
+		}
+	}
 }
 
 async function processPDF(filename) {
-  const filePath = path.join(PDFFOLDER, filename);
+	const filePath = path.join(PDFFOLDER, filename);
 
-  // --- SERIAL NUMBER LOGIC: Extract the PIL-XXXXX pattern for output filename ---
-  const pilMatch = filename.match(/(PIL-\d{4,5})/i);
-  if (!pilMatch) throw new Error('Filename does not contain a PIL-XXXXX serial number');
-  const pilSerial = pilMatch[1].toUpperCase();
-  const outputPath = path.join(CONTENTFOLDER, `${pilSerial}.md`);
+	// --- SERIAL NUMBER LOGIC: Extract the PIL-XXXXX pattern for output filename ---
+	const pilMatch = filename.match(/(PIL-\d{4,5})/i);
+	if (!pilMatch)
+		throw new Error("Filename does not contain a PIL-XXXXX serial number");
+	const pilSerial = pilMatch[1].toUpperCase();
+	const outputPath = path.join(CONTENTFOLDER, `${pilSerial}.mdx`);
 
-  // 1. Extract all tables as CSV files (one per page)
-  const asposePdfModule = await AsposePdf();
-  const csvPattern = path.join(TMPFOLDER, `${pilSerial}_page{0:D2}.csv`);
-  const csvJson = asposePdfModule.AsposePdfTablesToCSV(filePath, csvPattern, "\t");
-  let tablesByPage = {};
-  if (csvJson.errorCode === 0 && Array.isArray(csvJson.filesNameResult)) {
-    for (const csvFile of csvJson.filesNameResult) {
-      const pageNum = parseInt(csvFile.match(/page(\d+)\.csv$/)[1], 10);
-      const csvContent = fs.readFileSync(csvFile, 'utf8');
-      const records = csvParse(csvContent, { delimiter: '\t', skip_empty_lines: true });
-      tablesByPage[pageNum] = records;
-    }
-  }
+	// 1. Extract all tables as CSV files (one per page)
+	const asposePdfModule = await AsposePdf();
+	const csvPattern = path.join(TMPFOLDER, `${pilSerial}_page{0:D2}.csv`);
+	const csvJson = asposePdfModule.AsposePdfTablesToCSV(
+		filePath,
+		csvPattern,
+		"\t"
+	);
+	let tablesByPage = {};
+	if (csvJson.errorCode === 0 && Array.isArray(csvJson.filesNameResult)) {
+		for (const csvFile of csvJson.filesNameResult) {
+			const pageNum = parseInt(csvFile.match(/page(\d+)\.csv$/)[1], 10);
+			const csvContent = fs.readFileSync(csvFile, "utf8");
+			const records = csvParse(csvContent, {
+				delimiter: "\t",
+				skip_empty_lines: true,
+			});
+			tablesByPage[pageNum] = records;
+		}
+	}
 
-  // 2. Extract the full text for non-table content
-  const textJson = asposePdfModule.AsposePdfExtractText(filePath);
-  if (textJson.errorCode !== 0) throw new Error(textJson.errorText);
-  let rawText = textJson.extractText;
-  rawText = cleanExtractedText(rawText);
+	// 2. Extract the full text for non-table content
+	const textJson = asposePdfModule.AsposePdfExtractText(filePath);
+	if (textJson.errorCode !== 0) throw new Error(textJson.errorText);
+	let rawText = textJson.extractText;
+	rawText = cleanExtractedText(rawText);
 
-  // 3. Parse and structure the content
-  const { title, processedText } = extractTitleAndRemove(rawText, pilSerial);
-  const { days, treatments } = extractTreatmentDetails(processedText);
+	// 3. Parse and structure the content
+	const { title, processedText } = extractTitleAndRemove(rawText, pilSerial);
+	const { days, treatments } = extractTreatmentDetails(processedText);
 
-  // 4. Format body and insert Markdown table and bullet lists for side effects
+	// 4. Format body and insert Markdown table and bullet lists for side effects
 
-  // Render Treatment details as Markdown bullets
-  let treatmentDetailsSection = '';
-  if (treatments.length) {
-    treatmentDetailsSection = `\n\n**Treatment details:**\n${treatments.map(t => `- ${t}`).join('\n')}\n`;
-  }
+	// Render Treatment details as Markdown bullets
+	let treatmentDetailsSection = "";
+	if (treatments.length) {
+		treatmentDetailsSection = `\n\n**Treatment details:**\n${treatments
+			.map((t) => `- ${t}`)
+			.join("\n")}\n`;
+	}
 
-  const markdownBody = `${treatmentDetailsSection}\n${await formatSectionsWithSideEffects(processedText, tablesByPage)}`;
+	const markdownBody = `${treatmentDetailsSection}\n${await formatSectionsWithSideEffects(
+		processedText,
+		tablesByPage
+	)}`;
 
-  // 5. Build frontmatter
-  const slug = pilSerial.toLowerCase();
-  const pubDate = new Date().toISOString();
-  const frontmatter = `---
+	// 5. Build frontmatter
+	const slug = pilSerial.toLowerCase();
+	const pubDate = new Date().toISOString();
+	const frontmatter = `---
 title: "${title.replace(/"/g, '\\"')}"
 description: "Information extracted from ${filename}"
 slug: "${slug}"
@@ -123,12 +139,12 @@ category: "patient information"
 pubDate: ${pubDate}
 draft: false
 days: "${days}"
-treatments: [${treatments.map((t) => `"${t}"`).join(', ')}]
+treatments: [${treatments.map((t) => `"${t}"`).join(", ")}]
 ---`;
 
-  // 6. Write the Markdown file
-  // Disclaimer is always appended at the very end, after CONTACT_SECTION
-  const markdown = `${frontmatter}
+	// 6. Write the Markdown file
+	// Disclaimer is always appended at the very end, after CONTACT_SECTION
+	const markdown = `${frontmatter}
 
 # ${title}
 
@@ -138,217 +154,237 @@ ${CONTACT_SECTION}
 
 ${FIXED_DISCLAIMER}
 `;
-  fs.writeFileSync(outputPath, markdown);
+	fs.writeFileSync(outputPath, markdown);
 }
 
 // --- HELPERS ---
 
 function cleanExtractedText(text) {
-  let cleaned = text.replace(/\r\n?/g, '\n').replace(/\f/g, '\n\n');
-  cleaned = cleaned.replace(/^[ \t]+|[ \t]+$/gm, '');
-  cleaned = cleaned.replace(/\n{3,}/g, '\n\n');
-  const unwantedPhrases = [
-    'National University Cancer Institute',
-    'Singapore'
-  ];
-  cleaned = cleaned
-    .split('\n')
-    .filter(line => !unwantedPhrases.some(phrase => line.includes(phrase)))
-    .join('\n');
-  return cleaned.trim();
+	let cleaned = text.replace(/\r\n?/g, "\n").replace(/\f/g, "\n\n");
+	cleaned = cleaned.replace(/^[ \t]+|[ \t]+$/gm, "");
+	cleaned = cleaned.replace(/\n{3,}/g, "\n\n");
+	const unwantedPhrases = ["National University Cancer Institute", "Singapore"];
+	cleaned = cleaned
+		.split("\n")
+		.filter((line) => !unwantedPhrases.some((phrase) => line.includes(phrase)))
+		.join("\n");
+	return cleaned.trim();
 }
 
 function extractTitleAndRemove(text, fallback) {
-  const lines = text.split('\n');
-  let titleLines = [];
-  let removalCount = 0;
-  for (let i = 0; i < Math.min(lines.length, 5); i++) {
-    const trimmed = lines[i].trim();
-    if (!trimmed) continue;
-    if (titleLines.length === 0) {
-      titleLines.push(trimmed);
-      removalCount++;
-      continue;
-    }
-    if (trimmed.length < 80 && /^(and|or|with|for|\()/.test(trimmed)) {
-      titleLines.push(trimmed);
-      removalCount++;
-    }
-  }
-  let title = titleLines.join(' ').replace(/\s+/g, ' ').trim();
-  if (!title) {
-    title = fallback;
-  }
-  const remainingText = lines.slice(removalCount).join('\n').trim();
-  return { title, processedText: remainingText };
+	const lines = text.split("\n");
+	let titleLines = [];
+	let removalCount = 0;
+	for (let i = 0; i < Math.min(lines.length, 5); i++) {
+		const trimmed = lines[i].trim();
+		if (!trimmed) continue;
+		if (titleLines.length === 0) {
+			titleLines.push(trimmed);
+			removalCount++;
+			continue;
+		}
+		if (trimmed.length < 80 && /^(and|or|with|for|\()/.test(trimmed)) {
+			titleLines.push(trimmed);
+			removalCount++;
+		}
+	}
+	let title = titleLines.join(" ").replace(/\s+/g, " ").trim();
+	if (!title) {
+		title = fallback;
+	}
+	const remainingText = lines.slice(removalCount).join("\n").trim();
+	return { title, processedText: remainingText };
 }
 
 function extractTreatmentDetails(text) {
-  let days = '21';
-  let treatments = [];
-  const treatmentSectionRegex = /Treatment details([\s\S]+?)(?=\n\n|\n#|$)/i;
-  const match = text.match(treatmentSectionRegex);
-  if (match) {
-    const sectionText = match[1];
-    const dayMatch = sectionText.match(/(\d+)-day cycle/i);
-    if (dayMatch) {
-      days = dayMatch[1];
-    }
-    // Extract all bullet lines and render as Markdown bullets
-    const bulletLines = sectionText.split('\n').filter(l => /^[-*•]\s+/.test(l.trim()));
-    treatments = bulletLines.map(l => l.replace(/^[-*•]\s+/, '').trim());
-  }
-  return { days, treatments };
+	let days = "21";
+	let treatments = [];
+	const treatmentSectionRegex = /Treatment details([\s\S]+?)(?=\n\n|\n#|$)/i;
+	const match = text.match(treatmentSectionRegex);
+	if (match) {
+		const sectionText = match[1];
+		const dayMatch = sectionText.match(/(\d+)-day cycle/i);
+		if (dayMatch) {
+			days = dayMatch[1];
+		}
+		// Extract all bullet lines and render as Markdown bullets
+		const bulletLines = sectionText
+			.split("\n")
+			.filter((l) => /^[-*•]\s+/.test(l.trim()));
+		treatments = bulletLines.map((l) => l.replace(/^[-*•]\s+/, "").trim());
+	}
+	return { days, treatments };
 }
 
 // --- ROBUST SIDE EFFECT SECTION EXTRACTION FIX ---
 async function formatSectionsWithSideEffects(text, tablesByPage) {
-  const lines = text.split('\n');
-  const outputLines = [];
-  let currentSection = null;
-  let sectionBuffer = [];
+	const lines = text.split("\n");
+	const outputLines = [];
+	let currentSection = null;
+	let sectionBuffer = [];
 
-  // Map of section headers to markdown headings
-  const sectionMap = {
-    'common side effects': '### Common Side Effects',
-    'other common side effects': '### Other Common Side Effects',
-    'occasional side effects': '### Occasional Side Effects',
-    'rare side effects': '### Rare Side Effects'
-  };
+	// Map of section headers to markdown headings
+	const sectionMap = {
+		"common side effects": "### Common Side Effects",
+		"other common side effects": "### Other Common Side Effects",
+		"occasional side effects": "### Occasional Side Effects",
+		"rare side effects": "### Rare Side Effects",
+	};
 
-  function flushSection() {
-    if (!currentSection) return;
-    const heading = sectionMap[currentSection];
-    if (heading) outputLines.push(heading);
+	function flushSection() {
+		if (!currentSection) return;
+		const heading = sectionMap[currentSection];
+		if (heading) outputLines.push(heading);
 
-    // Special handling for Common Side Effects (table)
-    if (currentSection === 'common side effects') {
-      let tableMd = extractCommonSideEffectsTableFromPages(tablesByPage);
-      if (!tableMd) {
-        tableMd = extractCommonSideEffectsTableFromText(sectionBuffer);
-      }
-      if (tableMd) {
-        outputLines.push('');
-        outputLines.push(tableMd);
-        outputLines.push('');
-      }
-    } else {
-      // For other sections, extract and output bullets
-      const bullets = extractBulletList(sectionBuffer);
-      if (bullets.length) {
-        outputLines.push('');
-        outputLines.push(...bullets.map(b => `- ${b}`));
-        outputLines.push('');
-      }
-    }
-    // Reset
-    currentSection = null;
-    sectionBuffer = [];
-  }
+		// Special handling for Common Side Effects (table)
+		if (currentSection === "common side effects") {
+			let tableMd = extractCommonSideEffectsTableFromPages(tablesByPage);
+			if (!tableMd) {
+				tableMd = extractCommonSideEffectsTableFromText(sectionBuffer);
+			}
+			if (tableMd) {
+				outputLines.push("");
+				outputLines.push(tableMd);
+				outputLines.push("");
+			}
+		} else {
+			// For other sections, extract and output bullets
+			const bullets = extractBulletList(sectionBuffer);
+			if (bullets.length) {
+				outputLines.push("");
+				outputLines.push(...bullets.map((b) => `- ${b}`));
+				outputLines.push("");
+			}
+		}
+		// Reset
+		currentSection = null;
+		sectionBuffer = [];
+	}
 
-  for (let idx = 0; idx < lines.length; idx++) {
-    let line = lines[idx].trim();
-    const lower = line.toLowerCase();
+	for (let idx = 0; idx < lines.length; idx++) {
+		let line = lines[idx].trim();
+		const lower = line.toLowerCase();
 
-    if (sectionMap[lower]) {
-      flushSection();
-      currentSection = lower;
-      continue;
-    }
-    // If a new section header (not a side effect section), flush current
-    if (
-      SECTION_HEADERS.some(h => h.toLowerCase() === lower) &&
-      !sectionMap[lower]
-    ) {
-      flushSection();
-      outputLines.push(`### ${line}`);
-      continue;
-    }
-    // If in a side effect section, collect all lines until next header
-    if (currentSection) {
-      sectionBuffer.push(line);
-      continue;
-    }
-    // Default: add as paragraph
-    outputLines.push(line);
-  }
-  flushSection();
+		if (sectionMap[lower]) {
+			flushSection();
+			currentSection = lower;
+			continue;
+		}
+		// If a new section header (not a side effect section), flush current
+		if (
+			SECTION_HEADERS.some((h) => h.toLowerCase() === lower) &&
+			!sectionMap[lower]
+		) {
+			flushSection();
+			if (lower === "treatment details") {
+				// Skip all lines until the next SECTION_HEADER or end
+				idx++;
+				while (
+					idx < lines.length &&
+					!SECTION_HEADERS.some(
+						(h) => h.toLowerCase() === lines[idx].trim().toLowerCase()
+					)
+				) {
+					idx++;
+				}
+				idx--; // so the for loop's idx++ lands on the next header
+				continue;
+			}
+			outputLines.push(`### ${line}`);
+			continue;
+		}
 
-  let output = outputLines.join('\n').replace(/\n{3,}/g, '\n\n').trim();
-  return output;
+		// If in a side effect section, collect all lines until next header
+		if (currentSection) {
+			sectionBuffer.push(line);
+			continue;
+		}
+		// Default: add as paragraph
+		outputLines.push(line);
+	}
+	flushSection();
+
+	let output = outputLines
+		.join("\n")
+		.replace(/\n{3,}/g, "\n\n")
+		.trim();
+	return output;
 }
 
 // Extract bullet points from lines (for Other/Occasional/Rare side effects)
 function extractBulletList(lines) {
-  const bullets = [];
-  for (let line of lines) {
-    const m = line.match(/^[-*•]\s*(.+)$/);
-    if (m) {
-      bullets.push(m[1].trim());
-    }
-  }
-  return bullets;
+	const bullets = [];
+	for (let line of lines) {
+		const m = line.match(/^[-*•]\s*(.+)$/);
+		if (m) {
+			bullets.push(m[1].trim());
+		}
+	}
+	return bullets;
 }
 
 // --- Table extraction helpers (unchanged) ---
 
 function extractCommonSideEffectsTableFromPages(tablesByPage) {
-  for (const pageNum of Object.keys(tablesByPage)) {
-    const table = tablesByPage[pageNum];
-    if (
-      table &&
-      table.length >= 2 &&
-      table[0].length >= 2 &&
-      isCommonSideEffectsTable(table)
-    ) {
-      return csvTableToMarkdown(table);
-    }
-  }
-  return null;
+	for (const pageNum of Object.keys(tablesByPage)) {
+		const table = tablesByPage[pageNum];
+		if (
+			table &&
+			table.length >= 2 &&
+			table[0].length >= 2 &&
+			isCommonSideEffectsTable(table)
+		) {
+			return csvTableToMarkdown(table);
+		}
+	}
+	return null;
 }
 
 function isCommonSideEffectsTable(table) {
-  if (!table || table.length < 2) return false;
-  const header = table[0].map(cell => cell.toLowerCase().trim());
-  return (
-    header.includes('common side effect') &&
-    header.some(h => h.includes('description'))
-  );
+	if (!table || table.length < 2) return false;
+	const header = table[0].map((cell) => cell.toLowerCase().trim());
+	return (
+		header.includes("common side effect") &&
+		header.some((h) => h.includes("description"))
+	);
 }
 
 function extractCommonSideEffectsTableFromText(lines) {
-  const rows = [];
-  let currentName = null;
-  let currentDesc = [];
-  for (let line of lines) {
-    if (!line.trim()) continue;
-    // Heuristic: likely a side effect name if line is title case and not a full sentence
-    if (
-      /^[A-Z][A-Za-z0-9 ()/-]+$/.test(line.trim()) ||
-      (line.trim().length < 60 && !/[\.:\?]$/.test(line.trim()))
-    ) {
-      if (currentName) {
-        rows.push([currentName, currentDesc.join(' ').replace(/\s+/g, ' ').trim()]);
-      }
-      currentName = line.trim();
-      currentDesc = [];
-    } else if (currentName) {
-      currentDesc.push(line.trim());
-    }
-  }
-  if (currentName) {
-    rows.push([currentName, currentDesc.join(' ').replace(/\s+/g, ' ').trim()]);
-  }
-  if (rows.length === 0) return null;
-  // Markdown table
-  const md = [
-    '| Common Side Effect | Full Text Description |',
-    '|--------------------|----------------------|',
-    ...rows.map(([name, desc]) => `| ${name} | ${desc} |`)
-  ];
-  return md.join('\n');
+	const rows = [];
+	let currentName = null;
+	let currentDesc = [];
+	for (let line of lines) {
+		if (!line.trim()) continue;
+		// Heuristic: likely a side effect name if line is title case and not a full sentence
+		if (
+			/^[A-Z][A-Za-z0-9 ()/-]+$/.test(line.trim()) ||
+			(line.trim().length < 60 && !/[\.:\?]$/.test(line.trim()))
+		) {
+			if (currentName) {
+				rows.push([
+					currentName,
+					currentDesc.join(" ").replace(/\s+/g, " ").trim(),
+				]);
+			}
+			currentName = line.trim();
+			currentDesc = [];
+		} else if (currentName) {
+			currentDesc.push(line.trim());
+		}
+	}
+	if (currentName) {
+		rows.push([currentName, currentDesc.join(" ").replace(/\s+/g, " ").trim()]);
+	}
+	if (rows.length === 0) return null;
+	// Markdown table
+	const md = [
+		"| Common Side Effect | Full Text Description |",
+		"|--------------------|----------------------|",
+		...rows.map(([name, desc]) => `| ${name} | ${desc} |`),
+	];
+	return md.join("\n");
 }
 
-processAllPDFs().catch(err => {
-  console.error('Fatal error:', err);
+processAllPDFs().catch((err) => {
+	console.error("Fatal error:", err);
 });

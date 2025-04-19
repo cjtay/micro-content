@@ -1,0 +1,15 @@
+---
+// Card.astro
+const { title, icons = [] } = Astro.props;
+---
+
+<div class="bg-white rounded-lg shadow-sm border border-gray-100 flex flex-col items-center p-4 min-w-[120px] min-h-[130px]">
+  <div class="text-xl font-semibold mb-4">{title}</div>
+  <div class="flex flex-row gap-4">
+    {icons.map((Icon, idx) => (
+      <span class="w-10 h-10 flex items-center justify-center">
+        <Icon />
+      </span>
+    ))}
+  </div>
+</div>

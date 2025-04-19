@@ -10,6 +10,7 @@
     "extract-pdfs": "node src/utils/extract.js"
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.2.4",
     "@tailwindcss/vite": "^4.1.0",
     "asposepdfnodejs": "^25.3.0",
     "astro": "^5.5.6",

@@ -4,13 +4,26 @@ description: "Information extracted from PIL-0054  - Capecitabine and Radiation 
 slug: "pil-0054"
 tags: ["pdf", "extracted", "pil-0054"]
 category: "patient information"
-pubDate: 2025-04-18T13:37:51.097Z
+pubDate: 2025-04-19T03:26:03.967Z
 draft: false
-days: "7"
-treatments: ["Radiation will be administered over ~ 15 to 30 minutes on days 1 to 5 of your 7-day cycle.", "Capecitabine is to be taken twice a day by mouth fom days 1 to 5 of your 7-day cycle.", "On days 6 and 7, you won’t be having any anti-cancer treatment. Take this time to rest and recover."]
+days: "21"
+treatments: [
+  "Radiation will be administered over ~ 15 to 30 minutes on days 1 to 5 of your 7-day cycle.",
+  "Capecitabine is to be taken twice a day by mouth fom days 1 to 5 of your 7-day cycle.",
+  "On days 6 and 7, you won’t be having any anti-cancer treatment. Take this time to rest and recover."
+]
 ---
 
+import TreatmentCard from '../../components/TreatmentCard.astro'
+
 # Capecitabine and Radiation Therapy
+
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 my-8">
+  {Array.from({ length: Number(frontmatter.days) }).map((_, i) => (
+    <TreatmentCard title={`Day ${i + 1}`} icons={[]} />
+  ))}
+</div>
+
 
 
 
@@ -24,12 +37,6 @@ treatments: ["Radiation will be administered over ~ 15 to 30 minutes on days 1 t
 Concurrently given with radiation, capecitabine (antimetabolite chemotherapy) is a treatment option
 for colorectal and some other cancers. Radiation and cancer medicines are usually used to slow or stop
 cancer cell growth and spread more effectively.
-
-### Treatment details
-
-•   Radiation will be administered over ~ 15 to 30 minutes on days 1 to 5 of your 7-day cycle.
-•   Capecitabine is to be taken twice a day by mouth fom days 1 to 5 of your 7-day cycle.
-•   On days 6 and 7, you won’t be having any anti-cancer treatment. Take this time to rest and recover.
 
 ### Side Effects
 Chemotherapy is often linked to so many side effects. While it is true that chemotherapy drugs often

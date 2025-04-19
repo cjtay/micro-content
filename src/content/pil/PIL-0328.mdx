@@ -1,16 +1,25 @@
 ---
 title: "Paclitaxel (weekly), IV Pertuzumab and SC Trastuzumab"
-description: "Information extracted from PIL-03282.pdf"
-slug: "pil-03282"
-tags: ["pdf", "extracted", "pil-03282"]
+description: "Information extracted from PIL-0328.2 - Paclitaxel (weekly), IV Pertuzumab and SC Trastuzumab.pdf"
+slug: "pil-0328"
+tags: ["pdf", "extracted", "pil-0328"]
 category: "patient information"
-pubDate: 2025-04-19T03:27:07.241Z
+pubDate: 2025-04-19T09:17:41.095Z
 draft: false
 days: "21"
-treatments: ["Paclitaxel and Pertuzumab will be administered intravenously ~ 1.5 to 2 hours", "Trastuzumab will be administered subcutaneously ~2 to 5 minutes on day 1 of your 21-day cycle.", "Paclitaxel will be administered intravenously ~ 60 minutes on days 8 and 15 of your 21-day cycle.", "From days 2 to 7, days 9 to 14 and days 16 to 21, you won’t have any anti-cancer treatment."]
+treatments: ["Paclitaxel and Pertuzumab", "Paclitaxel", "Trastuzumab", "Rest"]
 ---
 
+export const days = frontmatter.days; 
+import TreatmentCard from '../../components/TreatmentCard.astro';
+
 # Paclitaxel (weekly), IV Pertuzumab and SC Trastuzumab
+
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-2 my-8">
+  {Array.from({ length: Number(days) }).map((_, i) => (
+    <TreatmentCard key={i} title={`Day ${i + 1}`} />
+  ))}
+</div>
 
 
 

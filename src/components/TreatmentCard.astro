@@ -1,15 +1,20 @@
 ---
 // Card.astro
-const { title, icons = [] } = Astro.props;
+const { title, icons = ["icon1","icon2"] } = Astro.props;
 ---
 
-<div class="bg-white rounded-lg shadow-sm border border-gray-100 flex flex-col items-center p-4 min-w-[120px] min-h-[130px]">
+<div class="bg-white rounded-lg border border-gray-300 flex flex-col items-center p-2 min-w-[100px] max-h-[100px]">
   <div class="text-xl font-semibold mb-4">{title}</div>
-  <div class="flex flex-row gap-4">
-    {icons.map((Icon, idx) => (
+  <div class="flex flex-row gap-1">
+    {icons.map((Icon) => (
       <span class="w-10 h-10 flex items-center justify-center">
-        <Icon />
+        <p>
+        {Icon}
+        </p>
       </span>
     ))}
   </div>
 </div>
+
+
+

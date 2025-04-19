@@ -4,12 +4,14 @@ import { fileURLToPath } from "url";
 import AsposePdf from "asposepdfnodejs";
 import { parse as csvParse } from "csv-parse/sync";
 
-const PDFFOLDER = "./src/utils/pdfs";
-const CONTENTFOLDER = "./src/content/pil";
-const TMPFOLDER = "./tmp_pdf_tables";
-
+// Path setup
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+const PDFFOLDER = path.join(__dirname, "../utils/pdfs");
+const CONTENTFOLDER = path.join(__dirname, "../content/pil");
+const TMPFOLDER = path.join(__dirname, "../../tmp_pdf_tables");
+const TREATMENTS_JSON_PATH = path.join(__dirname, "../data/treatments.json");
 
 const SECTION_HEADERS = [
 	"About the treatment",
@@ -27,7 +29,6 @@ const SECTION_HEADERS = [
 	"Exercise",
 ];
 
-// The fixed disclaimer to always append at the bottom
 const FIXED_DISCLAIMER =
 	"> _Patient Information Use and Disclaimer: this is not a complete list of side effects. Always consult your healthcare provider to ensure the information displayed on this page applies to your personal circumstances._";
 
@@ -57,6 +58,15 @@ fs.ensureDirSync(PDFFOLDER);
 fs.ensureDirSync(CONTENTFOLDER);
 fs.ensureDirSync(TMPFOLDER);
 
+// --- TREATMENT LABELS SETUP ---
+const treatmentsData = JSON.parse(fs.readFileSync(TREATMENTS_JSON_PATH, "utf-8"));
+// Map: lowercased name -> canonical label
+const treatmentNameToLabel = {};
+treatmentsData.forEach((t) => {
+	treatmentNameToLabel[t.name.toLowerCase()] = t.label;
+});
+const restLabel = treatmentNameToLabel["rest"] || "Rest";
+
 async function processAllPDFs() {
 	const files = fs
 		.readdirSync(PDFFOLDER)
@@ -74,7 +84,6 @@ async function processAllPDFs() {
 async function processPDF(filename) {
 	const filePath = path.join(PDFFOLDER, filename);
 
-	// --- SERIAL NUMBER LOGIC: Extract the PIL-XXXXX pattern for output filename ---
 	const pilMatch = filename.match(/(PIL-\d{4,5})/i);
 	if (!pilMatch)
 		throw new Error("Filename does not contain a PIL-XXXXX serial number");
@@ -110,14 +119,61 @@ async function processPDF(filename) {
 
 	// 3. Parse and structure the content
 	const { title, processedText } = extractTitleAndRemove(rawText, pilSerial);
-	const { days, treatments } = extractTreatmentDetails(processedText);
+
+	// --- Treatment details extraction and matching ---
+	const { days, treatmentsRaw, treatmentSectionText } = extractTreatmentDetails(processedText);
+
+	const foundLabels = new Set();
+
+	// 1. Match all canonical treatments (case-insensitive, whole-word)
+	const treatmentNamesLower = Object.keys(treatmentNameToLabel);
+	for (const candidate of treatmentsRaw) {
+		for (const tNameLower of treatmentNamesLower) {
+			const regex = new RegExp(`\\b${escapeRegExp(tNameLower)}\\b`, "i");
+			if (regex.test(candidate.toLowerCase())) {
+				foundLabels.add(treatmentNameToLabel[tNameLower]);
+			}
+		}
+	}
+
+	// 2. Detect "rest"/no treatment phrases in the treatment details section
+	const restPhrases = [
+		"no treatment",
+		"won't have any treatment",
+		"won’t have any treatment",
+		"won't be having any treatment",
+		"won’t be having any treatment",
+		"rest and recover",
+		"resting",
+		"rest",
+		"no anti-cancer treatment",
+		"won't have any anti-cancer treatment",
+		"won’t have any anti-cancer treatment",
+		"take this time to rest",
+		"you won't be having any anti-cancer treatment",
+		"you won’t be having any anti-cancer treatment",
+		"you won't have any anti-cancer treatment",
+		"you won’t have any anti-cancer treatment",
+	];
+	const treatmentSectionLower = (treatmentSectionText || "").toLowerCase();
+	const foundRest = restPhrases.some((phrase) =>
+		treatmentSectionLower.includes(phrase)
+	);
+	if (foundRest) {
+		foundLabels.add(restLabel);
+	}
+
+	if (foundLabels.size === 0) {
+		console.warn(
+			`⚠️  No recognized treatments found in "${filename}". Skipping file.`
+		);
+		return;
+	}
 
 	// 4. Format body and insert Markdown table and bullet lists for side effects
-
-	// Render Treatment details as Markdown bullets
 	let treatmentDetailsSection = "";
-	if (treatments.length) {
-		treatmentDetailsSection = `\n\n**Treatment details:**\n${treatments
+	if (treatmentsRaw.length) {
+		treatmentDetailsSection = `\n\n**Treatment details:**\n${treatmentsRaw
 			.map((t) => `- ${t}`)
 			.join("\n")}\n`;
 	}
@@ -129,7 +185,8 @@ async function processPDF(filename) {
 
 	// 5. Build frontmatter
 	const slug = pilSerial.toLowerCase();
-	const pubDate = new Date().toISOString();
+	const pubDate = new Date().toISOString(); // Unquoted ISO string for Astro schema
+	const treatmentsArr = Array.from(foundLabels);
 	const frontmatter = `---
 title: "${title.replace(/"/g, '\\"')}"
 description: "Information extracted from ${filename}"
@@ -139,11 +196,10 @@ category: "patient information"
 pubDate: ${pubDate}
 draft: false
 days: "${days}"
-treatments: [${treatments.map((t) => `"${t}"`).join(", ")}]
+treatments: [${treatmentsArr.map((t) => `"${t}"`).join(", ")}]
 ---`;
 
 	// 6. Write the Markdown file
-	// Disclaimer is always appended at the very end, after CONTACT_SECTION
 	const markdown = `${frontmatter}
 
 # ${title}
@@ -196,13 +252,16 @@ function extractTitleAndRemove(text, fallback) {
 	return { title, processedText: remainingText };
 }
 
+// --- Treatment details extraction (returns all bullet points as raw, for matching) ---
 function extractTreatmentDetails(text) {
 	let days = "21";
-	let treatments = [];
+	let treatmentsRaw = [];
+	let treatmentSectionText = "";
 	const treatmentSectionRegex = /Treatment details([\s\S]+?)(?=\n\n|\n#|$)/i;
 	const match = text.match(treatmentSectionRegex);
 	if (match) {
 		const sectionText = match[1];
+		treatmentSectionText = sectionText;
 		const dayMatch = sectionText.match(/(\d+)-day cycle/i);
 		if (dayMatch) {
 			days = dayMatch[1];
@@ -211,19 +270,18 @@ function extractTreatmentDetails(text) {
 		const bulletLines = sectionText
 			.split("\n")
 			.filter((l) => /^[-*•]\s+/.test(l.trim()));
-		treatments = bulletLines.map((l) => l.replace(/^[-*•]\s+/, "").trim());
+		treatmentsRaw = bulletLines.map((l) => l.replace(/^[-*•]\s+/, "").trim());
 	}
-	return { days, treatments };
+	return { days, treatmentsRaw, treatmentSectionText };
 }
 
-// --- ROBUST SIDE EFFECT SECTION EXTRACTION FIX ---
+// --- Section formatting (preserves all section headers!) ---
 async function formatSectionsWithSideEffects(text, tablesByPage) {
 	const lines = text.split("\n");
 	const outputLines = [];
 	let currentSection = null;
 	let sectionBuffer = [];
 
-	// Map of section headers to markdown headings
 	const sectionMap = {
 		"common side effects": "### Common Side Effects",
 		"other common side effects": "### Other Common Side Effects",
@@ -235,8 +293,6 @@ async function formatSectionsWithSideEffects(text, tablesByPage) {
 		if (!currentSection) return;
 		const heading = sectionMap[currentSection];
 		if (heading) outputLines.push(heading);
-
-		// Special handling for Common Side Effects (table)
 		if (currentSection === "common side effects") {
 			let tableMd = extractCommonSideEffectsTableFromPages(tablesByPage);
 			if (!tableMd) {
@@ -248,7 +304,6 @@ async function formatSectionsWithSideEffects(text, tablesByPage) {
 				outputLines.push("");
 			}
 		} else {
-			// For other sections, extract and output bullets
 			const bullets = extractBulletList(sectionBuffer);
 			if (bullets.length) {
 				outputLines.push("");
@@ -256,7 +311,6 @@ async function formatSectionsWithSideEffects(text, tablesByPage) {
 				outputLines.push("");
 			}
 		}
-		// Reset
 		currentSection = null;
 		sectionBuffer = [];
 	}
@@ -311,7 +365,6 @@ async function formatSectionsWithSideEffects(text, tablesByPage) {
 	return output;
 }
 
-// Extract bullet points from lines (for Other/Occasional/Rare side effects)
 function extractBulletList(lines) {
 	const bullets = [];
 	for (let line of lines) {
@@ -355,7 +408,6 @@ function extractCommonSideEffectsTableFromText(lines) {
 	let currentDesc = [];
 	for (let line of lines) {
 		if (!line.trim()) continue;
-		// Heuristic: likely a side effect name if line is title case and not a full sentence
 		if (
 			/^[A-Z][A-Za-z0-9 ()/-]+$/.test(line.trim()) ||
 			(line.trim().length < 60 && !/[\.:\?]$/.test(line.trim()))
@@ -376,13 +428,26 @@ function extractCommonSideEffectsTableFromText(lines) {
 		rows.push([currentName, currentDesc.join(" ").replace(/\s+/g, " ").trim()]);
 	}
 	if (rows.length === 0) return null;
-	// Markdown table
 	const md = [
 		"| Common Side Effect | Full Text Description |",
 		"|--------------------|----------------------|",
 		...rows.map(([name, desc]) => `| ${name} | ${desc} |`),
 	];
 	return md.join("\n");
+}
+
+function csvTableToMarkdown(table) {
+	const header = table[0];
+	const md = [
+		"| " + header.join(" | ") + " |",
+		"| " + header.map(() => "---").join(" | ") + " |",
+		...table.slice(1).map((row) => "| " + row.join(" | ") + " |"),
+	];
+	return md.join("\n");
+}
+
+function escapeRegExp(string) {
+	return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 processAllPDFs().catch((err) => {

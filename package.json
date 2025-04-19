@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "extract-pdfs": "node src/utils/extract.js"
+    "extract-pdfs": "node src/utils/extract/"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.4",

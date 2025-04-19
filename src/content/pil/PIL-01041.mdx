@@ -1,30 +1,37 @@
 ---
 title: "Cisplatin (Weekly) and Fluorouracil"
-description: "Information extracted from PIL-0104.2 - Cisplatin (Weekly) and Fluorouracil Continuous Infusion and SC Trastuzumab.pdf"
-slug: "pil-0104"
-tags: ["pdf", "extracted", "pil-0104"]
+description: "Information extracted from PIL-01041 - Cisplatin (Weekly) and Fluorouracil Continuous Infusion and IV Trastuzumab.pdf"
+slug: "pil-01041"
+tags: ["pdf", "extracted", "pil-01041"]
 category: "patient information"
-pubDate: 2025-04-19T03:26:53.341Z
+pubDate: 2025-04-19T09:17:23.299Z
 draft: false
 days: "21"
-treatments: ["Cisplatin will be administered intravenously ~ 60 min on day 1, 8 and 15 of your 21-day-cycle.", "Trastuzumab will be administered subcutaneously ~2 to 5 min on day 1 of your 21-day-cycle.", "Fluorouracil will be administered intravenously ~ 24 hours on day 1 of your 21-day-cycle. The", "infusion may be administered using speciﬁc infusion pumps. These pumps allow you to receive", "From days 2 to 21, you won’t have any anti-cancer treatment. Take this time to rest and recover."]
+treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil", "Rest"]
 ---
 
+export const days = frontmatter.days; 
+import TreatmentCard from '../../components/TreatmentCard.astro';
+
 # Cisplatin (Weekly) and Fluorouracil
+
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-2 my-8">
+  {Array.from({ length: Number(days) }).map((_, i) => (
+    <TreatmentCard key={i} title={`Day ${i + 1}`} />
+  ))}
+</div>
 
 
 
 **Treatment details:**
-- Cisplatin will be administered intravenously ~ 60 min on day 1, 8 and 15 of your 21-day-cycle.
-- Trastuzumab will be administered subcutaneously ~2 to 5 min on day 1 of your 21-day-cycle.
-- Fluorouracil will be administered intravenously ~ 24 hours on day 1 of your 21-day-cycle. The
-- infusion may be administered using speciﬁc infusion pumps. These pumps allow you to receive
-- From days 2 to 21, you won’t have any anti-cancer treatment. Take this time to rest and recover.
+- Cisplatin and Trastuzumab will be administered intravenously ~ 2 to 3 hours
+- Fluorouracil will be administered intravenously ~ 24 hours on day 1 of your 21 day-cycle.
+- Cisplatin will be administered intravenously ~ 60 min on day 8 and 15 of your 21 day-cycle.
+- From days 2 to 21, you won’t be having any anti-cancer treatment.
 
-Continuous Infusion and SC Trastuzumab
+Continuous Infusion and IV Trastuzumab
 
 ### About the treatment
-
 Treatment options for particular breast cancer conditions include cisplatin (a platinum-based
 compound), ﬂuorouracil (antimetabolite), and trastuzumab (monoclonal antibody). Cancer medicines
 are often used in combination to slow down or stop cancer cells.

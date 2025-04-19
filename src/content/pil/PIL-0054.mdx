@@ -1,29 +1,25 @@
 ---
 title: "Capecitabine and Radiation Therapy"
-description: "Information extracted from PIL-0054  - Capecitabine and Radiation Therapy (1).pdf"
+description: "Information extracted from PIL-0054  - Capecitabine and Radiation Therapy.pdf"
 slug: "pil-0054"
 tags: ["pdf", "extracted", "pil-0054"]
 category: "patient information"
-pubDate: 2025-04-19T03:26:03.967Z
+pubDate: 2025-04-19T09:17:02.398Z
 draft: false
-days: "21"
-treatments: [
-  "Radiation will be administered over ~ 15 to 30 minutes on days 1 to 5 of your 7-day cycle.",
-  "Capecitabine is to be taken twice a day by mouth fom days 1 to 5 of your 7-day cycle.",
-  "On days 6 and 7, you won’t be having any anti-cancer treatment. Take this time to rest and recover."
-]
+days: "7"
+treatments: ["Radiation", "Capecitabine", "Rest"]
 ---
 
-import TreatmentCard from '../../components/TreatmentCard.astro'
+export const days = frontmatter.days; 
+import TreatmentCard from '../../components/TreatmentCard.astro';
 
 # Capecitabine and Radiation Therapy
 
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 my-8">
-  {Array.from({ length: Number(frontmatter.days) }).map((_, i) => (
-    <TreatmentCard title={`Day ${i + 1}`} icons={[]} />
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-2 my-8">
+  {Array.from({ length: Number(days) }).map((_, i) => (
+    <TreatmentCard key={i} title={`Day ${i + 1}`} />
   ))}
 </div>
-
 
 
 

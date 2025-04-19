@@ -8,14 +8,15 @@ const pils = defineCollection({
       title: z.string(),
       description: z.string(),
       slug: z.string(),
-      tags: z.array(z.string()).optional(), // Define tags as an array of topics - community, elderly, general
+      tags: z.array(z.string()).optional(),
       category: z.string().optional(),
       pubDate: z.date(),
+      draft: z.boolean().optional(),
+      days: z.string().optional(),
+      treatments: z.array(z.string()).optional(), // <-- ADD THIS LINE
     }),
 });
 
-
 export const collections = {
   pils: pils,
-
 };

@@ -26,6 +26,9 @@ export default defineConfig({
   build: {
     inlineStylesheets: 'always', // Ensures all styles are inlined
   },
+  experimental: {
+    svg: true
+  },
 
   integrations: [mdx()],
 });

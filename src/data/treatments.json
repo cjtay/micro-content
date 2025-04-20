@@ -1,77 +1,67 @@
 [
-    {
-      "name": "radiation",
-      "label": "Radiation",
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'><circle cx='24' cy='24' r='22' fill='#FFEB3B'/><path d='M24 24v-10M24 24l8.66 5M24 24l-8.66 5' stroke='#212121' stroke-width='2'/><circle cx='24' cy='24' r='4' fill='#212121'/></svg>"
-    },
-    {
-      "name": "cisplatin",
-      "label": "Cisplatin",
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'><circle cx='24' cy='24' r='22' fill='#2196F3'/><rect x='16' y='14' width='16' height='20' rx='4' fill='#fff'/><rect x='20' y='10' width='8' height='8' rx='2' fill='#2196F3'/></svg>"
-    },
-    {
-      "name": "fluorouracil",
-      "label": "Fluorouracil",
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'><circle cx='24' cy='24' r='22' fill='#F44336'/><rect x='16' y='14' width='16' height='20' rx='4' fill='#fff'/><rect x='20' y='10' width='8' height='8' rx='2' fill='#F44336'/></svg>"
-    },
-    {
-      "name": "trastuzumab (sc)",
-      "label": "Trastuzumab (SC)",
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'><circle cx='24' cy='24' r='22' fill='#43A047'/><rect x='22' y='10' width='4' height='20' rx='2' fill='#fff'/><rect x='20' y='30' width='8' height='8' rx='2' fill='#43A047'/></svg>"
-    },
-    {
-      "name": "rest",
-      "label": "Rest",
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'><circle cx='24' cy='24' r='22' fill='#2196F3'/><polygon points='12,28 24,16 36,28 36,36 12,36' fill='#fff'/></svg>"
-    },
-    {
-      "name": "cisplatin, trastuzumab",
-      "label": "Cisplatin, Trastuzumab",
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 48' fill='none'><circle cx='24' cy='24' r='22' fill='#2196F3'/><rect x='16' y='14' width='16' height='20' rx='4' fill='#fff'/><rect x='20' y='10' width='8' height='8' rx='2' fill='#2196F3'/><circle cx='72' cy='24' r='22' fill='#F44336'/><rect x='64' y='14' width='16' height='20' rx='4' fill='#fff'/><rect x='68' y='10' width='8' height='8' rx='2' fill='#F44336'/></svg>"
-    },
-    {
-      "name": "etoposide",
-      "label": "Etoposide",
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'><circle cx='24' cy='24' r='22' fill='#2196F3'/><rect x='16' y='14' width='16' height='20' rx='4' fill='#fff'/><rect x='20' y='10' width='8' height='8' rx='2' fill='#2196F3'/></svg>"
-    },
-    {
-      "name": "radiation",
-      "label": "Radiation",
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'><circle cx='24' cy='24' r='22' fill='#FFEB3B'/><path d='M24 24v-10M24 24l8.66 5M24 24l-8.66 5' stroke='#212121' stroke-width='2'/><circle cx='24' cy='24' r='4' fill='#212121'/></svg>"
-    },
-    {
-      "name": "capecitabine",
-      "label": "Capecitabine",
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'><circle cx='24' cy='24' r='22' fill='#F06292'/><ellipse cx='24' cy='24' rx='12' ry='6' fill='#fff'/></svg>"
-    },
-    {
-      "name": "lapatinib",
-      "label": "Lapatinib",
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'><circle cx='24' cy='24' r='22' fill='#009688'/><ellipse cx='24' cy='24' rx='12' ry='6' fill='#fff'/></sv"
-    },
-    {
-      "name": "paclitaxel and pertuzumab",
-      "label": "Paclitaxel and Pertuzumab",
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'><circle cx='24' cy='24' r='22' fill='#2196F3'/><rect x='16' y='14' width='16' height='20' rx='4' fill='#fff'/><rect x='20' y='10' width='8' height='8' rx='2' fill='#2196F3'/></svg>"
-    },
-    {
-      "name": "trastuzumab",
-      "label": "Trastuzumab",
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'><circle cx='24' cy='24' r='22' fill='#43A047'/><rect x='22' y='10' width='4' height='20' rx='2' fill='#fff'/><rect x='20' y='30' width='8' height='8' rx='2' fill='#43A047'/></svg>"
-    },
-    {
-      "name": "paclitaxel",
-      "label": "Paclitaxel",
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'><circle cx='24' cy='24' r='22' fill='#FFEB3B'/><rect x='16' y='14' width='16' height='20' rx='4' fill='#fff'/><rect x='20' y='10' width='8' height='8' rx='2' fill='#FFEB3B'/></svg>"
-    },
-    {
-      "name": "cisplatin and etoposide",
-      "label": "Cisplatin and Etoposide",
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'><circle cx='24' cy='24' r='22' fill='#FFAB3B'/><rect x='16' y='14' width='16' height='20' rx='4' fill='#fff'/><rect x='20' y='10' width='8' height='8' rx='2' fill='#FFAB3B'/></svg>"
-    }
-
-
-  ]
-
-  
-  
+	{
+		"name": "cisplatin",
+		"label": "Cisplatin",
+		"icon": "radiation"
+	},
+	{
+		"name": "fluorouracil",
+		"label": "Fluorouracil",
+		"icon": "radiation"
+	},
+	{
+		"name": "trastuzumab (sc)",
+		"label": "Trastuzumab (SC)",
+		"icon": "radiation"
+	},
+	{
+		"name": "rest",
+		"label": "Rest",
+		"icon": "rest"
+	},
+	{
+		"name": "cisplatin, trastuzumab",
+		"label": "Cisplatin, Trastuzumab",
+		"icon": "radiation"
+	},
+	{
+		"name": "etoposide",
+		"label": "Etoposide",
+		"icon": "radiation"
+	},
+	{
+		"name": "radiation",
+		"label": "Radiation",
+		"icon": "radiation"
+	},
+	{
+		"name": "capecitabine",
+		"label": "Capecitabine",
+		"icon": "radiation"
+	},
+	{
+		"name": "lapatinib",
+		"label": "Lapatinib",
+		"icon": "radiation"
+	},
+	{
+		"name": "paclitaxel and pertuzumab",
+		"label": "Paclitaxel and Pertuzumab",
+		"icon": "radiation"
+	},
+	{
+		"name": "trastuzumab",
+		"label": "Trastuzumab",
+		"icon": "radiation"
+	},
+	{
+		"name": "paclitaxel",
+		"label": "Paclitaxel",
+		"icon": "radiation"
+	},
+	{
+		"name": "cisplatin and etoposide",
+		"label": "Cisplatin and Etoposide",
+		"icon": "radiation"
+	}
+]

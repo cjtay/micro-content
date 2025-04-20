@@ -9,13 +9,15 @@ import Head from "../components/Head.astro";
 import Header from "../components/Header.astro";
 import HeaderNcis from "../components/Header-ncis.astro";
 import Footer from "../components/Footer.astro";
+
 ---
 
 <html>
 	<Head title={title} />
+
 	<body>
 		<HeaderNcis />
-
+	
 		<article class="micro">
 			<slot />
 		</article>

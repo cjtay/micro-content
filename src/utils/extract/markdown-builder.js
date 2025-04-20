@@ -18,12 +18,13 @@ export function buildMarkdown(frontmatter, title, markdownBody) {
 ${frontmatter}
 ---
 
-export const days = frontmatter.days; 
-import TreatmentCard from '../../components/TreatmentCard.astro';
+export const days = frontmatter.days;
+export const treatments = frontmatter.treatments;
+import TreatmentGrid from '../../components/TreatmentGrid.astro';
 
 # ${title}
 
-${treatmentGrid}
+<TreatmentGrid days={Number(days)} treatments={treatments} />
 
 ${markdownBody}
 

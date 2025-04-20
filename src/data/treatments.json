@@ -2,12 +2,12 @@
 	{
 		"name": "cisplatin",
 		"label": "Cisplatin",
-		"icon": "radiation"
+		"icon": "drip"
 	},
 	{
 		"name": "fluorouracil",
 		"label": "Fluorouracil",
-		"icon": "radiation"
+		"icon": "drip"
 	},
 	{
 		"name": "trastuzumab (sc)",

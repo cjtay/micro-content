@@ -4,22 +4,19 @@ description: "Information extracted from PIL-0054  - Capecitabine and Radiation 
 slug: "pil-0054"
 tags: ["pdf", "extracted", "pil-0054"]
 category: "patient information"
-pubDate: 2025-04-20T05:02:10.790Z
+pubDate: 2025-04-20T07:59:25.828Z
 draft: false
 days: "7"
 treatments: ["Radiation", "Capecitabine", "Rest"]
 ---
 
-export const days = frontmatter.days; 
-import TreatmentCard from '../../components/TreatmentCard.astro';
+export const days = frontmatter.days;
+export const treatments = frontmatter.treatments;
+import TreatmentGrid from '../../components/TreatmentGrid.astro';
 
 # Capecitabine and Radiation Therapy
 
-<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-2 my-8">
-  {Array.from({ length: Number(days) }).map((_, i) => (
-    <TreatmentCard key={i} title={`Day ${i + 1}`} />
-  ))}
-</div>
+<TreatmentGrid days={Number(days)} treatments={treatments} />
 
 
 

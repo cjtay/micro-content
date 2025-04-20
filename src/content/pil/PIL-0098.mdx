@@ -4,22 +4,19 @@ description: "Information extracted from PIL-0098 - Cisplatin and Etoposide with
 slug: "pil-0098"
 tags: ["pdf", "extracted", "pil-0098"]
 category: "patient information"
-pubDate: 2025-04-20T05:02:31.239Z
+pubDate: 2025-04-20T07:59:46.386Z
 draft: false
 days: "28"
 treatments: ["Cisplatin", "Etoposide", "Cisplatin and Etoposide", "Radiation", "Rest"]
 ---
 
-export const days = frontmatter.days; 
-import TreatmentCard from '../../components/TreatmentCard.astro';
+export const days = frontmatter.days;
+export const treatments = frontmatter.treatments;
+import TreatmentGrid from '../../components/TreatmentGrid.astro';
 
 # Cisplatin and Etoposide with Radiation Q28 Days
 
-<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-2 my-8">
-  {Array.from({ length: Number(days) }).map((_, i) => (
-    <TreatmentCard key={i} title={`Day ${i + 1}`} />
-  ))}
-</div>
+<TreatmentGrid days={Number(days)} treatments={treatments} />
 
 
 

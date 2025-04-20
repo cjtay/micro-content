@@ -4,21 +4,19 @@ description: "Information extracted from PIL-0052 - Capecitabine and Lapatinib.p
 slug: "pil-0052"
 tags: ["pdf", "extracted", "pil-0052"]
 category: "patient information"
-pubDate: 2025-04-20T05:02:00.497Z
+pubDate: 2025-04-20T07:59:15.735Z
 draft: false
 days: "21"
-treatments: ["radiation", "drip"]
-
+treatments: ["Capecitabine", "Lapatinib"]
 ---
 
-export const days = frontmatter.days; 
-export const treatments = frontmatter.treatments; 
-import TreatmentCard from '../../components/TreatmentCard.astro';
+export const days = frontmatter.days;
+export const treatments = frontmatter.treatments;
+import TreatmentGrid from '../../components/TreatmentGrid.astro';
 
 # Capecitabine and Lapatinib
 
-<img src={`/icons/${treatments[0]}.svg`} class="w-12 h-12"/>
-
+<TreatmentGrid days={Number(days)} treatments={treatments} />
 
 
 

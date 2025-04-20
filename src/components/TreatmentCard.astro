@@ -1,22 +1,47 @@
 ---
 // Card.astro
-const { title } = Astro.props;
-import icons from '../data/treatments.json'
+const { title, treatments = [] } = Astro.props;
 
+// Define icon mapping object
+const ICON_MAPPING = {
+  "cisplatin": "drip",
+  "fluorouracil": "drip",
+  "trastuzumab (sc)": "drip",
+  "rest": "home",
+  "cisplatin, trastuzumab": "radiation",
+  "etoposide": "radiation",
+  "radiation": "radiation",
+  "capecitabine": "drug",
+  "lapatinib": "drug",
+  "paclitaxel and pertuzumab": "radiation",
+  "trastuzumab": "inject",
+  "paclitaxel": "radiation",
+  "cisplatin and etoposide": "radiation"
+
+};
+
+// Process treatments array to get icon names
+const iconNames = treatments.map(treatment => 
+  ICON_MAPPING[treatment.toLowerCase()] ?? "home"
+);
+console.log(treatments);
 ---
-
-<div class="relative w-full aspect-square flex items-center justify-center bg-white rounded-lg shadow-sm">
-  <!-- Icon Container -->
-  <div class="absolute inset-0 flex items-center justify-center">
-   
+<div class="rounded-lg shadow-sm p-3">
+  <!-- Title Section -->
+  <div class="mb-4 text-center">
+    <span class="text-lg md:text-base font-medium">
+      {title}
+    </span>
   </div>
-
-  <!-- Title Overlay -->
-  <span class="text-lg font-medium z-10 relative">
-    {title}
-  </span>
+  <!-- Icons Row -->
+  <div class="flex flex-row gap-1 mx-auto justify-center w-16 h-16 md:w-14 md:h-14">
+    {iconNames.map(iconName => (
+      <img
+        src={`/icons/${iconName}.svg`}
+        alt={`${iconName} icon`}
+        width="24"
+        height="24"
+      >
+    ))}
+  </div>
 </div>
-
-
-
-

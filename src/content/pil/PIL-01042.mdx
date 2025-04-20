@@ -4,22 +4,19 @@ description: "Information extracted from PIL-01042 - Cisplatin (Weekly) and Fluo
 slug: "pil-01042"
 tags: ["pdf", "extracted", "pil-01042"]
 category: "patient information"
-pubDate: 2025-04-20T05:03:01.559Z
+pubDate: 2025-04-20T08:00:16.708Z
 draft: false
 days: "21"
 treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil", "Rest"]
 ---
 
-export const days = frontmatter.days; 
-import TreatmentCard from '../../components/TreatmentCard.astro';
+export const days = frontmatter.days;
+export const treatments = frontmatter.treatments;
+import TreatmentGrid from '../../components/TreatmentGrid.astro';
 
 # Cisplatin (Weekly) and Fluorouracil
 
-<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-2 my-8">
-  {Array.from({ length: Number(days) }).map((_, i) => (
-    <TreatmentCard key={i} title={`Day ${i + 1}`} />
-  ))}
-</div>
+<TreatmentGrid days={Number(days)} treatments={treatments} />
 
 
 

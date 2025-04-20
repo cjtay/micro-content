@@ -4,19 +4,43 @@ description: "Information extracted from PIL-0328.2 - Paclitaxel (weekly), IV Pe
 slug: "pil-0328"
 tags: ["pdf", "extracted", "pil-0328"]
 category: "patient information"
-pubDate: 2025-04-20T08:22:44.347Z
+pubDate: 2025-04-20T10:21:49.826Z
 draft: false
-days: "21"
+days: 21
 treatments: ["Paclitaxel and Pertuzumab", "Paclitaxel", "Trastuzumab", "Rest"]
+treatmentSchedule: [
+  { day: 1, treatments: ["Rest"] },
+  { day: 2, treatments: ["Paclitaxel and Pertuzumab", "Paclitaxel", "Trastuzumab"] },
+  { day: 3, treatments: ["Paclitaxel and Pertuzumab", "Paclitaxel", "Trastuzumab"] },
+  { day: 4, treatments: ["Paclitaxel and Pertuzumab", "Paclitaxel", "Trastuzumab"] },
+  { day: 5, treatments: ["Paclitaxel and Pertuzumab", "Paclitaxel", "Trastuzumab"] },
+  { day: 6, treatments: ["Paclitaxel and Pertuzumab", "Paclitaxel", "Trastuzumab"] },
+  { day: 7, treatments: ["Paclitaxel and Pertuzumab", "Paclitaxel", "Trastuzumab"] },
+  { day: 8, treatments: ["Rest"] },
+  { day: 9, treatments: ["Rest"] },
+  { day: 10, treatments: ["Rest"] },
+  { day: 11, treatments: ["Rest"] },
+  { day: 12, treatments: ["Rest"] },
+  { day: 13, treatments: ["Rest"] },
+  { day: 14, treatments: ["Rest"] },
+  { day: 15, treatments: ["Rest"] },
+  { day: 16, treatments: ["Rest"] },
+  { day: 17, treatments: ["Rest"] },
+  { day: 18, treatments: ["Rest"] },
+  { day: 19, treatments: ["Rest"] },
+  { day: 20, treatments: ["Rest"] },
+  { day: 21, treatments: ["Rest"] }
+]
 ---
 
 export const days = frontmatter.days;
 export const treatments = frontmatter.treatments;
+export const treatmentSchedule = frontmatter.treatmentSchedule;
 import TreatmentGrid from '../../components/TreatmentGrid.astro';
 
 # Paclitaxel (weekly), IV Pertuzumab and SC Trastuzumab
 
-<TreatmentGrid days={Number(days)} treatments={treatments} />
+<TreatmentGrid treatmentSchedule={treatmentSchedule} />
 
 
 
@@ -59,6 +83,8 @@ different side effects to varying degrees.
 - Lungs/breathing problems (cough, shortness of breath)
 - Dry skin
 
+> _Patient Information Use and Disclaimer: this is not a complete list of side effects. Always consult your healthcare provider to ensure the information displayed on this page applies to your personal circumstances._
+
 
 ---
 ## How to contact your Healthcare Team
@@ -80,5 +106,3 @@ Cancer Line (+65) 9722 0569
 - Symptoms of an infection include fever (temperature over 38°C), chills, severe sore throat, wet cough (coughing up thick or green phlegm), and cloudy or foul-smelling urine.
 - Signs of unusual bleeding, bruising, or dark and sticky stools.
 - Feeling unwell (despite not having a fever).
-
-> _Patient Information Use and Disclaimer: this is not a complete list of side effects. Always consult your healthcare provider to ensure the information displayed on this page applies to your personal circumstances._

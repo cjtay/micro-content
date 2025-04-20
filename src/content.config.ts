@@ -12,11 +12,18 @@ const pils = defineCollection({
       category: z.string().optional(),
       pubDate: z.date(),
       draft: z.boolean().optional(),
-      days: z.string().optional(),
-      treatments: z.array(z.string()).optional(), // <-- ADD THIS LINE
+      days: z.number().optional(),
+      treatments: z.array(z.string()).optional(),
+      treatmentSchedule: z.array(
+        z.object({
+          day: z.number(),
+          treatments: z.array(z.string())
+        })
+      ).optional(),
     }),
 });
 
 export const collections = {
   pils: pils,
 };
+

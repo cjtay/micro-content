@@ -4,19 +4,50 @@ description: "Information extracted from PIL-0098 - Cisplatin and Etoposide with
 slug: "pil-0098"
 tags: ["pdf", "extracted", "pil-0098"]
 category: "patient information"
-pubDate: 2025-04-20T08:21:55.560Z
+pubDate: 2025-04-20T10:21:04.049Z
 draft: false
-days: "28"
+days: 28
 treatments: ["Cisplatin", "Etoposide", "Cisplatin and Etoposide", "Radiation", "Rest"]
+treatmentSchedule: [
+  { day: 1, treatments: ["Rest"] },
+  { day: 2, treatments: ["Cisplatin", "Etoposide", "Cisplatin and Etoposide"] },
+  { day: 3, treatments: ["Cisplatin", "Etoposide", "Cisplatin and Etoposide"] },
+  { day: 4, treatments: ["Cisplatin", "Etoposide", "Cisplatin and Etoposide"] },
+  { day: 5, treatments: ["Cisplatin", "Etoposide", "Cisplatin and Etoposide"] },
+  { day: 6, treatments: ["Radiation"] },
+  { day: 7, treatments: ["Radiation"] },
+  { day: 8, treatments: ["Rest"] },
+  { day: 9, treatments: ["Rest"] },
+  { day: 10, treatments: ["Rest"] },
+  { day: 11, treatments: ["Rest"] },
+  { day: 12, treatments: ["Rest"] },
+  { day: 13, treatments: ["Radiation"] },
+  { day: 14, treatments: ["Radiation"] },
+  { day: 15, treatments: ["Rest"] },
+  { day: 16, treatments: ["Rest"] },
+  { day: 17, treatments: ["Rest"] },
+  { day: 18, treatments: ["Rest"] },
+  { day: 19, treatments: ["Rest"] },
+  { day: 20, treatments: ["Radiation"] },
+  { day: 21, treatments: ["Radiation"] },
+  { day: 22, treatments: ["Rest"] },
+  { day: 23, treatments: ["Rest"] },
+  { day: 24, treatments: ["Rest"] },
+  { day: 25, treatments: ["Rest"] },
+  { day: 26, treatments: ["Rest"] },
+  { day: 27, treatments: ["Radiation"] },
+  { day: 28, treatments: ["Radiation"] }
+]
 ---
 
 export const days = frontmatter.days;
 export const treatments = frontmatter.treatments;
+export const treatmentSchedule = frontmatter.treatmentSchedule;
 import TreatmentGrid from '../../components/TreatmentGrid.astro';
 
 # Cisplatin and Etoposide with Radiation Q28 Days
 
-<TreatmentGrid days={Number(days)} treatments={treatments} />
+<TreatmentGrid treatmentSchedule={treatmentSchedule} />
 
 
 
@@ -61,6 +92,8 @@ experiences different side effects to varying degrees.
 - Liver dysfunction (Monitored by specific blood tests)
 - Kidney dysfunction (Monitored by specific blood tests)
 
+> _Patient Information Use and Disclaimer: this is not a complete list of side effects. Always consult your healthcare provider to ensure the information displayed on this page applies to your personal circumstances._
+
 
 ---
 ## How to contact your Healthcare Team
@@ -82,5 +115,3 @@ Cancer Line (+65) 9722 0569
 - Symptoms of an infection include fever (temperature over 38°C), chills, severe sore throat, wet cough (coughing up thick or green phlegm), and cloudy or foul-smelling urine.
 - Signs of unusual bleeding, bruising, or dark and sticky stools.
 - Feeling unwell (despite not having a fever).
-
-> _Patient Information Use and Disclaimer: this is not a complete list of side effects. Always consult your healthcare provider to ensure the information displayed on this page applies to your personal circumstances._

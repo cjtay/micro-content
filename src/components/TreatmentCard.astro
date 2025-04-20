@@ -8,23 +8,22 @@ const ICON_MAPPING = {
   "fluorouracil": "drip",
   "trastuzumab (sc)": "drip",
   "rest": "home",
-  "cisplatin, trastuzumab": "radiation",
-  "etoposide": "radiation",
+  "cisplatin, trastuzumab": "drip",
+  "etoposide": "drug",
   "radiation": "radiation",
   "capecitabine": "drug",
-  "lapatinib": "drug",
-  "paclitaxel and pertuzumab": "radiation",
+  "lapatinib": "inject",
+  "paclitaxel and pertuzumab": "drip",
   "trastuzumab": "inject",
-  "paclitaxel": "radiation",
-  "cisplatin and etoposide": "radiation"
-
+  "paclitaxel": "drug",
+  "cisplatin and etoposide": "drip"
 };
 
 // Process treatments array to get icon names
 const iconNames = treatments.map(treatment => 
   ICON_MAPPING[treatment.toLowerCase()] ?? "home"
 );
-console.log(treatments);
+// Remove console.log to avoid cluttering the console
 ---
 <div class="rounded-lg shadow-sm p-3">
   <!-- Title Section -->

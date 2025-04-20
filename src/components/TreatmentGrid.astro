@@ -1,21 +1,27 @@
-
-<!-- src/components/TreatmentGrid.astro -->
 ---
 import TreatmentCard from './TreatmentCard.astro';
-interface Props {
-  days: number;
+
+interface DayTreatment {
+  day: number;
   treatments: string[];
 }
 
-const { days, treatments } = Astro.props;
+interface Props {
+  treatmentSchedule: DayTreatment[];
+}
+
+const { treatmentSchedule } = Astro.props;
+
+// Sort by day number to ensure correct order
+const sortedSchedule = [...treatmentSchedule].sort((a, b) => a.day - b.day);
 ---
 
 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-2 my-8">
-  {Array.from({ length: Number(days) }).map((_, i) => (
+  {sortedSchedule.map((dayInfo) => (
     <TreatmentCard 
-      key={i} 
-      title={`Day ${i + 1}`} 
-      treatments={treatments}
+      key={dayInfo.day} 
+      title={`Day ${dayInfo.day}`} 
+      treatments={dayInfo.treatments}
     />
   ))}
 </div>

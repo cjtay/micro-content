@@ -4,19 +4,29 @@ description: "Information extracted from PIL-0054  - Capecitabine and Radiation 
 slug: "pil-0054"
 tags: ["pdf", "extracted", "pil-0054"]
 category: "patient information"
-pubDate: 2025-04-20T08:21:34.794Z
+pubDate: 2025-04-20T10:20:43.666Z
 draft: false
-days: "7"
+days: 7
 treatments: ["Radiation", "Capecitabine", "Rest"]
+treatmentSchedule: [
+  { day: 1, treatments: ["Radiation"] },
+  { day: 2, treatments: ["Radiation"] },
+  { day: 3, treatments: ["Radiation"] },
+  { day: 4, treatments: ["Radiation"] },
+  { day: 5, treatments: ["Radiation"] },
+  { day: 6, treatments: ["Capecitabine"] },
+  { day: 7, treatments: ["Capecitabine"] }
+]
 ---
 
 export const days = frontmatter.days;
 export const treatments = frontmatter.treatments;
+export const treatmentSchedule = frontmatter.treatmentSchedule;
 import TreatmentGrid from '../../components/TreatmentGrid.astro';
 
 # Capecitabine and Radiation Therapy
 
-<TreatmentGrid days={Number(days)} treatments={treatments} />
+<TreatmentGrid treatmentSchedule={treatmentSchedule} />
 
 
 
@@ -87,6 +97,8 @@ different side effects to varying degrees.
 - Sensitivity to the sun or UV light
 - Allergic reactions
 
+> _Patient Information Use and Disclaimer: this is not a complete list of side effects. Always consult your healthcare provider to ensure the information displayed on this page applies to your personal circumstances._
+
 
 ---
 ## How to contact your Healthcare Team
@@ -108,5 +120,3 @@ Cancer Line (+65) 9722 0569
 - Symptoms of an infection include fever (temperature over 38°C), chills, severe sore throat, wet cough (coughing up thick or green phlegm), and cloudy or foul-smelling urine.
 - Signs of unusual bleeding, bruising, or dark and sticky stools.
 - Feeling unwell (despite not having a fever).
-
-> _Patient Information Use and Disclaimer: this is not a complete list of side effects. Always consult your healthcare provider to ensure the information displayed on this page applies to your personal circumstances._

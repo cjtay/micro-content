@@ -22,12 +22,12 @@
 	{
 		"name": "cisplatin, trastuzumab",
 		"label": "Cisplatin, Trastuzumab",
-		"icon": "radiation"
+		"icon": "drip"
 	},
 	{
 		"name": "etoposide",
 		"label": "Etoposide",
-		"icon": "radiation"
+		"icon": "inject"
 	},
 	{
 		"name": "radiation",
@@ -37,31 +37,31 @@
 	{
 		"name": "capecitabine",
 		"label": "Capecitabine",
-		"icon": "radiation"
+		"icon": "drug"
 	},
 	{
 		"name": "lapatinib",
 		"label": "Lapatinib",
-		"icon": "radiation"
+		"icon": "drug"
 	},
 	{
 		"name": "paclitaxel and pertuzumab",
 		"label": "Paclitaxel and Pertuzumab",
-		"icon": "radiation"
+		"icon": "drip"
 	},
 	{
 		"name": "trastuzumab",
 		"label": "Trastuzumab",
-		"icon": "radiation"
+		"icon": "inject"
 	},
 	{
 		"name": "paclitaxel",
 		"label": "Paclitaxel",
-		"icon": "radiation"
+		"icon": "drug"
 	},
 	{
 		"name": "cisplatin and etoposide",
 		"label": "Cisplatin and Etoposide",
-		"icon": "radiation"
+		"icon": "drip"
 	}
 ]

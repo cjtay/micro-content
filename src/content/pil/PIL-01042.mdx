@@ -4,19 +4,43 @@ description: "Information extracted from PIL-01042 - Cisplatin (Weekly) and Fluo
 slug: "pil-01042"
 tags: ["pdf", "extracted", "pil-01042"]
 category: "patient information"
-pubDate: 2025-04-20T08:22:29.231Z
+pubDate: 2025-04-20T10:21:34.725Z
 draft: false
-days: "21"
+days: 21
 treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil", "Rest"]
+treatmentSchedule: [
+  { day: 1, treatments: ["Rest"] },
+  { day: 2, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] },
+  { day: 3, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] },
+  { day: 4, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] },
+  { day: 5, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] },
+  { day: 6, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] },
+  { day: 7, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] },
+  { day: 8, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] },
+  { day: 9, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] },
+  { day: 10, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] },
+  { day: 11, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] },
+  { day: 12, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] },
+  { day: 13, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] },
+  { day: 14, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] },
+  { day: 15, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] },
+  { day: 16, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] },
+  { day: 17, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] },
+  { day: 18, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] },
+  { day: 19, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] },
+  { day: 20, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] },
+  { day: 21, treatments: ["Cisplatin", "Trastuzumab", "Fluorouracil"] }
+]
 ---
 
 export const days = frontmatter.days;
 export const treatments = frontmatter.treatments;
+export const treatmentSchedule = frontmatter.treatmentSchedule;
 import TreatmentGrid from '../../components/TreatmentGrid.astro';
 
 # Cisplatin (Weekly) and Fluorouracil
 
-<TreatmentGrid days={Number(days)} treatments={treatments} />
+<TreatmentGrid treatmentSchedule={treatmentSchedule} />
 
 
 
@@ -82,6 +106,8 @@ different side effects to varying degrees.
 - Peripheral neuropathy
 - Flu-like symptoms
 
+> _Patient Information Use and Disclaimer: this is not a complete list of side effects. Always consult your healthcare provider to ensure the information displayed on this page applies to your personal circumstances._
+
 
 ---
 ## How to contact your Healthcare Team
@@ -103,5 +129,3 @@ Cancer Line (+65) 9722 0569
 - Symptoms of an infection include fever (temperature over 38°C), chills, severe sore throat, wet cough (coughing up thick or green phlegm), and cloudy or foul-smelling urine.
 - Signs of unusual bleeding, bruising, or dark and sticky stools.
 - Feeling unwell (despite not having a fever).
-
-> _Patient Information Use and Disclaimer: this is not a complete list of side effects. Always consult your healthcare provider to ensure the information displayed on this page applies to your personal circumstances._

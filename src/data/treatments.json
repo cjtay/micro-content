@@ -22,7 +22,7 @@
 	{
 		"name": "cisplatin, trastuzumab",
 		"label": "Cisplatin, Trastuzumab",
-		"icon": "drip"
+		"icon": "drip-blue"
 	},
 	{
 		"name": "etoposide",

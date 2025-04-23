@@ -4,24 +4,27 @@ const { title, treatments = [] } = Astro.props;
 
 // Define icon mapping object
 const ICON_MAPPING = {
-  "cisplatin": "drip",
-  "fluorouracil": "drip",
-  "trastuzumab (sc)": "drip",
+  "cisplatin": "drip-green",
+  "fluorouracil": "drip-red",
+  "trastuzumab (sc)": "inject-green",
   "rest": "home",
-  "cisplatin, trastuzumab": "drip",
-  "etoposide": "drug",
-  "radiation": "radiation",
-  "capecitabine": "drug",
-  "lapatinib": "inject",
-  "paclitaxel and pertuzumab": "drip",
-  "trastuzumab": "inject",
-  "paclitaxel": "drug",
-  "cisplatin and etoposide": "drip"
+  "cisplatin, trastuzumab": "drip-blue",
+  "etoposide": "drip-red",
+  "radiation": "radiation-green",
+  "capecitabine": "pill-red",
+  "lapatinib": "pill-blue",
+  "paclitaxel and pertuzumab": "drip-green",
+  "trastuzumab": "inject-green",
+  "paclitaxel": "drip-blue",
+  "cisplatin and etoposide": "drip-blue"
 };
 
 // Process treatments array to get icon names
 const iconNames = treatments.map(treatment => 
   ICON_MAPPING[treatment.toLowerCase()] ?? "home"
+);
+const treatmentNames = treatments.map(treatment => 
+  treatment ?? "home"
 );
 // Remove console.log to avoid cluttering the console
 ---
@@ -33,14 +36,20 @@ const iconNames = treatments.map(treatment =>
     </span>
   </div>
   <!-- Icons Row -->
-  <div class="flex flex-row gap-1 mx-auto justify-center w-16 h-16 md:w-14 md:h-14">
+
+  <div class="flex flex-row gap-0 mx-auto justify-center w-20 h-20 md:w-18 md:h-18">
     {iconNames.map(iconName => (
       <img
         src={`/icons/${iconName}.svg`}
         alt={`${iconName} icon`}
-        width="24"
-        height="24"
+        width="28"
+        height="28"
       >
+    ))}
+  </div>
+    <div class="flex flex-col gap-0  text-left pl-2 bg-gray-100 rounded-md">
+    {treatmentNames.map(treatmentName => (
+      <span class="capitalize">{treatmentName}</span>
     ))}
   </div>
 </div>

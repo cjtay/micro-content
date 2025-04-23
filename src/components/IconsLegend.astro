@@ -1,0 +1,65 @@
+---
+// TreatmentLegend.astro - A simple component to display treatment names and icons
+
+interface Props {
+  title?: string;
+  className?: string;
+}
+
+const { 
+  title = "Treatment Legend", 
+  className = "" 
+} = Astro.props;
+
+// Icon mapping from the reference code
+const ICON_MAPPING = {
+  "cisplatin": "drip-green",
+  "fluorouracil": "drip-red",
+  "trastuzumab (sc)": "inject-green",
+  "rest": "home",
+  "cisplatin, trastuzumab": "drip-blue",
+  "etoposide": "drip-red",
+  "radiation": "radiation-green",
+  "capecitabine": "pill-red",
+  "lapatinib": "pill-blue",
+  "paclitaxel and pertuzumab": "drip-green",
+  "trastuzumab": "inject-green",
+  "paclitaxel": "drip-blue",
+  "cisplatin and etoposide": "drip-blue"
+};
+
+// Generate a unique ID for accessibility
+const tableId = `treatment-legend-${Math.random().toString(36).substring(2, 9)}`;
+---
+
+<div class={`my-4 ${className}`}>
+  <h3 id={`${tableId}-label`} class="mb-2">{title}</h3>
+  <div class="overflow-x-auto">
+    <table 
+      id={tableId} 
+      aria-labelledby={`${tableId}-label`}
+      class="max-w-md border-collapse"
+    >
+      <thead>
+        <tr class="bg-gray-100">
+          <th scope="col" class="py-2 px-4 text-left text-sm font-medium text-gray-700">Treatment</th>
+          <th scope="col" class="py-2 px-4 text-left text-sm font-medium text-gray-700">Icon</th>
+        </tr>
+      </thead>
+      <tbody>
+        {Object.entries(ICON_MAPPING).map(([treatment, iconName], index) => (
+          <tr class={index % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+            <td class="px-4 text-sm text-gray-700 capitalize">{treatment}</td>
+            <td class="px-4 mx-auto justify-center w-20 h-20 md:w-18 md:h-18">
+              <img 
+                src={`/icons/${iconName}.svg`}
+                alt={`Icon for ${treatment}`}
+            
+              />
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,581 @@
+---
+import { Image } from "astro:assets";
+import PilLayout from "../layouts/PilLayout.astro";
+import Testimage from "../assets/page-1/nuhsapp.jpeg";
+---
+
+<PilLayout title="Lung Cancer">
+	<h1>Capecitabine and Radiation Therapy <br/><span class="text-sm text-red-700">Title: PDF filename must be the same as the title</span></h1>
+	
+	<h2>About the treatment</h2>
+	<p>
+		Concurrently given with radiation, capecitabine (antimetabolite
+		chemotherapy) is a treatment option for colorectal and some other cancers.
+		Radiation and cancer medicines are usually used to slow or stop cancer cell
+		growth and spread more effectively.
+	</p>
+	<h2>Treatment details</h2>
+	<ul>
+		<li>
+			Radiation will be administered over ~ 15 to 30 minutes on days 1 to 5 of
+			your 7-day cycle
+		</li>
+		<li>
+			Capecitabine is to be taken twice a day by mouth fom days 1 to 5 of your
+			7-day cycle.
+		</li>
+		<li>
+			On days 6 and 7, you won’t be having any anti-cancer treatment. Take this
+			time to rest and recover.
+		</li>
+	</ul>
+	<span class="text-sm text-red-700">Suggest to have more structured content format if possible</span>
+	<ul>
+		<li>
+			[Treatment Name]: on days [X] to [Y] of your [Z]-day cycle. [Additional info]
+		</li>
+		<li>
+			Capecitabine: on days 1 to 5 of your 7-day cycle. To be taken twic a day by mouth.
+		</li>
+		<li>
+			Radiation: on days 1 to 5 of your 7-day cycle. At Cancer Centre.
+		</li>
+		<li>
+			Rest: on days 6 and 7 of your 7-day cycle. You won’t be having any anti-cancer treatment and take this
+			time to rest and recover.
+		</li>
+	</ul>
+
+	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-2 my-8">
+		<div class="rounded-lg shadow-sm p-3">
+			<!-- Title Section -->
+			<div class="mb-4 text-center">
+			  <span class="text-lg md:text-base font-medium">
+				Day 1
+			  </span>
+			</div>
+			<!-- Icons Row -->
+		  
+			<div class="flex flex-row gap-0 mx-auto justify-center w-20 h-20 md:w-18 md:h-18">
+			 
+				<img
+				  src="/icons/radiation-green.svg"
+				  alt="drip"
+				  width="28"
+				  height="28"
+				>
+				<img
+				  src="/icons/pill-red.svg"
+				  alt="drip"
+				  width="28"
+				  height="28"
+				>
+		
+			</div>
+			  <div class="flex flex-col gap-0  text-left pl-2 bg-gray-100 rounded-md">
+			 
+				<span class="capitalize text-center">Radiation</span>
+				<span class="capitalize text-center">Capecitabine</span>
+		
+			</div>
+		  </div>
+		<div class="rounded-lg shadow-sm p-3">
+			<!-- Title Section -->
+			<div class="mb-4 text-center">
+			  <span class="text-lg md:text-base font-medium">
+				Day 2
+			  </span>
+			</div>
+			<!-- Icons Row -->
+		  
+			<div class="flex flex-row gap-0 mx-auto justify-center w-20 h-20 md:w-18 md:h-18">
+			 
+				<img
+				  src="/icons/radiation-green.svg"
+				  alt="drip"
+				  width="28"
+				  height="28"
+				>
+				<img
+				  src="/icons/pill-red.svg"
+				  alt="drip"
+				  width="28"
+				  height="28"
+				>
+		
+			</div>
+			  <div class="flex flex-col gap-0  text-left pl-2 bg-gray-100 rounded-md">
+			 
+				<span class="capitalize text-center">Radiation</span>
+				<span class="capitalize text-center">Capecitabine</span>
+		
+			</div>
+		  </div>
+		<div class="rounded-lg shadow-sm p-3">
+			<!-- Title Section -->
+			<div class="mb-4 text-center">
+			  <span class="text-lg md:text-base font-medium">
+				Day 3
+			  </span>
+			</div>
+			<!-- Icons Row -->
+		  
+			<div class="flex flex-row gap-0 mx-auto justify-center w-20 h-20 md:w-18 md:h-18">
+			 
+				<img
+				  src="/icons/drip-blue.svg"
+				  alt="drip"
+				  width="28"
+				  height="28"
+				>
+		
+			</div>
+			  <div class="flex flex-col gap-0  text-left pl-2 bg-gray-100 rounded-md">
+			 
+				<span class="capitalize text-center">Paclitaxel and Pertuzumab</span>
+		
+			</div>
+		  </div>
+		<div class="rounded-lg shadow-sm p-3">
+			<!-- Title Section -->
+			<div class="mb-4 text-center">
+			  <span class="text-lg md:text-base font-medium">
+				Day 4
+			  </span>
+			</div>
+			<!-- Icons Row -->
+		  
+			<div class="flex flex-row gap-0 mx-auto justify-center w-20 h-20 md:w-18 md:h-18">
+			 
+				<img
+				  src="/icons/drip-green.svg"
+				  alt="drip"
+				  width="28"
+				  height="28"
+				>
+		
+			</div>
+			  <div class="flex flex-col gap-0  text-left pl-2 bg-gray-100 rounded-md">
+			 
+				<span class="capitalize text-center">Cisplatin and Etoposide</span>
+		
+			</div>
+		  </div>
+		<div class="rounded-lg shadow-sm p-3">
+			<!-- Title Section -->
+			<div class="mb-4 text-center">
+			  <span class="text-lg md:text-base font-medium">
+				Day 5
+			  </span>
+			</div>
+			<!-- Icons Row -->
+		  
+			<div class="flex flex-row gap-0 mx-auto justify-center w-20 h-20 md:w-18 md:h-18">
+			 
+				<img
+				  src="/icons/inject-green.svg"
+				  alt="drip"
+				  width="28"
+				  height="28"
+				>
+		
+			</div>
+			  <div class="flex flex-col gap-0  text-left pl-2 bg-gray-100 rounded-md">
+			 
+				<span class="capitalize text-center">Fluorouracil</span>
+		
+			</div>
+		  </div>
+		<div class="rounded-lg shadow-sm p-3">
+			<!-- Title Section -->
+			<div class="mb-4 text-center">
+			  <span class="text-lg md:text-base font-medium">
+				Day 6
+			  </span>
+			</div>
+			<!-- Icons Row -->
+		  
+			<div class="flex flex-row gap-0 mx-auto justify-center w-20 h-20 md:w-18 md:h-18">
+			 
+				<img
+				  src="/icons/home.svg"
+				  alt="drip"
+				  width="28"
+				  height="28"
+				>
+		
+			</div>
+			  <div class="flex flex-col gap-0  text-left pl-2 bg-gray-100 rounded-md">
+			 
+				<span class="capitalize text-center">Rest</span>
+		
+			</div>
+		  </div>
+		<div class="rounded-lg shadow-sm p-3">
+			<!-- Title Section -->
+			<div class="mb-4 text-center">
+			  <span class="text-lg md:text-base font-medium">
+				Day 7
+			  </span>
+			</div>
+			<!-- Icons Row -->
+		  
+			<div class="flex flex-row gap-0 mx-auto justify-center w-20 h-20 md:w-18 md:h-18">
+			 
+				<img
+				  src="/icons/home.svg"
+				  alt="drip"
+				  width="28"
+				  height="28"
+				>
+		
+			</div>
+			  <div class="flex flex-col gap-0  text-left pl-2 bg-gray-100 rounded-md">
+			 
+				<span class="capitalize text-center">Rest</span>
+		
+			</div>
+		  </div>
+	  </div>
+	
+
+	<h2>Side Effects<br/>	<span class="text-sm text-red-700">Suggest this section to be fixed</span></h2>
+	<p>
+		Chemotherapy is often linked to so many side effects. While it is true that
+		chemotherapy drugs often cause a wide range of side effects, most of these
+		side effects are temporary and can be minimised or prevented. Remember that
+		different drugs cause different side effects, and each person experiences
+		different side effects to varying degrees.
+	</p>
+	<span class="text-sm text-red-700">Need to understand how the side effects are identified - based on treatment types</span>
+	<h2>Common Side Effects</h2>
+	<h4>
+		The following side effects occur in more than 10 out of every 100 people.
+		You might have one or more of them.
+	</h4>
+
+	<h5>Fatigue:</h5>
+	<p>
+		You may feel tired and find it harder to do daily chores/activities that you
+		usually do or want to do. It may be physical, emotional and mental
+		exhaustion.
+	</p>
+	<h5>Diarrhoea</h5>
+	<p>
+		This treatment may disturb the intestinal lining and cause loose, watery,
+		and more frequent stools than usual. Certain medications have a higher
+		chance of causing diarrhoea.
+	</p>
+
+	<h5>Nausea and/or vomiting</h5>
+
+	<p>
+		Every patient reacts differently to cancer medication. Many people feel
+		nauseous, and some also experience vomiting. Nausea and vomiting can be
+		managed or reduced with medication.
+	</p>
+
+	<h5>Hand and foot syndrome</h5>
+	<p>
+		Also called palmar-plantar erythrodysesthesia) is a side effect of some
+		chemotherapy drugs that can cause redness, swelling and blistering on the
+		palms of the hands and soles of the feet.
+	</p>
+
+	<h5>Low platelet count (thrombocytopenia)</h5>
+	<p>
+		Platelets help your blood clot, so you are at a higher risk of bleeding when
+		your platelet count decreases. Let your oncology care team know if you have
+		any excess bruising or bleeding, including nose bleeds, sore gums or blood
+		in your urine or stool.
+	</p>
+
+	<h5>Low white blood cell count (Leukopenia or Neutropenia)</h5>
+
+	<p>
+		White blood cells (WBC) are crucial for fighting infection. While receiving
+		treatment, your WBC count can drop, putting you at a higher risk of disease.
+	</p>
+
+	<h2>Other Common Side Effects</h2>
+	<ul>
+		<li>Low appetite</li>
+		<li>Abdominal pain</li>
+		<li>Mouth sores</li>
+	</ul>
+
+	<h2>Occasional Side Effects</h2>
+	<h4>
+		The following side effects occur in between 1 to 10 out of every 100 people
+		(1 - 10%) You might have one or more of them
+	</h4>
+
+	<ul>
+		<li>Low red blood cell count (Anaemia)</li>
+		<li>Swelling</li>
+		<li>Constipation</li>
+		<li>Upset stomach</li>
+		<li>Taste disorder</li>
+		<li>Liver changes (Monitored by specific blood tests)</li>
+		<li>Watery eyes, redness, blurred vision</li>
+		<li>Blood clots</li>
+		<li>Feeling balance problem/spinning</li>
+		<li>Dizziness</li>
+		<li>Sleeplessness (Insomnia)</li>
+		<li>Memory & cognitive problems</li>
+		<li>Headache</li>
+		<li>Mood changes</li>
+		<li>Nail changes</li>
+		<li>Rash, itchy skin, discolouration</li>
+		<li>Rash or irritation on skin area treated with radiation</li>
+		<li>Hair loss</li>
+		<li>Muscle weakness and pain</li>
+		<li>Joint pain</li>
+		<li>Dehydration</li>
+		<li>Lungs/Breathing problems (Cough, shortness of breath, fever)</li>
+	</ul>
+	<h2>Rare Side Effects</h2>
+	<h4>
+		The following side effects occur in fewer than 1 out of every 100 people.
+	</h4>
+	<ul>
+		<li>
+			Cardiac problems (Chest pain or tightness, irregular heartbeat or blood
+			pressure changes, shortness of breath)
+		</li>
+		<li>Severe rash, blisters, peeling usually with fever</li>
+		<li>Sensitivity to the sun or UV light</li>
+		<li>Allergic reactions</li>
+	</ul>
+
+	<div class="flex items-center gap-2">
+		<svg
+			class="w-8 h-8 text-gray-800 mb-2"
+			aria-hidden="true"
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			fill="none"
+			viewBox="0 0 24 24"
+		>
+			<path
+				stroke="currentColor"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				d="M9.5 11.5 11 13l4-3.5M12 20a16.405 16.405 0 0 1-5.092-5.804A16.694 16.694 0 0 1 5 6.666L12 4l7 2.667a16.695 16.695 0 0 1-1.908 7.529A16.406 16.406 0 0 1 12 20Z"
+			></path>
+		</svg>
+		
+		<h2>Safe Handling of Oral Chemotherapy Medicine </h2>
+		
+	</div>
+	<span class="text-sm text-red-700">Suggest this section to be fixed </span>
+	<p>
+		You have been prescribed oral chemotherapy medicine for your medical
+		condition. It is essential to handle this medicine with care, as incorrect
+		handling may cause harm to unintended users.
+	</p>
+	<p>Accidental exposure may occur through:</p>
+	<ul>
+		<li>Inhalation of dust when crushing or breaking the tablets/capsules</li>
+		<li>Inhalation of droliets when there is spillage of liquid syrups</li>
+		<li>Ingestion after contact with contaminated hands or the environment</li>
+	</ul>
+
+	<div class="flex items-center gap-2">
+		<svg
+			class="w-8 h-8 text-gray-800 mb-2"
+			aria-hidden="true"
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			fill="none"
+			viewBox="0 0 24 24"
+		>
+			<path
+				stroke="currentColor"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				d="M12 13V8m0 8h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+		</svg>
+		<h2>General Precautions</h2>
+	</div>
+	<span class="text-sm text-red-700">Suggest this section to be fixed </span>
+
+	<ul>
+		<li>Tablets/capsules should be swallowed whole (not chewed).</li>
+		<li>
+			Do not crush or break tablets or capsules. Check with your pharmacist or
+			doctor if you can or have difficulty swallowing them.
+		</li>
+		<li>
+			If it is necessary to cut the tablets (e.g. into halves or quarters) to
+			obtain the correct dose, a tablet cutter should be used. Do not use the
+			same tablet cutter to cut other medicines.
+		</li>
+		<li>Wash your hands before and after taking medications.</li>
+		<li>
+			Caregivers should not handle medications with bare hands. Gloves should be
+			worn. If there is accidental contact, hands should be washed immediately
+			with soap and water.
+		</li>
+		<li>Pregnant and lactating females should avoid handling medications.</li>
+		<li>Keep all medications in a safe place, out of reach of children.</li>
+		<li>
+			If the medication requires refrigeration, it should be properly separated
+			from other foods (i.e. in a resealable plastic bag or container). Do not
+			store other foods or medicines in the same container.
+		</li>
+		<li>
+			Use designated oral syringes or spoons to take your medications. You may
+			wash and reuse these for further doses, but do not use them for other
+			purposes.
+		</li>
+		<li>
+			If the doctor decides to stop treatment, return the remaining medicine to
+			the pharmacy for proper disposal.
+		</li>
+	</ul>
+	<h2>Lifestyle & Safety Advice<br/><span class="text-sm text-red-700">Suggest this section to be fixed </span></h2>
+	<div class="flex items-center gap-2 w-full ">
+		<div class="inline-flex mb-2 flex-shrink-0 ">
+			<img
+				class="w-8 h-8"
+				src="/icons/pil-food.svg"
+				alt="Alcohol icon"
+				role="presentation"
+			/>
+		</div>
+		<h3>Food & Drink</h3>
+	</div>
+	<p>
+		Tell your healthcare team about any medicines you are taking. This includes
+		vitamins, herbal supplements, traditional Chinese medicine and
+		over-the-counter remedies. During treatment, please do not drink the juice
+		of the following fruits, including supplements that may contain them:
+		grapefruit, starfruit, pomegranate and pomelo. They may interfere with the
+		effects of drugs or cause dangerous side effects.
+	</p>
+	<p>
+		As some treatments may weaken your immune system, avoiding raw or
+		undercooked food such as sushi, raw meat, and runny eggs is advisable to
+		prevent infection. Bacteria are often present in uncooked food and are
+		usually killed by the cooking process. If your doctor determines it is safe
+		to eat raw vegetables and fruits, they should be carefully washed. We have
+		dietitian services that can help you plan your diet and meals. Please let a
+		member of your healthcare team know if you are interested.
+	</p>
+	<div class="flex items-center gap-1 w-full">
+		<div class="inline-flex mb-2 flex-shrink-0">
+			<img
+				class="w-8 h-8"
+				src="/icons/pil-pregnancy.svg"
+				alt="Alcohol icon"
+				role="presentation"
+			/>
+		</div>
+		<h3>Pregnacy, Contraception and Breastfeeding</h3>
+	</div>
+	<p>
+		This drug may harm a baby developing in the womb. It is critical not to
+		become pregnant while having treatment and for at least six months
+		afterwards. Before starting treatment, talk to your healthcare team about
+		effective contraception (for both male and female part- ners). Do not
+		breastfeed during this treatment because the drug may pass through your
+		breast milk.
+	</p>
+	<div class="flex items-center gap-2 w-full">
+		<div class="inline-flex mb-2 flex-shrink-0">
+			<img
+				class="w-8 h-8"
+				src="/icons/pil-fertility.svg"
+				alt="Alcohol icon"
+				role="presentation"
+			/>
+		</div>
+		<h3>Fertility</h3>
+	</div>
+	<p>
+		It is not known whether this treatment affects fertility in people. We have
+		fertility services that can assist with family planning. Talk to your
+		healthcare team before starting treatment if you intend to have a baby in
+		the future.
+	</p>
+	<div class="flex items-center gap-2 w-full">
+		<div class="inline-flex mb-2 flex-shrink-0">
+			<img
+				class="w-8 h-8"
+				src="/icons/pil-injection.svg"
+				alt="Alcohol icon"
+				role="presentation"
+			/>
+		</div>
+		<h3>Immunisations</h3>
+	</div>
+	<p>
+		You may have immunisations and vaccinations to protect your health. Please
+		check with your healthcare team on which immunisations and vaccinations you
+		can take, as this may vary depending on the type of cancer and treatment you
+		are having.
+	</p>
+	<div class="flex items-center gap-2 w-full">
+		<div class="inline-flex mb-2 flex-shrink-0">
+			<img
+				class="w-8 h-8"
+				src="/icons/pil-alcohol.svg"
+				alt="Alcohol icon"
+				role="presentation"
+			/>
+		</div>
+		<h3>Alcohol</h3>
+	</div>
+	<p>
+		It is generally advisable to avoid alcohol while undergoing cancer
+		treatment.
+	</p>
+	<div class="flex items-center gap-2 w-full">
+		<div class="inline-flex mb-2 flex-shrink-0">
+			<img
+				class="w-8 h-8"
+				src="/icons/pil-exercise.svg"
+				alt="Alcohol icon"
+				role="presentation"
+			/>
+		</div>
+		<h3>Exercise</h3>
+	</div>
+	<p>
+		Keep an active routine. Regular exercise, such as walking 30 minutes weekly,
+		would be helpful.
+	</p>
+
+	<h2>How to contact your Healthcare Team<br/><span class="text-sm text-red-700">Suggest this section to be fixed </span></h2>
+	<h3 class="!text-red-700">Cancer Line (+65) 97220569</h3>
+	<p>
+		8:30 am - 5:30 pm (Mondays - Fridays) <br />
+		Closed on Weekends & Public Holidays
+	</p>
+	<h4>Contact your healthcare team as soon as possible if:</h4>
+	<ul>
+		<li>You have severe side effects.</li>
+		<li>Your side effects aren’t getting any better.</li>
+		<li>Your side effects are getting worse.</li>
+	</ul>
+	<h4>Seek medical attention if you develop the following:</h4>
+	<ul>
+		<li>
+			Soon after treatment, signs of an allergic reaction include rashes, face
+			swelling, dizziness, chest tightness, a fast heartbeat, or breathing
+			difficulties.
+		</li>
+		<li>
+			Symptoms of an infection include fever (temperature over 38°C), chills,
+			severe sore throat, wet cough (coughing up thick or green phlegm), and
+			cloudy or foul-smelling urine.
+		</li>
+		<li>Signs of unusual bleeding, bruising, or dark and sticky stools.</li>
+		<li>Feeling unwell (despite not having a fever).</li>
+	</ul>
+</PilLayout>

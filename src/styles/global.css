@@ -180,6 +180,10 @@ hr {
 	color: lightgray;
 }
 
+img[src$=".svg"] {
+	display: block;
+}
+
 /* Tablet styles */
 @media screen and (min-width: 768px) {
 	.p-6 {

@@ -3,18 +3,20 @@ const { name, cycle, info, icon = [] } = Astro.props;
 ---
 
 <div
-	class="relative flex items-start rounded-lg border border-gray-300 bg-white px-4 py-5 shadow-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400"
+	class="relative rounded-lg border border-gray-300 bg-white px-4 py-5 shadow-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400"
 >
-	<div class="flex-shrink-0 mr-4">
-		<img
-			src={`/icons/${icon}.svg`}
-			alt="drip"
-			class="w-8 h-8 object-contain"
-		/>
-	</div>
-	<div class="min-w-0 flex-1 ">
-		<div class="text-sm font-semibold text-gray-900 ">{name}</div>
-		<div class="text-sm text-gray-500">{cycle}</div>
-		<div class="text-sm text-gray-500">{info}</div>
+	<div class="grid grid-cols-[40px_1fr] gap-2">
+		<div class="flex items-start justify-center">
+			<img
+				src={`/icons/${icon}.svg`}
+				alt={name}
+				class="w-8 h-8 object-contain"
+			/>
+		</div>
+		<div>
+			<div class="text-sm font-semibold text-gray-900 leading-tight">{name}</div>
+			<div class="text-sm text-gray-500 leading-tight">{cycle}</div>
+			<div class="text-sm text-gray-500 leading-tight">{info}</div>
+		</div>
 	</div>
 </div>

@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import PilLayout from "../layouts/PilLayout.astro";
 import Testimage from "../assets/page-1/nuhsapp.jpeg";
+import LegendCard from "../components/LegendCard.astro";
+import LegendGrid from "../components/LegendGrid.astro";
 ---
 
 <PilLayout title="Lung Cancer">
@@ -15,7 +17,7 @@ import Testimage from "../assets/page-1/nuhsapp.jpeg";
 		growth and spread more effectively.
 	</p>
 	<h2>Treatment details</h2>
-	<ul>
+	<!-- <ul>
 		<li>
 			Radiation will be administered over ~ 15 to 30 minutes on days 1 to 5 of
 			your 7-day cycle
@@ -28,23 +30,9 @@ import Testimage from "../assets/page-1/nuhsapp.jpeg";
 			On days 6 and 7, you won’t be having any anti-cancer treatment. Take this
 			time to rest and recover.
 		</li>
-	</ul>
-	<span class="text-sm text-red-700">Suggest to have more structured content format if possible</span>
-	<ul>
-		<li>
-			[Treatment Name]: on days [X] to [Y] of your [Z]-day cycle. [Additional info]
-		</li>
-		<li>
-			Capecitabine: on days 1 to 5 of your 7-day cycle. To be taken twic a day by mouth.
-		</li>
-		<li>
-			Radiation: on days 1 to 5 of your 7-day cycle. At Cancer Centre.
-		</li>
-		<li>
-			Rest: on days 6 and 7 of your 7-day cycle. You won’t be having any anti-cancer treatment and take this
-			time to rest and recover.
-		</li>
-	</ul>
+	</ul> -->
+	<!-- <span class="text-sm text-red-700">Suggest to have more structured content format if possible</span> -->
+	<LegendGrid />
 
 	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-2 my-8">
 		<div class="rounded-lg shadow-sm p-3">
@@ -89,12 +77,12 @@ import Testimage from "../assets/page-1/nuhsapp.jpeg";
 			<div class="flex flex-row gap-0 mx-auto justify-center w-16 h-16 md:w-18 md:h-18">
 			 
 				<img
-				  src="/icons/radiation-green.svg"
+				  src="/icons/drip-green.svg"
 				  alt="drip"
 				  class="w-8 h-8 object-contain "
 				>
 				<img
-				  src="/icons/pill-red.svg"
+				  src="/icons/drip-yellow.svg"
 				  alt="drip"
 				  class="w-8 h-8 object-contain "
 				>
@@ -102,9 +90,9 @@ import Testimage from "../assets/page-1/nuhsapp.jpeg";
 				  src="/icons/drip-red.svg"
 				  alt="drip"
 				  class="w-8 h-8 object-contain "
-				>
+				>	
 				<img
-				  src="/icons/inject-green.svg"
+				  src="/icons/drip-orange.svg"
 				  alt="drip"
 			class="w-8 h-8 object-contain "
 				>

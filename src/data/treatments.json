@@ -47,7 +47,7 @@
 	{
 		"name": "paclitaxel and pertuzumab",
 		"label": "Paclitaxel and Pertuzumab",
-		"icon": "drip"
+		"icon": "drip-blue"
 	},
 	{
 		"name": "trastuzumab",
@@ -62,6 +62,6 @@
 	{
 		"name": "cisplatin and etoposide",
 		"label": "Cisplatin and Etoposide",
-		"icon": "drip"
+		"icon": "drip-blue"
 	}
 ]

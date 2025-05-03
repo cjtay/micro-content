@@ -34,6 +34,7 @@ import LegendGrid from "../components/LegendGrid.astro";
 	<!-- <span class="text-sm text-red-700">Suggest to have more structured content format if possible</span> -->
 	<LegendGrid />
 
+	<h2>Treatment cycle</h2>
 	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-2 my-8">
 		<div class="rounded-lg shadow-sm p-3">
 			<!-- Title Section -->
@@ -230,15 +231,22 @@ import LegendGrid from "../components/LegendGrid.astro";
 	  </div>
 	
 
-	<h2>Side Effects<br/>	<span class="text-sm text-red-700">Suggest this section to be fixed</span></h2>
-	<p>
-		Chemotherapy is often linked to so many side effects. While it is true that
-		chemotherapy drugs often cause a wide range of side effects, most of these
-		side effects are temporary and can be minimised or prevented. Remember that
-		different drugs cause different side effects, and each person experiences
-		different side effects to varying degrees.
-	</p>
+	<div class="bg-gray-100 p-4 rounded-lg mb-4">
+
+		<h2>Side Effects<br/>	<span class="text-sm text-red-700">Suggest this section to be fixed</span></h2>
+		<p>
+			Chemotherapy is often linked to so many side effects. While it is true that
+			chemotherapy drugs often cause a wide range of side effects, most of these
+			side effects are temporary and can be minimised or prevented. Remember that
+			different drugs cause different side effects, and each person experiences
+			different side effects to varying degrees.
+		</p>
+	</div>
 	<span class="text-sm text-red-700">Need to understand how the side effects are identified - based on treatment types</span>
+	
+	<div class="bg-gray-100 p-4 rounded-lg mb-4">
+
+
 	<h2>Common Side Effects</h2>
 	<h4>
 		The following side effects occur in more than 10 out of every 100 people.
@@ -288,13 +296,21 @@ import LegendGrid from "../components/LegendGrid.astro";
 		treatment, your WBC count can drop, putting you at a higher risk of disease.
 	</p>
 
+</div>
+
+<div class="bg-gray-100 p-4 rounded-lg mb-4">
+
 	<h2>Other Common Side Effects</h2>
 	<ul>
 		<li>Low appetite</li>
 		<li>Abdominal pain</li>
 		<li>Mouth sores</li>
 	</ul>
+</div>
 
+
+
+<div class="bg-gray-100 p-4 rounded-lg mb-4">
 	<h2>Occasional Side Effects</h2>
 	<h4>
 		The following side effects occur in between 1 to 10 out of every 100 people
@@ -325,6 +341,11 @@ import LegendGrid from "../components/LegendGrid.astro";
 		<li>Dehydration</li>
 		<li>Lungs/Breathing problems (Cough, shortness of breath, fever)</li>
 	</ul>
+</div>
+
+
+<div class="bg-gray-100 p-4 rounded-lg mb-4">
+
 	<h2>Rare Side Effects</h2>
 	<h4>
 		The following side effects occur in fewer than 1 out of every 100 people.
@@ -338,61 +359,70 @@ import LegendGrid from "../components/LegendGrid.astro";
 		<li>Sensitivity to the sun or UV light</li>
 		<li>Allergic reactions</li>
 	</ul>
+</div>
+
+<div>
+
+	<div class="bg-gray-100 p-4 rounded-lg mb-4">
 
 	<div class="flex items-center gap-2">
 		<svg
-			class="w-8 h-8 text-gray-800 mb-2"
-			aria-hidden="true"
-			xmlns="http://www.w3.org/2000/svg"
-			width="24"
-			height="24"
-			fill="none"
-			viewBox="0 0 24 24"
+		class="w-8 h-8 text-gray-800 mb-2"
+		aria-hidden="true"
+		xmlns="http://www.w3.org/2000/svg"
+		width="24"
+		height="24"
+		fill="none"
+		viewBox="0 0 24 24"
 		>
-			<path
-				stroke="currentColor"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				d="M9.5 11.5 11 13l4-3.5M12 20a16.405 16.405 0 0 1-5.092-5.804A16.694 16.694 0 0 1 5 6.666L12 4l7 2.667a16.695 16.695 0 0 1-1.908 7.529A16.406 16.406 0 0 1 12 20Z"
-			></path>
-		</svg>
-		
-		<h2>Safe Handling of Oral Chemotherapy Medicine </h2>
-		
-	</div>
-	<span class="text-sm text-red-700">Suggest this section to be fixed </span>
-	<p>
-		You have been prescribed oral chemotherapy medicine for your medical
-		condition. It is essential to handle this medicine with care, as incorrect
-		handling may cause harm to unintended users.
-	</p>
-	<p>Accidental exposure may occur through:</p>
-	<ul>
-		<li>Inhalation of dust when crushing or breaking the tablets/capsules</li>
-		<li>Inhalation of droliets when there is spillage of liquid syrups</li>
-		<li>Ingestion after contact with contaminated hands or the environment</li>
-	</ul>
+		<path
+		stroke="currentColor"
+		stroke-linecap="round"
+		stroke-linejoin="round"
+		stroke-width="2"
+		d="M9.5 11.5 11 13l4-3.5M12 20a16.405 16.405 0 0 1-5.092-5.804A16.694 16.694 0 0 1 5 6.666L12 4l7 2.667a16.695 16.695 0 0 1-1.908 7.529A16.406 16.406 0 0 1 12 20Z"
+		></path>
+	</svg>
+	
+	<h2>Safe Handling of Oral Chemotherapy Medicine </h2>
+	
+</div>
+<span class="text-sm text-red-700">Suggest this section to be fixed </span>
+<p>
+	You have been prescribed oral chemotherapy medicine for your medical
+	condition. It is essential to handle this medicine with care, as incorrect
+	handling may cause harm to unintended users.
+</p>
+<p>Accidental exposure may occur through:</p>
+<ul>
+	<li>Inhalation of dust when crushing or breaking the tablets/capsules</li>
+	<li>Inhalation of droliets when there is spillage of liquid syrups</li>
+	<li>Ingestion after contact with contaminated hands or the environment</li>
+</ul>
+</div>
+</div>
 
-	<div class="flex items-center gap-2">
-		<svg
-			class="w-8 h-8 text-gray-800 mb-2"
-			aria-hidden="true"
-			xmlns="http://www.w3.org/2000/svg"
-			width="24"
-			height="24"
-			fill="none"
-			viewBox="0 0 24 24"
-		>
-			<path
-				stroke="currentColor"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				d="M12 13V8m0 8h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
-		</svg>
-		<h2>General Precautions</h2>
-	</div>
+<div class="bg-gray-100 p-4 rounded-lg mb-4">
+
+<div class="flex items-center gap-2">
+	<svg
+	class="w-8 h-8 text-gray-800 mb-2"
+	aria-hidden="true"
+	xmlns="http://www.w3.org/2000/svg"
+	width="24"
+	height="24"
+	fill="none"
+	viewBox="0 0 24 24"
+	>
+	<path
+	stroke="currentColor"
+	stroke-linecap="round"
+	stroke-linejoin="round"
+	stroke-width="2"
+	d="M12 13V8m0 8h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+</svg>
+<h2>General Precautions</h2>
+</div>
 	<span class="text-sm text-red-700">Suggest this section to be fixed </span>
 
 	<ul>
@@ -429,6 +459,10 @@ import LegendGrid from "../components/LegendGrid.astro";
 			the pharmacy for proper disposal.
 		</li>
 	</ul>
+</div>
+<div class="bg-gray-100 p-4 rounded-lg mb-4">
+
+
 	<h2>Lifestyle & Safety Advice<br/><span class="text-sm text-red-700">Suggest this section to be fixed </span></h2>
 	<div class="flex items-center gap-2 w-full ">
 		<div class="inline-flex mb-2 flex-shrink-0 ">
@@ -621,6 +655,9 @@ import LegendGrid from "../components/LegendGrid.astro";
 		Keep an active routine. Regular exercise, such as walking 30 minutes weekly,
 		would be helpful.
 	</p>
+</div>
+	<div class="bg-red-50 p-4 rounded-lg mb-4">
+
 
 	<h2>How to contact your Healthcare Team<br/><span class="text-sm text-red-700">Suggest this section to be fixed </span></h2>
 	<!-- <h3 class="!text-red-700">Cancer Line (+65) 97220569</h3> -->
@@ -658,4 +695,6 @@ import LegendGrid from "../components/LegendGrid.astro";
 		<li>Signs of unusual bleeding, bruising, or dark and sticky stools.</li>
 		<li>Feeling unwell (despite not having a fever).</li>
 	</ul>
+
+</div>
 </PilLayout>

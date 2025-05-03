@@ -1,0 +1,39 @@
+{
+	"folders": [
+		{
+			"path": "../../../swa2024"
+		},
+		{
+			"path": "../../../../sitefinity"
+		},
+		{
+			"path": "../../../visitsg"
+		},
+		{
+			"path": "../../../demo-site-1"
+		},
+		{
+			"path": "../../../demo-site-2"
+		},
+		{
+			"path": "../../../lisfengshui2"
+		},
+		{
+			"path": "../../../astro-master"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "micro-content",
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"[astro]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		},
+		"editor.formatOnSave": true,
+		"files.autoSaveDelay": 500,
+		"files.autoSaveWhenNoErrors": true,
+		"files.autoSaveWorkspaceFilesOnly": true
+	}
+}

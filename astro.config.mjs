@@ -1,34 +1,29 @@
-import { defineConfig } from 'astro/config';
-import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from "astro/config";
+import tailwindcss from "@tailwindcss/vite";
 // Import the typography plugin
-import typography from '@tailwindcss/typography';
+import typography from "@tailwindcss/typography";
 
-import mdx from '@astrojs/mdx';
+import mdx from "@astrojs/mdx";
 
 export default defineConfig({
-  compressHTML: false,
+	compressHTML: false,
 
-  vite: {
-    build: {
-      minify: false,
-      cssMinify: false,
-    },
-    plugins: [
-      tailwindcss(),
-    ],
-    resolve: {
-      alias: {
-        '@': '/src'
-      }
-    }
-  },
+	vite: {
+		build: {
+			minify: false,
+			cssMinify: false,
+		},
+		plugins: [tailwindcss()],
+		resolve: {
+			alias: {
+				"@": "/src",
+			},
+		},
+	},
 
-  build: {
-    inlineStylesheets: 'always', // Ensures all styles are inlined
-  },
-  experimental: {
-    svg: true
-  },
+	build: {
+		inlineStylesheets: "always", // Ensures all styles are inlined
+	},
 
-  integrations: [mdx()],
+	integrations: [mdx()],
 });

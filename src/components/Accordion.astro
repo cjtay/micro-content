@@ -1,0 +1,40 @@
+---
+// components/Accordion.astro
+export interface Props {
+  title: string;
+  defaultOpen?: boolean;
+  bgColor?: string;
+}
+
+const { title, defaultOpen = false, bgColor = "bg-gray-100" } = Astro.props;
+---
+
+<details class={`${bgColor} rounded-lg mb-4`} open={defaultOpen}>
+  <summary class="flex items-center justify-between w-full p-4 cursor-pointer hover:bg-gray-200 transition-colors duration-200 list-none">
+    <h2 class="m-0">{title}</h2>
+    <svg class="w-5 h-5 transition-transform duration-300 transform details-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </summary>
+  <div class="px-4 pb-4">
+    <slot />
+  </div>
+</details>
+
+<style>
+  details summary {
+    list-style: none;
+  }
+  
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  details[open] .details-arrow {
+    transform: rotate(180deg);
+  }
+  
+  details .details-arrow {
+    transition: transform 0.3s ease-in-out;
+  }
+</style>

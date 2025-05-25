@@ -1,0 +1,18 @@
+---
+import TreatmentCycleCard from "./TreatmentCycleCard.astro";
+---
+
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-2 my-8">
+	<TreatmentCycleCard day="1" icons={["radiation-green", "pill-red"]} />
+	<TreatmentCycleCard day="2" icons={["drip-green", "drip-yellow", "drip-red", "drip-orange"]} />
+	<TreatmentCycleCard day="3" icons={["drip-blue"]} />
+	<TreatmentCycleCard day="4" icons={["drip-green"]} />
+	<TreatmentCycleCard day="5" icons={["inject-green"]} />
+	<TreatmentCycleCard day="6" icons={["drip-red"]} />
+	<TreatmentCycleCard day="7" icons={["drip-green"]} />
+	<TreatmentCycleCard day="8" icons={["drip-yellow"]} />
+	<TreatmentCycleCard day="9" icons={["home"]} />
+	<TreatmentCycleCard day="10" icons={["radiation-green"]} />
+	<TreatmentCycleCard day="11" icons={["home"]} />
+	<TreatmentCycleCard day="12" icons={["home"]} />
+</div>

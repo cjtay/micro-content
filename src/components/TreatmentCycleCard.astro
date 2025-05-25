@@ -1,0 +1,20 @@
+---
+const { day, icons = [] } = Astro.props;
+---
+
+<div class="rounded-lg shadow-sm p-3">
+	<div class="mb-4 text-center">
+		<span class="text-lg md:text-base font-medium">
+			Day {day}
+		</span>
+	</div>
+	<div class="flex flex-row gap-0 mx-auto justify-center w-16 h-16 md:w-18 md:h-18">
+		{icons.map((icon) => (
+			<img
+				src={`/icons/${icon}.svg`}
+				alt="treatment icon"
+				class="w-8 h-8 object-contain"
+			/>
+		))}
+	</div>
+</div>

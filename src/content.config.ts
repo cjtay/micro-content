@@ -13,7 +13,14 @@ const pils = defineCollection({
       pubDate: z.date(),
       draft: z.boolean().optional(),
       days: z.number().optional(),
-      treatments: z.array(z.string()).optional(),
+      treatments: z.array(
+        z.object({
+          name: z.string(),
+          cycle: z.string(),
+          info: z.string(),
+          icon: z.string()
+        })
+      ).optional(),
       treatmentSchedule: z.array(
         z.object({
           day: z.number(),

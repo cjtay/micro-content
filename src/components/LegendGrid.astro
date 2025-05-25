@@ -1,67 +1,27 @@
 ---
 import LegendCard from "./LegendCard.astro";
+
+interface Treatment {
+  name: string;
+  cycle: string;
+  info: string;
+  icon: string;
+}
+
+interface Props {
+  treatments: Treatment[];
+}
+
+const { treatments } = Astro.props;
 ---
 
 <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-3 my-8">
-	<LegendCard
-		name="Capecitabine"
-		cycle="days 1 to 14 of your 21-day cycle"
-		info="taken twice daily by mouth"
-		icon="pill-blue"
-	/>
-	<LegendCard
-		name="Lapatinib"
-		cycle="days 1 to 21 of your 21-day cycle"
-		info="taken once daily by mouth"
-		icon="pill-red"
-	/>
-	<LegendCard
-		name="Cisplatin"
-		cycle="day 1, 8 and 15 of your 21-day-cycle"
-		info="administered intravenously ~ 60 min"
-		icon="drip-red"
-	/>
-	<LegendCard
-		name="Fluorouracil"
-		cycle="day 1 of your 21-day-cycle"
-		info="administered intravenously ~ 24 hours"
-		icon="drip-blue"
-	/>
-
-	<LegendCard
-		name="Cisplatin and Trastuzumab"
-		cycle="day 1 of your 21 day-cycle"
-		info="administered intravenously ~ 2 to 3 hours"
-		icon="drip-yellow"
-	/>
-	<LegendCard
-		name="Cisplatin and Etoposide"
-		cycle="day 1 of your 28-day cycle"
-		info="administered intravenously over ~3 hours"
-		icon="drip-green"
-	/>
-	<LegendCard
-		name="Etoposide"
-		cycle="days 2 to 5 of your 28-day cycle"
-		info="administered intravenously over ~ 30 to 60 mins"
-        icon="drip-purple"
-	/>
-	<LegendCard
-	name="Trastuzumab"
-	cycle="day 1 of your 21-day-cycle"
-	info="administered subcutaneously ~2 to 5 min"
-	icon="inject-green"
-/>
-	<LegendCard
-		name="Radiation"
-		cycle="5 days every week of your 28-day cycle"
-		info="administered over ~ 15 to 30 mins"
-		icon="radiation-green"
-	/>
-	<LegendCard
-		name="Rest"
-		cycle="days 6, 7, 13, 14, 20, 21, 27 and 28"
-		info="you won’t have any anti-cancer treatment. Take this time to rest and recover"
-		icon="home"
-	/>
+	{treatments.map((treatment) => (
+		<LegendCard
+			name={treatment.name}
+			cycle={treatment.cycle}
+			info={treatment.info}
+			icon={treatment.icon}
+		/>
+	))}
 </div>

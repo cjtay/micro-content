@@ -1,5 +1,5 @@
 ---
-import TreatmentCard from './TreatmentCard.astro';
+import TreatmentCard from './_TreatmentCard.astro';
 
 interface DayTreatment {
   day: number;
@@ -16,7 +16,7 @@ const { treatmentSchedule } = Astro.props;
 const sortedSchedule = [...treatmentSchedule].sort((a, b) => a.day - b.day);
 ---
 
-<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-2 my-8">
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-2 my-8">
   {sortedSchedule.map((dayInfo) => (
     <TreatmentCard 
       key={dayInfo.day} 

@@ -1,8 +1,18 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import { render } from "astro:content";
-
-import NarrowLayout from "../../layouts/PilLayout.astro";
+import PilLayout from "../../layouts/PilLayout.astro";
+import LegendGrid from "../../components/LegendGrid.astro";
+import TreatmentCycleGrid from "../../components/TreatmentCycleGrid.astro";
+import Accordion from "../../components/Accordion.astro";
+import CommonSideEffects from "../../components/CommonSideEffects.astro";
+import OtherCommonSideEffects from "../../components/OtherCommonSideEffects.astro";
+import OccasionalSideEffects from "../../components/OccasionalSideEffects.astro";
+import RareSideEffects from "../../components/RareSideEffects.astro";
+import SafeHandlingAccordion from "../../components/SafeHandlingAccordion.astro";
+import GeneralPrecautionsAccordion from "../../components/GeneralPrecautionsAccordion.astro";
+import LifestyleSafetyAccordion from "../../components/LifestyleSafetyAccordion.astro";
+import HealthcareTeamContact from "../../components/HealthcareTeamContact.astro";
 
 export async function getStaticPaths() {
   const pils = await getCollection("pils");
@@ -11,14 +21,82 @@ export async function getStaticPaths() {
     props: pil,
   }));
 }
+
 type Props = CollectionEntry<"pils">;
-``
+
 const pil = Astro.props;
-// const { Content } = await event.render();
 const { Content } = await render(pil);
+
+// Check if this PIL uses the new structure with treatments array
+const hasNewStructure = pil.data.treatments && Array.isArray(pil.data.treatments) && pil.data.treatments.length > 0 && typeof pil.data.treatments[0] === 'object';
 ---
 
-<NarrowLayout title={`${pil.data.title}`}>
-  <Content />
+<PilLayout title={pil.data.title}>
+  {hasNewStructure ? (
+    <Content />
+  ) : (
+    <>
+      <h1>{pil.data.title}</h1>
 
-</NarrowLayout>
+      <h2>About the treatment</h2>
+      <p>
+        Concurrently given with radiation, capecitabine (antimetabolite
+        chemotherapy) is a treatment option for colorectal and some other cancers.
+        Radiation and cancer medicines are usually used to slow or stop cancer cell
+        growth and spread more effectively.
+      </p>
+      <h2>Treatment details</h2>
+      <LegendGrid treatments={pil.data.treatments || []} />
+      <h2>Treatment cycle</h2>
+      <TreatmentCycleGrid />
+      <hr class="py-4 border-t-[0.5px] border-gray-500" />
+
+      <h2>Side Effects</h2>
+      <p>
+        Chemotherapy is often linked to so many side effects. While it is true that
+        chemotherapy drugs often cause a wide range of side effects, most of these
+        side effects are temporary and can be minimised or prevented. Remember that
+        different drugs cause different side effects, and each person experiences
+        different side effects to varying degrees.
+      </p>
+
+      <CommonSideEffects />
+
+      <OtherCommonSideEffects />
+
+      <OccasionalSideEffects />
+
+      <RareSideEffects />
+
+      <hr class="py-4 border-t-[0.5px] border-gray-500" />
+
+      <SafeHandlingAccordion />
+
+      <GeneralPrecautionsAccordion />
+
+      <LifestyleSafetyAccordion />
+
+      <hr class="py-4 border-t-[0.5px] border-gray-500" />
+      <HealthcareTeamContact />
+    </>
+  )}
+
+  <style>
+    /* Style for details/summary accordion */
+    details summary {
+      list-style: none;
+    }
+
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details[open] .details-arrow {
+      transform: rotate(180deg);
+    }
+
+    details .details-arrow {
+      transition: transform 0.3s ease-in-out;
+    }
+  </style>
+</PilLayout>

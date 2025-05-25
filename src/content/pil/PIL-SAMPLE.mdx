@@ -1,0 +1,122 @@
+---
+title: "Sample Treatment Protocol"
+description: "Sample treatment information with complete frontmatter data"
+slug: "pil-sample"
+tags: ["sample", "treatment"]
+category: "patient information"
+pubDate: 2025-01-25T10:00:00.000Z
+draft: false
+days: 21
+treatments: [
+  {
+    name: "Capecitabine",
+    cycle: "days 1 to 14 of your 21-day cycle",
+    info: "taken twice daily by mouth",
+    icon: "pill-blue"
+  },
+  {
+    name: "Lapatinib", 
+    cycle: "days 1 to 21 of your 21-day cycle",
+    info: "taken once daily by mouth",
+    icon: "pill-red"
+  },
+  {
+    name: "Cisplatin",
+    cycle: "day 1, 8 and 15 of your 21-day cycle",
+    info: "administered intravenously ~ 60 min",
+    icon: "drip-red"
+  },
+  {
+    name: "Fluorouracil",
+    cycle: "day 1 of your 21-day cycle",
+    info: "administered intravenously ~ 24 hours",
+    icon: "drip-blue"
+  },
+  {
+    name: "Trastuzumab",
+    cycle: "day 8 of your 21-day cycle",
+    info: "administered subcutaneously ~2 to 5 min",
+    icon: "inject-green"
+  },
+  {
+    name: "Radiation",
+    cycle: "days 1 to 5 of your 21-day cycle",
+    info: "administered over ~ 15 to 30 mins",
+    icon: "radiation-green"
+  },
+  {
+    name: "Rest",
+    cycle: "days 6, 7, 20 and 21",
+    info: "you won't have any anti-cancer treatment. Take this time to rest and recover",
+    icon: "home"
+  }
+]
+treatmentSchedule: [
+  { day: 1, treatments: ["capecitabine", "cisplatin", "fluorouracil", "radiation"] },
+  { day: 2, treatments: ["capecitabine", "lapatinib", "radiation"] },
+  { day: 3, treatments: ["capecitabine", "lapatinib", "radiation"] },
+  { day: 4, treatments: ["capecitabine", "lapatinib", "radiation"] },
+  { day: 5, treatments: ["capecitabine", "lapatinib", "radiation"] },
+  { day: 6, treatments: ["rest"] },
+  { day: 7, treatments: ["rest"] },
+  { day: 8, treatments: ["capecitabine", "lapatinib", "cisplatin", "trastuzumab"] },
+  { day: 9, treatments: ["capecitabine", "lapatinib"] },
+  { day: 10, treatments: ["capecitabine", "lapatinib"] },
+  { day: 11, treatments: ["capecitabine", "lapatinib"] },
+  { day: 12, treatments: ["capecitabine", "lapatinib"] },
+  { day: 13, treatments: ["capecitabine", "lapatinib"] },
+  { day: 14, treatments: ["capecitabine", "lapatinib"] },
+  { day: 15, treatments: ["lapatinib", "cisplatin"] },
+  { day: 16, treatments: ["rest"] },
+  { day: 17, treatments: ["lapatinib"] },
+  { day: 18, treatments: ["rest"] },
+  { day: 19, treatments: ["lapatinib"] },
+  { day: 20, treatments: ["rest"] },
+  { day: 21, treatments: ["rest"] }
+]
+---
+
+export const days = frontmatter.days;
+export const treatments = frontmatter.treatments;
+export const treatmentSchedule = frontmatter.treatmentSchedule;
+import TreatmentGrid from '../../components/_TreatmentGrid.astro';
+import LegendGrid from '../../components/LegendGrid.astro';
+import CommonSideEffects from '../../components/CommonSideEffects.astro';
+import OtherCommonSideEffects from '../../components/OtherCommonSideEffects.astro';
+import OccasionalSideEffects from '../../components/OccasionalSideEffects.astro';
+import RareSideEffects from '../../components/RareSideEffects.astro';
+import SafeHandlingAccordion from '../../components/SafeHandlingAccordion.astro';
+import GeneralPrecautionsAccordion from '../../components/GeneralPrecautionsAccordion.astro';
+import LifestyleSafetyAccordion from '../../components/LifestyleSafetyAccordion.astro';
+import HealthcareTeamContact from '../../components/HealthcareTeamContact.astro';
+
+# Sample Treatment Protocol
+
+## About the treatment
+Concurrently given with radiation, capecitabine (antimetabolite chemotherapy) is a treatment option for colorectal and some other cancers. Radiation and cancer medicines are usually used to slow or stop cancer cell growth and spread more effectively.
+
+## Treatment details
+<LegendGrid treatments={treatments} />
+
+## Treatment cycle
+<TreatmentGrid treatmentSchedule={treatmentSchedule} />
+
+<hr class="py-4 border-t-[0.5px] border-gray-500" />
+
+## Side Effects
+Chemotherapy is often linked to so many side effects. While it is true that chemotherapy drugs often cause a wide range of side effects, most of these side effects are temporary and can be minimised or prevented. Remember that different drugs cause different side effects, and each person experiences different side effects to varying degrees.
+
+<CommonSideEffects />
+<OtherCommonSideEffects />
+<OccasionalSideEffects />
+<RareSideEffects />
+
+<hr class="py-4 border-t-[0.5px] border-gray-500" />
+
+<SafeHandlingAccordion />
+<GeneralPrecautionsAccordion />
+<LifestyleSafetyAccordion />
+
+<hr class="py-4 border-t-[0.5px] border-gray-500" />
+
+<HealthcareTeamContact />

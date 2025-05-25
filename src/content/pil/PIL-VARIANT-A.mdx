@@ -1,0 +1,82 @@
+---
+title: "Carboplatin and Docetaxel Protocol"
+description: "Combination chemotherapy treatment for lung cancer"
+slug: "pil-variant-a"
+tags: ["carboplatin", "docetaxel", "lung-cancer"]
+category: "patient information"
+pubDate: 2025-01-25T14:30:00.000Z
+draft: false
+days: 10
+treatments: [
+  {
+    name: "radiation",
+    cycle: "day 1,5 and 10 of your 10-day cycle",
+    info: "administered intravenously ~ 30 min",
+    icon: "drip-blue"
+  },
+  {
+    name: "Rest",
+    cycle: "days 2 to 4 and 6 to 9 of your 10-day cycle",
+    info: "you won't have any anti-cancer treatment. Take this time to rest and recover",
+    icon: "home"
+  }
+]
+treatmentSchedule: [
+  { day: 1, treatments: ["radiation"] },
+  { day: 2, treatments: ["rest"] },
+  { day: 3, treatments: ["rest"] },
+  { day: 4, treatments: ["rest"] },
+  { day: 5, treatments: ["radiation"] },
+  { day: 6, treatments: ["rest"] },
+  { day: 7, treatments: ["rest"] },
+  { day: 8, treatments: ["rest"] },
+  { day: 9, treatments: ["rest"] },
+  { day: 10, treatments: ["radiation"] },
+
+]
+---
+
+export const days = frontmatter.days;
+export const treatments = frontmatter.treatments;
+export const treatmentSchedule = frontmatter.treatmentSchedule;
+import TreatmentGrid from '../../components/_TreatmentGrid.astro';
+import LegendGrid from '../../components/LegendGrid.astro';
+import CommonSideEffects from '../../components/CommonSideEffects.astro';
+import OtherCommonSideEffects from '../../components/OtherCommonSideEffects.astro';
+import OccasionalSideEffects from '../../components/OccasionalSideEffects.astro';
+import RareSideEffects from '../../components/RareSideEffects.astro';
+import SafeHandlingAccordion from '../../components/SafeHandlingAccordion.astro';
+import GeneralPrecautionsAccordion from '../../components/GeneralPrecautionsAccordion.astro';
+import LifestyleSafetyAccordion from '../../components/LifestyleSafetyAccordion.astro';
+import HealthcareTeamContact from '../../components/HealthcareTeamContact.astro';
+
+# Carboplatin and Docetaxel Protocol
+
+## About the treatment
+Carboplatin and docetaxel combination is a standard chemotherapy treatment for non-small cell lung cancer. This platinum-based regimen works by damaging cancer cell DNA and disrupting cell division, effectively slowing or stopping tumor growth.
+
+## Treatment details
+<LegendGrid treatments={treatments} />
+
+## Treatment cycle
+<TreatmentGrid treatmentSchedule={treatmentSchedule} />
+
+<hr class="py-4 border-t-[0.5px] border-gray-500" />
+
+## Side Effects
+This combination chemotherapy may cause various side effects. Most side effects are manageable with proper medical support and typically improve between treatment cycles or after treatment completion.
+
+<CommonSideEffects />
+<OtherCommonSideEffects />
+<OccasionalSideEffects />
+<RareSideEffects />
+
+<hr class="py-4 border-t-[0.5px] border-gray-500" />
+
+<SafeHandlingAccordion />
+<GeneralPrecautionsAccordion />
+<LifestyleSafetyAccordion />
+
+<hr class="py-4 border-t-[0.5px] border-gray-500" />
+
+<HealthcareTeamContact />

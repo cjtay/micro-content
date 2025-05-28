@@ -13,14 +13,17 @@ const pils = defineCollection({
       pubDate: z.date(),
       draft: z.boolean().optional(),
       days: z.number().optional(),
-      treatments: z.array(
-        z.object({
-          name: z.string(),
-          cycle: z.string(),
-          info: z.string(),
-          icon: z.string()
-        })
-      ).optional(),
+      treatments: z.union([
+        z.array(z.string()),
+        z.array(
+          z.object({
+            name: z.string(),
+            cycle: z.string(),
+            info: z.string(),
+            icon: z.string()
+          })
+        )
+      ]).optional(),
       treatmentSchedule: z.array(
         z.object({
           day: z.number(),
@@ -30,22 +33,25 @@ const pils = defineCollection({
       commonSideEffects: z.array(
         z.object({
           name: z.string(),
-          description: z.string()
+          description: z.string().optional()
         })
       ).optional(),
       otherCommonSideEffects: z.array(
         z.object({
-          name: z.string()
+          name: z.string(),
+          description: z.string().optional()
         })
       ).optional(),
       occasionalSideEffects: z.array(
         z.object({
-          name: z.string()
+          name: z.string(),
+          description: z.string().optional()
         })
       ).optional(),
       rareSideEffects: z.array(
         z.object({
-          name: z.string()
+          name: z.string(),
+          description: z.string().optional()
         })
       ).optional(),
     }),

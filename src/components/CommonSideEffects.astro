@@ -3,7 +3,7 @@ import Accordion from "./Accordion.astro";
 
 interface SideEffect {
   name: string;
-  description: string;
+  description?: string;
 }
 
 interface Props {
@@ -22,7 +22,7 @@ const { commonSideEffects = [] } = Astro.props;
   {commonSideEffects.map((sideEffect) => (
     <>
       <h5>{sideEffect.name}</h5>
-      <p>{sideEffect.description}</p>
+      {sideEffect.description && <p>{sideEffect.description}</p>}
     </>
   ))}
 </Accordion>

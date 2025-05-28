@@ -28,61 +28,72 @@ const pil = Astro.props;
 const { Content } = await render(pil);
 
 // Check if this PIL uses the new structure with treatments array
-const hasNewStructure = pil.data.treatments && Array.isArray(pil.data.treatments) && pil.data.treatments.length > 0 && typeof pil.data.treatments[0] === 'object';
+const hasNewStructure =
+  pil.data.treatments &&
+  Array.isArray(pil.data.treatments) &&
+  pil.data.treatments.length > 0 &&
+  typeof pil.data.treatments[0] === "object";
 ---
 
 <PilLayout title={pil.data.title}>
-  {hasNewStructure ? (
-    <Content />
-  ) : (
-    <>
-      <h1>{pil.data.title}</h1>
+  {
+    hasNewStructure ? (
+      <Content />
+    ) : (
+      <>
+        <h1>{pil.data.title}</h1>
 
-      <h2>About the treatment</h2>
-      <p>
-        Concurrently given with radiation, capecitabine (antimetabolite
-        chemotherapy) is a treatment option for colorectal and some other cancers.
-        Radiation and cancer medicines are usually used to slow or stop cancer cell
-        growth and spread more effectively.
-      </p>
-      <h2>Treatment details</h2>
-      <LegendGrid treatments={pil.data.treatments || []} />
-      <h2>Treatment cycle</h2>
-      <TreatmentCycleGrid 
-        treatmentSchedule={pil.data.treatmentSchedule || []} 
-        treatments={pil.data.treatments || []} 
-      />
-      <hr class="py-4 border-t-[0.5px] border-gray-500" />
+        <h2>About the treatment</h2>
+        <p>
+          Concurrently given with radiation, capecitabine (antimetabolite
+          chemotherapy) is a treatment option for colorectal and some other
+          cancers. Radiation and cancer medicines are usually used to slow or
+          stop cancer cell growth and spread more effectively.
+        </p>
+        <h2>Treatment details</h2>
+        <LegendGrid treatments={pil.data.treatments || []} />
+        <h2>Treatment cycle test</h2>
+        <TreatmentCycleGrid
+          treatmentSchedule={pil.data.treatmentSchedule || []}
+        />
+        <hr class="py-4 border-t-[0.5px] border-gray-500" />
 
-      <h2>Side Effects</h2>
-      <p>
-        Chemotherapy is often linked to so many side effects. While it is true that
-        chemotherapy drugs often cause a wide range of side effects, most of these
-        side effects are temporary and can be minimised or prevented. Remember that
-        different drugs cause different side effects, and each person experiences
-        different side effects to varying degrees.
-      </p>
+        <h2>Side Effects</h2>
+        <p>
+          Chemotherapy is often linked to so many side effects. While it is true
+          that chemotherapy drugs often cause a wide range of side effects, most
+          of these side effects are temporary and can be minimised or prevented.
+          Remember that different drugs cause different side effects, and each
+          person experiences different side effects to varying degrees.
+        </p>
 
-      <CommonSideEffects commonSideEffects={pil.data.commonSideEffects || []} />
+        <CommonSideEffects
+          commonSideEffects={pil.data.commonSideEffects || []}
+        />
 
-      <OtherCommonSideEffects otherCommonSideEffects={pil.data.otherCommonSideEffects || []} />
+        <OtherCommonSideEffects
+          otherCommonSideEffects={pil.data.otherCommonSideEffects || []}
+        />
 
-      <OccasionalSideEffects occasionalSideEffects={pil.data.occasionalSideEffects || []} />
+        <OccasionalSideEffects
+          occasionalSideEffects={pil.data.occasionalSideEffects || []}
+        />
 
-      <RareSideEffects rareSideEffects={pil.data.rareSideEffects || []} />
+        <RareSideEffects rareSideEffects={pil.data.rareSideEffects || []} />
 
-      <hr class="py-4 border-t-[0.5px] border-gray-500" />
+        <hr class="py-4 border-t-[0.5px] border-gray-500" />
 
-      <SafeHandlingAccordion />
+        <SafeHandlingAccordion />
 
-      <GeneralPrecautionsAccordion />
+        <GeneralPrecautionsAccordion />
 
-      <LifestyleSafetyAccordion />
+        <LifestyleSafetyAccordion />
 
-      <hr class="py-4 border-t-[0.5px] border-gray-500" />
-      <HealthcareTeamContact />
-    </>
-  )}
+        <hr class="py-4 border-t-[0.5px] border-gray-500" />
+        <HealthcareTeamContact />
+      </>
+    )
+  }
 
   <style>
     /* Style for details/summary accordion */

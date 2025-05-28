@@ -1,38 +1,34 @@
 ---
-title: "Paclitaxel (weekly), IV Pertuzumab and SC Trastuzumab"
+title: "PIL-0328-2"
 description: "A combination treatment of paclitaxel, pertuzumab, and trastuzumab for breast cancer administered over a 21-day cycle"
-slug: "pil-0328-2-paclitaxel-pertuzumab-trastuzumab"
-tags: ["treatment","cancer","pil","breast cancer"]
+slug: "PIL-0328-2"
+tags: ["treatment","cancer","pil"]
 category: "patient information"
-pubDate: 2025-05-28T10:48:04.026Z
+pubDate: 2025-05-28T12:51:31.440Z
 draft: false
 days: 21
 treatments: [
     {
       "name": "Paclitaxel and Pertuzumab",
       "cycle": "day 1 of 21-day cycle",
-      "info": "intravenous administration ~1.5 to 2 hours",
-      "icon": "drip-red"
+      "info": "administered intravenously for 1.5 to 2 hours"
     },
     {
       "name": "Trastuzumab",
       "cycle": "day 1 of 21-day cycle",
-      "info": "subcutaneous administration ~2 to 5 minutes",
-      "icon": "inject-green"
+      "info": "administered subcutaneously for 2 to 5 minutes"
     },
     {
       "name": "Paclitaxel",
       "cycle": "days 8 and 15 of 21-day cycle",
-      "info": "intravenous administration ~60 minutes",
-      "icon": "drip-red"
+      "info": "administered intravenously for 60 minutes"
     }
   ]
 treatmentSchedule: [
     {
       "day": 1,
       "treatments": [
-        "paclitaxel",
-        "pertuzumab",
+        "paclitaxel and pertuzumab",
         "trastuzumab"
       ]
     },
@@ -168,11 +164,11 @@ commonSideEffects: [
   },
   {
     name: "Low white blood cell count (Leukopenia or Neutropenia)",
-    description: "Higher risk of infection due to decreased WBC count"
+    description: "Higher risk of infection due to dropped WBC count"
   },
   {
     name: "Allergic reactions",
-    description: "May include rash, itching, dizziness, vomiting, shortness of breath, chest pain, sudden blood pressure changes or oedema"
+    description: "Symptoms include rash, itching, dizziness, vomiting, shortness of breath, chest pain, sudden blood pressure changes or oedema"
   },
   {
     name: "Nausea and/or vomiting",
@@ -221,7 +217,7 @@ export const commonSideEffects = frontmatter.commonSideEffects;
 export const otherCommonSideEffects = frontmatter.otherCommonSideEffects;
 export const occasionalSideEffects = frontmatter.occasionalSideEffects;
 export const rareSideEffects = frontmatter.rareSideEffects;
-import TreatmentGrid from "../../components/_TreatmentGrid.astro";
+import TreatmentCycleGrid from "../../components/TreatmentCycleGrid.astro";
 import LegendGrid from "../../components/LegendGrid.astro";
 import CommonSideEffects from "../../components/CommonSideEffects.astro";
 import OtherCommonSideEffects from "../../components/OtherCommonSideEffects.astro";
@@ -244,7 +240,7 @@ A combination treatment of paclitaxel, pertuzumab, and trastuzumab for breast ca
 
 ## Treatment cycle
 
-<TreatmentGrid treatmentSchedule={treatmentSchedule} />
+<TreatmentCycleGrid treatmentSchedule={treatmentSchedule} />
 
 <hr class="py-4 border-t-[0.5px] border-gray-500" />
 

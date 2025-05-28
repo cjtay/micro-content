@@ -1,5 +1,6 @@
 ---
 import TreatmentCycleCard from "./TreatmentCycleCard.astro";
+import treatmentsData from "../data/treatments.json";
 
 interface TreatmentScheduleDay {
   day: number;
@@ -8,43 +9,30 @@ interface TreatmentScheduleDay {
 
 interface Props {
   treatmentSchedule: TreatmentScheduleDay[];
-  treatments: any[];
 }
 
-const { treatmentSchedule = [], treatments = [] } = Astro.props;
+const { treatmentSchedule = [] } = Astro.props;
 
-// Create a map of treatment name to icon for lookup
+// Create a map from the centralized treatments.json file with normalized keys
 const treatmentIconMap = new Map();
+treatmentsData.forEach(treatment => {
+  // Normalize: lowercase, trim, normalize whitespace
+  const normalizedKey = treatment.name.toLowerCase().trim().replace(/\s+/g, ' ');
+  treatmentIconMap.set(normalizedKey, treatment.icon);
+});
 
-// Handle both string array and object array formats for treatments
-if (treatments.length > 0) {
-  if (typeof treatments[0] === 'object' && treatments[0].name) {
-    // Object format: [{name, cycle, info, icon}]
-    treatments.forEach(treatment => {
-      treatmentIconMap.set(treatment.name.toLowerCase(), treatment.icon);
-    });
-  }
-}
-
-// Function to get icon for a treatment name
+// Function to get icon for a treatment name with robust matching
 function getIconForTreatment(treatmentName: string): string {
-  const icon = treatmentIconMap.get(treatmentName.toLowerCase());
-  if (icon) return icon;
+  // Normalize input: lowercase, trim, normalize whitespace
+  const normalizedInput = treatmentName.toLowerCase().trim().replace(/\s+/g, ' ');
+  const icon = treatmentIconMap.get(normalizedInput);
   
-  // Fallback mapping for common treatment names
-  const fallbackMap: Record<string, string> = {
-    'capecitabine': 'pill-blue',
-    'lapatinib': 'pill-red', 
-    'cisplatin': 'drip-red',
-    'fluorouracil': 'drip-blue',
-    'trastuzumab': 'inject-green',
-    'pertuzumab': 'inject',
-    'paclitaxel': 'drip-green',
-    'radiation': 'radiation-green',
-    'rest': 'home'
-  };
+  if (!icon) {
+    console.warn(`⚠️ No icon found for treatment: "${treatmentName}" (normalized: "${normalizedInput}")`);
+    console.log('Available keys:', Array.from(treatmentIconMap.keys()));
+  }
   
-  return fallbackMap[treatmentName.toLowerCase()] || 'pill-blue';
+  return icon || 'pill-blue'; // Default fallback
 }
 ---
 

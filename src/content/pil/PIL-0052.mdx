@@ -1,24 +1,22 @@
 ---
-title: "Capecitabine and Lapatinib"
+title: "PIL-0052"
 description: "A combination treatment of capecitabine (antimetabolite) and lapatinib (kinase inhibitor) for breast cancer"
-slug: "pil-0052-capecitabine-lapatinib"
-tags: ["treatment","cancer","pil","breast cancer"]
+slug: "PIL-0052"
+tags: ["treatment","cancer","pil"]
 category: "patient information"
-pubDate: 2025-05-28T10:48:35.432Z
+pubDate: 2025-05-28T12:52:05.656Z
 draft: false
 days: 21
 treatments: [
     {
       "name": "Capecitabine",
       "cycle": "days 1 to 14 of your 21-day cycle",
-      "info": "taken twice daily by mouth",
-      "icon": "pill-blue"
+      "info": "taken twice daily by mouth"
     },
     {
       "name": "Lapatinib",
       "cycle": "days 1 to 21 of your 21-day cycle",
-      "info": "taken once daily by mouth",
-      "icon": "pill-blue"
+      "info": "taken once daily by mouth"
     }
   ]
 treatmentSchedule: [
@@ -232,7 +230,7 @@ export const commonSideEffects = frontmatter.commonSideEffects;
 export const otherCommonSideEffects = frontmatter.otherCommonSideEffects;
 export const occasionalSideEffects = frontmatter.occasionalSideEffects;
 export const rareSideEffects = frontmatter.rareSideEffects;
-import TreatmentGrid from "../../components/_TreatmentGrid.astro";
+import TreatmentCycleGrid from "../../components/TreatmentCycleGrid.astro";
 import LegendGrid from "../../components/LegendGrid.astro";
 import CommonSideEffects from "../../components/CommonSideEffects.astro";
 import OtherCommonSideEffects from "../../components/OtherCommonSideEffects.astro";
@@ -255,7 +253,7 @@ A combination treatment of capecitabine (antimetabolite) and lapatinib (kinase i
 
 ## Treatment cycle
 
-<TreatmentGrid treatmentSchedule={treatmentSchedule} />
+<TreatmentCycleGrid treatmentSchedule={treatmentSchedule} />
 
 <hr class="py-4 border-t-[0.5px] border-gray-500" />
 

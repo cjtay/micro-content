@@ -1,67 +1,58 @@
 [
 	{
-		"name": "cisplatin",
-		"label": "Cisplatin",
-		"icon": "drip"
-	},
-	{
-		"name": "fluorouracil",
-		"label": "Fluorouracil",
-		"icon": "drip"
-	},
-	{
-		"name": "trastuzumab (sc)",
-		"label": "Trastuzumab (SC)",
-		"icon": "radiation"
-	},
-	{
-		"name": "rest",
-		"label": "Rest",
-		"icon": "rest"
-	},
-	{
-		"name": "cisplatin, trastuzumab",
-		"label": "Cisplatin, Trastuzumab",
-		"icon": "drip-blue"
-	},
-	{
-		"name": "etoposide",
-		"label": "Etoposide",
-		"icon": "inject"
-	},
-	{
-		"name": "radiation",
-		"label": "Radiation",
-		"icon": "radiation"
-	},
-	{
 		"name": "capecitabine",
-		"label": "Capecitabine",
-		"icon": "drug"
+		"icon": "pill-blue"
 	},
 	{
 		"name": "lapatinib",
-		"label": "Lapatinib",
-		"icon": "drug"
+		"icon": "pill-red"
 	},
 	{
-		"name": "paclitaxel and pertuzumab",
-		"label": "Paclitaxel and Pertuzumab",
+		"name": "cisplatin",
+		"icon": "drip-red"
+	},
+	{
+		"name": "fluorouracil",
 		"icon": "drip-blue"
 	},
 	{
 		"name": "trastuzumab",
-		"label": "Trastuzumab",
-		"icon": "inject"
+		"icon": "inject-green"
+	},
+	{
+		"name": "pertuzumab",
+		"icon": "drip-green"
 	},
 	{
 		"name": "paclitaxel",
-		"label": "Paclitaxel",
-		"icon": "drug"
+		"icon": "drip-purple"
+	},
+	{
+		"name": "etoposide",
+		"icon": "drip-orange"
+	},
+	{
+		"name": "radiation",
+		"icon": "radiation-green"
+	},
+	{
+		"name": "rest",
+		"icon": "home"
+	},
+	{
+		"name": "paclitaxel and pertuzumab",
+		"icon": "drip-yellow"
 	},
 	{
 		"name": "cisplatin and etoposide",
-		"label": "Cisplatin and Etoposide",
-		"icon": "drip-blue"
+		"icon": "pill-green"
+	},
+	{
+		"name": "cisplatin, trastuzumab",
+		"icon": "drug"
+	},
+	{
+		"name": "trastuzumab (sc)",
+		"icon": "inject"
 	}
 ]

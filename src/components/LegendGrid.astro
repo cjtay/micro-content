@@ -1,27 +1,45 @@
 ---
 import LegendCard from "./LegendCard.astro";
+import treatmentsData from "../data/treatments.json";
 
 interface Treatment {
   name: string;
   cycle: string;
   info: string;
-  icon: string;
+  icon?: string;
 }
 
 interface Props {
-  treatments: Treatment[];
+  treatments: Treatment[] | string[];
 }
 
 const { treatments } = Astro.props;
+
+// Create a map from the centralized treatments.json file
+const treatmentIconMap = new Map();
+treatmentsData.forEach(treatment => {
+  treatmentIconMap.set(treatment.name.toLowerCase(), treatment.icon);
+});
+
+// Function to get icon for a treatment name from centralized source
+function getIconForTreatment(treatmentName: string): string {
+  const icon = treatmentIconMap.get(treatmentName.toLowerCase().trim());
+  return icon || 'pill-blue'; // Default fallback
+}
+
+// Handle both string array and object array formats
+const treatmentObjects = Array.isArray(treatments) && treatments.length > 0 && typeof treatments[0] === 'string' 
+  ? [] // If string array, return empty for now since we need object format for LegendGrid
+  : treatments as Treatment[];
 ---
 
 <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-3 my-8">
-	{treatments.map((treatment) => (
+	{treatmentObjects.map((treatment) => (
 		<LegendCard
 			name={treatment.name}
 			cycle={treatment.cycle}
 			info={treatment.info}
-			icon={treatment.icon}
+			icon={getIconForTreatment(treatment.name)}
 		/>
 	))}
 </div>

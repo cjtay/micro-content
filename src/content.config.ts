@@ -20,7 +20,7 @@ const pils = defineCollection({
             name: z.string(),
             cycle: z.string(),
             info: z.string(),
-            icon: z.string()
+            icon: z.string().optional()
           })
         )
       ]).optional(),

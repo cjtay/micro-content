@@ -10,7 +10,7 @@ interface Props {
   occasionalSideEffects: SideEffect[];
 }
 
-const { occasionalSideEffects } = Astro.props;
+const { occasionalSideEffects = [] } = Astro.props;
 ---
 
 <Accordion title="Occasional Side Effects">

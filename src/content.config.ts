@@ -27,6 +27,27 @@ const pils = defineCollection({
           treatments: z.array(z.string())
         })
       ).optional(),
+      commonSideEffects: z.array(
+        z.object({
+          name: z.string(),
+          description: z.string()
+        })
+      ).optional(),
+      otherCommonSideEffects: z.array(
+        z.object({
+          name: z.string()
+        })
+      ).optional(),
+      occasionalSideEffects: z.array(
+        z.object({
+          name: z.string()
+        })
+      ).optional(),
+      rareSideEffects: z.array(
+        z.object({
+          name: z.string()
+        })
+      ).optional(),
     }),
 });
 

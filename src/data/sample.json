@@ -1,0 +1,273 @@
+{
+  "frontmatter": {
+    "title": "Paclitaxel (weekly), IV Pertuzumab and SC Trastuzumab",
+    "description": "A combination of paclitaxel (microtubule inhibitor), pertuzumab (monoclonal antibody), and trastuzumab (monoclonal antibody) for breast cancer treatment",
+    "slug": "paclitaxel-pertuzumab-trastuzumab-breast-cancer",
+    "tags": [
+      "treatment",
+      "cancer",
+      "pil"
+    ],
+    "category": "patient information",
+    "pubDate": "2023-05-18T10:00:00.000Z",
+    "draft": false,
+    "days": 21,
+    "treatments": [
+      {
+        "name": "Paclitaxel",
+        "cycle": "days 1, 8 and 15 of your 21-day cycle",
+        "info": "administered intravenously for ~60 minutes",
+        "icon": "drip-red"
+      },
+      {
+        "name": "Pertuzumab",
+        "cycle": "day 1 of your 21-day cycle",
+        "info": "administered intravenously for ~1.5 to 2 hours",
+        "icon": "drip-red"
+      },
+      {
+        "name": "Trastuzumab",
+        "cycle": "day 1 of your 21-day cycle",
+        "info": "administered subcutaneously for ~2 to 5 minutes",
+        "icon": "inject-green"
+      }
+    ],
+    "treatmentSchedule": [
+      {
+        "day": 1,
+        "treatments": [
+          "paclitaxel",
+          "pertuzumab",
+          "trastuzumab"
+        ]
+      },
+      {
+        "day": 2,
+        "treatments": [
+          "rest"
+        ]
+      },
+      {
+        "day": 3,
+        "treatments": [
+          "rest"
+        ]
+      },
+      {
+        "day": 4,
+        "treatments": [
+          "rest"
+        ]
+      },
+      {
+        "day": 5,
+        "treatments": [
+          "rest"
+        ]
+      },
+      {
+        "day": 6,
+        "treatments": [
+          "rest"
+        ]
+      },
+      {
+        "day": 7,
+        "treatments": [
+          "rest"
+        ]
+      },
+      {
+        "day": 8,
+        "treatments": [
+          "paclitaxel"
+        ]
+      },
+      {
+        "day": 9,
+        "treatments": [
+          "rest"
+        ]
+      },
+      {
+        "day": 10,
+        "treatments": [
+          "rest"
+        ]
+      },
+      {
+        "day": 11,
+        "treatments": [
+          "rest"
+        ]
+      },
+      {
+        "day": 12,
+        "treatments": [
+          "rest"
+        ]
+      },
+      {
+        "day": 13,
+        "treatments": [
+          "rest"
+        ]
+      },
+      {
+        "day": 14,
+        "treatments": [
+          "rest"
+        ]
+      },
+      {
+        "day": 15,
+        "treatments": [
+          "paclitaxel"
+        ]
+      },
+      {
+        "day": 16,
+        "treatments": [
+          "rest"
+        ]
+      },
+      {
+        "day": 17,
+        "treatments": [
+          "rest"
+        ]
+      },
+      {
+        "day": 18,
+        "treatments": [
+          "rest"
+        ]
+      },
+      {
+        "day": 19,
+        "treatments": [
+          "rest"
+        ]
+      },
+      {
+        "day": 20,
+        "treatments": [
+          "rest"
+        ]
+      },
+      {
+        "day": 21,
+        "treatments": [
+          "rest"
+        ]
+      }
+    ],
+    "commonSideEffects": [
+      {
+        "name": "Low platelet count (thrombocytopenia)",
+        "description": "Platelets help your blood clot, so you are at a higher risk of bleeding when your platelet count decreases. Let your oncology care team know if you have any excess bruising or bleeding, including nose bleeds, sore gums or blood in your urine or stool."
+      },
+      {
+        "name": "Low red blood cell count (anaemia)",
+        "description": "Red blood cells (RBC) are responsible for carrying oxygen to the tissues in your body. When you have a low RBC count, you may feel tired or weak and have pale skin."
+      },
+      {
+        "name": "Low white blood cell count (Leukopenia or Neutropenia)",
+        "description": "White blood cells (WBC) are crucial for fighting infection. While receiving treatment, your WBC count can drop, putting you at a higher risk of disease."
+      },
+      {
+        "name": "Allergic reactions",
+        "description": "You may have an allergic reaction to this medication. Symptoms usually include rash, itching, dizziness, vomiting, shortness of breath, chest pain, sudden blood pressure changes or oedema (swelling)."
+      },
+      {
+        "name": "Nausea and/or vomiting",
+        "description": "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication."
+      },
+      {
+        "name": "Peripheral neuropathy/neurotoxicity",
+        "description": "Peripheral neuropathy is due to damage to the nerves outside the brain and spinal cord. These nerves carry information from the brain to other parts of the body. The usual symptoms are numbness, tingling, and weakness in the extremities like hands and feet."
+      },
+      {
+        "name": "Fatigue",
+        "description": "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion."
+      }
+    ],
+    "otherCommonSideEffects": [
+      {
+        "name": "Skin problems (rash, itch)"
+      },
+      {
+        "name": "Nail problems"
+      },
+      {
+        "name": "Lungs/breathing problems (cough, shortness of breath)"
+      },
+      {
+        "name": "Dry skin"
+      }
+    ],
+    "occasionalSideEffects": [
+      {
+        "name": "Mouth sores"
+      },
+      {
+        "name": "Flu-like symptoms"
+      },
+      {
+        "name": "Joint pain"
+      }
+    ],
+    "rareSideEffects": [
+      {
+        "name": "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath, sudden weight gain due to oedema)"
+      },
+      {
+        "name": "Mood changes"
+      },
+      {
+        "name": "Muscle stiffness and difficult movement"
+      },
+      {
+        "name": "Hot flushes & sweating"
+      },
+      {
+        "name": "Dry mouth"
+      },
+      {
+        "name": "Piles"
+      },
+      {
+        "name": "Breast swelling and pain"
+      },
+      {
+        "name": "Kidney dysfunction (Monitored by specific blood tests)"
+      },
+      {
+        "name": "Liver dysfunction (Monitored by specific blood tests)"
+      },
+      {
+        "name": "Seizure or convulsion"
+      },
+      {
+        "name": "Cognitive or memory problems"
+      },
+      {
+        "name": "Heart failure"
+      },
+      {
+        "name": "Blood clots"
+      },
+      {
+        "name": "Sepsis"
+      },
+      {
+        "name": "Respiratory failure"
+      }
+    ]
+  },
+  "metadata": {
+    "sourcePdfFilename": "paclitaxel-pertuzumab-trastuzumab.pdf",
+    "extractionMethod": "document_only",
+    "processingTimestamp": "2023-05-18T14:32:21.456Z"
+  }
+}

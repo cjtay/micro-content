@@ -1,5 +1,16 @@
 ---
 import Accordion from "./Accordion.astro";
+
+interface SideEffect {
+  name: string;
+  description?: string;
+}
+
+interface Props {
+  rareSideEffects: SideEffect[];
+}
+
+const { rareSideEffects } = Astro.props;
 ---
 
 <Accordion title="Rare Side Effects">
@@ -7,12 +18,8 @@ import Accordion from "./Accordion.astro";
     The following side effects occur in fewer than 1 out of every 100 people.
   </h4>
   <ul>
-    <li>
-      Cardiac problems (Chest pain or tightness, irregular heartbeat or blood
-      pressure changes, shortness of breath)
-    </li>
-    <li>Severe rash, blisters, peeling usually with fever</li>
-    <li>Sensitivity to the sun or UV light</li>
-    <li>Allergic reactions</li>
+    {rareSideEffects.map((sideEffect) => (
+      <li>{sideEffect.name}</li>
+    ))}
   </ul>
 </Accordion>

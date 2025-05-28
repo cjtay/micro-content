@@ -1,5 +1,16 @@
 ---
 import Accordion from "./Accordion.astro";
+
+interface SideEffect {
+  name: string;
+  description: string;
+}
+
+interface Props {
+  commonSideEffects: SideEffect[];
+}
+
+const { commonSideEffects } = Astro.props;
 ---
 
 <Accordion title="Common Side Effects">
@@ -8,47 +19,10 @@ import Accordion from "./Accordion.astro";
     You might have one or more of them.
   </h4>
 
-  <h5>Fatigue:</h5>
-  <p>
-    You may feel tired and find it harder to do daily chores/activities that
-    you usually do or want to do. It may be physical, emotional and mental
-    exhaustion.
-  </p>
-  <h5>Diarrhoea</h5>
-  <p>
-    This treatment may disturb the intestinal lining and cause loose, watery,
-    and more frequent stools than usual. Certain medications have a higher
-    chance of causing diarrhoea.
-  </p>
-
-  <h5>Nausea and/or vomiting</h5>
-
-  <p>
-    Every patient reacts differently to cancer medication. Many people feel
-    nauseous, and some also experience vomiting. Nausea and vomiting can be
-    managed or reduced with medication.
-  </p>
-
-  <h5>Hand and foot syndrome</h5>
-  <p>
-    Also called palmar-plantar erythrodysesthesia) is a side effect of some
-    chemotherapy drugs that can cause redness, swelling and blistering on the
-    palms of the hands and soles of the feet.
-  </p>
-
-  <h5>Low platelet count (thrombocytopenia)</h5>
-  <p>
-    Platelets help your blood clot, so you are at a higher risk of bleeding
-    when your platelet count decreases. Let your oncology care team know if
-    you have any excess bruising or bleeding, including nose bleeds, sore gums
-    or blood in your urine or stool.
-  </p>
-
-  <h5>Low white blood cell count (Leukopenia or Neutropenia)</h5>
-
-  <p>
-    White blood cells (WBC) are crucial for fighting infection. While
-    receiving treatment, your WBC count can drop, putting you at a higher risk
-    of disease.
-  </p>
+  {commonSideEffects.map((sideEffect) => (
+    <>
+      <h5>{sideEffect.name}</h5>
+      <p>{sideEffect.description}</p>
+    </>
+  ))}
 </Accordion>

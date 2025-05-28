@@ -1,11 +1,22 @@
 ---
 import Accordion from "./Accordion.astro";
+
+interface SideEffect {
+  name: string;
+  description?: string;
+}
+
+interface Props {
+  otherCommonSideEffects: SideEffect[];
+}
+
+const { otherCommonSideEffects } = Astro.props;
 ---
 
 <Accordion title="Other Common Side Effects">
   <ul>
-    <li>Low appetite</li>
-    <li>Abdominal pain</li>
-    <li>Mouth sores</li>
+    {otherCommonSideEffects.map((sideEffect) => (
+      <li>{sideEffect.name}</li>
+    ))}
   </ul>
 </Accordion>

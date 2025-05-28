@@ -7,109 +7,197 @@ category: "patient information"
 pubDate: 2025-01-25T10:00:00.000Z
 draft: false
 days: 21
-treatments: [
-  {
-    name: "Capecitabine",
-    cycle: "days 1 to 14 of your 21-day cycle",
-    info: "taken twice daily by mouth",
-    icon: "pill-blue"
-  },
-  {
-    name: "Lapatinib", 
-    cycle: "days 1 to 21 of your 21-day cycle",
-    info: "taken once daily by mouth",
-    icon: "pill-red"
-  },
-  {
-    name: "Cisplatin",
-    cycle: "day 1, 8 and 15 of your 21-day cycle",
-    info: "administered intravenously ~ 60 min",
-    icon: "drip-red"
-  },
-  {
-    name: "Fluorouracil",
-    cycle: "day 1 of your 21-day cycle",
-    info: "administered intravenously ~ 24 hours",
-    icon: "drip-blue"
-  },
-  {
-    name: "Trastuzumab",
-    cycle: "day 8 of your 21-day cycle",
-    info: "administered subcutaneously ~2 to 5 min",
-    icon: "inject-green"
-  },
-  {
-    name: "Radiation",
-    cycle: "days 1 to 5 of your 21-day cycle",
-    info: "administered over ~ 15 to 30 mins",
-    icon: "radiation-green"
-  },
-  {
-    name: "Rest",
-    cycle: "days 6, 7, 20 and 21",
-    info: "you won't have any anti-cancer treatment. Take this time to rest and recover",
-    icon: "home"
-  }
-]
-treatmentSchedule: [
-  { day: 1, treatments: ["capecitabine", "cisplatin", "fluorouracil", "radiation"] },
-  { day: 2, treatments: ["capecitabine", "lapatinib", "radiation"] },
-  { day: 3, treatments: ["capecitabine", "lapatinib", "radiation"] },
-  { day: 4, treatments: ["capecitabine", "lapatinib", "radiation"] },
-  { day: 5, treatments: ["capecitabine", "lapatinib", "radiation"] },
-  { day: 6, treatments: ["rest"] },
-  { day: 7, treatments: ["rest"] },
-  { day: 8, treatments: ["capecitabine", "lapatinib", "cisplatin", "trastuzumab"] },
-  { day: 9, treatments: ["capecitabine", "lapatinib"] },
-  { day: 10, treatments: ["capecitabine", "lapatinib"] },
-  { day: 11, treatments: ["capecitabine", "lapatinib"] },
-  { day: 12, treatments: ["capecitabine", "lapatinib"] },
-  { day: 13, treatments: ["capecitabine", "lapatinib"] },
-  { day: 14, treatments: ["capecitabine", "lapatinib"] },
-  { day: 15, treatments: ["lapatinib", "cisplatin"] },
-  { day: 16, treatments: ["rest"] },
-  { day: 17, treatments: ["lapatinib"] },
-  { day: 18, treatments: ["rest"] },
-  { day: 19, treatments: ["lapatinib"] },
-  { day: 20, treatments: ["rest"] },
-  { day: 21, treatments: ["rest"] }
-]
+treatments:
+  [
+    {
+      name: "Capecitabine",
+      cycle: "days 1 to 14 of your 21-day cycle",
+      info: "taken twice daily by mouth",
+      icon: "pill-blue",
+    },
+    {
+      name: "Lapatinib",
+      cycle: "days 1 to 21 of your 21-day cycle",
+      info: "taken once daily by mouth",
+      icon: "pill-red",
+    },
+    {
+      name: "Cisplatin",
+      cycle: "day 1, 8 and 15 of your 21-day cycle",
+      info: "administered intravenously ~ 60 min",
+      icon: "drip-red",
+    },
+    {
+      name: "Fluorouracil",
+      cycle: "day 1 of your 21-day cycle",
+      info: "administered intravenously ~ 24 hours",
+      icon: "drip-blue",
+    },
+    {
+      name: "Trastuzumab",
+      cycle: "day 8 of your 21-day cycle",
+      info: "administered subcutaneously ~2 to 5 min",
+      icon: "inject-green",
+    },
+    {
+      name: "Radiation",
+      cycle: "days 1 to 5 of your 21-day cycle",
+      info: "administered over ~ 15 to 30 mins",
+      icon: "radiation-green",
+    },
+    {
+      name: "Rest",
+      cycle: "days 6, 7, 20 and 21",
+      info: "you won't have any anti-cancer treatment. Take this time to rest and recover",
+      icon: "home",
+    },
+  ]
+
+treatmentSchedule:
+  [
+    {
+      day: 1,
+      treatments: ["capecitabine", "cisplatin", "fluorouracil", "radiation"],
+    },
+    { day: 2, treatments: ["capecitabine", "lapatinib", "radiation"] },
+    { day: 3, treatments: ["capecitabine", "lapatinib", "radiation"] },
+    { day: 4, treatments: ["capecitabine", "lapatinib", "radiation"] },
+    { day: 5, treatments: ["capecitabine", "lapatinib", "radiation"] },
+    { day: 6, treatments: ["rest"] },
+    { day: 7, treatments: ["rest"] },
+    {
+      day: 8,
+      treatments: ["capecitabine", "lapatinib", "cisplatin", "trastuzumab"],
+    },
+    { day: 9, treatments: ["capecitabine", "lapatinib"] },
+    { day: 10, treatments: ["capecitabine", "lapatinib"] },
+    { day: 11, treatments: ["capecitabine", "lapatinib"] },
+    { day: 12, treatments: ["capecitabine", "lapatinib"] },
+    { day: 13, treatments: ["capecitabine", "lapatinib"] },
+    { day: 14, treatments: ["capecitabine", "lapatinib"] },
+    { day: 15, treatments: ["lapatinib", "cisplatin"] },
+    { day: 16, treatments: ["rest"] },
+    { day: 17, treatments: ["lapatinib"] },
+    { day: 18, treatments: ["rest"] },
+    { day: 19, treatments: ["lapatinib"] },
+    { day: 20, treatments: ["rest"] },
+    { day: 21, treatments: ["rest"] },
+  ]
+
+commonSideEffects:
+  [
+    {
+      name: "Fatigue",
+      description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion.",
+    },
+    {
+      name: "Diarrhoea",
+      description: "This treatment may disturb the intestinal lining and cause loose, watery, and more frequent stools than usual. Certain medications have a higher chance of causing diarrhoea.",
+    },
+    {
+      name: "Nausea and/or vomiting",
+      description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication.",
+    },
+    {
+      name: "Hand and foot syndrome",
+      description: "Also called palmar-plantar erythrodysesthesia) is a side effect of some chemotherapy drugs that can cause redness, swelling and blistering on the palms of the hands and soles of the feet.",
+    },
+    {
+      name: "Low platelet count (thrombocytopenia)",
+      description: "Platelets help your blood clot, so you are at a higher risk of bleeding when your platelet count decreases. Let your oncology care team know if you have any excess bruising or bleeding, including nose bleeds, sore gums or blood in your urine or stool.",
+    },
+    {
+      name: "Low white blood cell count (Leukopenia or Neutropenia)",
+      description: "White blood cells (WBC) are crucial for fighting infection. While receiving treatment, your WBC count can drop, putting you at a higher risk of disease.",
+    },
+  ]
+
+otherCommonSideEffects:
+  [
+    { name: "Low appetite" },
+    { name: "Abdominal pain" },
+    { name: "Mouth sores" },
+  ]
+
+occasionalSideEffects:
+  [
+    { name: "Low red blood cell count (Anaemia)" },
+    { name: "Swelling" },
+    { name: "Constipation" },
+    { name: "Upset stomach" },
+    { name: "Taste disorder" },
+    { name: "Liver changes (Monitored by specific blood tests)" },
+    { name: "Watery eyes, redness, blurred vision" },
+    { name: "Blood clots" },
+    { name: "Feeling balance problem/spinning" },
+    { name: "Dizziness" },
+    { name: "Sleeplessness (Insomnia)" },
+    { name: "Memory & cognitive problems" },
+    { name: "Headache" },
+    { name: "Mood changes" },
+    { name: "Nail changes" },
+    { name: "Rash, itchy skin, discolouration" },
+    { name: "Rash or irritation on skin area treated with radiation" },
+    { name: "Hair loss" },
+    { name: "Muscle weakness and pain" },
+    { name: "Joint pain" },
+    { name: "Dehydration" },
+    { name: "Lungs/Breathing problems (Cough, shortness of breath, fever)" },
+  ]
+
+rareSideEffects:
+  [
+    {
+      name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)",
+    },
+    { name: "Severe rash, blisters, peeling usually with fever" },
+    { name: "Sensitivity to the sun or UV light" },
+    { name: "Allergic reactions" },
+  ]
 ---
 
 export const days = frontmatter.days;
 export const treatments = frontmatter.treatments;
 export const treatmentSchedule = frontmatter.treatmentSchedule;
-import TreatmentGrid from '../../components/_TreatmentGrid.astro';
-import LegendGrid from '../../components/LegendGrid.astro';
-import CommonSideEffects from '../../components/CommonSideEffects.astro';
-import OtherCommonSideEffects from '../../components/OtherCommonSideEffects.astro';
-import OccasionalSideEffects from '../../components/OccasionalSideEffects.astro';
-import RareSideEffects from '../../components/RareSideEffects.astro';
-import SafeHandlingAccordion from '../../components/SafeHandlingAccordion.astro';
-import GeneralPrecautionsAccordion from '../../components/GeneralPrecautionsAccordion.astro';
-import LifestyleSafetyAccordion from '../../components/LifestyleSafetyAccordion.astro';
-import HealthcareTeamContact from '../../components/HealthcareTeamContact.astro';
+export const commonSideEffects = frontmatter.commonSideEffects;
+export const otherCommonSideEffects = frontmatter.otherCommonSideEffects;
+export const occasionalSideEffects = frontmatter.occasionalSideEffects;
+export const rareSideEffects = frontmatter.rareSideEffects;
+import TreatmentGrid from "../../components/_TreatmentGrid.astro";
+import LegendGrid from "../../components/LegendGrid.astro";
+import CommonSideEffects from "../../components/CommonSideEffects.astro";
+import OtherCommonSideEffects from "../../components/OtherCommonSideEffects.astro";
+import OccasionalSideEffects from "../../components/OccasionalSideEffects.astro";
+import RareSideEffects from "../../components/RareSideEffects.astro";
+import SafeHandlingAccordion from "../../components/SafeHandlingAccordion.astro";
+import GeneralPrecautionsAccordion from "../../components/GeneralPrecautionsAccordion.astro";
+import LifestyleSafetyAccordion from "../../components/LifestyleSafetyAccordion.astro";
+import HealthcareTeamContact from "../../components/HealthcareTeamContact.astro";
 
 # Sample Treatment Protocol
 
 ## About the treatment
+
 Concurrently given with radiation, capecitabine (antimetabolite chemotherapy) is a treatment option for colorectal and some other cancers. Radiation and cancer medicines are usually used to slow or stop cancer cell growth and spread more effectively.
 
 ## Treatment details
+
 <LegendGrid treatments={treatments} />
 
 ## Treatment cycle
+
 <TreatmentGrid treatmentSchedule={treatmentSchedule} />
 
 <hr class="py-4 border-t-[0.5px] border-gray-500" />
 
 ## Side Effects
+
 Chemotherapy is often linked to so many side effects. While it is true that chemotherapy drugs often cause a wide range of side effects, most of these side effects are temporary and can be minimised or prevented. Remember that different drugs cause different side effects, and each person experiences different side effects to varying degrees.
 
-<CommonSideEffects />
-<OtherCommonSideEffects />
-<OccasionalSideEffects />
-<RareSideEffects />
+<CommonSideEffects commonSideEffects={commonSideEffects} />
+<OtherCommonSideEffects otherCommonSideEffects={otherCommonSideEffects} />
+<OccasionalSideEffects occasionalSideEffects={occasionalSideEffects} />
+<RareSideEffects rareSideEffects={rareSideEffects} />
 
 <hr class="py-4 border-t-[0.5px] border-gray-500" />
 

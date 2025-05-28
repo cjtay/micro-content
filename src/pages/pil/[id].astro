@@ -48,7 +48,10 @@ const hasNewStructure = pil.data.treatments && Array.isArray(pil.data.treatments
       <h2>Treatment details</h2>
       <LegendGrid treatments={pil.data.treatments || []} />
       <h2>Treatment cycle</h2>
-      <TreatmentCycleGrid />
+      <TreatmentCycleGrid 
+        treatmentSchedule={pil.data.treatmentSchedule || []} 
+        treatments={pil.data.treatments || []} 
+      />
       <hr class="py-4 border-t-[0.5px] border-gray-500" />
 
       <h2>Side Effects</h2>

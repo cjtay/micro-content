@@ -6,60 +6,61 @@ const allPils = await getCollection("pils");
 
 // Ensure pubDate is a Date object and filter for 2024 events
 const pils = allPils
-	.map((pil) => ({
-		...pil,
-		data: {
-			...pil.data,
-			pubDate:
-				pil.data.pubDate instanceof Date
-					? pil.data.pubDate
-					: new Date(pil.data.pubDate),
-		},
-	}))
-	// Add filter here to exclude posts from 2027 and above
-	.filter((pil) => pil.data.pubDate.getFullYear() < 2027)
-	.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
-	.slice(0, 8);
+  .map((pil) => ({
+    ...pil,
+    data: {
+      ...pil.data,
+      pubDate:
+        pil.data.pubDate instanceof Date
+          ? pil.data.pubDate
+          : new Date(pil.data.pubDate),
+    },
+  }))
+  // Add filter here to exclude posts from 2027 and above
+  .filter((pil) => pil.data.pubDate.getFullYear() < 2027)
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+  .slice(0, 8);
 ---
 
 <IndexLayout title="micro-content">
-	<section aria-label="micro-content" class="py-8  max-w-8/12 mx-auto">
-		<h1 class="text-2xl font-bold">PIL micro-content</h1>
-		<p class="mb-8">For review purpose only</p>
-		<div>
-			{
-				pils.map((m) => (
-					<ul role="list" class="divide-y divide-gray-200 !list-none ">
-						<li>
-							<h6>
-								<a href={`/pil/${m.id}`}>{m.data.title}</a>
-							</h6>
-							<p class="mb-4 text-gray-500 dark:text-gray-400">
-								{m.data.description}
-							</p>
-					
-						</li>
-					</ul>
-				))
-			}
-		</div>
-	</section>
+  <section aria-label="micro-content" class="py-8 max-w-8/12 mx-auto">
+    <h1 class="text-2xl font-bold">PIL micro-content</h1>
+    <p class="mb-8">This is a staging site for internal <br/>
+    Please do not share any links to this site. 
+    testing purposes only.</p>
+    <div>
+      {
+        pils.map((m) => (
+          <ul role="list" class="divide-y divide-gray-200 !list-none ">
+            <li>
+              <h6>
+                <a href={`/pil/${m.id}`}>{m.data.title}</a>
+              </h6>
+              <p class="mb-4 text-gray-500 dark:text-gray-400">
+                {m.data.description}
+              </p>
+            </li>
+          </ul>
+        ))
+      }
+    </div>
+  </section>
 </IndexLayout>
 
 <script>
- window.difyChatbotConfig = {
-  token: 'JrH0E5I8QxqLI2SU',
-  baseUrl: 'https://dify-eks.bot-alex.com'
- }
+  window.difyChatbotConfig = {
+    token: "JrH0E5I8QxqLI2SU",
+    baseUrl: "https://dify-eks.bot-alex.com",
+  };
 </script>
 <script
- src="https://dify-eks.bot-alex.com/embed.min.js"
- id="JrH0E5I8QxqLI2SU"
- defer>
-</script>
+  src="https://dify-eks.bot-alex.com/embed.min.js"
+  id="JrH0E5I8QxqLI2SU"
+  defer
+></script>
 <style>
   #dify-chatbot-bubble-button {
-    background-color: #1C64F2 !important;
+    background-color: #1c64f2 !important;
   }
   #dify-chatbot-bubble-window {
     width: 24rem !important;

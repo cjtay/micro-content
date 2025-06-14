@@ -14,15 +14,15 @@ const { commonSideEffects = [] } = Astro.props;
 ---
 
 <Accordion title="Common Side Effects">
-  <h4 class="mb-2">
+  <h4 class="mb-2 pb-2">
     The following side effects occur in more than 10 out of every 100 people.
     You might have one or more of them.
   </h4>
 
   {commonSideEffects.map((sideEffect) => (
-    <>
+    <div class="my-4">
       <h5>{sideEffect.name}</h5>
       {sideEffect.description && <p>{sideEffect.description}</p>}
-    </>
+    </div>
   ))}
 </Accordion>

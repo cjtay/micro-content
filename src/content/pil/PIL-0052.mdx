@@ -1,10 +1,10 @@
 ---
 title: "PIL-0052"
-description: "A combination of capecitabine (antimetabolite) and lapatinib (kinase inhibitor) for breast cancer treatment"
+description: "A combination treatment of capecitabine and lapatinib for breast cancer, taken orally in a 21-day cycle."
 slug: "PIL-0052"
 tags: ["treatment","cancer","pil"]
 category: "patient information"
-pubDate: 2025-05-30T09:08:52.700Z
+pubDate: 2025-06-07T05:25:25.593Z
 draft: false
 days: 21
 treatments: [
@@ -171,7 +171,7 @@ commonSideEffects: [
     description: "Also called palmar-plantar erythrodysesthesia) is a side effect of some chemotherapy drugs that can cause redness, swelling and blistering on the palms of the hands and soles of the feet."
   },
   {
-    name: "Low white blood cell count",
+    name: "Low white blood cell count (Leukopenia or Neutropenia)",
     description: "White blood cells (WBC) are crucial for fighting infection. While receiving treatment, your WBC count can drop, putting you at a higher risk of disease."
   },
   {
@@ -183,7 +183,7 @@ commonSideEffects: [
     description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion."
   },
   {
-    name: "Low platelet count",
+    name: "Low platelet count (thrombocytopenia)",
     description: "Platelets help your blood clot, so you are at a higher risk of bleeding when your platelet count decreases. Let your oncology care team know if you have any excess bruising or bleeding, including nose bleeds, sore gums or blood in your urine or stool."
   },
   {
@@ -208,11 +208,11 @@ otherCommonSideEffects: [
   { name: "Mood changes" },
   { name: "Memory & cognitive problems" },
   { name: "Hair loss" },
-  { name: "Lungs/Breathing problems" },
+  { name: "Lungs/Breathing problems (Cough, shortness of breath, fever)" },
   { name: "Constipation" },
   { name: "Dehydration" },
   { name: "Muscle weakness/pain" },
-  { name: "Liver dysfunction" }
+  { name: "Liver dysfunction (monitored by specific blood tests)" }
 ]
 occasionalSideEffects: []
 rareSideEffects: [
@@ -220,7 +220,7 @@ rareSideEffects: [
   { name: "Severe rash, blisters, peeling, usually with fever" },
   { name: "Sensitivity to sun or UV light" },
   { name: "Allergic reactions" },
-  { name: "Cardiac problems" },
+  { name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)" },
   { name: "Rash or irritation on skin previously treated with radiation" }
 ]
 ---
@@ -246,7 +246,7 @@ import HealthcareTeamContact from "../../components/HealthcareTeamContact.astro"
 
 ## About the treatment
 
-A combination of capecitabine (antimetabolite) and lapatinib (kinase inhibitor) for breast cancer treatment
+A combination treatment of capecitabine and lapatinib for breast cancer, taken orally in a 21-day cycle.
 
 ## Treatment details
 
@@ -267,12 +267,12 @@ Chemotherapy is often linked to so many side effects. While it is true that chem
 <OccasionalSideEffects occasionalSideEffects={occasionalSideEffects} />
 <RareSideEffects rareSideEffects={rareSideEffects} />
 
-<hr class="py-4 border-t-[0.5px] border-gray-500" />
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
 
 <SafeHandlingAccordion />
 <GeneralPrecautionsAccordion />
 <LifestyleSafetyAccordion />
 
-<hr class="py-4 border-t-[0.5px] border-gray-500" />
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
 
 <HealthcareTeamContact />

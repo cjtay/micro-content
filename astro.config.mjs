@@ -4,6 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import typography from "@tailwindcss/typography";
 
 import mdx from "@astrojs/mdx";
+import inlineSvgIntegration from "./src/integrations/inlineSvgIntegration.mjs";
 
 export default defineConfig({
 	compressHTML: false,
@@ -22,8 +23,9 @@ export default defineConfig({
 	},
 
 	build: {
+		format: "file", // Generate flat HTML files instead of directories
 		inlineStylesheets: "always", // Ensures all styles are inlined
 	},
 
-	integrations: [mdx()],
+	integrations: [mdx(), inlineSvgIntegration()],
 });

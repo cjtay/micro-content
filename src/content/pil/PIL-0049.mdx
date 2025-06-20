@@ -1,0 +1,254 @@
+---
+title: "PIL-0049"
+description: "Capecitabine (antimetabolite) is selectively tumour-sensitive, which interferes with the synthesis of DNA and RNA of cells and stops the growth and spread of cancer cells. This drug is activated by a specific enzyme more prevalent in cancer cells than in normal body cells. This single-agent treatment is given in certain conditions of breast cancer and bowel/colorectal cancer and has some other uses."
+slug: "PIL-0049"
+tags: ["treatment","cancer","pil"]
+category: "patient information"
+pubDate: 2025-06-20T10:41:27.144Z
+draft: false
+days: 21
+treatments: [
+    {
+      "name": "Capecitabine",
+      "cycle": "days 1 to 14 of your 21-day cycle",
+      "info": "taken twice daily by mouth"
+    }
+  ]
+treatmentSchedule: [
+    {
+      "day": 1,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 2,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 3,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 4,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 5,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 6,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 7,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 8,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 9,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 10,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 11,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 12,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 13,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 14,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 15,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 16,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 17,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 18,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 19,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 20,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 21,
+      "treatments": [
+        "rest"
+      ]
+    }
+  ]
+commonSideEffects: [
+  {
+    name: "Diarrhoea",
+    description: "This treatment may disturb the intestinal lining and cause loose, watery, and more frequent stools than usual. Certain medications have a higher chance of causing diarrhoea."
+  },
+  {
+    name: "Fatigue",
+    description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion."
+  },
+  {
+    name: "Nausea and/or vomiting",
+    description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication."
+  },
+  {
+    name: "Low white blood cell count (Leukopenia or Neutropenia)",
+    description: "White blood cells (WBC) are crucial for fighting infection. While receiving treatment, your WBC count can drop, putting you at a higher risk of disease."
+  },
+  {
+    name: "Low platelet count (thrombocytopenia)",
+    description: "Platelets help your blood clot, so you are at a higher risk of bleeding when your platelet count decreases. Let your oncology care team know if you have any excess bruising or bleeding, including nose bleeds, sore gums or blood in your urine or stool."
+  }
+]
+otherCommonSideEffects: [
+  { name: "Low appetite" },
+  { name: "Abdominal pain" },
+  { name: "Mouth sores" },
+  { name: "Hand and foot syndrome" }
+]
+occasionalSideEffects: []
+rareSideEffects: [
+  { name: "Low red blood cell count (Anaemia)" },
+  { name: "Swelling" },
+  { name: "Constipation" },
+  { name: "Upset stomach" },
+  { name: "Taste disorder" },
+  { name: "Liver changes" },
+  { name: "Watery eyes, redness, blurred vision" },
+  { name: "Blood clots" },
+  { name: "Feeling balance problem/spinning" },
+  { name: "Dizziness" },
+  { name: "Sleeplessness (Insomnia)" },
+  { name: "Memory & cognitive problems" },
+  { name: "Headache" },
+  { name: "Mood changes" },
+  { name: "Nail changes" },
+  { name: "Rash, itchy skin, discolouration" },
+  { name: "Hair loss" },
+  { name: "Muscle weakness and pain" },
+  { name: "Joint pain" },
+  { name: "Dehydration" },
+  { name: "Lungs/Breathing problems" },
+  { name: "Cardiac problems" },
+  { name: "Rash or irritation on skin previously treated with radiation" },
+  { name: "Sensitivity to sun or UV light" },
+  { name: "Severe rash, blisters, peeling usually with fever" },
+  { name: "Allergic reactions" }
+]
+---
+export const days = frontmatter.days;
+export const treatments = frontmatter.treatments;
+export const treatmentSchedule = frontmatter.treatmentSchedule;
+export const commonSideEffects = frontmatter.commonSideEffects;
+export const otherCommonSideEffects = frontmatter.otherCommonSideEffects;
+export const occasionalSideEffects = frontmatter.occasionalSideEffects;
+export const rareSideEffects = frontmatter.rareSideEffects;
+import TreatmentCycleGrid from "../../components/TreatmentCycleGrid.astro";
+import LegendGrid from "../../components/LegendGrid.astro";
+import CommonSideEffects from "../../components/CommonSideEffects.astro";
+import OtherCommonSideEffects from "../../components/OtherCommonSideEffects.astro";
+import OccasionalSideEffects from "../../components/OccasionalSideEffects.astro";
+import RareSideEffects from "../../components/RareSideEffects.astro";
+import SafeHandlingAccordion from "../../components/SafeHandlingAccordion.astro";
+import GeneralPrecautionsAccordion from "../../components/GeneralPrecautionsAccordion.astro";
+import LifestyleSafetyAccordion from "../../components/LifestyleSafetyAccordion.astro";
+import HealthcareTeamContact from "../../components/HealthcareTeamContact.astro";
+
+# Capecitabine
+
+## About the treatment
+
+Capecitabine (antimetabolite) is selectively tumour-sensitive, which interferes with the synthesis of DNA and RNA of cells and stops the growth and spread of cancer cells. This drug is activated by a specific enzyme more prevalent in cancer cells than in normal body cells. This single-agent treatment is given in certain conditions of breast cancer and bowel/colorectal cancer and has some other uses.
+
+## Treatment details
+
+<LegendGrid treatments={treatments} />
+
+## Treatment cycle
+
+<TreatmentCycleGrid treatmentSchedule={treatmentSchedule} />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+## Side Effects
+
+Chemotherapy is often linked to so many side effects. While it is true that chemotherapy drugs often cause a wide range of side effects, most of these side effects are temporary and can be minimised or prevented. Remember that different drugs cause different side effects, and each person experiences different side effects to varying degrees.
+
+<CommonSideEffects commonSideEffects={commonSideEffects} />
+<OtherCommonSideEffects otherCommonSideEffects={otherCommonSideEffects} />
+<OccasionalSideEffects occasionalSideEffects={occasionalSideEffects} />
+<RareSideEffects rareSideEffects={rareSideEffects} />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+<SafeHandlingAccordion />
+<GeneralPrecautionsAccordion />
+<LifestyleSafetyAccordion />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+<HealthcareTeamContact />

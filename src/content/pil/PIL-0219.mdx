@@ -1,0 +1,277 @@
+---
+title: "PIL-0219"
+description: "Fulvestrant is an oestrogen receptor blocker that works as a hormonal therapy and is used in treating breast cancer. Fulvestrant slows down or stops the growth of cancer cells that require oestrogen to grow."
+slug: "PIL-0219"
+tags: ["treatment","cancer","pil"]
+category: "patient information"
+pubDate: 2025-06-20T09:40:43.741Z
+draft: false
+days: 28
+treatments: [
+    {
+      "name": "Fulvestrant",
+      "cycle": "day 1 of your 28-day cycle",
+      "info": "administered ~5 min intramuscularly"
+    }
+  ]
+treatmentSchedule: [
+    {
+      "day": 1,
+      "treatments": [
+        "fulvestrant"
+      ]
+    },
+    {
+      "day": 2,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 3,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 4,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 5,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 6,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 7,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 8,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 9,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 10,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 11,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 12,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 13,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 14,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 15,
+      "treatments": [
+        "fulvestrant"
+      ]
+    },
+    {
+      "day": 16,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 17,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 18,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 19,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 20,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 21,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 22,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 23,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 24,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 25,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 26,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 27,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 28,
+      "treatments": [
+        "rest"
+      ]
+    }
+  ]
+commonSideEffects: [
+  {
+    name: "Hot flushes",
+    description: "You may feel sudden warmth in the upper body, especially over the face, neck and chest. You may also feel redness and sweating."
+  },
+  {
+    name: "Fever",
+    description: "Fever is a possible side effect of both chemotherapy and biological treatments. You must contact your healthcare team immediately if you have a temperature of 38ºC or higher."
+  },
+  {
+    name: "Rash",
+    description: "Skin rash is one of the most common side effects of cancer treatment. It may appear on your face, neck, scalp, upper back, and chest. Although the rash can occur at any point during treatment, it is most common in the first two to three weeks."
+  },
+  {
+    name: "Nausea and/or vomiting",
+    description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication."
+  }
+]
+otherCommonSideEffects: [
+  { name: "Liver Dysfunction" },
+  { name: "Redness or pain at the injection site" },
+  { name: "Allergic reaction" },
+  { name: "Pain" },
+  { name: "Low appetite" },
+  { name: "Diarrhoea" },
+  { name: "Headache" },
+  { name: "Blood clot" },
+  { name: "Vaginal dryness" },
+  { name: "Bleeding and bruising" },
+  { name: "Numbness, tingling and unusual sensation in extremities like hands and feet" },
+  { name: "Sciatica" }
+]
+occasionalSideEffects: []
+rareSideEffects: [
+  { name: "Venous thromboembolism" },
+  { name: "Liver failure" },
+  { name: "Vaginal Hemorrhage" }
+]
+---
+export const days = frontmatter.days;
+export const treatments = frontmatter.treatments;
+export const treatmentSchedule = frontmatter.treatmentSchedule;
+export const commonSideEffects = frontmatter.commonSideEffects;
+export const otherCommonSideEffects = frontmatter.otherCommonSideEffects;
+export const occasionalSideEffects = frontmatter.occasionalSideEffects;
+export const rareSideEffects = frontmatter.rareSideEffects;
+import TreatmentCycleGrid from "../../components/TreatmentCycleGrid.astro";
+import LegendGrid from "../../components/LegendGrid.astro";
+import CommonSideEffects from "../../components/CommonSideEffects.astro";
+import OtherCommonSideEffects from "../../components/OtherCommonSideEffects.astro";
+import OccasionalSideEffects from "../../components/OccasionalSideEffects.astro";
+import RareSideEffects from "../../components/RareSideEffects.astro";
+import SafeHandlingAccordion from "../../components/SafeHandlingAccordion.astro";
+import GeneralPrecautionsAccordion from "../../components/GeneralPrecautionsAccordion.astro";
+import LifestyleSafetyAccordion from "../../components/LifestyleSafetyAccordion.astro";
+import HealthcareTeamContact from "../../components/HealthcareTeamContact.astro";
+
+# Fulvestrant
+
+## About the treatment
+
+Fulvestrant is an oestrogen receptor blocker that works as a hormonal therapy and is used in treating breast cancer. Fulvestrant slows down or stops the growth of cancer cells that require oestrogen to grow.
+
+## Treatment details
+
+<LegendGrid treatments={treatments} />
+
+## Treatment cycle
+
+<TreatmentCycleGrid treatmentSchedule={treatmentSchedule} />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+## Side Effects
+
+Chemotherapy is often linked to so many side effects. While it is true that chemotherapy drugs often cause a wide range of side effects, most of these side effects are temporary and can be minimised or prevented. Remember that different drugs cause different side effects, and each person experiences different side effects to varying degrees.
+
+<CommonSideEffects commonSideEffects={commonSideEffects} />
+<OtherCommonSideEffects otherCommonSideEffects={otherCommonSideEffects} />
+<OccasionalSideEffects occasionalSideEffects={occasionalSideEffects} />
+<RareSideEffects rareSideEffects={rareSideEffects} />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+<SafeHandlingAccordion />
+<GeneralPrecautionsAccordion />
+<LifestyleSafetyAccordion />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+<HealthcareTeamContact />

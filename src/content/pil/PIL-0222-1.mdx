@@ -1,0 +1,244 @@
+---
+title: "PIL-0222-1"
+description: "Gemcitabine (antimetabolite) is chemotherapy for breast, lung, head and neck cancers. It interferes with DNA synthesis in cells and stops the growth and spread of rapidly dividing cells such as cancer cells. Gemcitabine will be administered intravenously ~30 min on days 1 and 8 of your 21-day cycle."
+slug: "PIL-0222-1"
+tags: ["treatment","cancer","pil"]
+category: "patient information"
+pubDate: 2025-06-20T09:40:10.830Z
+draft: false
+days: 21
+treatments: [
+    {
+      "name": "Gemcitabine",
+      "cycle": "days 1 and 8 of your 21-day cycle",
+      "info": "administered intravenously ~30 min"
+    }
+  ]
+treatmentSchedule: [
+    {
+      "day": 1,
+      "treatments": [
+        "gemcitabine"
+      ]
+    },
+    {
+      "day": 2,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 3,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 4,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 5,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 6,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 7,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 8,
+      "treatments": [
+        "gemcitabine"
+      ]
+    },
+    {
+      "day": 9,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 10,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 11,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 12,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 13,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 14,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 15,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 16,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 17,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 18,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 19,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 20,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 21,
+      "treatments": [
+        "rest"
+      ]
+    }
+  ]
+commonSideEffects: [
+  {
+    name: "Nausea and/or vomiting",
+    description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication."
+  },
+  {
+    name: "Low white blood cell count (Leukopenia or Neutropenia)",
+    description: "White blood cells (WBC) are crucial for fighting infection. While receiving treatment, your WBC count can drop, putting you at a higher risk of disease."
+  },
+  {
+    name: "Fatigue",
+    description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion."
+  },
+  {
+    name: "Low platelet count (thrombocytopenia)",
+    description: "Platelets help your blood clot, so you are at a higher risk of bleeding when your platelet count decreases. Let your oncology care team know if you have any excess bruising or bleeding, including nose bleeds, sore gums or blood in your urine or stool."
+  }
+]
+otherCommonSideEffects: [
+  { name: "Liver dysfunction" },
+  { name: "Low red blood cells (Anaemia)" },
+  { name: "Swelling" },
+  { name: "Skin rash" },
+  { name: "Hair loss" },
+  { name: "Dizziness" },
+  { name: "Blood & protein in the urine" },
+  { name: "Breathing difficulty" }
+]
+occasionalSideEffects: []
+rareSideEffects: [
+  { name: "Diarrhoea" },
+  { name: "Constipation" },
+  { name: "Mouth sores" },
+  { name: "Low appetite" },
+  { name: "Muscle pain" },
+  { name: "Back pain" },
+  { name: "Sleeplessness (Insomnia)" },
+  { name: "Headache" },
+  { name: "Sweating" },
+  { name: "Injection site reactions" },
+  { name: "Allergic reactions" },
+  { name: "Cardiac problems" },
+  { name: "Severe rash, blisters, peeling, usually with fever" },
+  { name: "Capillary leak syndrome (CLS)" },
+  { name: "Hemolytic-uremic syndrome (HUS)" },
+  { name: "Neurological disorder" }
+]
+---
+export const days = frontmatter.days;
+export const treatments = frontmatter.treatments;
+export const treatmentSchedule = frontmatter.treatmentSchedule;
+export const commonSideEffects = frontmatter.commonSideEffects;
+export const otherCommonSideEffects = frontmatter.otherCommonSideEffects;
+export const occasionalSideEffects = frontmatter.occasionalSideEffects;
+export const rareSideEffects = frontmatter.rareSideEffects;
+import TreatmentCycleGrid from "../../components/TreatmentCycleGrid.astro";
+import LegendGrid from "../../components/LegendGrid.astro";
+import CommonSideEffects from "../../components/CommonSideEffects.astro";
+import OtherCommonSideEffects from "../../components/OtherCommonSideEffects.astro";
+import OccasionalSideEffects from "../../components/OccasionalSideEffects.astro";
+import RareSideEffects from "../../components/RareSideEffects.astro";
+import SafeHandlingAccordion from "../../components/SafeHandlingAccordion.astro";
+import GeneralPrecautionsAccordion from "../../components/GeneralPrecautionsAccordion.astro";
+import LifestyleSafetyAccordion from "../../components/LifestyleSafetyAccordion.astro";
+import HealthcareTeamContact from "../../components/HealthcareTeamContact.astro";
+
+# Gemcitabine (Weekly) Q21 Days
+
+## About the treatment
+
+Gemcitabine (antimetabolite) is chemotherapy for breast, lung, head and neck cancers. It interferes with DNA synthesis in cells and stops the growth and spread of rapidly dividing cells such as cancer cells. Gemcitabine will be administered intravenously ~30 min on days 1 and 8 of your 21-day cycle.
+
+## Treatment details
+
+<LegendGrid treatments={treatments} />
+
+## Treatment cycle
+
+<TreatmentCycleGrid treatmentSchedule={treatmentSchedule} />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+## Side Effects
+
+Chemotherapy is often linked to so many side effects. While it is true that chemotherapy drugs often cause a wide range of side effects, most of these side effects are temporary and can be minimised or prevented. Remember that different drugs cause different side effects, and each person experiences different side effects to varying degrees.
+
+<CommonSideEffects commonSideEffects={commonSideEffects} />
+<OtherCommonSideEffects otherCommonSideEffects={otherCommonSideEffects} />
+<OccasionalSideEffects occasionalSideEffects={occasionalSideEffects} />
+<RareSideEffects rareSideEffects={rareSideEffects} />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+<SafeHandlingAccordion />
+<GeneralPrecautionsAccordion />
+<LifestyleSafetyAccordion />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+<HealthcareTeamContact />

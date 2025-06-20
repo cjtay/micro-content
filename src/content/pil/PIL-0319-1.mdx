@@ -1,0 +1,253 @@
+---
+title: "PIL-0319-1"
+description: "A combination of paclitaxel (microtubule inhibitor) and carboplatin (platinum-based compound) is an effective treatment for breast, gynaecological, and other cancers. Combining cancer medicines to enhance effectiveness in slowing or stopping cancer cell growth and spread is standard."
+slug: "PIL-0319-1"
+tags: ["treatment","cancer","pil"]
+category: "patient information"
+pubDate: 2025-06-20T09:30:25.469Z
+draft: false
+days: 21
+treatments: [
+    {
+      "name": "Paclitaxel and Carboplatin",
+      "cycle": "day 1 of your 21-day cycle",
+      "info": "administered intravenously ~2 hours"
+    },
+    {
+      "name": "Paclitaxel",
+      "cycle": "day 8 of your 21-day cycle",
+      "info": "administered intravenously ~60 minutes"
+    }
+  ]
+treatmentSchedule: [
+    {
+      "day": 1,
+      "treatments": [
+        "paclitaxel and carboplatin"
+      ]
+    },
+    {
+      "day": 2,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 3,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 4,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 5,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 6,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 7,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 8,
+      "treatments": [
+        "paclitaxel"
+      ]
+    },
+    {
+      "day": 9,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 10,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 11,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 12,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 13,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 14,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 15,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 16,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 17,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 18,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 19,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 20,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 21,
+      "treatments": [
+        "rest"
+      ]
+    }
+  ]
+commonSideEffects: [
+  {
+    name: "Diarrhoea",
+    description: "This treatment may disturb the intestinal lining and cause loose, watery, and more frequent stools than usual. Certain medications have a higher chance of causing diarrhoea."
+  },
+  {
+    name: "Fatigue",
+    description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion."
+  },
+  {
+    name: "Nausea and/or vomiting",
+    description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication."
+  },
+  {
+    name: "Low white blood cell count (Leukopenia or Neutropenia)",
+    description: "White blood cells (WBC) are crucial for fighting infection. While receiving treatment, your WBC count can drop, putting you at a higher risk of disease."
+  },
+  {
+    name: "Low platelet count (thrombocytopenia)",
+    description: "Platelets help your blood clot, so you are at a higher risk of bleeding when your platelet count decreases. Let your oncology care team know if you have any excess bruising or bleeding, including nose bleeds, sore gums or blood in your urine or stool."
+  }
+]
+otherCommonSideEffects: [
+  { name: "Low red blood cells (Anaemia)" },
+  { name: "Muscle/joint pain" },
+  { name: "Hair loss" },
+  { name: "Allergic reactions" },
+  { name: "Mouth sores" },
+  { name: "Dizziness" },
+  { name: "Swelling" },
+  { name: "Kidney dysfunction" },
+  { name: "Liver dysfunction" },
+  { name: "Electrolyte imbalance" },
+  { name: "Numbness, tingling and unusual sensation in extremities like hands and feet" }
+]
+occasionalSideEffects: []
+rareSideEffects: [
+  { name: "Hearing problem" },
+  { name: "Skin rash" },
+  { name: "Nail changes" },
+  { name: "Blurred vision" },
+  { name: "Constipation" },
+  { name: "Taste disorder" },
+  { name: "Lungs/breathing problems" },
+  { name: "Mood changes" },
+  { name: "Sleeplessness (Insomnia)" },
+  { name: "Memory & cognitive problem" },
+  { name: "Injection-site reactions" },
+  { name: "Seizure or convulsion" },
+  { name: "Increased risk of second cancer" }
+]
+---
+export const days = frontmatter.days;
+export const treatments = frontmatter.treatments;
+export const treatmentSchedule = frontmatter.treatmentSchedule;
+export const commonSideEffects = frontmatter.commonSideEffects;
+export const otherCommonSideEffects = frontmatter.otherCommonSideEffects;
+export const occasionalSideEffects = frontmatter.occasionalSideEffects;
+export const rareSideEffects = frontmatter.rareSideEffects;
+import TreatmentCycleGrid from "../../components/TreatmentCycleGrid.astro";
+import LegendGrid from "../../components/LegendGrid.astro";
+import CommonSideEffects from "../../components/CommonSideEffects.astro";
+import OtherCommonSideEffects from "../../components/OtherCommonSideEffects.astro";
+import OccasionalSideEffects from "../../components/OccasionalSideEffects.astro";
+import RareSideEffects from "../../components/RareSideEffects.astro";
+import SafeHandlingAccordion from "../../components/SafeHandlingAccordion.astro";
+import GeneralPrecautionsAccordion from "../../components/GeneralPrecautionsAccordion.astro";
+import LifestyleSafetyAccordion from "../../components/LifestyleSafetyAccordion.astro";
+import HealthcareTeamContact from "../../components/HealthcareTeamContact.astro";
+
+# Paclitaxel (2 out of 3 Week) and Carboplatin Q21 Days
+
+## About the treatment
+
+A combination of paclitaxel (microtubule inhibitor) and carboplatin (platinum-based compound) is an effective treatment for breast, gynaecological, and other cancers. Combining cancer medicines to enhance effectiveness in slowing or stopping cancer cell growth and spread is standard.
+
+## Treatment details
+
+<LegendGrid treatments={treatments} />
+
+## Treatment cycle
+
+<TreatmentCycleGrid treatmentSchedule={treatmentSchedule} />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+## Side Effects
+
+Chemotherapy is often linked to so many side effects. While it is true that chemotherapy drugs often cause a wide range of side effects, most of these side effects are temporary and can be minimised or prevented. Remember that different drugs cause different side effects, and each person experiences different side effects to varying degrees.
+
+<CommonSideEffects commonSideEffects={commonSideEffects} />
+<OtherCommonSideEffects otherCommonSideEffects={otherCommonSideEffects} />
+<OccasionalSideEffects occasionalSideEffects={occasionalSideEffects} />
+<RareSideEffects rareSideEffects={rareSideEffects} />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+<SafeHandlingAccordion />
+<GeneralPrecautionsAccordion />
+<LifestyleSafetyAccordion />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+<HealthcareTeamContact />

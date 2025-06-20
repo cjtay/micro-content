@@ -1,0 +1,262 @@
+---
+title: "PIL-0056-2"
+description: "A combination of capecitabine (antimetabolite) and trastuzumab (monoclonal antibody) is used in treating breast cancers. Cancer medicines are often used in combination to enhance efficiency in slowing down or stopping the growth and spread of cancer cells."
+slug: "PIL-0056-2"
+tags: ["treatment","cancer","pil"]
+category: "patient information"
+pubDate: 2025-06-20T10:38:45.902Z
+draft: false
+days: 21
+treatments: [
+    {
+      "name": "Trastuzumab",
+      "cycle": "day 1 of your 21-day-cycle",
+      "info": "administered subcutaneously ~2 to 5 min"
+    },
+    {
+      "name": "Capecitabine",
+      "cycle": "days 1 to 14 of your 21 day-cycle",
+      "info": "taken twice a day by mouth"
+    }
+  ]
+treatmentSchedule: [
+    {
+      "day": 1,
+      "treatments": [
+        "trastuzumab",
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 2,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 3,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 4,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 5,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 6,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 7,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 8,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 9,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 10,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 11,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 12,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 13,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 14,
+      "treatments": [
+        "capecitabine"
+      ]
+    },
+    {
+      "day": 15,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 16,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 17,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 18,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 19,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 20,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 21,
+      "treatments": [
+        "rest"
+      ]
+    }
+  ]
+commonSideEffects: [
+  {
+    name: "Diarrhoea",
+    description: "This treatment may disturb the intestinal lining and cause loose, watery, and more frequent stools than usual. Certain medications have a higher chance of causing diarrhoea."
+  },
+  {
+    name: "Hand and foot syndrome",
+    description: "Also called palmar-plantar erythrodysesthesia) is a side effect of some chemotherapy drugs that can cause redness, swelling and blistering on the palms of the hands and soles of the feet."
+  },
+  {
+    name: "Nausea and/or vomiting",
+    description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication."
+  },
+  {
+    name: "Fatigue",
+    description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion."
+  },
+  {
+    name: "Mouth sores",
+    description: "Cancer medications can cause sores in the mouth and throat. These sores are painful and may become infected."
+  },
+  {
+    name: "Abdominal pain",
+    description: "Pain may be achy or cramp-like and is associated with increased flatulence (gas). Chemotherapy may also alter the normal bacterial flora in the intestines. This can affect digestion and cause abdominal pain, cramping or flatulence (gas)."
+  },
+  {
+    name: "Low appetite",
+    description: "Appetite loss or poor appetite are common side effects of cancer and its treatment. This means you may eat less than usual, not feel hungry, or feel full after eating only a tiny amount."
+  }
+]
+otherCommonSideEffects: [
+  { name: "Red, itchy, dry eyes and blurred vision" },
+  { name: "Insomnia" },
+  { name: "Cardiac problems" },
+  { name: "Lungs/breathing problems" },
+  { name: "Low platelet count (thrombocytopenia)" },
+  { name: "Allergic reactions" }
+]
+occasionalSideEffects: []
+rareSideEffects: [
+  { name: "Nail changes" },
+  { name: "Kidney dysfunction" },
+  { name: "Liver dysfunction" },
+  { name: "Mood changes (depression)" },
+  { name: "Blood clots" },
+  { name: "Muscle pain or stiffness" },
+  { name: "Hot flushes and sweating" },
+  { name: "Vertigo" },
+  { name: "Urinary infection" },
+  { name: "Vaginal bleeding/discharge" },
+  { name: "Flatulence" },
+  { name: "Dehydration" },
+  { name: "Heart failure" },
+  { name: "Diabetes" },
+  { name: "Severe rash, blisters, peeling, usually with fever" },
+  { name: "High or low blood pressure" },
+  { name: "Loss of interest in sex" },
+  { name: "Confusion or memory changes" }
+]
+---
+export const days = frontmatter.days;
+export const treatments = frontmatter.treatments;
+export const treatmentSchedule = frontmatter.treatmentSchedule;
+export const commonSideEffects = frontmatter.commonSideEffects;
+export const otherCommonSideEffects = frontmatter.otherCommonSideEffects;
+export const occasionalSideEffects = frontmatter.occasionalSideEffects;
+export const rareSideEffects = frontmatter.rareSideEffects;
+import TreatmentCycleGrid from "../../components/TreatmentCycleGrid.astro";
+import LegendGrid from "../../components/LegendGrid.astro";
+import CommonSideEffects from "../../components/CommonSideEffects.astro";
+import OtherCommonSideEffects from "../../components/OtherCommonSideEffects.astro";
+import OccasionalSideEffects from "../../components/OccasionalSideEffects.astro";
+import RareSideEffects from "../../components/RareSideEffects.astro";
+import SafeHandlingAccordion from "../../components/SafeHandlingAccordion.astro";
+import GeneralPrecautionsAccordion from "../../components/GeneralPrecautionsAccordion.astro";
+import LifestyleSafetyAccordion from "../../components/LifestyleSafetyAccordion.astro";
+import HealthcareTeamContact from "../../components/HealthcareTeamContact.astro";
+
+# Capecitabine and SC Trastuzumab Q21Days
+
+## About the treatment
+
+A combination of capecitabine (antimetabolite) and trastuzumab (monoclonal antibody) is used in treating breast cancers. Cancer medicines are often used in combination to enhance efficiency in slowing down or stopping the growth and spread of cancer cells.
+
+## Treatment details
+
+<LegendGrid treatments={treatments} />
+
+## Treatment cycle
+
+<TreatmentCycleGrid treatmentSchedule={treatmentSchedule} />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+## Side Effects
+
+Chemotherapy is often linked to so many side effects. While it is true that chemotherapy drugs often cause a wide range of side effects, most of these side effects are temporary and can be minimised or prevented. Remember that different drugs cause different side effects, and each person experiences different side effects to varying degrees.
+
+<CommonSideEffects commonSideEffects={commonSideEffects} />
+<OtherCommonSideEffects otherCommonSideEffects={otherCommonSideEffects} />
+<OccasionalSideEffects occasionalSideEffects={occasionalSideEffects} />
+<RareSideEffects rareSideEffects={rareSideEffects} />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+<SafeHandlingAccordion />
+<GeneralPrecautionsAccordion />
+<LifestyleSafetyAccordion />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+<HealthcareTeamContact />

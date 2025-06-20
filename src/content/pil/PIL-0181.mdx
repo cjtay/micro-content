@@ -1,0 +1,255 @@
+---
+title: "PIL-0181"
+description: "Eribulin is a microtubule inhibitor that works as a chemotherapeutic agent. It interferes with the activity of microtubules in cell division, stopping the growth and spread of cancer cells. This single-agent treatment is given for sarcomas (muscle and bone cancers) and breast cancer."
+slug: "PIL-0181"
+tags: ["treatment","cancer","pil"]
+category: "patient information"
+pubDate: 2025-06-20T09:23:28.310Z
+draft: false
+days: 21
+treatments: [
+    {
+      "name": "Eribulin",
+      "cycle": "days 1 and 8 of your 21-day cycle",
+      "info": "administered intravenously ~ 5 to 10 minutes"
+    }
+  ]
+treatmentSchedule: [
+    {
+      "day": 1,
+      "treatments": [
+        "eribulin"
+      ]
+    },
+    {
+      "day": 2,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 3,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 4,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 5,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 6,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 7,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 8,
+      "treatments": [
+        "eribulin"
+      ]
+    },
+    {
+      "day": 9,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 10,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 11,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 12,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 13,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 14,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 15,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 16,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 17,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 18,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 19,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 20,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 21,
+      "treatments": [
+        "rest"
+      ]
+    }
+  ]
+commonSideEffects: [
+  {
+    name: "Peripheral neuropathy/neurotoxicity",
+    description: "Damage to the nerves outside the brain and spinal cord. The usual symptoms are numbness, tingling, and weakness in the extremities like hands and feet."
+  },
+  {
+    name: "Nausea and/or vomiting",
+    description: "Many people feel nauseous, and some also experience vomiting. Can be managed or reduced with medication."
+  },
+  {
+    name: "Fatigue",
+    description: "You may feel tired and find it harder to do daily chores/activities. It may be physical, emotional and mental exhaustion."
+  },
+  {
+    name: "Constipation",
+    description: "This treatment can cause difficulty in passing stool."
+  },
+  {
+    name: "Electrolyte imbalance",
+    description: "Loss of body fluids from prolonged vomiting, diarrhoea and sweating can cause an electrolyte imbalance."
+  },
+  {
+    name: "Low platelet count (thrombocytopenia)",
+    description: "Higher risk of bleeding when platelet count decreases."
+  },
+  {
+    name: "Effects on the liver",
+    description: "This medication can cause liver toxicity, which may be monitored with blood tests."
+  },
+  {
+    name: "Hair loss (alopecia)",
+    description: "This treatment causes the hair on your head and other body parts to fall. In most cases, hair loss is temporary."
+  }
+]
+otherCommonSideEffects: [
+  { name: "Headache" },
+  { name: "Cardiac problems" },
+  { name: "Red, itchy, watery eyes and blurred vision" },
+  { name: "Lung/Breathing problems" }
+]
+occasionalSideEffects: []
+rareSideEffects: [
+  { name: "Dehydration" },
+  { name: "Dizziness" },
+  { name: "High blood sugar" },
+  { name: "Abdominal pain" },
+  { name: "Taste changes" },
+  { name: "Mood changes" },
+  { name: "Neurological disorder" },
+  { name: "Hearing problem" },
+  { name: "Hot flushes and sweating" },
+  { name: "Blood clots" },
+  { name: "Urine infection" },
+  { name: "Skin problems" },
+  { name: "Poor kidney functioning" },
+  { name: "Pancreas inflammation" },
+  { name: "Severe skin problems" }
+]
+---
+export const days = frontmatter.days;
+export const treatments = frontmatter.treatments;
+export const treatmentSchedule = frontmatter.treatmentSchedule;
+export const commonSideEffects = frontmatter.commonSideEffects;
+export const otherCommonSideEffects = frontmatter.otherCommonSideEffects;
+export const occasionalSideEffects = frontmatter.occasionalSideEffects;
+export const rareSideEffects = frontmatter.rareSideEffects;
+import TreatmentCycleGrid from "../../components/TreatmentCycleGrid.astro";
+import LegendGrid from "../../components/LegendGrid.astro";
+import CommonSideEffects from "../../components/CommonSideEffects.astro";
+import OtherCommonSideEffects from "../../components/OtherCommonSideEffects.astro";
+import OccasionalSideEffects from "../../components/OccasionalSideEffects.astro";
+import RareSideEffects from "../../components/RareSideEffects.astro";
+import SafeHandlingAccordion from "../../components/SafeHandlingAccordion.astro";
+import GeneralPrecautionsAccordion from "../../components/GeneralPrecautionsAccordion.astro";
+import LifestyleSafetyAccordion from "../../components/LifestyleSafetyAccordion.astro";
+import HealthcareTeamContact from "../../components/HealthcareTeamContact.astro";
+
+# Eribulin Q21 Days
+
+## About the treatment
+
+Eribulin is a microtubule inhibitor that works as a chemotherapeutic agent. It interferes with the activity of microtubules in cell division, stopping the growth and spread of cancer cells. This single-agent treatment is given for sarcomas (muscle and bone cancers) and breast cancer.
+
+## Treatment details
+
+<LegendGrid treatments={treatments} />
+
+## Treatment cycle
+
+<TreatmentCycleGrid treatmentSchedule={treatmentSchedule} />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+## Side Effects
+
+Chemotherapy is often linked to so many side effects. While it is true that chemotherapy drugs often cause a wide range of side effects, most of these side effects are temporary and can be minimised or prevented. Remember that different drugs cause different side effects, and each person experiences different side effects to varying degrees.
+
+<CommonSideEffects commonSideEffects={commonSideEffects} />
+<OtherCommonSideEffects otherCommonSideEffects={otherCommonSideEffects} />
+<OccasionalSideEffects occasionalSideEffects={occasionalSideEffects} />
+<RareSideEffects rareSideEffects={rareSideEffects} />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+<SafeHandlingAccordion />
+<GeneralPrecautionsAccordion />
+<LifestyleSafetyAccordion />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+<HealthcareTeamContact />

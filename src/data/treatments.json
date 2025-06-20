@@ -54,5 +54,9 @@
 	{
 		"name": "trastuzumab (sc)",
 		"icon": "inject"
+	},
+	{
+		"name": "paclitaxel, pertuzumab and trastuzumab",
+		"icon": "drip-blue"
 	}
 ]

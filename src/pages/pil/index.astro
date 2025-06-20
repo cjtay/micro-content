@@ -19,7 +19,7 @@ const pils = allPils
   // Add filter here to exclude posts from 2027 and above
   .filter((pil) => pil.data.pubDate.getFullYear() < 2027)
   .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
-  .slice(0, 8);
+  .slice(0, 120);
 ---
 
 <IndexLayout title="micro-content">

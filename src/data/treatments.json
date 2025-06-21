@@ -58,5 +58,185 @@
 	{
 		"name": "paclitaxel, pertuzumab and trastuzumab",
 		"icon": "drip-blue"
+	},
+	{
+		"name": "abemaciclib",
+		"icon": "pill-pink"
+	},
+	{
+		"name": "alpelisib",
+		"icon": "pill-teal"
+	},
+	{
+		"name": "anastrozole",
+		"icon": "pill-coral"
+	},
+	{
+		"name": "atezolizumab",
+		"icon": "drip-indigo"
+	},
+	{
+		"name": "carboplatin",
+		"icon": "drip-brown"
+	},
+	{
+		"name": "cyclophosphamide",
+		"icon": "drip-coral"
+	},
+	{
+		"name": "cyclophosphamide, doxorubicin",
+		"icon": "drip-maroon"
+	},
+	{
+		"name": "docetaxel",
+		"icon": "drip-teal"
+	},
+	{
+		"name": "docetaxel, carboplatin",
+		"icon": "drip-gold"
+	},
+	{
+		"name": "docetaxel, carboplatin, trastuzumab",
+		"icon": "drip-silver"
+	},
+	{
+		"name": "docetaxel, cyclophosphamide",
+		"icon": "drip-lime"
+	},
+	{
+		"name": "docetaxel, trastuzumab",
+		"icon": "drip-pink"
+	},
+	{
+		"name": "doxorubicin",
+		"icon": "drip-navy"
+	},
+	{
+		"name": "doxorubicin, cyclophosphamide",
+		"icon": "drip-magenta"
+	},
+	{
+		"name": "entrectinib",
+		"icon": "pill-indigo"
+	},
+	{
+		"name": "eribulin",
+		"icon": "drip-olive"
+	},
+	{
+		"name": "eribulin, trastuzumab",
+		"icon": "drip-coral"
+	},
+	{
+		"name": "everolimus",
+		"icon": "pill-brown"
+	},
+	{
+		"name": "exemestane",
+		"icon": "pill-olive"
+	},
+	{
+		"name": "fluorouracil, epirubicin",
+		"icon": "drip-indigo"
+	},
+	{
+		"name": "fulvestrant",
+		"icon": "inject-pink"
+	},
+	{
+		"name": "gemcitabine",
+		"icon": "drip-teal"
+	},
+	{
+		"name": "gemcitabine, carboplatin",
+		"icon": "drip-brown"
+	},
+	{
+		"name": "goserelin",
+		"icon": "inject-teal"
+	},
+	{
+		"name": "hydrocortisone",
+		"icon": "pill-navy"
+	},
+	{
+		"name": "larotrectinib",
+		"icon": "pill-lime"
+	},
+	{
+		"name": "lenvatinib",
+		"icon": "pill-magenta"
+	},
+	{
+		"name": "letrozole",
+		"icon": "pill-gold"
+	},
+	{
+		"name": "methotrexate",
+		"icon": "drip-coral"
+	},
+	{
+		"name": "nab-paclitaxel",
+		"icon": "drip-pink"
+	},
+	{
+		"name": "nivolumab",
+		"icon": "drip-navy"
+	},
+	{
+		"name": "olaparib",
+		"icon": "pill-silver"
+	},
+	{
+		"name": "paclitaxel, carboplatin",
+		"icon": "drip-olive"
+	},
+	{
+		"name": "palbociclib",
+		"icon": "pill-maroon"
+	},
+	{
+		"name": "pembrolizumab",
+		"icon": "drip-lime"
+	},
+	{
+		"name": "ribociclib",
+		"icon": "pill-indigo"
+	},
+	{
+		"name": "sacituzumab govitecan",
+		"icon": "drip-magenta"
+	},
+	{
+		"name": "ts-1",
+		"icon": "pill-coral"
+	},
+	{
+		"name": "talazoparib",
+		"icon": "pill-teal"
+	},
+	{
+		"name": "tamoxifen",
+		"icon": "pill-pink"
+	},
+	{
+		"name": "trastuzumab deruxtecan",
+		"icon": "drip-gold"
+	},
+	{
+		"name": "trastuzumab emtansine",
+		"icon": "drip-silver"
+	},
+	{
+		"name": "tucatinib",
+		"icon": "pill-brown"
+	},
+	{
+		"name": "vinorelbine",
+		"icon": "drip-maroon"
+	},
+	{
+		"name": "zoledronic acid",
+		"icon": "drip-indigo"
 	}
 ]

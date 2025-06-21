@@ -1,0 +1,482 @@
+{
+  "unique_treatments": [
+    "Abemaciclib",
+    "Alpelisib",
+    "Anastrozole",
+    "Atezolizumab",
+    "Capecitabine",
+    "Carboplatin",
+    "Cisplatin",
+    "Cyclophosphamide",
+    "Cyclophosphamide, Doxorubicin",
+    "Docetaxel",
+    "Docetaxel, Carboplatin",
+    "Docetaxel, Carboplatin, Trastuzumab",
+    "Docetaxel, Cyclophosphamide",
+    "Docetaxel, Trastuzumab",
+    "Doxorubicin",
+    "Doxorubicin, Cyclophosphamide",
+    "Entrectinib",
+    "Eribulin",
+    "Eribulin, Trastuzumab",
+    "Everolimus",
+    "Exemestane",
+    "Fluorouracil",
+    "Fluorouracil, Epirubicin",
+    "Fulvestrant",
+    "Gemcitabine",
+    "Gemcitabine, Carboplatin",
+    "Gemcitabine, Carboplatin,",
+    "Goserelin",
+    "Hydrocortisone",
+    "Lapatinib",
+    "Larotrectinib",
+    "Lenvatinib",
+    "Letrozole",
+    "Methotrexate",
+    "NAB-Paclitaxel",
+    "Nab-Paclitaxel",
+    "Nivolumab",
+    "Olaparib",
+    "Paclitaxel",
+    "Paclitaxel, Carboplatin",
+    "Paclitaxel, Pertuzumab",
+    "Palbociclib",
+    "Pembrolizumab",
+    "Pertuzumab",
+    "Ribociclib",
+    "Sacituzumab Govitecan",
+    "TS-1",
+    "Talazoparib",
+    "Tamoxifen",
+    "Trastuzumab",
+    "Trastuzumab Deruxtecan",
+    "Trastuzumab Emtansine",
+    "Tucatinib",
+    "Vinorelbine",
+    "Zoledronic Acid"
+  ],
+  "treatments_by_file": {
+    "PIL-0069-1.mdx": [
+      "Carboplatin"
+    ],
+    "PIL-0167.mdx": [
+      "Doxorubicin, Cyclophosphamide",
+      "Atezolizumab"
+    ],
+    "PIL-0149-1.mdx": [
+      "Docetaxel, Carboplatin",
+      "Trastuzumab"
+    ],
+    "PIL-0403.mdx": [
+      "Vinorelbine"
+    ],
+    "PIL-0070-1.mdx": [
+      "Carboplatin"
+    ],
+    "PIL-0056-2.mdx": [
+      "Trastuzumab",
+      "Capecitabine"
+    ],
+    "PIL-0402-2.mdx": [
+      "Vinorelbine"
+    ],
+    "PIL-0150-1.mdx": [
+      "Docetaxel, Carboplatin, Trastuzumab",
+      "Pertuzumab"
+    ],
+    "PIL-0069-2.mdx": [
+      "Carboplatin"
+    ],
+    "PIL-0010.mdx": [
+      "Anastrozole"
+    ],
+    "PIL-0070-3.mdx": [
+      "Carboplatin"
+    ],
+    "PIL-0149-2.mdx": [
+      "Docetaxel",
+      "Carboplatin",
+      "Trastuzumab"
+    ],
+    "PIL-0372.mdx": [
+      "Sacituzumab Govitecan"
+    ],
+    "PIL-0056-1.mdx": [
+      "Trastuzumab",
+      "Capecitabine"
+    ],
+    "PIL-0070-2.mdx": [
+      "Carboplatin"
+    ],
+    "PIL-0402-1.mdx": [
+      "Vinorelbine"
+    ],
+    "PIL-0150-2.mdx": [
+      "Docetaxel, Carboplatin",
+      "Pertuzumab",
+      "Trastuzumab"
+    ],
+    "PIL-0388-2.mdx": [
+      "Trastuzumab",
+      "Lapatinib"
+    ],
+    "PIL-0001.mdx": [
+      "Abemaciclib"
+    ],
+    "PIL-0377.mdx": [
+      "Tamoxifen"
+    ],
+    "PIL-0376.mdx": [
+      "Talazoparib"
+    ],
+    "PIL-0388-1.mdx": [
+      "Trastuzumab",
+      "Lapatinib"
+    ],
+    "PIL-0111-1.mdx": [
+      "Cisplatin",
+      "Gemcitabine",
+      "Gemcitabine"
+    ],
+    "PIL-0391-0.mdx": [
+      "TS-1"
+    ],
+    "PIL-0188.mdx": [
+      "Everolimus",
+      "Exemestane"
+    ],
+    "PIL-0070-4.mdx": [
+      "Carboplatin"
+    ],
+    "PIL-0266.mdx": [
+      "Letrozole"
+    ],
+    "PIL-0231-2.mdx": [
+      "Goserelin"
+    ],
+    "PIL-0057-1.mdx": [
+      "Trastuzumab",
+      "Capecitabine",
+      "Tucatinib"
+    ],
+    "PIL-0191-0.mdx": [
+      "Exemestane"
+    ],
+    "PIL-0231-1.mdx": [
+      "Goserelin"
+    ],
+    "PIL-0311.mdx": [
+      "Paclitaxel, Carboplatin",
+      "Pembrolizumab",
+      "Paclitaxel",
+      "Carboplatin"
+    ],
+    "PIL-0310.mdx": [
+      "Paclitaxel",
+      "Carboplatin"
+    ],
+    "PIL-0099.mdx": [
+      "Cisplatin",
+      "Fluorouracil"
+    ],
+    "PIL-0057-2.mdx": [
+      "Trastuzumab",
+      "Capecitabine",
+      "Tucatinib"
+    ],
+    "PIL-0260.mdx": [
+      "Larotrectinib"
+    ],
+    "PIL-0155-1.mdx": [
+      "Docetaxel, Cyclophosphamide",
+      "Trastuzumab"
+    ],
+    "PIL-0296-2.mdx": [
+      "Nivolumab"
+    ],
+    "PIL-0329.mdx": [
+      "Palbociclib"
+    ],
+    "PIL-0389-0.mdx": [
+      "Trastuzumab Deruxtecan"
+    ],
+    "PIL-0301.mdx": [
+      "Olaparib"
+    ],
+    "PIL-0328-1.mdx": [
+      "Paclitaxel, Pertuzumab",
+      "Trastuzumab",
+      "Paclitaxel"
+    ],
+    "PIL-0405-1.mdx": [
+      "Trastuzumab",
+      "Vinorelbine"
+    ],
+    "PIL-0077.mdx": [
+      "Carboplatin",
+      "Gemcitabine"
+    ],
+    "PIL-0157-2.mdx": [
+      "Docetaxel",
+      "Trastuzumab"
+    ],
+    "PIL-0288.mdx": [
+      "Nab-Paclitaxel",
+      "Carboplatin"
+    ],
+    "PIL-0155-2.mdx": [
+      "Docetaxel",
+      "Cyclophosphamide",
+      "Trastuzumab"
+    ],
+    "PIL-0049.mdx": [
+      "Capecitabine"
+    ],
+    "PIL-0317.mdx": [
+      "Paclitaxel, Carboplatin",
+      "Trastuzumab"
+    ],
+    "PIL-0296-1.mdx": [
+      "Nivolumab"
+    ],
+    "PIL-0100.mdx": [
+      "Fluorouracil",
+      "Cisplatin"
+    ],
+    "PIL-0328-2.mdx": [
+      "Paclitaxel",
+      "Pertuzumab",
+      "Trastuzumab",
+      "Paclitaxel"
+    ],
+    "PIL-0405-2.mdx": [
+      "Trastuzumab",
+      "Vinorelbine"
+    ],
+    "PIL-0157-1.mdx": [
+      "Docetaxel",
+      "Trastuzumab"
+    ],
+    "PIL-0166-1.mdx": [
+      "Doxorubicin",
+      "Cyclophosphamide"
+    ],
+    "PIL-0222-1.mdx": [
+      "Gemcitabine"
+    ],
+    "PIL-0319-2.mdx": [
+      "Paclitaxel",
+      "Carboplatin",
+      "Paclitaxel"
+    ],
+    "PIL-0387-1.mdx": [
+      "Trastuzumab"
+    ],
+    "PIL-0306-4.mdx": [
+      "Paclitaxel"
+    ],
+    "PIL-0124.mdx": [
+      "Methotrexate",
+      "Fluorouracil",
+      "Cyclophosphamide"
+    ],
+    "PIL-0078.mdx": [
+      "Carboplatin",
+      "Gemcitabine",
+      "Gemcitabine"
+    ],
+    "PIL-0182-1.mdx": [
+      "Eribulin",
+      "Trastuzumab",
+      "Eribulin"
+    ],
+    "PIL-0052.mdx": [
+      "Capecitabine",
+      "Lapatinib"
+    ],
+    "PIL-0166-2.mdx": [
+      "Doxorubicin",
+      "Cyclophosphamide"
+    ],
+    "PIL-0330.mdx": [
+      "Fulvestrant",
+      "Palbociclib"
+    ],
+    "PIL-0319-1.mdx": [
+      "Paclitaxel",
+      "Carboplatin",
+      "Paclitaxel"
+    ],
+    "PIL-0387-2.mdx": [
+      "Trastuzumab"
+    ],
+    "PIL-0265-0.mdx": [
+      "Pembrolizumab",
+      "Lenvatinib"
+    ],
+    "PIL-0325.mdx": [
+      "Pembrolizumab",
+      "Paclitaxel",
+      "Paclitaxel"
+    ],
+    "PIL-0286.mdx": [
+      "NAB-Paclitaxel"
+    ],
+    "PIL-0182-2.mdx": [
+      "Eribulin",
+      "Trastuzumab"
+    ],
+    "PIL-0103-2.mdx": [
+      "Cisplatin",
+      "Trastuzumab",
+      "Fluorouracil"
+    ],
+    "PIL-0306-3.mdx": [
+      "Paclitaxel"
+    ],
+    "PIL-0287-2.mdx": [
+      "Nab-Paclitaxel",
+      "Atezolizumab",
+      "Nab-Paclitaxel"
+    ],
+    "PIL-0335.mdx": [
+      "Pembrolizumab"
+    ],
+    "PIL-0308.mdx": [
+      "Paclitaxel",
+      "Carboplatin",
+      "Trastuzumab"
+    ],
+    "PIL-0306-2.mdx": [
+      "Paclitaxel"
+    ],
+    "PIL-0122.mdx": [
+      "Cyclophosphamide, Doxorubicin",
+      "Fluorouracil"
+    ],
+    "PIL-0226-2.mdx": [
+      "Trastuzumab",
+      "Gemcitabine",
+      "Carboplatin",
+      "Gemcitabine"
+    ],
+    "PIL-0281.mdx": [
+      "Methotrexate",
+      "Hydrocortisone"
+    ],
+    "PIL-0103-1.mdx": [
+      "Cisplatin",
+      "Trastuzumab",
+      "Fluorouracil"
+    ],
+    "PIL-0068.mdx": [
+      "Carboplatin"
+    ],
+    "PIL-0287-1.mdx": [
+      "Nab-Paclitaxel",
+      "Atezolizumab",
+      "Nab-Paclitaxel"
+    ],
+    "PIL-0306-1.mdx": [
+      "Paclitaxel"
+    ],
+    "PIL-0226-1.mdx": [
+      "Gemcitabine, Carboplatin",
+      "Trastuzumab",
+      "Gemcitabine"
+    ],
+    "PIL-0104-1.mdx": [
+      "Cisplatin",
+      "Trastuzumab",
+      "Fluorouracil",
+      "Cisplatin"
+    ],
+    "PIL-0350.mdx": [
+      "Ribociclib"
+    ],
+    "PIL-0408-1.mdx": [
+      "Zoledronic Acid"
+    ],
+    "PIL-0158-1.mdx": [
+      "Docetaxel, Trastuzumab",
+      "Pertuzumab"
+    ],
+    "PIL-0183-2.mdx": [
+      "Eribulin",
+      "Pertuzumab",
+      "Trastuzumab",
+      "Eribulin"
+    ],
+    "PIL-0327-2.mdx": [
+      "Paclitaxel",
+      "Trastuzumab"
+    ],
+    "PIL-0219.mdx": [
+      "Fulvestrant"
+    ],
+    "PIL-0227.mdx": [
+      "Gemcitabine, Carboplatin,",
+      "Pembrolizumab",
+      "Gemcitabine"
+    ],
+    "PIL-0104-2.mdx": [
+      "Cisplatin",
+      "Trastuzumab",
+      "Fluorouracil"
+    ],
+    "PIL-0145.mdx": [
+      "Docetaxel"
+    ],
+    "PIL-0390.mdx": [
+      "Trastuzumab Emtansine"
+    ],
+    "PIL-0158-2.mdx": [
+      "Docetaxel",
+      "Pertuzumab",
+      "Trastuzumab"
+    ],
+    "PIL-0183-1.mdx": [
+      "Eribulin, Trastuzumab",
+      "Pertuzumab",
+      "Eribulin"
+    ],
+    "PIL-0327-1.mdx": [
+      "Paclitaxel",
+      "Trastuzumab",
+      "Paclitaxel"
+    ],
+    "PIL-0178.mdx": [
+      "Entrectinib"
+    ],
+    "PIL-0008.mdx": [
+      "Fulvestrant",
+      "Alpelisib"
+    ],
+    "PIL-0154.mdx": [
+      "Docetaxel",
+      "Cyclophosphamide"
+    ],
+    "PIL-0168.mdx": [
+      "Doxorubicin, Cyclophosphamide",
+      "Pembrolizumab"
+    ],
+    "PIL-0342-1.mdx": [
+      "Pertuzumab",
+      "Trastuzumab"
+    ],
+    "PIL-0181.mdx": [
+      "Eribulin"
+    ],
+    "PIL-0195.mdx": [
+      "Fluorouracil, Epirubicin",
+      "Cyclophosphamide"
+    ],
+    "PIL-0342-2.mdx": [
+      "Pertuzumab",
+      "Trastuzumab"
+    ]
+  },
+  "total_unique_treatments": 55,
+  "total_files_with_treatments": 107
+}

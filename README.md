@@ -1,48 +1,67 @@
-# Astro Starter Kit: Basics
+# Micro-Content: Medical PIL Management System
 
-```sh
-npm create astro@latest -- --template basics
+A web application for Singapore's National University Hospital (NUH) and National Cancer Institute Singapore (NCIS) to manage and display Patient Information Leaflets (PILs) for cancer treatments.
+
+## Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Process PDFs into content
+npm run extract-pdfs
+
+# Build for production
+npm run build
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Overview
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This system automates the conversion of PDF treatment protocols into interactive, web-based patient education materials with:
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- 🤖 Automated PDF extraction and processing
+- 📅 Visual treatment calendars with day-by-day schedules
+- 🎨 Color-coded treatment icons (57 treatments supported)
+- 🏥 Multi-hospital branding support (NUH, NCIS, HEH)
+- 📱 Responsive design for all devices
 
-## 🚀 Project Structure
+## Documentation
 
-Inside of your Astro project, you'll see the following folders and files:
+For comprehensive documentation including:
+- Technical architecture
+- PDF processing pipeline
+- Component documentation
+- Development guidelines
+- AI/Claude-specific instructions
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+**See [CLAUDE.md](./CLAUDE.md)**
+
+## Tech Stack
+
+- **Astro** 5.7.10 - Static site generator
+- **Tailwind CSS** 4.1.0 - Styling (via Vite plugin)
+- **MDX** 4.2.6 - Content format
+- **TypeScript** - Type safety
+
+## Project Structure
+
+```
+src/
+├── content/
+│   ├── pil/     # Patient Information Leaflets
+│   └── basic/   # Basic content pages
+├── components/  # Reusable Astro components
+├── utils/       # PDF extraction utilities
+└── data/        # Treatment definitions
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## License
 
-## 🧞 Commands
+Property of National University Health System (NUHS), Singapore.
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+For detailed documentation, please refer to [CLAUDE.md](./CLAUDE.md).

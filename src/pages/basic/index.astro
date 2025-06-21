@@ -1,0 +1,69 @@
+---
+import { getCollection } from "astro:content";
+import IndexLayout from "../../layouts/IndexLayout.astro";
+
+const allBasic = await getCollection("basic");
+
+// Ensure pubDate is a Date object and filter for 2024 events
+const basic = allBasic
+  .map((page) => ({
+    ...page,
+    data: {
+      ...page.data,
+      pubDate:
+        page.data.pubDate instanceof Date
+          ? page.data.pubDate
+          : new Date(page.data.pubDate),
+    },
+  }))
+  // Add filter here to exclude posts from 2027 and above
+  .filter((page) => page.data.pubDate.getFullYear() < 2027)
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+  .slice(0, 120);
+---
+
+<IndexLayout title="micro-content">
+  <section aria-label="micro-content" class="py-8 max-w-8/12 mx-auto">
+    <h1 class="text-2xl font-bold">Basic micro-content</h1>
+    <p class="mb-8">This is a staging site for internal <br/>
+    Please do not share any links to this site. 
+    testing purposes only.</p>
+    <div>
+      {
+        basic.map((m) => (
+          <ul role="list" class="divide-y divide-gray-200 !list-none ">
+            <li>
+              <h6>
+                <a href={`/basic/${m.id}`}>{m.data.title}</a>
+              </h6>
+              <p class="mb-4 text-gray-500 dark:text-gray-400">
+                {m.data.description}
+              </p>
+            </li>
+          </ul>
+        ))
+      }
+    </div>
+  </section>
+</IndexLayout>
+
+<script>
+  window.difyChatbotConfig = {
+    token: "JrH0E5I8QxqLI2SU",
+    baseUrl: "https://dify-eks.bot-alex.com",
+  };
+</script>
+<script
+  src="https://dify-eks.bot-alex.com/embed.min.js"
+  id="JrH0E5I8QxqLI2SU"
+  defer
+></script>
+<style>
+  #dify-chatbot-bubble-button {
+    background-color: #1c64f2 !important;
+  }
+  #dify-chatbot-bubble-window {
+    width: 24rem !important;
+    height: 40rem !important;
+  }
+</style>

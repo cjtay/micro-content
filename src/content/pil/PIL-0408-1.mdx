@@ -1,0 +1,271 @@
+---
+title: "PIL-0408-1"
+description: "Zoledronic acid is a bisphosphonate used to treat high blood calcium levels caused by cancer or reduce bone loss which may occur in certain types of cancer. It can prevent bone-related events (e.g. bone fractures, bone pain) in patients with bone metastases. Zoledronic Acid will be administered Intravenously ~15 - 30 minutes on day 1 of your 28-day cycle."
+slug: "PIL-0408-1"
+tags: ["treatment","cancer","pil"]
+category: "patient information"
+pubDate: 2025-06-21T04:07:08.066Z
+draft: false
+days: 28
+treatments: [
+    {
+      "name": "Zoledronic Acid",
+      "cycle": "day 1 of your 28-day cycle",
+      "info": "administered Intravenously ~15 - 30 minutes"
+    }
+  ]
+treatmentSchedule: [
+    {
+      "day": 1,
+      "treatments": [
+        "zoledronic acid"
+      ]
+    },
+    {
+      "day": 2,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 3,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 4,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 5,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 6,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 7,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 8,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 9,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 10,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 11,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 12,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 13,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 14,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 15,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 16,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 17,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 18,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 19,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 20,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 21,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 22,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 23,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 24,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 25,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 26,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 27,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 28,
+      "treatments": [
+        "rest"
+      ]
+    }
+  ]
+commonSideEffects: [
+  {
+    name: "Bone, joint and muscle pain",
+    description: "Chemotherapy can result in various physical side effects, including cramps and pain in the muscles (myalgia), joints (arthralgia) and bones (ostealgia). Pain may be mild and intermittent, or persistent and severe."
+  },
+  {
+    name: "Peripheral neuropathy/neurotoxicity",
+    description: "Peripheral neuropathy is due to damage to the nerves outside the brain and spinal cord. These nerves carry information from the brain to other parts of the body. The usual symptoms are numbness, tingling, and weakness in the extremities like hands and feet."
+  },
+  {
+    name: "Flu-like symptoms",
+    description: "Some types of chemotherapy can cause flu-like symptoms within a few hours of treatment. These symptoms generally last for 2 to 3 days. Some types of immunotherapy increase your body's natural immune response, which can cause mild to severe flu-like symptoms."
+  }
+]
+otherCommonSideEffects: []
+occasionalSideEffects: []
+rareSideEffects: [
+  { name: "Kidney dysfunction" },
+  { name: "Low calcium levels" },
+  { name: "Low red blood cells (Anaemia)" },
+  { name: "Low appetite" },
+  { name: "Eye problem (Red, watery eyes and blurred vision)" },
+  { name: "Urine infection" },
+  { name: "Bone damage/fracture" },
+  { name: "Cardiac problems" },
+  { name: "Allergic reactions" },
+  { name: "Jawbone damage or pain" },
+  { name: "Bone fracture" },
+  { name: "Mouth sores" },
+  { name: "Taste disorder" },
+  { name: "Skin problems (Rash, Itchy skin)" }
+]
+---
+export const days = frontmatter.days;
+export const treatments = frontmatter.treatments;
+export const treatmentSchedule = frontmatter.treatmentSchedule;
+export const commonSideEffects = frontmatter.commonSideEffects;
+export const otherCommonSideEffects = frontmatter.otherCommonSideEffects;
+export const occasionalSideEffects = frontmatter.occasionalSideEffects;
+export const rareSideEffects = frontmatter.rareSideEffects;
+import TreatmentCycleGrid from "../../components/TreatmentCycleGrid.astro";
+import LegendGrid from "../../components/LegendGrid.astro";
+import CommonSideEffects from "../../components/CommonSideEffects.astro";
+import OtherCommonSideEffects from "../../components/OtherCommonSideEffects.astro";
+import OccasionalSideEffects from "../../components/OccasionalSideEffects.astro";
+import RareSideEffects from "../../components/RareSideEffects.astro";
+import SafeHandlingAccordion from "../../components/SafeHandlingAccordion.astro";
+import GeneralPrecautionsAccordion from "../../components/GeneralPrecautionsAccordion.astro";
+import LifestyleSafetyAccordion from "../../components/LifestyleSafetyAccordion.astro";
+import HealthcareTeamContact from "../../components/HealthcareTeamContact.astro";
+
+# Zoledronic Acid (Monthly)
+
+## About the treatment
+
+Zoledronic acid is a bisphosphonate used to treat high blood calcium levels caused by cancer or reduce bone loss which may occur in certain types of cancer. It can prevent bone-related events (e.g. bone fractures, bone pain) in patients with bone metastases. Zoledronic Acid will be administered Intravenously ~15 - 30 minutes on day 1 of your 28-day cycle.
+
+## Treatment details
+
+<LegendGrid treatments={treatments} />
+
+## Treatment cycle
+
+<TreatmentCycleGrid treatmentSchedule={treatmentSchedule} />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+## Side Effects
+
+Chemotherapy is often linked to so many side effects. While it is true that chemotherapy drugs often cause a wide range of side effects, most of these side effects are temporary and can be minimised or prevented. Remember that different drugs cause different side effects, and each person experiences different side effects to varying degrees.
+
+<CommonSideEffects commonSideEffects={commonSideEffects} />
+<OtherCommonSideEffects otherCommonSideEffects={otherCommonSideEffects} />
+<OccasionalSideEffects occasionalSideEffects={occasionalSideEffects} />
+<RareSideEffects rareSideEffects={rareSideEffects} />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+<SafeHandlingAccordion />
+<GeneralPrecautionsAccordion />
+<LifestyleSafetyAccordion />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+<HealthcareTeamContact />

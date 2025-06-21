@@ -57,7 +57,21 @@ const pils = defineCollection({
     }),
 });
 
+const basic = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: "./src/content/basic" }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    slug: z.string(),
+    tags: z.array(z.string()).optional(),
+    category: z.string().optional(),
+    pubDate: z.coerce.date(),
+    draft: z.boolean().optional(),
+  }),
+});
+
 export const collections = {
   pils: pils,
+  basic: basic,
 };
 

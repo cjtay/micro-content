@@ -1,20 +1,58 @@
 ---
-const { day, icons = [] } = Astro.props;
+const { day, icons = [], treatments = [] } = Astro.props;
+
+// Function to capitalize first letter of each treatment name
+function capitalizeFirstLetter(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// Create a unique ID for this card's checkbox
+const cardId = `card-${day}`;
 ---
 
-<div class="rounded-lg shadow-sm p-3">
-	<div class="mb-4 text-center">
-		<span class="text-lg md:text-base font-medium">
-			Day {day}
-		</span>
-	</div>
-	<div class="flex flex-row gap-0 mx-auto justify-center w-16 h-16 md:w-18 md:h-18">
-		{icons.map((icon) => (
-			<img
-				src={`/icons/${icon}.svg`}
-				alt="treatment icon"
-				class="w-8 h-8 object-contain"
-			/>
-		))}
-	</div>
+<div class="relative">
+	<!-- Hidden radio button for CSS-only state management -->
+	<input type="radio" name="tooltip-control" id={cardId} class="sr-only" />
+	
+	<!-- Clickable card -->
+	<label for={cardId} class="block rounded-lg shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow">
+		<div class="mb-4 text-center">
+			<span class="text-lg md:text-base font-medium">
+				Day {day}
+			</span>
+		</div>
+		<div class="flex flex-row gap-0 mx-auto justify-center w-16 h-16 md:w-18 md:h-18">
+			{icons.map((icon) => (
+				<img
+					src={`/icons/${icon}.svg`}
+					alt="treatment icon"
+					class="w-8 h-8 object-contain"
+				/>
+			))}
+		</div>
+	</label>
+	
+	<!-- Tooltip -->
+	{treatments.length > 0 && (
+		<div class="tooltip absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-white text-gray-800 text-sm rounded-lg shadow-lg border border-gray-200 opacity-0 pointer-events-none transition-opacity duration-200 z-10 min-w-max">
+			<ul class="list-disc list-inside m-0 p-0">
+				{treatments.map((treatment) => (
+					<li>
+						{capitalizeFirstLetter(treatment)}
+					</li>
+				))}
+			</ul>
+			<!-- Tooltip arrow -->
+			<div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-white"></div>
+		</div>
+	)}
 </div>
+
+<style>
+	/* Show tooltip when radio button is checked */
+	input[type="radio"]:checked + label + .tooltip {
+		opacity: 1;
+		pointer-events: auto;
+	}
+</style>
+

@@ -36,14 +36,28 @@ function getIconForTreatment(treatmentName: string): string {
 }
 ---
 
+<!-- Hidden radio button to close all tooltips -->
+<input type="radio" name="tooltip-control" id="close-all-tooltips" class="sr-only" checked />
+
 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-2 my-8">
   {treatmentSchedule.map((scheduleDay) => {
     const icons = scheduleDay.treatments.map(treatment => getIconForTreatment(treatment));
     return (
       <TreatmentCycleCard 
         day={scheduleDay.day.toString()} 
-        icons={icons} 
+        icons={icons}
+        treatments={scheduleDay.treatments}
       />
     );
   })}
 </div>
+
+<!-- Invisible overlay to close tooltips when clicking outside -->
+<label for="close-all-tooltips" class="fixed inset-0 cursor-default z-0" style="pointer-events: none;"></label>
+
+<style>
+  /* Enable pointer events on the overlay only when a tooltip is open */
+  input[name="tooltip-control"]:not(#close-all-tooltips):checked ~ label[for="close-all-tooltips"] {
+    pointer-events: auto;
+  }
+</style>

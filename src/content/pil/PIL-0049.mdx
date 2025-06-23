@@ -4,7 +4,7 @@ description: "Capecitabine (antimetabolite) is selectively tumour-sensitive, whi
 slug: "PIL-0049"
 tags: ["treatment","cancer","pil"]
 category: "patient information"
-pubDate: 2025-06-20T10:41:27.144Z
+pubDate: 2025-06-23T04:19:56.082Z
 draft: false
 days: 21
 treatments: [
@@ -143,6 +143,9 @@ treatmentSchedule: [
     }
   ]
 commonSideEffects: [
+  { name: "Hand and foot syndrome",
+    description: "Also called palmar-plantar-erythrodysesthesia is a side effect of some chemotherapy drugs that can cause redness, swelling and blistering on the palms of the hands and soles of the feet."
+  },
   {
     name: "Diarrhoea",
     description: "This treatment may disturb the intestinal lining and cause loose, watery, and more frequent stools than usual. Certain medications have a higher chance of causing diarrhoea."
@@ -167,17 +170,16 @@ commonSideEffects: [
 otherCommonSideEffects: [
   { name: "Low appetite" },
   { name: "Abdominal pain" },
-  { name: "Mouth sores" },
-  { name: "Hand and foot syndrome" }
+  { name: "Mouth sores" }
+
 ]
-occasionalSideEffects: []
-rareSideEffects: [
-  { name: "Low red blood cell count (Anaemia)" },
+occasionalSideEffects: [
+   { name: "Low red blood cell count (Anaemia)" },
   { name: "Swelling" },
   { name: "Constipation" },
   { name: "Upset stomach" },
   { name: "Taste disorder" },
-  { name: "Liver changes" },
+  { name: "Liver changes (Monitored by specific blood tests)" },
   { name: "Watery eyes, redness, blurred vision" },
   { name: "Blood clots" },
   { name: "Feeling balance problem/spinning" },
@@ -192,14 +194,18 @@ rareSideEffects: [
   { name: "Muscle weakness and pain" },
   { name: "Joint pain" },
   { name: "Dehydration" },
-  { name: "Lungs/Breathing problems" },
-  { name: "Cardiac problems" },
+  { name: "Lungs/Breathing problems (Cough, shortness of breath, fever)" },
+]
+rareSideEffects: [
+ 
+  { name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)" },
   { name: "Rash or irritation on skin previously treated with radiation" },
   { name: "Sensitivity to sun or UV light" },
   { name: "Severe rash, blisters, peeling usually with fever" },
   { name: "Allergic reactions" }
 ]
 ---
+
 export const days = frontmatter.days;
 export const treatments = frontmatter.treatments;
 export const treatmentSchedule = frontmatter.treatmentSchedule;
@@ -242,7 +248,12 @@ Chemotherapy is often linked to so many side effects. While it is true that chem
 <OtherCommonSideEffects otherCommonSideEffects={otherCommonSideEffects} />
 <OccasionalSideEffects occasionalSideEffects={occasionalSideEffects} />
 <RareSideEffects rareSideEffects={rareSideEffects} />
-
+<p>
+  <span class="font-bold">Patient Information Use and Disclaimer:</span> this is
+  not a complete list of side effects. Always consult your healthcare provider
+  to ensure the information displayed on this page applies to your personal
+  circumstances.
+</p>
 <hr class="py-0 border-t-[0.5px] border-gray-500" />
 
 <SafeHandlingAccordion />

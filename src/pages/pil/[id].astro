@@ -80,7 +80,14 @@ const hasNewStructure =
         />
 
         <RareSideEffects rareSideEffects={pil.data.rareSideEffects || []} />
-
+        <p>
+          <span class="font-semibold">
+            Patient Information Use and Disclaimer:
+          </span>
+          this is not a complete list of side effects. Always consult your
+          healthcare provider to ensure the information displayed on this page
+          applies to your personal circumstances.
+        </p>
         <hr class="py-4 border-t-[0.5px] border-gray-500" />
 
         <SafeHandlingAccordion />
@@ -91,6 +98,7 @@ const hasNewStructure =
 
         {/* <hr class="py-4 border-t-[0.5px] border-gray-500" /> */}
         <HealthcareTeamContact />
+
       </>
     )
   }

@@ -1,0 +1,10 @@
+---
+title: "Corrected PIL-0002"
+commonSideEffects:
+  [
+    {
+      name: "Revised Effects",
+      description: "Corrected description with proper spelling...",
+    },
+  ]
+---

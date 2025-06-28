@@ -1,0 +1,24 @@
+{
+  "PIL-0001": {
+    "description": "This is a corrected description for PIL-0001",
+    "commonSideEffects": [
+      {
+        "name": "Fatigue",
+        "description": "You may feel tired and find it harder to do daily activities."
+      }
+    ],
+    "correctedBy": "manual",
+    "correctedDate": "2025-06-24"
+  },
+  "PIL-0008": {
+    "otherCommonSideEffects": [
+      { "name": "Joint pain" },
+      { "name": "Muscle stiffness" }
+    ],
+    "occasionalSideEffects": [
+      { "name": "Skin rash" }
+    ],
+    "correctedBy": "manual", 
+    "correctedDate": "2025-06-24"
+  }
+}

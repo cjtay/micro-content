@@ -1,0 +1,53 @@
+---
+treatmentSchedule:
+  [
+    { "day": 1, "treatments": ["fulvestrant", "alpelisib"] },
+    { "day": 2, "treatments": ["rest"] },
+    { "day": 3, "treatments": ["alpelisib"] },
+    { "day": 4, "treatments": ["alpelisib"] },
+    { "day": 5, "treatments": ["alpelisib"] },
+    { "day": 6, "treatments": ["alpelisib"] },
+    { "day": 7, "treatments": ["alpelisib"] },
+    { "day": 8, "treatments": ["alpelisib"] },
+    { "day": 9, "treatments": ["alpelisib"] },
+    { "day": 10, "treatments": ["alpelisib"] },
+    { "day": 11, "treatments": ["alpelisib"] },
+    { "day": 12, "treatments": ["alpelisib"] },
+    { "day": 13, "treatments": ["alpelisib"] },
+    { "day": 14, "treatments": ["alpelisib"] },
+    { "day": 15, "treatments": ["fulvestrant", "alpelisib"] },
+    { "day": 16, "treatments": ["alpelisib"] },
+    { "day": 17, "treatments": ["alpelisib"] },
+    { "day": 18, "treatments": ["alpelisib"] },
+    { "day": 19, "treatments": ["alpelisib"] },
+    { "day": 20, "treatments": ["alpelisib"] },
+    { "day": 21, "treatments": ["alpelisib"] },
+    { "day": 22, "treatments": ["alpelisib"] },
+    { "day": 23, "treatments": ["alpelisib"] },
+    { "day": 24, "treatments": ["alpelisib"] },
+    { "day": 25, "treatments": ["alpelisib"] },
+    { "day": 26, "treatments": ["alpelisib"] },
+    { "day": 27, "treatments": ["rest"] },
+    { "day": 28, "treatments": ["alpelisib"] },
+  ]
+otherCommonSideEffects: []
+occasionalSideEffects:
+  [
+    { name: "Swelling mainly in legs or arms" },
+    { name: "Blood clots" },
+    { name: "Jawbone damage or pain" },
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+    { name: "Lung/ breathing problems (cough, shortness of breath, fever)" },
+    {
+      name: "Numbness, tingling and unusual sensation in extremities like hands and feet",
+    },
+    {
+      name: "Urine infection (pain or burning while urinating, frequent urge to urinate and dark or cloudy urine)",
+    },
+    { name: "Bleeding & bruising" },
+    { name: "Liver dysfunction (Monitored by specific blood tests)" },
+    { name: "Musculoskeletal pain" },
+  ]
+
+---
+

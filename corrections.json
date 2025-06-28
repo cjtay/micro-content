@@ -1,0 +1,18 @@
+{
+  "PIL-0001": {
+    "description": "This is a corrected description for PIL-0001",
+    "commonSideEffects": [],
+    "otherCommonSideEffects": [{ "name": "Taste changes" }],
+    "occasionalSideEffects": [
+      { "name": "Dehydration" },
+      { "name": "Blood clots" },
+      {
+        "name": "Lungs/breathing problems (Chest pain, cough, shortness of breath, fever)"
+      }
+    ],
+    "rareSideEffects": [{ "name": "Allergic reactions" }],
+
+    "correctedBy": "manual",
+    "correctedDate": "2025-06-28"
+  }
+}

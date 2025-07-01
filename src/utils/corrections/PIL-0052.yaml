@@ -1,0 +1,18 @@
+---
+otherCommonSideEffects: []
+occasionalSideEffects: [
+    { name: "Swelling" },
+  { name: "Taste disorder" },
+  { name: "Blood clots" },
+  { name: "Headache" },
+  { name: "Insomnia" },
+  { name: "Mood changes" },
+  { name: "Memory & cognitive problems" },
+  { name: "Hair loss" },
+  { name: "Lungs/Breathing problems (Cough, shortness of breath, fever)" },
+  { name: "Constipation" },
+  { name: "Dehydration" },
+  { name: "Muscle weakness/pain" },
+  { name: "Liver dysfunction (monitored by specific blood tests)" }
+]
+---

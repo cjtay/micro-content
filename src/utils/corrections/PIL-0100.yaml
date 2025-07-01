@@ -1,0 +1,69 @@
+---
+commonSideEffects:
+  [
+    {
+      name: "Low platelet count (thrombocytopenia)",
+      description: "Platelets help your blood clot, so you are at a higher risk of bleeding when your platelet count decreases. Let your oncology care team know if you have any excess bruising or bleeding, including nose bleeds, sore gums or blood in your urine or stool.",
+    },
+    {
+      name: "Low red blood cell count (anaemia)",
+      description: "Red blood cells (RBC) are responsible for carrying oxygen to the tissues in your body. When you have a low RBC count, you may feel tired or weak and have pale skin.",
+    },
+    {
+      name: "Low white blood cell count (Leukopenia or Neutropenia)",
+      description: "White blood cells (WBC) are crucial for fighting infection. While receiving treatment, your WBC count can drop, putting you at a higher risk of disease.",
+    },
+    {
+      name: "Fever",
+      description: "Fever is a possible side effect of both chemotherapy and biological treatments. You must contact your healthcare team immediately if you have a temperature of 38ºC or higher.",
+    },
+    {
+      name: "Diarrhoea",
+      description: "This treatment may disturb the intestinal lining and cause loose, watery, and more frequent stools than usual. Certain medications have a higher chance of causing diarrhoea.",
+    },
+    {
+      name: "Nausea and/or vomiting",
+      description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication.",
+    },
+    {
+      name: "Hearing problems",
+      description: "Hearing problems can be a side effect of chemotherapy. If you are experiencing hearing problems during chemotherapy, it's critical to talk to your healthcare provider. They might be able to change your treatment plan or give you medicine to help you.",
+    },
+    {
+      name: "Effects on the kidney",
+      description: "This treatment may affect and damage your kidneys. Your doctor may monitor the working condition of your kidneys through blood tests called renal function tests.",
+    },
+    {
+      name: "High blood uric acid levels",
+      description: "Chemotherapy drugs can cause a wide range of side effects, including high blood uric acid levels. This condition is known as hyperuricemia, and it occurs when the body produces too much uric acid or cannot eliminate it properly.",
+    },
+  ]
+otherCommonSideEffects:
+  [
+    { name: "Difficulty in breathing (wheezing & coughing)" },
+    { name: "Electrolyte imbalance (Monitored by specific blood tests)" },
+    { name: "Fatigue" },
+    { name: "Low appetite" },
+    { name: "Hair loss" },
+    { name: "Sore mouth/throat" },
+    { name: "Hand-foot syndrome" },
+  ]
+occasionalSideEffects: [{ name: "Blood clots" }, { name: "Allergic reactions" }]
+rareSideEffects:
+  [
+    { name: "Increased risk of second cancer" },
+    { name: "Stroke" },
+    { name: "Seizures" },
+    { name: "Hypomagnesemia" },
+    { name: "Metallic taste in mouth" },
+    { name: "Posterior reversible encephalopathy syndrome" },
+    { name: "Feeling happy & excited" },
+    { name: "Eye & vision problems" },
+    { name: "Tremors, stiffness & slow in movements" },
+    { name: "Insomnia" },
+    { name: "Hypotension" },
+    { name: "Liver dysfunction (Monitored by specific blood tests)" },
+    { name: "Skin & nail problems" },
+  ]
+---
+

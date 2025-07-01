@@ -1,0 +1,30 @@
+---
+occasionalSideEffects:
+  [
+    { name: "Headache" },
+    { name: "Muscle pain and stiffness" },
+    { name: "Joint/Bone pain" },
+    { name: "Temporary eyesight changes" },
+    { name: "Hearing problems" },
+    { name: "Sweating/Hot flushes" },
+    { name: "Mood changes" },
+    { name: "Dry mouth" },
+    { name: "Swollen or sore breasts" },
+    { name: "Oedema" },
+    { name: "Taste disorder" },
+    { name: "Indigestion/Abdominal pain" },
+    { name: "Insomnia" },
+    { name: "Difficulty in breathing (wheezing, coughing)" },
+    { name: "Liver dysfunction (Monitored by specific blood tests)" },
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+  ]
+rareSideEffects:
+  [
+    { name: "Hemolytic anaemia" },
+    { name: "Kidney failure" },
+    { name: "Pneumonitis" },
+    { name: "Cardiomyopathy" },
+    { name: "Tumor Lysis Syndrome" },
+    { name: "Increased risk of second cancer" },
+  ]
+---

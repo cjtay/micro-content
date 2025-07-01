@@ -1,0 +1,38 @@
+---
+description: "This treatment is given to carboplatin-sensitive or platinum-sensitive patients who have already shown allergic reactions/hypersensitivity reactions to this medication. This treatment choice depends upon the severity of your reaction and your oncology team's decision. "
+occasionalSideEffects:
+  [
+    { name: "Hair loss/thinning" },
+    {
+      name: "Numbness, tingling and unusual sensation in extremities like hands and feet",
+    },
+    { name: "Temporary eyesight changes" },
+    { name: "Hearing problem/Tinnitus" },
+    { name: "Constipation/Diarrhoea" },
+    { name: "Taste changes" },
+    { name: "Mouth sores" },
+    { name: "Lungs/breathing problems (Cough, shortness of breath, fever)" },
+    { name: "Pain" },
+    { name: "Liver dysfunction" },
+    {
+      name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)",
+    },
+  ]
+rareSideEffects:
+  [
+     { name: "Increased risk of blood clots" },
+    {
+      name:
+        "Neurological disorder ((Report to your oncology team about headache, confusion, vision changes,
+        drooping eyelids, swallowing difficulty, weakness or numbness in arms, legs or face))",
+    },
+    { name: "Low appetite" },
+    { name: "Dehydration" },
+    {
+      name:
+        "Tumour lysis syndrome ((Severe electrolyte imbalance, kidney or urination problem, irregular
+        heartbeat, muscles cramps or seizures as a response to treatment))",
+    },
+    { name: "Hemolytic-uremic syndrome (HUS)" },
+  ]
+---

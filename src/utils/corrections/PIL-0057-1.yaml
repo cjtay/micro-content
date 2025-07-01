@@ -1,0 +1,64 @@
+---
+commonSideEffects:
+  [
+    {
+      name: "Diarrhoea",
+      description: "This treatment may disturb the intestinal lining and cause loose, watery, and more frequent stools than usual. Certain medications have a higher chance of causing diarrhoea.",
+    },
+    {
+      name: "Hand and foot syndrome",
+      description: "Also called palmar-plantar erythrodysesthesia) is a side effect of some chemotherapy drugs that can cause redness, swelling and blistering on the palms of the hands and soles of the feet.",
+    },
+    {
+      name: "Nausea and/or vomiting",
+      description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication.",
+    },
+    {
+      name: "Low white blood cell count (Leukopenia or Neutropenia)",
+      description: "White blood cells (WBC) are crucial for fighting infection. While receiving treatment, your WBC count can drop, putting you at a higher risk of disease.",
+    },
+    {
+      name: "Low platelet count (thrombocytopenia)",
+      description: "Platelets help your blood clot, so you are at a higher risk of bleeding when your platelet count decreases. Let your oncology care team know if you have any excess bruising or bleeding, including nose bleeds, sore gums or blood in your urine or stool.",
+    },
+    {
+      name: "Fatigue",
+      description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion.",
+    },
+    {
+      name: "Mouth sores",
+      description: "Cancer medications can cause sores in the mouth and throat. These sores are painful and may become infected.",
+    },
+    {
+      name: "Effects on the liver",
+      description: "This medication can cause liver toxicity, which your oncology care team may monitor with blood tests called liver function tests.",
+    },
+  ]
+otherCommonSideEffects: [{ name: "Electrolyte imbalance" }]
+occasionalSideEffects:
+  [
+    { name: "Nail changes" },
+    { name: "Kidney dysfunction" },
+    { name: "Mood changes (depression)" },
+    { name: "Blood clots" },
+    { name: "Muscle pain or stiffness" },
+    { name: "Hot flushes and sweating" },
+    { name: "Vertigo" },
+    { name: "Urinary tract infection" },
+    { name: "Vaginal bleeding/discharge" },
+    { name: "Flatulence" },
+    { name: "Dehydration" },
+    { name: "Seizures" },
+    { name: "Blood sugar changes" },
+    { name: "Red, itchy, dry eyes and blurred vision" },
+  ]
+rareSideEffects:
+  [
+    { name: "Heart failure" },
+    { name: "Diabetes" },
+    { name: "Severe rash, blisters, peeling, usually with fever" },
+    { name: "High or low blood pressure" },
+    { name: "Confusion or memory changes" },
+    { name: "Dermatitis" },
+  ]
+---

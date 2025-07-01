@@ -1,16 +1,8 @@
 ---
-title: "PIL-0057-2"
-description: "The combination of capecitabine (antimetabolite), trastuzumab (monoclonal antibody) and tucatinib (kinase inhibitor) is used for the treatment of breast cancer. Cancer medicines are often used in combination to slow down or stop the growth and spread of cancer cells."
-slug: "PIL-0057-2"
-tags: ["treatment", "cancer", "pil"]
-category: "patient information"
-pubDate: 2025-06-23T04:22:46.116Z
-draft: false
-days: 21
 treatments:
   [
     {
-      "name": "Trastuzumab",
+      "name": "Trastuzumab-s",
       "cycle": "day 1 of your 21-day-cycle",
       "info": "administered subcutaneously ~2 to 5 min",
     },
@@ -27,7 +19,7 @@ treatments:
   ]
 treatmentSchedule:
   [
-    { "day": 1, "treatments": ["trastuzumab", "capecitabine", "tucatinib"] },
+    { "day": 1, "treatments": ["trastuzumab-s", "capecitabine", "tucatinib"] },
     { "day": 2, "treatments": ["capecitabine", "tucatinib"] },
     { "day": 3, "treatments": ["capecitabine", "tucatinib"] },
     { "day": 4, "treatments": ["capecitabine", "tucatinib"] },
@@ -77,24 +69,17 @@ commonSideEffects:
     },
     {
       name: "Mouth sores",
-      description:
-        "Cancer medications can cause sores in the mouth and throat. These sores are painful and may become
-        infected.",
+      description: "Cancer medications can cause sores in the mouth and throat. These sores are painful and may become infected.",
     },
     {
       name: "Effects on the liver",
-      description:
-        "This medication can cause liver toxicity, which your oncology care team may monitor with blood tests
-        called liver function tests.",
+      description: "This medication can cause liver toxicity, which your oncology care team may monitor with blood tests called liver function tests.",
     },
   ]
-otherCommonSideEffects:
+otherCommonSideEffects: [{ name: "Electrolyte imbalance" }]
+occasionalSideEffects:
   [
-    { name: "Electrolyte imbalance" },
- 
-  ]
-occasionalSideEffects: [
-      { name: "Nail changes" },
+    { name: "Nail changes" },
     { name: "Kidney dysfunction" },
     { name: "Mood changes (depression)" },
     { name: "Blood clots" },
@@ -108,10 +93,9 @@ occasionalSideEffects: [
     { name: "Seizures" },
     { name: "Blood sugar changes" },
     { name: "Red, itchy, dry eyes and blurred vision" },
-]
+  ]
 rareSideEffects:
   [
-
     { name: "Heart failure" },
     { name: "Diabetes" },
     { name: "Severe rash, blisters, peeling, usually with fever" },
@@ -121,60 +105,3 @@ rareSideEffects:
   ]
 ---
 
-export const days = frontmatter.days;
-export const treatments = frontmatter.treatments;
-export const treatmentSchedule = frontmatter.treatmentSchedule;
-export const commonSideEffects = frontmatter.commonSideEffects;
-export const otherCommonSideEffects = frontmatter.otherCommonSideEffects;
-export const occasionalSideEffects = frontmatter.occasionalSideEffects;
-export const rareSideEffects = frontmatter.rareSideEffects;
-import TreatmentCycleGrid from "../../components/TreatmentCycleGrid.astro";
-import LegendGrid from "../../components/LegendGrid.astro";
-import CommonSideEffects from "../../components/CommonSideEffects.astro";
-import OtherCommonSideEffects from "../../components/OtherCommonSideEffects.astro";
-import OccasionalSideEffects from "../../components/OccasionalSideEffects.astro";
-import RareSideEffects from "../../components/RareSideEffects.astro";
-import SafeHandlingAccordion from "../../components/SafeHandlingAccordion.astro";
-import GeneralPrecautionsAccordion from "../../components/GeneralPrecautionsAccordion.astro";
-import LifestyleSafetyAccordion from "../../components/LifestyleSafetyAccordion.astro";
-import HealthcareTeamContact from "../../components/HealthcareTeamContact.astro";
-
-# Capecitabine, Tucatinib and SC Trastuzumab
-
-## About the treatment
-
-The combination of capecitabine (antimetabolite), trastuzumab (monoclonal antibody) and tucatinib (kinase inhibitor) is used for the treatment of breast cancer. Cancer medicines are often used in combination to slow down or stop the growth and spread of cancer cells.
-
-## Treatment details
-
-<LegendGrid treatments={treatments} />
-
-## Treatment cycle
-
-<TreatmentCycleGrid treatmentSchedule={treatmentSchedule} />
-
-<hr class="py-0 border-t-[0.5px] border-gray-500" />
-
-## Side Effects
-
-Chemotherapy is often linked to so many side effects. While it is true that chemotherapy drugs often cause a wide range of side effects, most of these side effects are temporary and can be minimised or prevented. Remember that different drugs cause different side effects, and each person experiences different side effects to varying degrees.
-
-<CommonSideEffects commonSideEffects={commonSideEffects} />
-<OtherCommonSideEffects otherCommonSideEffects={otherCommonSideEffects} />
-<OccasionalSideEffects occasionalSideEffects={occasionalSideEffects} />
-<RareSideEffects rareSideEffects={rareSideEffects} />
-<p>
-  <span class="font-bold">Patient Information Use and Disclaimer:</span> this is
-  not a complete list of side effects. Always consult your healthcare provider
-  to ensure the information displayed on this page applies to your personal
-  circumstances.
-</p>
-<hr class="py-0 border-t-[0.5px] border-gray-500" />
-
-<SafeHandlingAccordion />
-<GeneralPrecautionsAccordion />
-<LifestyleSafetyAccordion />
-
-<hr class="py-0 border-t-[0.5px] border-gray-500" />
-
-<HealthcareTeamContact />

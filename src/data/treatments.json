@@ -17,6 +17,10 @@
 	},
 	{
 		"name": "trastuzumab",
+		"icon": "drip-gold"
+	},
+	{
+		"name": "trastuzumab-s",
 		"icon": "inject-green"
 	},
 	{
@@ -237,6 +241,10 @@
 	},
 	{
 		"name": "zoledronic acid",
+		"icon": "drip-indigo"
+	},
+	{
+		"name": "carboplatin and gemcitabine",
 		"icon": "drip-indigo"
 	}
 ]

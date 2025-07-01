@@ -1,0 +1,64 @@
+---
+commonSideEffects: [
+   { name: "Hand and foot syndrome",
+    description: "Also called palmar-plantar erythrodysesthesia) is a side effect of some chemotherapy drugs that can cause redness, swelling and blistering on the palms of the hands and soles of the feet."
+    },
+  {
+    name: "Diarrhoea",
+    description: "This treatment may disturb the intestinal lining and cause loose, watery, and more frequent stools than usual. Certain medications have a higher chance of causing diarrhoea."
+  },
+  {
+    name: "Fatigue",
+    description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion."
+  },
+  {
+    name: "Nausea and/or vomiting",
+    description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication."
+  },
+  {
+    name: "Low white blood cell count (Leukopenia or Neutropenia)",
+    description: "White blood cells (WBC) are crucial for fighting infection. While receiving treatment, your WBC count can drop, putting you at a higher risk of disease."
+  },
+  {
+    name: "Low platelet count (thrombocytopenia)",
+    description: "Platelets help your blood clot, so you are at a higher risk of bleeding when your platelet count decreases. Let your oncology care team know if you have any excess bruising or bleeding, including nose bleeds, sore gums or blood in your urine or stool."
+  }
+]
+otherCommonSideEffects: [
+  { name: "Low appetite" },
+  { name: "Abdominal pain" },
+  { name: "Mouth sores" },
+ 
+]
+occasionalSideEffects: [
+  { name: "Low red blood cell count (Anaemia)" },
+  { name: "Swelling" },
+  { name: "Constipation" },
+  { name: "Upset stomach" },
+  { name: "Taste disorder" },
+  { name: "Liver changes (Monitored by specific blood tests)" },
+  { name: "Watery eyes, redness, blurred vision" },
+  { name: "Blood clots" },
+  { name: "Feeling balance problem/spinning" },
+  { name: "Dizziness" },
+  { name: "Sleeplessness (Insomnia)" },
+  { name: "Memory & cognitive problems" },
+  { name: "Headache" },
+  { name: "Mood changes" },
+  { name: "Nail changes" },
+  { name: "Rash, itchy skin, discolouration" },
+  { name: "Hair loss" },
+  { name: "Muscle weakness and pain" },
+  { name: "Joint pain" },
+  { name: "Dehydration" },
+  { name: "Lungs/Breathing problems (Cough, shortness of breath, fever)" },
+]
+rareSideEffects: [
+  
+  { name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)" },
+  { name: "Rash or irritation on skin previously treated with radiation" },
+  { name: "Sensitivity to sun or UV light" },
+  { name: "Severe rash, blisters, peeling usually with fever" },
+  { name: "Allergic reactions" }
+]
+---

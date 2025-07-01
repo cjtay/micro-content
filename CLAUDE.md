@@ -101,7 +101,9 @@ micro-content/
 │   │   └── [others]        # Institution-specific pages
 │   ├── styles/              # Global CSS files
 │   └── utils/               # Utility functions
-│       └── extract/         # PDF processing pipeline
+│       ├── extract/         # PDF processing pipeline
+│       ├── corrections/     # Frontmatter correction files
+│       └── frontmatter-corrections.js # Frontmatter updater script
 ├── astro.config.mjs         # Astro & Vite configuration
 ├── content.config.ts        # Content collection schemas
 ├── package.json            # Dependencies and scripts
@@ -239,6 +241,12 @@ Currently contains 57 treatments with unique color-coded icons:
    - Creates treatment schedule YAML
    ```
 
+7. **Frontmatter Corrections** (`frontmatter-corrections.js`)
+   ```javascript
+   - Updates MDX frontmatter using individual correction files
+   - See FRONTMATTER.md for complete documentation
+   ```
+
 ### Running the Extraction
 
 ```bash
@@ -247,6 +255,13 @@ Currently contains 57 treatments with unique color-coded icons:
 npm run extract-pdfs
 
 # Generated files appear in src/content/pil/
+```
+
+### Correcting Frontmatter
+
+```bash
+# See FRONTMATTER.md for complete documentation
+cd src/utils && node frontmatter-corrections.js
 ```
 
 ## Components
@@ -316,6 +331,24 @@ npm run extract-pdfs
    ---
    ```
 3. **Write content** using Markdown/MDX
+
+### Correcting Frontmatter
+
+Use the frontmatter corrections system to fix extracted content without regenerating files from PDFs.
+
+**See [FRONTMATTER.md](./FRONTMATTER.md) for complete documentation including:**
+- Usage guide and examples
+- Correction file format
+- Troubleshooting
+- Workflow integration
+
+**Quick start:**
+```bash
+# Create correction files in src/utils/corrections/
+# Run corrections
+cd src/utils && node frontmatter-corrections.js
+# Review output in src/content/pil-update/
+```
 
 ### Modifying Components
 
@@ -454,6 +487,10 @@ npm run build
 - **Cause**: Icon file not created for color
 - **Solution**: Generate SVG with correct color
 - **Naming**: Follow [type]-[color].svg pattern
+
+#### Frontmatter Correction Issues
+- **Cause**: Corrections directory or files not found
+- **Solution**: See [FRONTMATTER.md](./FRONTMATTER.md) for complete troubleshooting guide
 
 ### Getting Help
 

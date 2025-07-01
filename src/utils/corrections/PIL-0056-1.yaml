@@ -1,0 +1,78 @@
+---
+commonSideEffects:
+  [
+    {
+      name: "Diarrhoea",
+      description: "This treatment may disturb the intestinal lining and cause loose, watery, and more frequent stools than usual. Certain medications have a higher chance of causing diarrhoea.",
+    },
+    {
+      name: "Hand and foot syndrome",
+      description: "Also called palmar-plantar erythrodysesthesia) is a side effect of some chemotherapy drugs that can cause redness, swelling and blistering on the palms of the hands and soles of the feet.",
+    },
+    {
+      name: "Nausea and/or vomiting",
+      description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication.",
+    },
+    {
+      name: "Fatigue",
+      description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion.",
+    },
+    {
+      name: "Mouth sores",
+      description: "Cancer medications can cause sores in the mouth and throat. These sores are painful and may become infected.",
+    },
+    {
+      name: "Abdominal pain",
+      description: "Pain may be achy or cramp-like and is associated with increased flatulence (gas). Chemotherapy may also alter the normal bacterial flora in the intestines. This can affect digestion and cause abdominal pain, cramping or flatulence (gas).",
+    },
+    {
+      name: "Low appetite",
+      description: "Appetite loss or poor appetite are common side effects of cancer and its treatment. This means you may eat less than usual, not feel hungry, or feel full after eating only a tiny amount.",
+    },
+    {
+      name: "Lungs/breathing problems",
+      description: "If you experience an onset or worsening of previous problems such as cough, shortness of breath and fever, notify your doctor.",
+    },
+    {
+      name: "Low platelet count (thrombocytopenia)",
+      description: "Platelets help your blood clot, so you are at a higher risk of bleeding when your platelet count decreases. Let your oncology care team know if you have any excess bruising or bleeding, including nose bleeds, sore gums or blood in your urine or stool.",
+    },
+    {
+      name: "Allergic reactions",
+      description: "You may have an allergic reaction to this medication. Symptoms usually include rash, itching, dizziness, vomiting, shortness of breath, chest pain, sudden blood pressure changes or oedema (swelling).",
+    },
+  ]
+otherCommonSideEffects:
+  [
+    { name: "Red, itchy, dry eyes and blurred vision" },
+    { name: "Insomnia" },
+    {
+      name: "Cardiac problems ((Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath))",
+    },
+  ]
+occasionalSideEffects:
+  [
+    { name: "Nail changes" },
+    { name: "Kidney dysfunction" },
+    { name: "Liver dysfunction" },
+    { name: "Mood changes (depression)" },
+    { name: "Blood clots" },
+    { name: "Muscle pain or stiffness" },
+    { name: "Hot flushes and sweating" },
+    { name: "Vertigo" },
+    { name: "Urinary infection" },
+    { name: "Vaginal bleeding/discharge" },
+    { name: "Flatulence" },
+    { name: "Dehydration" },
+  ]
+rareSideEffects:
+  [
+    { name: "Heart failure" },
+    { name: "Diabetes" },
+    { name: "Severe rash, blisters, peeling, usually with fever" },
+    { name: "High or low blood pressure" },
+    { name: "Loss of interest in sex" },
+    { name: "Confusion or memory changes" },
+  ]
+---
+

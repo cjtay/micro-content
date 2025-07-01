@@ -13,6 +13,7 @@ import SafeHandlingAccordion from "../../components/SafeHandlingAccordion.astro"
 import GeneralPrecautionsAccordion from "../../components/GeneralPrecautionsAccordion.astro";
 import LifestyleSafetyAccordion from "../../components/LifestyleSafetyAccordion.astro";
 import HealthcareTeamContact from "../../components/HealthcareTeamContact.astro";
+import TreatmentHeader from "../../components/TreatmentHeader.astro";
 
 export async function getStaticPaths() {
   const pils = await getCollection("pils");
@@ -41,15 +42,7 @@ const hasNewStructure =
       <Content />
     ) : (
       <>
-        <h1>{pil.data.title}</h1>
-
-        <h2>About the treatment</h2>
-        <p>
-          Concurrently given with radiation, capecitabine (antimetabolite
-          chemotherapy) is a treatment option for colorectal and some other
-          cancers. Radiation and cancer medicines are usually used to slow or
-          stop cancer cell growth and spread more effectively.
-        </p>
+        <TreatmentHeader title={pil.data.title} description={pil.data.description} />
         <h2>Treatment details</h2>
         <LegendGrid treatments={pil.data.treatments || []} />
         <h2>Treatment cycle test</h2>

@@ -1,0 +1,30 @@
+---
+occasionalSideEffects:
+  [
+    { name: "Kidney dysfunction" },
+    { name: "Liver dysfunction" },
+    { name: "Mood changes" },
+    { name: "Constipation" },
+    { name: "Swollen or sore breasts" },
+    { name: "Changes in blood pressure" },
+    { name: "Haemorrhoids" },
+    { name: "Allergic reactions" },
+    { name: "Hearing problems" },
+    { name: "Sore or painful muscles, joints and bones" },
+    {
+      name:
+        "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes,
+        shortness of breath)",
+    },
+  ]
+rareSideEffects:
+  [
+    { name: "Heart failure" },
+    { name: "Respiratory failure" },
+    { name: "Tumour lysis syndrome" },
+    { name: "Stroke" },
+    { name: "Blood clots" },
+    { name: "Dehydration" },
+    { name: "Risk of developing a second cancer" },
+  ]
+---

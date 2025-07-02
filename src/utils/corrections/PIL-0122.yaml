@@ -1,0 +1,26 @@
+---
+occasionalSideEffects: [
+   { name: "Skin rash & itching" },
+  { name: "Nail changes" },
+  { name: "Injection site reactions (redness, swelling, itching, pain at the site of injection)" },
+  { name: "Abdominal pain" },
+  { name: "Low sperm count in men" },
+  { name: "Chills" },
+]
+rareSideEffects: [
+ 
+  { name: "Risk of getting second cancer" },
+  { name: "Allergic reactions" },
+  { name: "Eye and vision problems" },
+  { name: "Blood clots" },
+  { name: "Pericardial effusion" },
+  { name: "Irregular or missing periods" },
+  { name: "Hearing loss" },
+  { name: "Peripheral neuropathy" },
+  { name: "Mood changes" },
+  { name: "Headaches & dizziness" },
+  { name: "Insomnia" },
+  { name: "Low blood pressure" },
+  { name: "Shaking and trembling, stiffness and slow movement" }
+]
+---

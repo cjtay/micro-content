@@ -1,0 +1,23 @@
+---
+occasionalSideEffects: [
+   { name: "Liver dysfunction" },
+  { name: "Dry mouth" },
+  { name: "Mood changes" },
+  { name: "Stiff arms or legs" },
+  { name: "Drowsiness" },
+  { name: "Sweating" },
+  { name: "Swollen or sore breasts" },
+  { name: "Haemorrhoids" },
+  { name: "Blood clots" },
+  { name: "Injection site reactions" },
+]
+rareSideEffects: [
+ 
+  { name: "Risk of second cancer" },
+  { name: "Hypomagnesemia" },
+  { name: "Seizures" },
+  { name: "Euphoria" },
+  { name: "Posterior reversible encephalopathy syndrome" },
+  { name: "Heart attack" }
+]
+---

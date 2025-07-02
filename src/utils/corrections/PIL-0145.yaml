@@ -1,0 +1,16 @@
+---
+occasionalSideEffects:
+  [
+    { name: "Constipation" },
+    { name: "Abdominal pain" },
+    { name: "Blood pressure changes" },
+    { name: "Joint pain" },
+    { name: "Bone pain" },
+    { name: "Injection site reactions" },
+    { name: "Liver dysfunction" },
+    { name: "Heart dysfunction" },
+  ]
+rareSideEffects:
+  [{ name: "Heart failure" }, { name: "Inflammation of the food pipe" }]
+---
+

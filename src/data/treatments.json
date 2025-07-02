@@ -20,10 +20,6 @@
 		"icon": "drip-gold"
 	},
 	{
-		"name": "trastuzumab-s",
-		"icon": "inject-green"
-	},
-	{
 		"name": "pertuzumab",
 		"icon": "drip-green"
 	},
@@ -56,8 +52,8 @@
 		"icon": "drug"
 	},
 	{
-		"name": "trastuzumab (sc)",
-		"icon": "inject"
+		"name": "cisplatin and trastuzumab",
+		"icon": "drip-cyan"
 	},
 	{
 		"name": "paclitaxel, pertuzumab and trastuzumab",
@@ -86,6 +82,10 @@
 	{
 		"name": "cyclophosphamide",
 		"icon": "drip-coral"
+	},
+	{
+		"name": "cyclophosphamide-m",
+		"icon": "pill-teal"
 	},
 	{
 		"name": "cyclophosphamide, doxorubicin",
@@ -246,5 +246,33 @@
 	{
 		"name": "carboplatin and gemcitabine",
 		"icon": "drip-indigo"
+	},
+	{
+		"name": "cisplatin and gemcitabine",
+		"icon": "drip-lime"
+	},
+	{
+		"name": "cyclophosphamide, doxorubicin and fluorouracil",
+		"icon": "drip-orange"
+	},
+	{
+		"name": "methotrexate and fluorouracil",
+		"icon": "drip-silver"
+	},
+	{
+		"name": "cyclophosphamide (oral)",
+		"icon": "pill-coral"
+	},
+	{
+		"name": "docetaxel, carboplatin and trastuzumab",
+		"icon": "drip-maroon"
+	},
+	{
+		"name": "docetaxel and carboplatin",
+		"icon": "drip-gold"
+	},
+	{
+		"name": "trastuzumab (sc)",
+		"icon": "inject-green"
 	}
 ]

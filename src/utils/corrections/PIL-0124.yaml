@@ -1,0 +1,215 @@
+---
+treatments: [
+    {
+      "name": "Methotrexate and Fluorouracil",
+      "cycle": "days 1 and 8 of your 28-day cycle",
+      "info": "administered intravenously ~ 20 to 30 min"
+    },
+    {
+      "name": "Cyclophosphamide (oral)",
+      "cycle": "days 1 to 14 of your 28 day-cycle",
+      "info": "taken once daily by mouth"
+    }
+  ]
+treatmentSchedule: [
+    {
+      "day": 1,
+      "treatments": [
+        "methotrexate and fluorouracil",
+        "cyclophosphamide (oral)"
+      ]
+    },
+    {
+      "day": 2,
+      "treatments": [
+        "cyclophosphamide (oral)"
+      ]
+    },
+    {
+      "day": 3,
+      "treatments": [
+        "cyclophosphamide (oral)"
+      ]
+    },
+    {
+      "day": 4,
+      "treatments": [
+        "cyclophosphamide (oral)"
+      ]
+    },
+    {
+      "day": 5,
+      "treatments": [
+        "cyclophosphamide (oral)"
+      ]
+    },
+    {
+      "day": 6,
+      "treatments": [
+        "cyclophosphamide (oral)"
+      ]
+    },
+    {
+      "day": 7,
+      "treatments": [
+        "cyclophosphamide (oral)"
+      ]
+    },
+    {
+      "day": 8,
+      "treatments": [
+        "methotrexate and fluorouracil",
+        "cyclophosphamide (oral)"
+      ]
+    },
+    {
+      "day": 9,
+      "treatments": [
+        "cyclophosphamide (oral)"
+      ]
+    },
+    {
+      "day": 10,
+      "treatments": [
+        "cyclophosphamide (oral)"
+      ]
+    },
+    {
+      "day": 11,
+      "treatments": [
+        "cyclophosphamide (oral)"
+      ]
+    },
+    {
+      "day": 12,
+      "treatments": [
+        "cyclophosphamide (oral)"
+      ]
+    },
+    {
+      "day": 13,
+      "treatments": [
+        "cyclophosphamide (oral)"
+      ]
+    },
+    {
+      "day": 14,
+      "treatments": [
+        "cyclophosphamide (oral)"
+      ]
+    },
+    {
+      "day": 15,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 16,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 17,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 18,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 19,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 20,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 21,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 22,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 23,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 24,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 25,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 26,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 27,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 28,
+      "treatments": [
+        "rest"
+      ]
+    }
+  ]
+occasionalSideEffects: [
+   { name: "Headaches" },
+  { name: "Dizziness" },
+  { name: "Skin & nail changes" },
+  { name: "Low sperm count in men" },
+  { name: "Chills" },
+]
+rareSideEffects: [
+ 
+  { name: "Increased risk of second cancer" },
+  { name: "Tumour lysis syndrome" },
+  { name: "Dehydration" },
+  { name: "Electrolyte imbalance" },
+  { name: "Memory & cognitive problems" },
+  { name: "Peripheral neuropathy" },
+  { name: "Muscle & joint pain" },
+  { name: "Osteoporosis" },
+  { name: "Seizures" },
+  { name: "Hearing loss" },
+  { name: "Blood clots" },
+  { name: "Stevens-Johnson syndrome" },
+  { name: "Toxic epidermal necrolysis" },
+  { name: "Pancreatitis" },
+  { name: "Slow wound healing" },
+  { name: "Mood changes" },
+  { name: "Eye and vision problems" },
+  { name: "Tremor, stiffness & slow movement" },
+  { name: "Insomnia" }
+]
+---

@@ -1,0 +1,25 @@
+---
+occasionalSideEffects:
+  [
+    { name: "Blood clots" },
+    { name: "Heart dysfunction" },
+    { name: "Injection site reactions" },
+    { name: "Headache" },
+    { name: "Drowsiness" },
+    { name: "Insomnia" },
+    { name: "Constipation" },
+    { name: "Sweating" },
+    { name: "Back/Muscle pain" },
+    { name: "Lungs/breathing problems" },
+  ]
+rareSideEffects:
+  [
+    { name: "Allergic reactions" },
+    { name: "Stroke" },
+    { name: "Heart attack" },
+    { name: "Hemolytic-uremic syndrome (HUS)" },
+    { name: "Capillary leak syndrome (CLS)" },
+    { name: "Increased risk of second cancer" },
+    { name: "Neurological or brain diseases" },
+  ]
+---

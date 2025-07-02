@@ -1,0 +1,31 @@
+---
+occasionalSideEffects:
+  [
+    { name: "Diarrhoea" },
+    { name: "Constipation" },
+    { name: "Mouth sores" },
+    { name: "Low appetite" },
+    { name: "Muscle pain" },
+    { name: "Back pain" },
+    { name: "Sleeplessness (Insomnia)" },
+    { name: "Headache" },
+    { name: "Sweating" },
+    {
+      name: "Injection site reactions (Redness, swelling, itching, pain at the site of injection)",
+    },
+  ]
+rareSideEffects:
+  [
+    { name: "Allergic reactions" },
+    { name: "Cardiac problems" },
+    { name: "Severe rash, blisters, peeling, usually with fever" },
+    { name: "Capillary leak syndrome (CLS)" },
+    { name: "Hemolytic-uremic syndrome (HUS)" },
+    {
+      name:
+        "Neurological disorder (Report to your oncology team about headaches, confusion, vision changes,
+        drooping eyelids, swallowing difficulty, weakness or numbness in arms, legs or face)",
+    },
+  ]
+---
+

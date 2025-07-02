@@ -1,0 +1,94 @@
+---
+commonSideEffects:
+  [
+     
+    {
+      name: "Low white blood cell count (Leukopenia or Neutropenia)",
+      description: "White blood cells (WBC) are crucial for fighting infection. While receiving treatment, your WBC count can drop, putting you at a higher risk of disease.",
+    },
+ 
+    {
+      name: "Fatigue",
+      description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion.",
+    },
+    {
+      name: "Diarrhoea",
+      description: "This treatment may disturb the intestinal lining and cause loose, watery, and more frequent stools than usual. Certain medications have a higher chance of causing diarrhoea.",
+    },
+       {
+      name: "Peripheral neuropathy/neurotoxicity",
+      description: "Peripheral neuropathy is due to damage to the nerves outside the brain and spinal cord. These nerves carry information from the brain to other parts of the body. The usual symptoms are numbness, tingling, and weakness in the extremities like hands and feet.",
+    },
+ 
+ 
+    {
+      name: "Muscle pain",
+      description: "Muscle aches are a possible side effect of cancer and cancer treatment. Another term for muscle aches is myalgia. Muscle aches can occur independently or be associated with other symptoms, like muscle weakness, cramps, or depression.",
+    },
+         {
+      name: "Low platelet count (thrombocytopenia)",
+      description: "Platelets help your blood clot, so you are at a higher risk of bleeding when your platelet count decreases. Let your oncology care team know if you have any excess bruising or bleeding, including nose bleeds, sore gums or blood in your urine or stool.",
+    },
+    {
+      name: "Hair loss (alopecia)",
+      description: "This treatment causes the hair on your head and other body parts to fall. In most cases, hair loss is temporary, and hair grows back to normal after treatment.",
+    },
+    {
+      name: "Effects on the liver",
+      description: "This medication can cause liver toxicity, which your oncology care team may monitor with blood tests called liver function tests.",
+    },
+    {
+      name: "Joint pain",
+      description: "Pain is a common side effect of chemotherapy, and joint pain is no exception. Although it can occur anytime during treatment, it often appears afterwards and is usually resolved in weeks to months.",
+    },
+    {
+      name: "Constipation",
+      description: "This treatment can cause difficulty in passing stool. However, constipation may also occur for other reasons, such as when a person is less active or undernourished.",
+    },
+    {
+      name: "Rash",
+      description: "Skin rash is one of the most common side effects of cancer treatment. It may appear on your face, neck, scalp, upper back, and chest. Although the rash can occur at any point during treatment, it is most common in the first two to three weeks.",
+    },
+    {
+      name: "Injection site reaction",
+      description: "Injection site reactions are common side effects of chemotherapy. These reactions occur when the medication is injected into the body and can cause redness, swelling, pain, and itching at the injection site. In some cases, a lump or skin rash may also develop.",
+    },
+  ]
+otherCommonSideEffects:
+  [
+    {
+      name:
+        "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes,
+        shortness of breath, heart failure)",
+    },
+  ]
+occasionalSideEffects:
+  [
+    { name: "Mouth sores" },
+    { name: "Lungs/breathing problems" },
+    { name: "Dehydration" },
+    { name: "Electrolyte imbalance" },
+    { name: "Sleeplessness (insomnia)" },
+    { name: "Mood changes" },
+    { name: "Headache" },
+    { name: "Taste disorder" },
+    { name: "Dizziness" },
+    { name: "Abdominal pain" },
+    { name: "Upset stomach" },
+    { name: "Nail changes" },
+    { name: "Blurred vision, dry or watery eyes" },
+    { name: "Hot flushes" },
+    { name: "Fluid retention" },
+    { name: "Sore throat" },
+  ]
+rareSideEffects:
+  [
+    { name: "Allergic reactions" },
+    { name: "Blood sugar levels changes" },
+    { name: "Dry mouth" },
+    { name: "Ear problems" },
+    { name: "Pain or burning while urinating, frequent urge to urinate" },
+    { name: "Swallowing difficulty" },
+    { name: "Sensitivity to sun" },
+  ]
+---

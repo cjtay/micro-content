@@ -237,7 +237,7 @@
 	},
 	{
 		"name": "vinorelbine",
-		"icon": "drip-maroon"
+		"icon": "pill-maroon"
 	},
 	{
 		"name": "zoledronic acid",
@@ -326,5 +326,61 @@
 	{
 		"name": "doxorubicin, cyclophosphamide and atezolizumab",
 		"icon": "drip-purple"
+	},
+	{
+		"name": "gemcitabine, carboplatin, and pembrolizumab",
+		"icon": "drip-maroon"
+	},
+	{
+		"name": "gemcitabine and carboplatin",
+		"icon": "drip-indigo"
+	},
+	{
+		"name": "gemcitabine, carboplatin and trastuzumab",
+		"icon": "drip-navy"
+	},
+	{
+		"name": "fluorouracil, epirubicin and cyclophosphamide",
+		"icon": "drip-gold"
+	},
+	{
+		"name": "nab-paclitaxel and carboplatin",
+		"icon": "drip-brown"
+	},
+	{
+		"name": "nab-paclitaxel and atezolizumab",
+		"icon": "drip-purple"
+	},
+	{
+		"name": "methotrexate and hydrocortisone",
+		"icon": "inject-teal"
+	},
+	{
+		"name": "paclitaxel and carboplatin",
+		"icon": "drip-cyan"
+	},
+	{
+		"name": "paclitaxel, carboplatin and trastuzumab",
+		"icon": "drip-orange"
+	},
+	{
+		"name": "paclitaxel, carboplatin and pembrolizumab",
+		"icon": "drip-red"
+	},
+	{
+		"name": "pertuzumab and trastuzumab",
+		"icon": "drip-blue"
+	},
+	{
+		"name": "paclitaxel and trastuzumab",
+		"icon": "drip-green"
+	},
+	{
+		"name": "pembrolizumab and paclitaxel",
+		"icon": "drip-yellow"
+	},
+	{
+		"name": "vinorelbine (iv)",
+		"icon": "drip-maroon"
 	}
 ]

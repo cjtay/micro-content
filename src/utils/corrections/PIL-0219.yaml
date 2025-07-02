@@ -1,0 +1,22 @@
+---
+occasionalSideEffects:
+  [
+    { name: "Low appetite" },
+    { name: "Diarrhoea" },
+    { name: "Headache" },
+    { name: "Blood clot" },
+    { name: "Vaginal dryness" },
+    { name: "Bleeding and bruising" },
+    {
+      name: "Numbness, tingling and unusual sensation in extremities like hands and feet",
+    },
+    { name: "Sciatica" },
+  ]
+rareSideEffects:
+  [
+    { name: "Venous thromboembolism" },
+    { name: "Liver failure" },
+    { name: "Vaginal Hemorrhage" },
+  ]
+---
+

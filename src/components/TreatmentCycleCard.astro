@@ -1,5 +1,5 @@
 ---
-const { day, icons = [], treatments = [] } = Astro.props;
+const { label, icons = [], treatments = [] } = Astro.props;
 
 // Function to capitalize first letter of each treatment name
 function capitalizeFirstLetter(str) {
@@ -7,7 +7,7 @@ function capitalizeFirstLetter(str) {
 }
 
 // Create a unique ID for this card's checkbox
-const cardId = `card-${day}`;
+const cardId = `card-${label.replace(/\s+/g, '-').toLowerCase()}`;
 ---
 
 <div class="relative">
@@ -18,7 +18,7 @@ const cardId = `card-${day}`;
 	<label for={cardId} class="block rounded-lg shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow">
 		<div class="mb-4 text-center">
 			<span class="text-lg md:text-base font-medium">
-				Day {day}
+				{label.startsWith('Week') ? label : `Day ${label}`}
 			</span>
 		</div>
 		<div class="flex flex-row gap-0 mx-auto justify-center w-16 h-16 md:w-18 md:h-18">

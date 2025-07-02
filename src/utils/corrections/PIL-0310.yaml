@@ -1,0 +1,26 @@
+---
+occasionalSideEffects: [
+    { name: "Kidney dysfunction (monitored by specific blood tests)" },
+  { name: "Liver dysfunction (monitored by specific blood tests)" },
+  { name: "Hearing problems" },
+  { name: "Blurred vision" },
+  { name: "Constipation" },
+  { name: "Taste disorder" },
+  { name: "Lungs/breathing problems (cough, shortness of breath, fever)" },
+  { name: "Insomnia" },
+]
+rareSideEffects: [
+
+  { name: "Stroke" },
+  { name: "Increased risk of second cancer" },
+  { name: "Inflammation of blood vessels" },
+  { name: "Blood clots" },
+  { name: "High blood pressure" },
+  { name: "Haemolytic anaemia" },
+  { name: "Haemolytic uremic syndrome" },
+  { name: "Tumour lysis syndrome" },
+  { name: "Dehydration" },
+  { name: "Chills" },
+  { name: "Dizziness" }
+]
+---

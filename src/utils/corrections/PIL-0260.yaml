@@ -1,0 +1,64 @@
+---
+commonSideEffects:
+  [
+    {
+      name: "Low white blood cell count (Leukopenia or Neutropenia)",
+      description: "White blood cells (WBC) are crucial for fighting infection. While receiving treatment, your WBC count can drop, putting you at a higher risk of disease.",
+    },
+    {
+      name: "Muscle pain (myalgia)",
+      description: "You may feel unexplained muscle pain, tenderness, discomfort, or weakness in different body parts. If the pain becomes more severe, you should seek medical advice.",
+    },
+    {
+      name: "Fatigue",
+      description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion.",
+    },
+    {
+      name: "Nausea and/or vomiting",
+      description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication.",
+    },
+    {
+      name: "Constipation",
+      description: "This treatment can cause difficulty in passing stool. However, constipation may also occur for other reasons, such as when a person is less active or undernourished.",
+    },
+    {
+      name: "Low red blood cell count (anaemia)",
+      description: "Red blood cells (RBC) are responsible for carrying oxygen to the tissues in your body. When you have a low RBC count, you may feel tired or weak and have pale skin.",
+    },
+    {
+      name: "Dizziness",
+      description: "It is a feeling of lightheadedness. There are many possible causes of dizziness. For cancer patients, the reason is often nausea and vomiting associated with chemotherapy. Treatment of nausea and vomiting with antiemetic drugs may help relieve dizziness. Dizziness and vertigo are not the same.",
+    },
+    {
+      name: "Effects on the liver",
+      description: "This medication can cause liver toxicity, which your oncology care team may monitor with blood tests called liver function tests.",
+    },
+    {
+      name: "Oedema (swelling)",
+      description: "Some patients will experience fluid build-up in their body tissues which chemotherapy, certain cancers, and conditions unrelated to cancer may cause.",
+    },
+  ]
+otherCommonSideEffects:
+  [
+    { name: "Weight gain" },
+    {
+      name: "Lungs/breathing problems (cough, nasal congestion, shortness of breath)",
+    },
+    { name: "Cognitive changes" },
+    { name: "Cough" },
+  ]
+occasionalSideEffects:
+  [
+    { name: "Taste disorder" },
+    { name: "Muscle weakness" },
+    { name: "Gait disturbance" },
+    {
+      name: "Numbness, tingling, weakness and unusual sensation in extremities like hands and feet",
+    },
+    { name: "Mood changes (delirium, anxiety, agitation, confusion)" },
+    { name: "Difficulty speaking or unclear speech" },
+    { name: "Insomnia" },
+    { name: "Skin rash" },
+  ]
+rareSideEffects: [{ name: "Allergic reactions" }]
+---

@@ -1,0 +1,68 @@
+---
+treatments:
+  [
+    {
+      "name": "Vinorelbine (iv)",
+      "cycle": "days 1 and 8 of your 21-day cycle",
+      "info": "administered intravenously ~ 10 to 15 minutes",
+    },
+  ]
+treatmentSchedule:
+  [
+    { "day": 1, "treatments": ["vinorelbine (iv)"] },
+    { "day": 2, "treatments": ["rest"] },
+    { "day": 3, "treatments": ["rest"] },
+    { "day": 4, "treatments": ["rest"] },
+    { "day": 5, "treatments": ["rest"] },
+    { "day": 6, "treatments": ["rest"] },
+    { "day": 7, "treatments": ["rest"] },
+    { "day": 8, "treatments": ["vinorelbine (iv)"] },
+    { "day": 9, "treatments": ["rest"] },
+    { "day": 10, "treatments": ["rest"] },
+    { "day": 11, "treatments": ["rest"] },
+    { "day": 12, "treatments": ["rest"] },
+    { "day": 13, "treatments": ["rest"] },
+    { "day": 14, "treatments": ["rest"] },
+    { "day": 15, "treatments": ["rest"] },
+    { "day": 16, "treatments": ["rest"] },
+    { "day": 17, "treatments": ["rest"] },
+    { "day": 18, "treatments": ["rest"] },
+    { "day": 19, "treatments": ["rest"] },
+    { "day": 20, "treatments": ["rest"] },
+    { "day": 21, "treatments": ["rest"] },
+  ]
+occasionalSideEffects:
+  [
+    { name: "Allergic reactions" },
+    { name: "Lungs/breathing problems (Cough, shortness of breath, fever)" },
+    { name: "Headache" },
+    { name: "Dizziness" },
+    { name: "Sleeplessness (Insomnia)" },
+    { name: "Taste disorder" },
+    { name: "Skin rash, blisters, hives" },
+    { name: "Inflammation of throat & food pipe - difficulty in swallowing" },
+    { name: "Blood pressure changes" },
+    { name: "Jaw pain" },
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+    { name: "Pain, burning or difficulty passing urine" },
+    { name: "Joint/Muscle pain" },
+    { name: "Changes in eye vision" },
+    { name: "Neuropathy" },
+  ]
+rareSideEffects:
+  [
+    {
+      name: "Slowing/stopping of bowels (can lead to severe constipation, abdominal pain or bloating)",
+    },
+    { name: "Sepsis" },
+    { name: "Problems with balance and body movements" },
+    { name: "Flushing (redness) of hands and feet" },
+    { name: "Guillain-Barre syndrome" },
+    { name: "Hearing disorder" },
+    {
+      name: "Heart dysfunction (such as heart failure, chest pain or heart attack)",
+    },
+    { name: "Severe difficulty breathing or wheezing" },
+  ]
+---
+

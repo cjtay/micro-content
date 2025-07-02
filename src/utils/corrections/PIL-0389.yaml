@@ -1,0 +1,17 @@
+---
+otherCommonSideEffects: [{ name: "Skin rash" }, { name: "Dry eyes" }]
+occasionalSideEffects:
+  [
+    { name: "Lung problems (Cough, difficulty in breathing)" },
+    { name: "Heart dysfunction (Monitored by specific blood tests)" },
+    { name: "Dehydration" },
+    { name: "Cellulitis" },
+    { name: "Electrolyte imbalance (Monitored by specific blood tests)" },
+    { name: "Allergic reaction" },
+    { name: "Sepsis" },
+    { name: "Urinary tract infection" },
+    { name: "Blurred vision" },
+    { name: "Pleural effusion" },
+  ]
+---
+

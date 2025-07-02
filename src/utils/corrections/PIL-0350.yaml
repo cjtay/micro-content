@@ -1,0 +1,21 @@
+---
+occasionalSideEffects:
+  [
+    {
+      name: "Cardiac problems (chest pain or tightness, irregular heart rate or blood pressure changes, shortness of breath)",
+    },
+    { name: "Bleeding and bruising (due to low platelets)" },
+    { name: "Electrolyte imbalance (Monitored by specific blood tests)" },
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+    { name: "Dry mouth" },
+    { name: "Sore throat" },
+    { name: "Watery or dry eyes" },
+  ]
+rareSideEffects:
+  [
+    { name: "Stevens-Johnson syndrome" },
+    { name: "Toxic epidermal necrolysis" },
+    { name: "Liver injury" },
+  ]
+---
+

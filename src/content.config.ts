@@ -26,9 +26,9 @@ const pils = defineCollection({
       ]).optional(),
       treatmentSchedule: z.array(
         z.object({
-          day: z.number(),
+          day: z.number().optional(),
           treatments: z.array(z.string())
-        })
+        }).catchall(z.any())
       ).optional(),
       commonSideEffects: z.array(
         z.object({

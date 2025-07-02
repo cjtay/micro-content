@@ -1,0 +1,29 @@
+---
+occasionalSideEffects:
+  [
+    { name: "Heart dysfunction (Monitored by specific tests)" },
+    { name: "Allergic reactions" },
+    { name: "Dizziness" },
+    { name: "Memory & cognitive problems" },
+    { name: "Hypokalemia" },
+    { name: "Taste disorder" },
+    { name: "Oedema" },
+    { name: "Chills" },
+    { name: "Rash, itchy skin" },
+    { name: "Nail changes" },
+    { name: "Hair thinning" },
+    { name: "Dry eyes & blurred vision" },
+    { name: "Hand-Foot Syndrome" },
+    { name: "Lungs/breathing problems" },
+    {
+      name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath, heart failure)",
+    },
+  ]
+rareSideEffects:
+  [
+    { name: "Injection site reactions" },
+    { name: "Inflammation of lungs" },
+    { name: "Severe liver problems" },
+  ]
+---
+

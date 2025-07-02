@@ -1,0 +1,215 @@
+---
+treatments: [
+    {
+      "name": "Paclitaxel and Pertuzumab",
+      "cycle": "day 1 of your 21-day cycle",
+      "info": "administered intravenously ~ 1.5 to 2 hours"
+    },
+    {
+      "name": "Trastuzumab (sc)",
+      "cycle": "day 1 of your 21-day cycle",
+      "info": "administered subcutaneously ~2 to 5 minutes"
+    },
+    {
+      "name": "Paclitaxel",
+      "cycle": "days 8 and 15 of your 21-day cycle",
+      "info": "administered intravenously ~ 60 minutes"
+    }
+  ]
+treatmentSchedule: [
+    {
+      "day": 1,
+      "treatments": [
+        "paclitaxel and pertuzumab",
+        "trastuzumab (sc)"
+      ]
+    },
+    {
+      "day": 2,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 3,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 4,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 5,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 6,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 7,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 8,
+      "treatments": [
+        "paclitaxel"
+      ]
+    },
+    {
+      "day": 9,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 10,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 11,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 12,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 13,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 14,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 15,
+      "treatments": [
+        "paclitaxel"
+      ]
+    },
+    {
+      "day": 16,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 17,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 18,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 19,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 20,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 21,
+      "treatments": [
+        "rest"
+      ]
+    }
+  ]
+commonSideEffects: [
+  {
+    name: "Low platelet count (thrombocytopenia)",
+    description: "Platelets help your blood clot, so you are at a higher risk of bleeding when your platelet count decreases. Let your oncology care team know if you have any excess bruising or bleeding, including nose bleeds, sore gums or blood in your urine or stool."
+  },
+  {
+    name: "Low red blood cell count (anaemia)",
+    description: "Red blood cells (RBC) are responsible for carrying oxygen to the tissues in your body. When you have a low RBC count, you may feel tired or weak and have pale skin."
+  },
+  {
+    name: "Low white blood cell count (Leukopenia or Neutropenia)",
+    description: "White blood cells (WBC) are crucial for fighting infection. While receiving treatment, your WBC count can drop, putting you at a higher risk of disease."
+  },
+  {
+    name: "Allergic reactions",
+    description: "You may have an allergic reaction to this medication. Symptoms usually include rash, itching, dizziness, vomiting, shortness of breath, chest pain, sudden blood pressure changes or oedema (swelling)."
+  },
+  {
+    name: "Nausea and/or vomiting",
+    description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication."
+  },
+  {
+    name: "Peripheral neuropathy/neurotoxicity",
+    description: "Peripheral neuropathy is due to damage to the nerves outside the brain and spinal cord. These nerves carry information from the brain to other parts of the body. The usual symptoms are numbness, tingling, and weakness in the extremities like hands and feet."
+  },
+  {
+    name: "Fatigue",
+    description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion."
+  },
+  {
+    name: "Mouth sores",
+    description: "Cancer medications can cause sores in the mouth and throat. These sores are painful and may become infected."
+  },
+  {
+    name: "Flu-like symptoms",
+    description: "Some types of chemotherapy can cause flu-like symptoms within a few hours of treatment. These symptoms generally last for 2 to 3 days. Some types of immunotherapy increase your body's natural immune response, which can cause mild to severe flu-like symptoms."
+  },
+  {
+    name: "Joint pain",
+    description: "Pain is a common side effect of chemotherapy, and joint pain is no exception. Although it can occur anytime during treatment, it often appears afterwards and is usually resolved in weeks to months."
+  }
+]
+otherCommonSideEffects: [
+  { name: "Skin problems (rash, itch), nail problems" },
+  { name: "Lungs/breathing problems (cough, shortness of breath)" },
+  { name: "Dry skin" }
+]
+occasionalSideEffects: [
+    { name: "Cardiac problems" },
+  { name: "Mood changes" },
+  { name: "Muscle stiffness and difficult movement" },
+  { name: "Hot flushes & sweating" },
+  { name: "Dry mouth" },
+  { name: "Piles" },
+  { name: "Breast swelling and pain" },
+  { name: "Kidney dysfunction" },
+  { name: "Liver dysfunction" },
+]
+rareSideEffects: [
+
+  { name: "Seizure or convulsion" },
+  { name: "Cognitive or memory problems" },
+  { name: "Heart failure" },
+  { name: "Blood clots" },
+  { name: "Sepsis" },
+  { name: "Respiratory failure" }
+]
+---

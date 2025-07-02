@@ -1,0 +1,28 @@
+---
+occasionalSideEffects:
+  [
+    { name: "Swelling of legs" },
+    { name: "Weight gain" },
+    { name: "Reduced bone mineral density which can lead to fractures" },
+    { name: "Low appetite" },
+    { name: "Diarrhoea/Constipation" },
+    { name: "Indigestion/bloating" },
+    { name: "Decreased in normal sensations to touch or temperature" },
+    { name: "Numbness, tingling, burning sensation and pain in hand or wrist" },
+    { name: "Rash, itchy skin" },
+    {
+      name: "Lung/breathing problems (shortness of breath, cough, runny and blocked nose)",
+    },
+  ]
+rareSideEffects:
+  [
+    {
+      name: "Trigger fingers (Fingers struck in a bent or straight position, difficult or stiff movements)",
+    },
+    { name: "Allergic reactions" },
+    { name: "Feeling very sleepy or drowsy" },
+    { name: "Endometrial polyps" },
+    { name: "Increased risk of blood clots" },
+  ]
+---
+

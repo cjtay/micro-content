@@ -1,0 +1,42 @@
+---
+occasionalSideEffects:
+  [
+    { name: "Swelling in hands or feet" },
+    { name: "Weight gain" },
+    { name: "Hair thinning" },
+    { name: "Dizziness" },
+    { name: "Low appetite" },
+    { name: "Constipation/Diarrhoea" },
+    { name: "Abdominal pain" },
+    { name: "Rash, dry skin" },
+    { name: "Vaginal dryness, bleeding/discharge" },
+    { name: "Bone density loss and increase risk of bone fracture" },
+    { name: "Breast pain" },
+    { name: "Muscle pain" },
+    { name: "Headaches" },
+    { name: "Nausea & vomiting" },
+    {
+      name: "Cardiac problems (Chest pain or tightness, irregular heartbeat, increased blood pressure, shortness of breath)",
+    },
+  ]
+rareSideEffects:
+  [
+    {
+      name:
+        "Urinary tract infection (pain or burning while urinating, frequent urge to urinate and dark or cloudy
+        urine)",
+    },
+    { name: "Sleeplessness (Insomnia)" },
+    { name: "Memory & cognitive problem" },
+    {
+      name: "Numbness, tingling and unusual sensation in any affected area of body",
+    },
+    { name: "Blurred vision, dry eyes" },
+    { name: "Taste disorder" },
+    { name: "Liver dysfunction" },
+    {
+      name: "Trigger fingers (Fingers struck in bent or straight position, difficult or stiff movements)",
+    },
+    { name: "Blood clots" },
+  ]
+---

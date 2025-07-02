@@ -1,0 +1,24 @@
+---
+occasionalSideEffects:
+  [
+    { name: "Indigestion/heartburn" },
+    { name: "Nail changes" },
+    { name: "Low sperm count in men" },
+    { name: "Liver dysfunction" },
+    { name: "Heart dysfunction" },
+    { name: "Difficulty in breathing" },
+  ]
+rareSideEffects:
+  [
+    { name: "Tremors, stiffness & slow in movements" },
+    { name: "Insomnia" },
+    { name: "Low blood pressure" },
+    { name: "Blood clots" },
+    { name: "Hearing loss" },
+    { name: "Dizziness" },
+    { name: "Headache" },
+    { name: "Peripheral neuropathy" },
+    { name: "Increased risk of second cancer" },
+  ]
+---
+

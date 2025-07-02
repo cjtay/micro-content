@@ -1,0 +1,119 @@
+---
+treatments:
+  [
+    {
+      "name": "Trastuzumab (sc)",
+      "cycle": "day 1 of your 21-day cycle",
+      "info": "administered subcutaneously ~2 to 5 mins",
+    },
+    {
+      "name": "Lapatinib",
+      "cycle": "days 1 to 21 of your 21-day cycle",
+      "info": "taken daily by mouth",
+    },
+  ]
+treatmentSchedule:
+  [
+    { "day": 1, "treatments": ["trastuzumab (sc)", "lapatinib"] },
+    { "day": 2, "treatments": ["lapatinib"] },
+    { "day": 3, "treatments": ["lapatinib"] },
+    { "day": 4, "treatments": ["lapatinib"] },
+    { "day": 5, "treatments": ["lapatinib"] },
+    { "day": 6, "treatments": ["lapatinib"] },
+    { "day": 7, "treatments": ["lapatinib"] },
+    { "day": 8, "treatments": ["lapatinib"] },
+    { "day": 9, "treatments": ["lapatinib"] },
+    { "day": 10, "treatments": ["lapatinib"] },
+    { "day": 11, "treatments": ["lapatinib"] },
+    { "day": 12, "treatments": ["lapatinib"] },
+    { "day": 13, "treatments": ["lapatinib"] },
+    { "day": 14, "treatments": ["lapatinib"] },
+    { "day": 15, "treatments": ["lapatinib"] },
+    { "day": 16, "treatments": ["lapatinib"] },
+    { "day": 17, "treatments": ["lapatinib"] },
+    { "day": 18, "treatments": ["lapatinib"] },
+    { "day": 19, "treatments": ["lapatinib"] },
+    { "day": 20, "treatments": ["lapatinib"] },
+    { "day": 21, "treatments": ["lapatinib"] },
+  ]
+commonSideEffects:
+  [
+    {
+      name: "Diarrhoea",
+      description: "This treatment may disturb the intestinal lining and cause loose, watery, and more frequent stools than usual. Certain medications have a higher chance of causing diarrhoea.",
+    },
+    {
+      name: "Low white blood cell count (Leukopenia or Neutropenia)",
+      description: "White blood cells (WBC) are crucial for fighting infection. While receiving treatment, your WBC count can drop, putting you at a higher risk of disease.",
+    },
+    {
+      name: "Fatigue",
+      description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion.",
+    },
+    {
+      name: "Nausea and/or vomiting",
+      description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication.",
+    },
+    {
+      name: "Low platelet count (thrombocytopenia)",
+      description: "Platelets help your blood clot, so you are at a higher risk of bleeding when your platelet count decreases. Let your oncology care team know if you have any excess bruising or bleeding, including nose bleeds, sore gums or blood in your urine or stool.",
+    },
+    {
+      name: "Mouth sores",
+      description: "Cancer medications can cause sores in the mouth and throat. These sores are painful and may become infected.",
+    },
+    {
+      name: "Low red blood cell count (anaemia)",
+      description: "Red blood cells (RBC) are responsible for carrying oxygen to the tissues in your body. When you have a low RBC count, you may feel tired or weak and have pale skin.",
+    },
+    {
+      name: "Flu-like symptoms",
+      description: "Some types of chemotherapy can cause flu-like symptoms within a few hours of treatment. These symptoms generally last for 2 to 3 days. Some types of immunotherapy increase your body's natural immune response, which can cause mild to severe flu-like symptoms.",
+    },
+    {
+      name: "Headaches",
+      description: "A headache is pain experienced in any part of your head. It is a common condition and, in most cases, is not a symptom of serious illness. There are many different types of headaches, and many other things can cause them.",
+    },
+    {
+      name: "Oedema (swelling)",
+      description: "Some patients will experience fluid build-up in their body tissues which chemotherapy, certain cancers, and conditions unrelated to cancer may cause.",
+    },
+    {
+      name: "Lungs/breathing problems",
+      description: "If you experience an onset or worsening of previous problems such as cough, shortness of breath and fever, notify your doctor.",
+    },
+    {
+      name: "Allergic reactions",
+      description: "You may have an allergic reaction to this medication. Symptoms usually include rash, itching, dizziness, vomiting, shortness of breath, chest pain, sudden blood pressure changes or oedema (swelling).",
+    },
+  ]
+otherCommonSideEffects:
+  [
+    { name: "Skin problems(rash, Itch) and nail problems" },
+    { name: "Dry skin" },
+  ]
+occasionalSideEffects:
+  [
+    { name: "Numbness, tingling or unusual sensation of nerves" },
+    {
+      name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)",
+    },
+    { name: "Hair loss" },
+    { name: "Mood changes" },
+    { name: "Muscle stiffness and difficult movement" },
+    { name: "Dry mouth" },
+    { name: "Piles" },
+    { name: "Hot flushes and sweating" },
+    { name: "Breast swelling and pain" },
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+    { name: "Liver dysfunction (Monitored by specific blood tests)" },
+  ]
+rareSideEffects:
+  [
+    { name: "Heart failure" },
+    { name: "Respiratory failure" },
+    { name: "Pulmonary toxicity" },
+    { name: "Hepatotoxicity" },
+  ]
+---
+

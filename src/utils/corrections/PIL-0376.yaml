@@ -1,0 +1,59 @@
+---
+commonSideEffects:
+  [
+    {
+      name: "Nausea and/or vomiting",
+      description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication.",
+    },
+    {
+      name: "Fatigue",
+      description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion.",
+    },
+    {
+      name: "Low white blood cell count (Leukopenia or Neutropenia)",
+      description: "White blood cells (WBC) are crucial for fighting infection. While receiving treatment, your WBC count can drop, putting you at a higher risk of disease.",
+    },
+    {
+      name: "Low platelet count (thrombocytopenia)",
+      description: "Platelets help your blood clot, so you are at a higher risk of bleeding when your platelet count decreases. Let your oncology care team know if you have any excess bruising or bleeding, including nose bleeds, sore gums or blood in your urine or stool.",
+    },
+    {
+      name: "Diarrhoea",
+      description: "This treatment may disturb the intestinal lining and cause loose, watery, and more frequent stools than usual. Certain medications have a higher chance of causing diarrhoea.",
+    },
+    {
+      name: "Headaches",
+      description: "A headache is pain experienced in any part of your head. It is a common condition and, in most cases, is not a symptom of serious illness. There are many different types of headaches, and many other things can cause them.",
+    },
+    {
+      name: "High blood sugar (hyperglycemia)",
+      description: "This treatment can increase your blood sugar levels. If you have diabetes or a family history of diabetes, you must have frequent glucose screening tests.",
+    },
+    {
+      name: "Low red blood cell count (anaemia)",
+      description: "Red blood cells (RBC) are responsible for carrying oxygen to the tissues in your body. When you have a low RBC count, you may feel tired or weak and have pale skin.",
+    },
+    {
+      name: "Low appetite",
+      description: "Appetite loss or poor appetite are common side effects of cancer and its treatment. This means you may eat less than usual, not feel hungry, or feel full after eating only a tiny amount.",
+    },
+    {
+      name: "Effects on the liver",
+      description: "This medication can cause liver toxicity, which your oncology care team may monitor with blood tests called liver function tests.",
+    },
+  ]
+otherCommonSideEffects: [{ name: "Hair thinning" }]
+occasionalSideEffects:
+  [
+    { name: "Taste disorder" },
+    { name: "Mouth sores" },
+    { name: "Abdominal pain" },
+    { name: "Gastric problems (Acid reflux, heartburn, bloating)" },
+  ]
+rareSideEffects:
+  [
+    { name: "Allergic reactions" },
+    { name: "Increased risk of secondary cancer" },
+  ]
+---
+

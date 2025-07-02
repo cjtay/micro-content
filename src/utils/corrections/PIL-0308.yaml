@@ -1,0 +1,67 @@
+---
+treatments:
+  [
+    {
+      "name": "Paclitaxel and Carboplatin",
+      "cycle": "day 1 of your 21-day cycle",
+      "info": "administered intravenously ~3.5 to 4 hours",
+    },
+    {
+      "name": "Trastuzumab (sc)",
+      "cycle": "day 1 of your 21-day cycle",
+      "info": "administered subcutaneously ~2 to 5 min",
+    },
+  ]
+treatmentSchedule:
+  [
+    {
+      "day": 1,
+      "treatments": ["paclitaxel and carboplatin", "trastuzumab (sc)"],
+    },
+    { "day": 2, "treatments": ["rest"] },
+    { "day": 3, "treatments": ["rest"] },
+    { "day": 4, "treatments": ["rest"] },
+    { "day": 5, "treatments": ["rest"] },
+    { "day": 6, "treatments": ["rest"] },
+    { "day": 7, "treatments": ["rest"] },
+    { "day": 8, "treatments": ["rest"] },
+    { "day": 9, "treatments": ["rest"] },
+    { "day": 10, "treatments": ["rest"] },
+    { "day": 11, "treatments": ["rest"] },
+    { "day": 12, "treatments": ["rest"] },
+    { "day": 13, "treatments": ["rest"] },
+    { "day": 14, "treatments": ["rest"] },
+    { "day": 15, "treatments": ["rest"] },
+    { "day": 16, "treatments": ["rest"] },
+    { "day": 17, "treatments": ["rest"] },
+    { "day": 18, "treatments": ["rest"] },
+    { "day": 19, "treatments": ["rest"] },
+    { "day": 20, "treatments": ["rest"] },
+    { "day": 21, "treatments": ["rest"] },
+  ]
+occasionalSideEffects:
+  [
+    { name: "Cardiac problems" },
+    { name: "Kidney dysfunction" },
+    { name: "Liver dysfunction" },
+    { name: "Mood changes" },
+    { name: "Stiff arms or legs" },
+    { name: "Drowsiness, dizziness" },
+    { name: "Hearing problems" },
+    { name: "Changes in vision/eyesight" },
+    { name: "Swollen or sore breasts" },
+    { name: "Haemorrhoids" },
+    { name: "Injection site pain" },
+  ]
+rareSideEffects:
+  [
+    { name: "Stroke" },
+    { name: "Inflammation of blood vessels" },
+    { name: "High blood pressure" },
+    { name: "Blood clots" },
+    { name: "Pancreatitis" },
+    { name: "Dehydration" },
+    { name: "Haemolytic uremic syndrome" },
+    { name: "Tumour lysis syndrome" },
+  ]
+---

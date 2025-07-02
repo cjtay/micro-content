@@ -1,0 +1,30 @@
+---
+occasionalSideEffects:
+  [
+    { name: "Increased cholesterol levels" },
+    { name: "Hair thinning or loss" },
+    { name: "Ovarian cyst" },
+    { name: "Abdominal pain" },
+    { name: "Low appetite" },
+    { name: "Constipation/Diarrhoea" },
+    { name: "Low red blood cells count (Anaemia)" },
+    { name: "Allergic reactions" },
+    { name: "Dizziness" },
+    { name: "Headache" },
+    { name: "Vision changes (blurred vision, cataracts)" },
+    { name: "Pain" },
+    { name: "Liver dysfunction" },
+    {
+      name: "Cardiac problems (Chest pain or tightness, irregular heart rate or blood pressure changes, shortness of breath)",
+    },
+  ]
+rareSideEffects:
+  [
+    {
+      name: "Increased risk of blood clots in vein of legs or arteries of lungs",
+    },
+    { name: "Liver failure" },
+    { name: "Increased risk of endometrial (womb) cancer" },
+  ]
+---
+

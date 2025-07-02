@@ -2,13 +2,15 @@
 import TreatmentCycleCard from "./TreatmentCycleCard.astro";
 import treatmentsData from "../data/treatments.json";
 
-interface TreatmentScheduleDay {
-  day: number;
+interface TreatmentScheduleEntry {
+  day?: number;
+  week?: number;
+  [key: string]: any; // Allow flexible week range keys like "week 2-52"
   treatments: string[];
 }
 
 interface Props {
-  treatmentSchedule: TreatmentScheduleDay[];
+  treatmentSchedule: TreatmentScheduleEntry[];
 }
 
 const { treatmentSchedule = [] } = Astro.props;
@@ -34,19 +36,46 @@ function getIconForTreatment(treatmentName: string): string {
   
   return icon || 'pill-blue'; // Default fallback
 }
+
+// Function to generate label for schedule entry
+function generateLabel(scheduleEntry: TreatmentScheduleEntry): string {
+  // Check for day field
+  if (scheduleEntry.day !== undefined) {
+    return scheduleEntry.day.toString();
+  }
+  
+  // Check for week field
+  if (scheduleEntry.week !== undefined) {
+    return `Week ${scheduleEntry.week}`;
+  }
+  
+  // Check for week range keys (e.g., "week 2-52", "week 2-12")
+  const weekRangeKey = Object.keys(scheduleEntry).find(key => 
+    key.startsWith('week ') && key.includes('-')
+  );
+  
+  if (weekRangeKey) {
+    return weekRangeKey.charAt(0).toUpperCase() + weekRangeKey.slice(1); // Capitalize first letter
+  }
+  
+  // Fallback
+  return 'Day 1';
+}
 ---
 
 <!-- Hidden radio button to close all tooltips -->
 <input type="radio" name="tooltip-control" id="close-all-tooltips" class="sr-only" checked />
 
 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-2 my-8">
-  {treatmentSchedule.map((scheduleDay) => {
-    const icons = scheduleDay.treatments.map(treatment => getIconForTreatment(treatment));
+  {treatmentSchedule.map((scheduleEntry, index) => {
+    const icons = scheduleEntry.treatments.map(treatment => getIconForTreatment(treatment));
+    const label = generateLabel(scheduleEntry);
     return (
       <TreatmentCycleCard 
-        day={scheduleDay.day.toString()} 
+        label={label}
         icons={icons}
-        treatments={scheduleDay.treatments}
+        treatments={scheduleEntry.treatments}
+        key={index}
       />
     );
   })}

@@ -1,0 +1,28 @@
+---
+occasionalSideEffects:
+  [
+    {
+      name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)",
+    },
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+    { name: "Liver dysfunction (Monitored by specific blood tests)" },
+    { name: "Mood changes" },
+    { name: "Stiff arms or legs" },
+    { name: "Drowsiness, Dizziness" },
+    { name: "Hearing problems" },
+    { name: "Changes to vision/eyesight" },
+    { name: "Swollen or sore breasts" },
+    { name: "Haemorrhoids" },
+  ]
+rareSideEffects:
+  [
+    { name: "Stroke" },
+    { name: "Inflammation of blood vessels" },
+    { name: "High blood pressure" },
+    { name: "Blood clots" },
+    { name: "Pancreatitis" },
+    { name: "Dehydration" },
+    { name: "Haemolytic uremic syndrome" },
+    { name: "Tumour lysis syndrome" },
+  ]
+---

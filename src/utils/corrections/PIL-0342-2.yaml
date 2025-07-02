@@ -1,0 +1,21 @@
+---
+occasionalSideEffects:
+  [
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+    { name: "Liver dysfunction (Monitored by specific blood tests)" },
+    { name: "Mood changes (Anxiety, depression)" },
+    { name: "Muscle stiffness and hypertonia" },
+    { name: "Dry mouth" },
+    { name: "Piles" },
+    { name: "Excessive sweating" },
+    { name: "Breast swelling and pain" },
+  ]
+rareSideEffects:
+  [
+    { name: "Heart failure" },
+    {
+      name: "Tumour lysis syndrome (severe electrolyte imbalance, kidney or urination problem, irregular heartbeat, muscles cramps or seizures as a response to treatment)",
+    },
+  ]
+---
+

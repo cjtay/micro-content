@@ -1,0 +1,24 @@
+---
+occasionalSideEffects:
+  [
+    { name: "Headache" },
+    { name: "Blood clot" },
+    {
+      name: "Urine infection (pain or burning while urinating, frequent urge to urinate and dark or cloudy urine)",
+    },
+    { name: "Vaginal dryness" },
+    {
+      name: "Numbness, tingling and unusual sensation in extremities like hands and feet",
+    },
+    { name: "Sciatica" },
+    { name: "Taste disorder" },
+    { name: "Blurred vision, dry or watery eyes" },
+  ]
+rareSideEffects:
+  [
+    { name: "Venous thromboembolism" },
+    { name: "Liver failure" },
+    { name: "Interstitial pulmonary disease" },
+    { name: "Pneumonitis" },
+  ]
+---

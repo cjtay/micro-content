@@ -1,0 +1,27 @@
+---
+occasionalSideEffects:
+  [
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+    { name: "Low calcium levels" },
+    { name: "Low red blood cells (Anaemia)" },
+    { name: "Low appetite" },
+    { name: "Eye problem (Red, watery eyes and blurred vision)" },
+    {
+      name: "Urine infection (pain or burning while urinating, frequent urge to urinate)",
+    },
+    { name: "Bone damage/fracture" },
+  ]
+rareSideEffects:
+  [
+    {
+      name: "Cardiac problems (chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)",
+    },
+    { name: "Allergic reactions" },
+    { name: "Jawbone damage or pain" },
+    { name: "Bone fracture" },
+    { name: "Mouth sores" },
+    { name: "Taste disorder" },
+    { name: "Skin problems (Rash, Itchy skin)" },
+  ]
+---
+

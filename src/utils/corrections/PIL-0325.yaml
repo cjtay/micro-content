@@ -1,0 +1,33 @@
+---
+occasionalSideEffects: [
+    { name: "Lung/ breathing problems (Cough, shortness of breath, fever)" },
+  { name: "Rash, itchy skin, discolouration" },
+  { name: "Flu-like symptoms" },
+  { name: "Taste disorder" },
+  { name: "Abdominal pain" },
+  { name: "Memory & cognitive problems" },
+  { name: "Dizziness" },
+  { name: "Sleeplessness (Insomnia)" },
+  { name: "Mood changes" },
+  { name: "Dry eyes" },
+  { name: "Thyroid disorder (Monitored by specific blood tests)" },
+  { name: "Electrolyte imbalance (Monitored by specific blood tests)" },
+  { name: "Injection-site reactions (redness, swelling, itching, pain at the site of injection)" },
+]
+rareSideEffects: [
+
+  { name: "Hormonal glands problems" },
+  { name: "Diabetes" },
+  { name: "Kidney dysfunction" },
+  { name: "Seizures (Fits)" },
+  { name: "Body's severe response to infection" },
+  { name: "Auto-immune diseases like meningitis, myasthenia gravis" }
+]
+immuneSideEffects: [
+  { name: "Pembrolizumab stimulates your immune system." },
+  { name: "Your immune system can attack normal organs and tissues in your body, leading to serious or life-threatening complications." },
+  { name: "Tell your doctor if you may have worse symptoms during treatment in any part of your body." },
+  { name: "Early management of immune-mediated side effects is beneficial in using pembrolizumab safely." },
+  { name: "It mainly includes immune-mediated cardiac, neurological, respiratory, digestive, and skin problems and hormonal and electrolyte imbalance." }
+]
+---

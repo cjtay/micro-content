@@ -1,0 +1,41 @@
+---
+occasionalSideEffects:
+  [
+    {
+      name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)",
+    },
+    { name: "Lung/ breathing problems (Cough, shortness of breath, fever)" },
+    { name: "Rash, itchy skin, discolouration" },
+    { name: "Flu-like symptoms" },
+    { name: "Taste disorder" },
+    { name: "Abdominal pain" },
+    { name: "Dizziness" },
+    { name: "Sleeplessness (Insomnia)" },
+    { name: "Mood changes" },
+    { name: "Dry eyes, blurred vision" },
+    { name: "Thyroid disorder (Monitored by specific blood tests)" },
+    { name: "Hearing problem" },
+  ]
+rareSideEffects:
+  [
+    {
+      name: "Hormonal glands problems (Signs are headache, dizziness, mood changes, vision problem, weight changes, stomach issues)",
+    },
+    { name: "Diabetes" },
+    { name: "Kidney failure" },
+    { name: "Hemolytic-uremic syndrome (HUS)" },
+    { name: "Seizures (Fits)" },
+    { name: "Body's severe response to infection" },
+    { name: "Inflammation of the brain linings and spinal cord (meningitis)" },
+    { name: "Auto-immune disease such as myasthenia gravis" },
+    { name: "Increased risk of second cancer" },
+  ]
+immuneSideEffects:
+  [
+    { name: "Pembrolizumab stimulates your immune system." },
+    { name: "Your immune system can attack normal organs and tissues in your body, leading to serious or life-threatening complications." },
+    { name: "Tell your doctor if you may have worse symptoms during treatment in any part of your body." },
+    { name: "Early management of immune-mediated side effects is beneficial in using pembrolizumab safely." },
+    { name: "It mainly includes immune-mediated cardiac, neurological, respiratory, digestive, and skin problems and hormonal and electrolyte imbalance." }
+  ]
+---

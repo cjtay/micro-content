@@ -1,0 +1,82 @@
+---
+commonSideEffects: [
+  {
+    name: "Low white blood cell count (Leukopenia or Neutropenia)",
+    description: "White blood cells (WBC) are crucial for fighting infection. While receiving treatment, your WBC count can drop, putting you at a higher risk of disease."
+  },
+  {
+    name: "Low red blood cell count (anaemia)",
+    description: "Red blood cells (RBC) are responsible for carrying oxygen to the tissues in your body. When you have a low RBC count, you may feel tired or weak and have pale skin."
+  },
+  {
+    name: "Low platelet count (thrombocytopenia)",
+    description: "Platelets help your blood clot, so you are at a higher risk of bleeding when your platelet count decreases. Let your oncology care team know if you have any excess bruising or bleeding, including nose bleeds, sore gums or blood in your urine or stool."
+  },
+  {
+    name: "Peripheral neuropathy/neurotoxicity",
+    description: "Peripheral neuropathy is due to damage to the nerves outside the brain and spinal cord. These nerves carry information from the brain to other parts of the body. The usual symptoms are numbness, tingling, and weakness in the extremities like hands and feet."
+  },
+  {
+    name: "Nausea and/or vomiting",
+    description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication."
+  },
+  {
+    name: "Diarrhoea",
+    description: "This treatment may disturb the intestinal lining and cause loose, watery, and more frequent stools than usual. Certain medications have a higher chance of causing diarrhoea."
+  },
+   { name: "Mouth sores",
+    description: "Cancer medications can cause sores in the mouth and throat. These sores are painful and may become infected."
+    },
+  { name: "Hair loss (alopecia)",
+    description: "This treatment causes the hair on your head and other body parts to fall. In most cases, hair loss is temporary, and hair grows back to normal after treatment."
+   },
+  { name: "Joint pain", 
+       description: "Pain is a common side effect of chemotherapy, and joint pain is no exception. Although it can occur anytime during treatment, it often appears afterwards and is usually resolved in weeks to months."
+   },
+  { name: "Muscle pain (myalgia)",
+    description: "You may feel unexplained muscle pain, tenderness, discomfort, or weakness in different body parts. If the pain becomes more severe, you should seek medical advice."
+   },
+  { name: "Fatigue", 
+    description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion."
+   },
+  { name: "Electrolyte imbalance",
+    description: "Loss of body fluids from prolonged vomiting, diarrhoea and sweating can cause an electrolyte imbalance. Your doctor may monitor your electrolyte levels through routine blood tests."
+   },
+  { name: "Abdominal pain",
+    description: "Pain may be achy or cramp-like and is associated with increased flatulence (gas). Chemotherapy may also alter the normal bacterial flora in the intestines. This can affect digestion and cause abdominal pain, cramping or flatulence (gas)."
+   },
+  { name: "Infusion-related reactions",
+    description: "The infusion may lead to chills, fever, low blood pressure, shortness of breath, nausea, vomiting, rashes, oedema (swelling) or sudden weight gain. If you suddenly feel unwell during the first 24 hours after the infusion, notify your nurse immediately."
+   }
+]
+otherCommonSideEffects: [
+  { name: "Kidney dysfunction" },
+  { name: "Liver dysfunction" },
+  { name: "Urine infection" },
+ 
+]
+occasionalSideEffects: [
+    { name: "Cardiac problems" },
+  { name: "Hearing problem" },
+  { name: "Skin rash" },
+  { name: "Nail changes" },
+  { name: "Blurred vision" },
+  { name: "Constipation" },
+  { name: "Taste disorder" },
+  { name: "Lungs/breathing problems" },
+  { name: "Mood changes" },
+  { name: "Sleeplessness (Insomnia)" },
+  { name: "Memory & cognitive problems" },
+]
+rareSideEffects: [
+
+  { name: "Increased risk of second cancer" },
+  { name: "Increased risk of blood clots" },
+  { name: "Dizziness" },
+  { name: "Sepsis" },
+  { name: "Neurological disorder" },
+  { name: "Dehydration" },
+  { name: "Tumour lysis syndrome" },
+  { name: "Hemolytic-uremic syndrome (HUS)" }
+]
+---

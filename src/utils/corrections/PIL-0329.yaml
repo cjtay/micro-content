@@ -1,0 +1,10 @@
+---
+occasionalSideEffects:
+  [{ name: "Taste changes" }, { name: "Blurred vision, dry or watery eyes" }]
+rareSideEffects:
+  [
+    { name: "Interstitial pulmonary disease (cough, shortness of breath)" },
+    { name: "Pneumonitis" },
+  ]
+---
+

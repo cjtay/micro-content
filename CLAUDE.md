@@ -93,7 +93,7 @@ micro-content/
 │   │   ├── pil/             # Patient Information Leaflets (107 files)
 │   │   └── basic/           # Basic content pages
 │   ├── data/                # JSON data files
-│   │   └── treatments.json  # 57 treatments with icons
+│   │   └── treatments.json  # 60+ treatments with icons
 │   ├── layouts/             # Page layout templates
 │   ├── pages/               # Route-based pages
 │   │   ├── pil/            # PIL routes
@@ -115,7 +115,7 @@ micro-content/
 
 ### 1. **Automated PDF Processing**
 - Extracts text and tabular data from medical PDFs
-- Identifies 57 different treatments automatically
+- Identifies 60+ different treatments automatically
 - Converts complex protocols into structured MDX files
 - Handles multi-page documents and complex layouts
 
@@ -164,6 +164,8 @@ micro-content/
   }>;
   // Side effects arrays (optional)
   commonSideEffects?: Array<{...}>;
+  immuneSideEffects?: Array<{...}>;
+  otherCommonSideEffects?: Array<{...}>;
   occasionalSideEffects?: Array<{...}>;
   rareSideEffects?: Array<{...}>;
 }
@@ -184,7 +186,7 @@ micro-content/
 
 ### Treatment Data (treatments.json)
 
-Currently contains 57 treatments with unique color-coded icons:
+Currently contains 60+ treatments with unique color-coded icons:
 
 **Color Palette:**
 - Original: blue, red, green, purple, orange, yellow
@@ -283,8 +285,33 @@ cd src/utils && node frontmatter-corrections.js
 #### Content Components
 - **Accordion.astro**: Collapsible sections
 - **CommonSideEffects.astro**: Side effects display
+- **ImmuneSideEffects.astro**: Immune-related side effects for pembrolizumab treatments
+- **OtherCommonSideEffects.astro**: Additional common side effects display
+- **OccasionalSideEffects.astro**: Occasional side effects display
+- **RareSideEffects.astro**: Rare side effects display
 - **SafeHandlingAccordion.astro**: Safety information
 - **HealthcareTeamContact.astro**: Contact details
+
+#### Side Effects Components
+
+The system includes specialized components for displaying different categories of side effects:
+
+- **CommonSideEffects.astro**: Primary side effects with detailed descriptions
+- **ImmuneSideEffects.astro**: Immune-related side effects specific to pembrolizumab treatments
+  - Uses bullet point format for consistency with other side effects components
+  - Wrapped in Accordion component for collapsible display
+  - Takes `immuneSideEffects` array from frontmatter
+- **OtherCommonSideEffects.astro**: Additional common side effects (simple list format)
+- **OccasionalSideEffects.astro**: Less frequent side effects
+- **RareSideEffects.astro**: Rare but serious side effects
+
+Each component follows the same pattern:
+```typescript
+interface SideEffect {
+  name: string;
+  description?: string;
+}
+```
 
 ### Layout System
 
@@ -331,6 +358,37 @@ cd src/utils && node frontmatter-corrections.js
    ---
    ```
 3. **Write content** using Markdown/MDX
+
+### Adding Immune Side Effects to PIL Files
+
+For pembrolizumab-containing treatments, add immune side effects:
+
+1. **Add to frontmatter**:
+   ```yaml
+   immuneSideEffects:
+     [
+       { name: "Pembrolizumab stimulates your immune system." },
+       { name: "Your immune system can attack normal organs and tissues in your body, leading to severe or life-threatening complications." },
+       { name: "Tell your doctor if you may have symptoms during treatment in any part of your body." },
+       { name: "Early management of immune-mediated side effects is really helpful in the safe use of pembrolizumab." },
+       { name: "It mainly includes immune-mediated cardiac, neurological, respiratory, digestive and skin problems and hormonal and electrolyte imbalance." }
+     ]
+   ```
+
+2. **Export the data**:
+   ```javascript
+   export const immuneSideEffects = frontmatter.immuneSideEffects;
+   ```
+
+3. **Import the component**:
+   ```javascript
+   import ImmuneSideEffects from "../../components/ImmuneSideEffects.astro";
+   ```
+
+4. **Use in content**:
+   ```jsx
+   <ImmuneSideEffects immuneSideEffects={immuneSideEffects} />
+   ```
 
 ### Correcting Frontmatter
 
@@ -473,20 +531,35 @@ npm run build
 - **Solution**: Ensure PDFs have extractable text
 - **Fallback**: Manual content creation
 
+#### Treatment Icon Issues
+- **Cause**: Treatment names in MDX treatmentSchedule don't match treatments.json entries
+- **Symptom**: Wrong/default icons displayed in treatment calendar
+- **Solution**: Add missing treatment combinations to treatments.json with unique color-coded icons
+- **Pattern**: Check both comma and "and" variations (e.g., "gemcitabine, carboplatin" vs "gemcitabine and carboplatin")
+- **Validation**: Ensure icon files exist in public/icons/ directory
+- **Color Selection**: Choose unique colors to avoid visual confusion between similar treatments
+
 #### Treatment Not Found
 - **Cause**: Treatment name not in treatments.json
 - **Solution**: Add treatment with unique icon color
 - **Validation**: Check spelling variations
 
-#### Build Errors
-- **Cause**: Invalid MDX frontmatter
-- **Solution**: Validate against content schema
-- **Tool**: Use TypeScript for type checking
-
 #### Missing Icons
 - **Cause**: Icon file not created for color
 - **Solution**: Generate SVG with correct color
 - **Naming**: Follow [type]-[color].svg pattern
+- **Icon Types**: Use appropriate type (drip for IV, pill for oral, inject for injections)
+
+#### Immune Side Effects Missing
+- **Cause**: Immunotherapy drugs (pembrolizumab, nivolumab, atezolizumab) missing immune-specific side effects
+- **Solution**: Add immuneSideEffects array to frontmatter and implement ImmuneSideEffects component
+- **Pattern**: Follow established pattern with frontmatter → export → import → component usage
+- **Format**: Use bullet points for consistency with other side effects components
+
+#### Build Errors
+- **Cause**: Invalid MDX frontmatter
+- **Solution**: Validate against content schema
+- **Tool**: Use TypeScript for type checking
 
 #### Frontmatter Correction Issues
 - **Cause**: Corrections directory or files not found
@@ -503,6 +576,7 @@ npm run build
 
 ## Version History
 
+- **July 2025**: Added ImmuneSideEffects component, treatment combinations update to 60+ entries
 - **June 2025**: Major update with 57 treatments, Tailwind v4, Astro v5.7
 - **Initial**: Basic PIL system with manual content
 

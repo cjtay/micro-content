@@ -1,0 +1,32 @@
+---
+occasionalSideEffects:
+  [
+    { name: "Allergic reactions" },
+    { name: "Electrolyte imbalance (Monitored by specific blood tests)" },
+    { name: "Sleeplessness (insomnia)" },
+    { name: "Mood changes" },
+    { name: "Headache" },
+    { name: "Dizziness" },
+    {
+      name: "Cardiac problems (chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)",
+    },
+    { name: "Abdominal pain" },
+    { name: "Upset stomach" },
+    { name: "Taste disorder" },
+    { name: "Nail changes" },
+    { name: "Blurred vision, dry or watery eyes" },
+    { name: "Swelling" },
+    { name: "Lungs/breathing problems (Cough, shortness of breath, fever)" },
+    { name: "Liver changes (Monitored by specific blood tests)" },
+    { name: "Hearing problem" },
+    {
+      name: "Injection site reactions (Redness, swelling, itching, pain at the site of injection)",
+    },
+  ]
+rareSideEffects:
+  [
+    { name: "Sensitivity to sun" },
+    { name: "Blood clots" },
+    { name: "Increased risk of second cancer" },
+  ]
+---

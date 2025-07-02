@@ -1,0 +1,28 @@
+---
+occasionalSideEffects:
+  [
+    { name: "Lungs/breathing problems (Cough, shortness of breath, fever)" },
+    { name: "Headache" },
+    { name: "Dizziness" },
+    { name: "Sleeplessness (Insomnia)" },
+    { name: "Taste changes" },
+    { name: "Skin rash" },
+    { name: "Blood pressure changes" },
+    { name: "Jaw pain" },
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+    {
+      name: "Urine passing problems (pain or burning sensation while urinating)",
+    },
+    { name: "Eyesight changes" },
+  ]
+rareSideEffects:
+  [
+    { name: "Ulcers of the digestive system" },
+    { name: "Serious infection" },
+    { name: "Problems with balance and body movements" },
+    {
+      name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)",
+    },
+  ]
+---
+

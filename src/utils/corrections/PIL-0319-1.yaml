@@ -1,0 +1,20 @@
+---
+occasionalSideEffects: [
+   { name: "Hearing problem" },
+  { name: "Skin rash" },
+  { name: "Nail changes" },
+  { name: "Blurred vision" },
+  { name: "Constipation" },
+  { name: "Taste disorder" },
+  { name: "Lungs/breathing problems (Cough, shortness of breath, fever)" },
+  { name: "Mood changes" },
+  { name: "Sleeplessness (Insomnia)" },
+  { name: "Memory & cognitive problem" },
+  { name: "Injection-site reactions (redness, swelling, itching, pain at site of injection)" },
+]
+rareSideEffects: [
+ 
+  { name: "Seizure or convulsion" },
+  { name: "Increased risk of second cancer" }
+]
+---

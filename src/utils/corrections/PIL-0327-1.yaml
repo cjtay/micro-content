@@ -1,0 +1,23 @@
+---
+occasionalSideEffects: [
+   { name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath, sudden weight gain due to oedema)" },
+  { name: "Mood changes" },
+  { name: "Muscle stiffness and difficult movement" },
+  { name: "Hot flushes & sweating" },
+  { name: "Dry mouth" },
+  { name: "Piles" },
+  { name: "Breast swelling and pain" },
+  { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+  { name: "Liver dysfunction (Monitored by specific blood tests)" },
+]
+rareSideEffects: [
+ 
+  { name: "Seizure or convulsion" },
+  { name: "Cognitive or memory problems" },
+  { name: "Heart failure" },
+  { name: "Blood clots" },
+  { name: "Sepsis" },
+  { name: "High blood pressure" },
+  { name: "Respiratory failure" }
+]
+---

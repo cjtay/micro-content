@@ -1,0 +1,36 @@
+---
+occasionalSideEffects:
+  [
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+    {
+      name: "Cardiac problems (Chest pain or tightness, irregular heart rate or blood pressure changes, shortness of breath)",
+    },
+    { name: "Mood changes" },
+    { name: "Muscle stiffness and difficult movement" },
+    { name: "Dry mouth" },
+    { name: "Piles" },
+    { name: "Hot flushes and sweating" },
+    { name: "Breast swelling and pain" },
+    { name: "Drowsiness" },
+    { name: "Headache" },
+    { name: "Dizziness" },
+    { name: "Taste changes" },
+    { name: "Skin rash" },
+    { name: "Blood pressure changes" },
+    { name: "Jaw pain" },
+    {
+      name: "Urine passing problems (pain or burning sensation while urinating)",
+    },
+    { name: "Eyesight/Vision changes" },
+  ]
+rareSideEffects:
+  [
+    { name: "Heart failure" },
+    { name: "Pulmonary toxicity" },
+    { name: "Respiratory failure" },
+    { name: "Ulcers of the digestive system" },
+    { name: "Serious infection" },
+    { name: "Problems with balance and body movements" },
+  ]
+---
+

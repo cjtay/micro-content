@@ -1,0 +1,38 @@
+---
+treatmentSchedule: []
+occasionalSideEffects:
+  [
+    { name: "Peripheral oedema (Swelling in legs, feet, arms or hands)" },
+    {
+      name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)",
+    },
+    { name: "Diabetes" },
+    { name: "Weight gain" },
+    { name: "Gout (Swelling, redness and pain in joints)" },
+    { name: "Bone/back pain" },
+    { name: "Constipation" },
+    { name: "Diarrhoea" },
+    {
+      name: "Urinary problems (Infections, presence of blood, lower back pain, frequent urination and urine passing problems)",
+    },
+    { name: "Low red blood cell count (Anaemia)" },
+    { name: "Kidney dysfunction" },
+    {
+      name: "Lung/Breathing problems (Cough, shortness of breath, fever, flu-like symptoms)",
+    },
+    { name: "Chills" },
+    { name: "Low white blood cell count - Infections" },
+    { name: "Decrease in bone mineral density" },
+    { name: "Mood changes" },
+  ]
+rareSideEffects:
+  [
+    { name: "Allergic reactions" },
+    { name: "Risk of pituitary tumour" },
+    { name: "Hallucinations" },
+    { name: "High calcium levels in the body" },
+    { name: "Small cysts in ovaries which are self-limiting" },
+    { name: "Early menopause" },
+  ]
+---
+

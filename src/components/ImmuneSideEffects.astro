@@ -13,17 +13,17 @@ interface Props {
 const { immuneSideEffects = [] } = Astro.props;
 ---
 
-<Accordion title="Immune Side Effects">
+<Accordion title="Immuno Side Effects">
  
   
-  <ol class="list-decimal list-inside space-y-3 text-sm">
+  <ul class="space-y-2">
     {immuneSideEffects.map((sideEffect) => (
       <li class="text-gray-700">
         <span class="font-medium">{sideEffect.name}</span>
-        {sideEffect.description && <p class="mt-1 ml-6 text-gray-600">{sideEffect.description}</p>}
+        {sideEffect.description && <p class="mt-1 text-gray-600">{sideEffect.description}</p>}
       </li>
     ))}
-  </ol>
+  </ul>
   
-  
+ 
 </Accordion>

@@ -1,0 +1,27 @@
+---
+occasionalSideEffects:
+  [
+    { name: "Fatigue" },
+    { name: "Diarrhoea" },
+    { name: "Skin rash, itching or reddening of the skin" },
+    { name: "Lung/Breathing problems" },
+    { name: "Hair loss" },
+    { name: "Cushing Syndrome" },
+    { name: "High blood pressure" },
+  ]
+rareSideEffects:
+  [
+    { name: "Allergic reactions" },
+    { name: "Blood clots" },
+    { name: "Mood changes" },
+    { name: "Confusion" },
+    { name: "Feeling balance problem/ spinning" },
+    { name: "Diabetes" },
+    { name: "Bone loss, pain (Osteoporosis)" },
+    { name: "Irregular or missed periods" },
+    { name: "Muscle/Joint pain" },
+    { name: "Increased risk of second cancer" },
+    { name: "Speech disturbance" },
+    { name: "Slow wound healing" },
+  ]
+---

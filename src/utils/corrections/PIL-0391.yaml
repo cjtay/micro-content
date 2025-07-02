@@ -1,0 +1,35 @@
+---
+occasionalSideEffects:
+  [
+    { name: "DVT (blood clot in vein)" },
+    { name: "Electrolyte imbalance (Monitored by specific blood tests)" },
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+    { name: "Sleeplessness (Insomnia)" },
+    { name: "Dizziness" },
+    { name: "Headache" },
+    { name: "Taste changes" },
+    { name: "Dry mouth" },
+    { name: "Abdominal pain" },
+    { name: "Liver dysfunction (Monitored by specific blood tests)" },
+  ]
+rareSideEffects:
+  [
+    { name: "Hair Loss- Alopecia" },
+    { name: "Hiccups" },
+    {
+      name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)",
+    },
+    { name: "Allergic reactions" },
+    { name: "High blood sugar" },
+    { name: "Memory & cognitive problems" },
+    { name: "Mood changes (depression, anxiety, hallucination)" },
+    { name: "Stroke" },
+    { name: "Hearing problem" },
+    { name: "Secondary malignancy" },
+    { name: "Acute pancreatitis" },
+    {
+      name: "Lungs/breathing problems (cough, shortness of breath, fever)- Interstitial pneumonia",
+    },
+  ]
+---
+

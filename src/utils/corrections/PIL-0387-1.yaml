@@ -1,0 +1,19 @@
+---
+occasionalSideEffects:
+  [
+    {
+      name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath, sudden weight gain due to oedema)",
+    },
+    { name: "Low blood counts (anaemia, bleeding/bruising, neutropenia)" },
+    { name: "Mood changes" },
+    { name: "Muscle stiffness and difficult movement" },
+    { name: "Dry mouth" },
+    { name: "Piles" },
+    { name: "Hot flushes and sweating" },
+    { name: "Breast swelling and pain" },
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+    { name: "Liver dysfunction (Monitored by specific blood tests)" },
+  ]
+rareSideEffects: [{ name: "Heart failure" }, { name: "Respiratory failure" }]
+---
+

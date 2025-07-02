@@ -1,0 +1,70 @@
+---
+treatments:
+  [
+    {
+      "name": "Trastuzumab (sc)",
+      "cycle": "day 1 of your 21-day cycle",
+      "info": "administered subcutaneously ~2 to 5 mins",
+    },
+    {
+      "name": "Vinorelbine",
+      "cycle": "days 1 and 8 of your 21-day cycle",
+      "info": "administered once daily by mouth",
+    },
+  ]
+treatmentSchedule:
+  [
+    { "day": 1, "treatments": ["trastuzumab (sc)", "vinorelbine"] },
+    { "day": 2, "treatments": ["rest"] },
+    { "day": 3, "treatments": ["rest"] },
+    { "day": 4, "treatments": ["rest"] },
+    { "day": 5, "treatments": ["rest"] },
+    { "day": 6, "treatments": ["rest"] },
+    { "day": 7, "treatments": ["rest"] },
+    { "day": 8, "treatments": ["vinorelbine"] },
+    { "day": 9, "treatments": ["rest"] },
+    { "day": 10, "treatments": ["rest"] },
+    { "day": 11, "treatments": ["rest"] },
+    { "day": 12, "treatments": ["rest"] },
+    { "day": 13, "treatments": ["rest"] },
+    { "day": 14, "treatments": ["rest"] },
+    { "day": 15, "treatments": ["rest"] },
+    { "day": 16, "treatments": ["rest"] },
+    { "day": 17, "treatments": ["rest"] },
+    { "day": 18, "treatments": ["rest"] },
+    { "day": 19, "treatments": ["rest"] },
+    { "day": 20, "treatments": ["rest"] },
+    { "day": 21, "treatments": ["rest"] },
+  ]
+occasionalSideEffects:
+  [
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+    { name: "Mood changes" },
+    { name: "Muscle stiffness and difficult movement" },
+    { name: "Dry mouth" },
+    { name: "Piles" },
+    { name: "Hot flushes and sweating" },
+    { name: "Breast swelling and pain" },
+    { name: "Drowsiness" },
+    { name: "Lungs/breathing problems (Cough, shortness of breath, fever)" },
+    { name: "Headache" },
+    { name: "Dizziness" },
+    { name: "Taste changes" },
+    { name: "Skin rash" },
+    { name: "Blood pressure changes" },
+    { name: "Jaw pain" },
+    {
+      name: "Urine passing problems (pain or burning sensation while urinating)",
+    },
+    { name: "Eyesight/Vision changes" },
+  ]
+rareSideEffects:
+  [
+    { name: "Heart failure" },
+    { name: "Respiratory failure" },
+    { name: "Ulcers of the digestive system" },
+    { name: "Serious infection" },
+    { name: "Problems with balance and body movements" },
+  ]
+---
+

@@ -1,0 +1,24 @@
+---
+occasionalSideEffects:
+  [
+    { name: "Dehydration" },
+    { name: "Dizziness" },
+    { name: "High blood sugar" },
+    { name: "Abdominal pain" },
+    { name: "Taste changes" },
+    { name: "Mood changes" },
+    { name: "Neurological disorder" },
+    { name: "Hearing problem" },
+    { name: "Hot flushes and sweating" },
+    { name: "Blood clots" },
+    { name: "Urine infection" },
+    { name: "Skin problems" },
+  ]
+rareSideEffects:
+  [
+    { name: "Poor kidney functioning" },
+    { name: "Pancreas inflammation" },
+    { name: "Severe skin problems" },
+  ]
+---
+

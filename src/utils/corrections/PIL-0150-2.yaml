@@ -1,0 +1,73 @@
+---
+treatments:
+  [
+    {
+      "name": "Docetaxel, Carboplatin and Pertuzumab",
+      "cycle": "day 1 of your 21-day cycle",
+      "info": "administered intravenously ~2 to 3 hours",
+    },
+    {
+      "name": "Trastuzumab (sc)",
+      "cycle": "day 1 of your 21-day cycle",
+      "info": "administered subcutaneously ~2 to 5 min",
+    },
+  ]
+treatmentSchedule:
+  [
+    {
+      "day": 1,
+      "treatments": ["docetaxel, carboplatin and pertuzumab", "trastuzumab (sc)"],
+    },
+    { "day": 2, "treatments": ["rest"] },
+    { "day": 3, "treatments": ["rest"] },
+    { "day": 4, "treatments": ["rest"] },
+    { "day": 5, "treatments": ["rest"] },
+    { "day": 6, "treatments": ["rest"] },
+    { "day": 7, "treatments": ["rest"] },
+    { "day": 8, "treatments": ["rest"] },
+    { "day": 9, "treatments": ["rest"] },
+    { "day": 10, "treatments": ["rest"] },
+    { "day": 11, "treatments": ["rest"] },
+    { "day": 12, "treatments": ["rest"] },
+    { "day": 13, "treatments": ["rest"] },
+    { "day": 14, "treatments": ["rest"] },
+    { "day": 15, "treatments": ["rest"] },
+    { "day": 16, "treatments": ["rest"] },
+    { "day": 17, "treatments": ["rest"] },
+    { "day": 18, "treatments": ["rest"] },
+    { "day": 19, "treatments": ["rest"] },
+    { "day": 20, "treatments": ["rest"] },
+    { "day": 21, "treatments": ["rest"] },
+  ]
+occasionalSideEffects:
+  [
+    { name: "Kidney dysfunction" },
+    { name: "Liver dysfunction" },
+    { name: "Mood changes" },
+    { name: "Constipation" },
+    { name: "Injection site reactions" },
+    { name: "Swollen or sore breasts" },
+    { name: "Changes in blood pressure" },
+    { name: "Haemorrhoids" },
+    { name: "Hearing problems" },
+    { name: "Sore or painful muscles, joints and bones" },
+    {
+      name:
+        "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes,
+        shortness of breath)",
+    },
+  ]
+rareSideEffects:
+  [
+    { name: "Heart failure" },
+    { name: "Respiratory failure" },
+    { name: "Tumour lysis syndrome" },
+    { name: "Stroke" },
+    { name: "Blood clots" },
+    { name: "Dehydration" },
+    { name: "Risk of developing a second cancer" },
+    { name: "Haemolytic anaemia" },
+    { name: "Haemolytic uremic syndrome" },
+    { name: "Inflammation, scarring and fluid around the lung" },
+  ]
+---

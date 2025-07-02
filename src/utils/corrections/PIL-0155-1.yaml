@@ -1,0 +1,26 @@
+---
+otherCommonSideEffects: [
+  { name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes,\nshortness of breath or heart failure)" },
+  { name: "Lungs/breathing problems (Cough, Shortness of breath, fever)" },
+  { name: "Constipation" },
+  { name: "Taste disorder" },
+  { name: "Fluid retention (higher risk without pre-medication dexamethasone)" },
+  { name: "Infusion reaction" },
+  { name: "Risk of infertility (In men, sperm production may be decreased.\nIn women, menstruation may become irregular and stop)" }
+]
+occasionalSideEffects: [
+   { name: "Injection site reactions" },
+  { name: "Liver changes" },
+  { name: "Electrolyte imbalance" },
+  { name: "Poor kidney functioning" },
+  { name: "Mood changes" },
+  { name: "Red, itchy, dry eyes and blurred vision" },
+]
+rareSideEffects: [
+ 
+  { name: "Risk of getting second cancer" },
+  { name: "Hemolytic-uremic syndrome (HUS)" },
+  { name: "Neurological disorder" },
+  { name: "Hand-foot syndrome" }
+]
+---

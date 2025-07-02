@@ -1,0 +1,22 @@
+---
+occasionalSideEffects:
+  [
+    {
+      name: "Injection site reactions (Redness, swelling, itching, pain at the site of injection)",
+    },
+    { name: "Liver changes (Monitored by specific blood tests)" },
+    { name: "Electrolyte imbalance (Monitored by typical blood tests)" },
+    { name: "Mood changes" },
+    { name: "Red, itchy, dry eyes and blurred vision" },
+  ]
+rareSideEffects:
+  [
+    { name: "Risk of getting second cancer" },
+    { name: "Hyperuricemia" },
+    {
+      name: "Neurological disorder (Report to your oncology team about headache, confusion, vision changes, drooping eyelids, swallowing difficulty, weakness or numbness in arms, legs or face)",
+    },
+    { name: "Hand-foot syndrome" },
+    { name: "Poor kidney functioning (Monitored by specific blood tests)" },
+  ]
+---

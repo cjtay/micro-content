@@ -274,5 +274,57 @@
 	{
 		"name": "trastuzumab (sc)",
 		"icon": "inject-green"
+	},
+	{
+		"name": "docetaxel, carboplatin, trastuzumab and pertuzumab",
+		"icon": "drip-purple"
+	},
+	{
+		"name": "docetaxel, carboplatin and pertuzumab",
+		"icon": "drip-yellow"
+	},
+	{
+		"name": "docetaxel and cyclophosphamide",
+		"icon": "drip-lime"
+	},
+	{
+		"name": "docetaxel, cyclophosphamide and trastuzumab",
+		"icon": "drip-red"
+	},
+	{
+		"name": "docetaxel and trastuzumab",
+		"icon": "drip-pink"
+	},
+	{
+		"name": "docetaxel, trastuzumab and pertuzumab",
+		"icon": "drip-green"
+	},
+	{
+		"name": "docetaxel and pertuzumab",
+		"icon": "drip-navy"
+	},
+	{
+		"name": "doxorubicin and cyclophosphamide",
+		"icon": "drip-magenta"
+	},
+	{
+		"name": "eribulin and pertuzumab",
+		"icon": "drip-silver"
+	},
+	{
+		"name": "eribulin, trastuzumab and pertuzumab",
+		"icon": "drip-cyan"
+	},
+	{
+		"name": "eribulin and trastuzumab",
+		"icon": "drip-coral"
+	},
+	{
+		"name": "doxorubicin, cyclophosphamide and pembrolizumab",
+		"icon": "drip-brown"
+	},
+	{
+		"name": "doxorubicin, cyclophosphamide and atezolizumab",
+		"icon": "drip-purple"
 	}
 ]

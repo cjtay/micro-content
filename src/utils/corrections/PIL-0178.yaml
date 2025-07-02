@@ -1,0 +1,23 @@
+---
+occasionalSideEffects:
+  [
+    {
+      name: "Cardiac problems (Chest pain or tightness, irregular heart rate or blood pressure changes, shortness of breath)",
+    },
+    { name: "Mood changes" },
+    { name: "Problems with balance & body movements" },
+    { name: "Speech difficulty" },
+    { name: "High uric acid level" },
+    { name: "Dehydration" },
+    { name: "Unable to pass urine or frequent urge to urinate" },
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+  ]
+rareSideEffects:
+  [
+    { name: "Suicidal thought" },
+    {
+      name: "Tumour lysis syndrome (severe electrolyte imbalance, kidney or urination problem, irregular heartbeat, muscles cramps or seizures as a response to treatment)",
+    },
+  ]
+---
+

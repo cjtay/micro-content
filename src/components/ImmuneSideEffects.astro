@@ -1,0 +1,29 @@
+---
+import Accordion from "./Accordion.astro";
+
+interface SideEffect {
+  name: string;
+  description?: string;
+}
+
+interface Props {
+  immuneSideEffects: SideEffect[];
+}
+
+const { immuneSideEffects = [] } = Astro.props;
+---
+
+<Accordion title="Immune Side Effects">
+ 
+  
+  <ol class="list-decimal list-inside space-y-3 text-sm">
+    {immuneSideEffects.map((sideEffect) => (
+      <li class="text-gray-700">
+        <span class="font-medium">{sideEffect.name}</span>
+        {sideEffect.description && <p class="mt-1 ml-6 text-gray-600">{sideEffect.description}</p>}
+      </li>
+    ))}
+  </ol>
+  
+  
+</Accordion>

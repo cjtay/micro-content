@@ -1,0 +1,168 @@
+---
+treatments: [
+    {
+      "name": "Eribulin and Pertuzumab",
+      "cycle": "day 1 of your 21-day cycle",
+      "info": "administered intravenously ~ 40 to 60 min"
+    },
+    {
+      "name": "Trastuzumab (sc)",
+      "cycle": "day 1 of your 21-day-cycle",
+      "info": "administered subcutaneously ~2 to 5 min"
+    },
+    {
+      "name": "Eribulin",
+      "cycle": "day 8 of your 21-day cycle",
+      "info": "administered intravenously ~ 5 to 10 min"
+    }
+  ]
+treatmentSchedule: [
+    {
+      "day": 1,
+      "treatments": [
+        "eribulin and pertuzumab",
+        "trastuzumab (sc)"
+      ]
+    },
+    {
+      "day": 2,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 3,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 4,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 5,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 6,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 7,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 8,
+      "treatments": [
+        "eribulin"
+      ]
+    },
+    {
+      "day": 9,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 10,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 11,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 12,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 13,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 14,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 15,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 16,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 17,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 18,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 19,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 20,
+      "treatments": [
+        "rest"
+      ]
+    },
+    {
+      "day": 21,
+      "treatments": [
+        "rest"
+      ]
+    }
+  ]
+occasionalSideEffects: [
+  { name: "Dehydration" },
+  { name: "High blood sugar" },
+  { name: "Abdominal pain" },
+  { name: "Taste changes" },
+  { name: "Mood changes" },
+  { name: "Neurological disorder (Report to your oncology team about headache, confusion, vision changes, drooping eyelids, swallowing difficulty or difficult movements)" },
+  { name: "Hearing problem" },
+  { name: "Hot flushes and sweating" },
+  { name: "Blood clots" },
+  { name: "Urine infection (pain or burning while urinating, frequent urge to urinate and dark or cloudy urine)" },
+  { name: "Poor kidney functioning (Monitored by specific blood tests)" },
+  { name: "Skin problems" }
+]
+rareSideEffects: [
+
+  { name: "Heart failure" },
+  { name: "Pancreas inflammation" },
+  { name: "Severe skin problems" }
+]
+---

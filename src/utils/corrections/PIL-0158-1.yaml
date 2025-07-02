@@ -1,0 +1,28 @@
+---
+occasionalSideEffects:
+  [
+    {
+      name: "Eye & vision changes (dry eyes, blurred vision, increase tears production, inflammation)",
+    },
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+    { name: "Liver dysfunction (Monitored by specific blood tests)" },
+    { name: "Mood changes (anxious/depressed)" },
+    { name: "Constipation" },
+    { name: "Swollen or sore breasts" },
+    { name: "Changes in blood pressure" },
+    { name: "Haemorrhoids (Piles)" },
+    {
+      name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)",
+    },
+    { name: "Lungs/breathing problems (Cough, Shortness of breath, fever)" },
+  ]
+rareSideEffects:
+  [
+    { name: "Heart failure" },
+    { name: "Risk of getting second cancer" },
+    {
+      name: "Tumour lysis syndrome (severe electrolyte imbalance, kidney or urination problem, irregular heartbeat, muscles cramps or seizures as a response to treatment)",
+    },
+    { name: "Inflammation, scarring and fluid around the lung" },
+  ]
+---

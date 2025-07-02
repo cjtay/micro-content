@@ -1,0 +1,106 @@
+---
+commonSideEffects:
+  [
+    {
+      name: "Low platelet count (thrombocytopenia)",
+      description: "Platelets help your blood clot, so you are at a higher risk of bleeding when your platelet count decreases. Let your oncology care team know if you have any excess bruising or bleeding, including nose bleeds, sore gums or blood in your urine or stool.",
+    },
+    {
+      name: "Low red blood cell count (anaemia)",
+      description: "Red blood cells (RBC) are responsible for carrying oxygen to the tissues in your body. When you have a low RBC count, you may feel tired or weak and have pale skin.",
+    },
+    {
+      name: "Low white blood cell count (Leukopenia or Neutropenia)",
+      description: "White blood cells (WBC) are crucial for fighting infection. While receiving treatment, your WBC count can drop, putting you at a higher risk of disease.",
+    },
+    {
+      name: "Hair loss (alopecia)",
+      description: "This treatment causes the hair on your head and other body parts to fall. In most cases, hair loss is temporary, and hair grows back to normal after treatment.",
+    },
+    {
+      name: "Fatigue",
+      description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion.",
+    },
+    {
+      name: "Bladder problem (Haemorrhagic cystitis)",
+      description: "Some medicines may accumulate in the bladder and cause damage to your bladder or urinary tract. If you feel pain while urinating, have problems passing urine or have blood in urine with or without fever, notify your doctor immediately.",
+    },
+    {
+      name: "Nausea and/or vomiting",
+      description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication.",
+    },
+    {
+      name: "Diarrhoea",
+      description: "This treatment may disturb the intestinal lining and cause loose, watery, and more frequent stools than usual. Certain medications have a higher chance of causing diarrhoea.",
+    },
+    {
+      name: "Constipation",
+      description: "This treatment can cause difficulty in passing stool. However, constipation may also occur for other reasons, such as when a person is less active or undernourished.",
+    },
+  ]
+immuneSideEffects:
+  [
+    { name: "Pembrolizumab stimulates your immune system." },
+    {
+      name: "Your immune system can attack normal organs and tissues in your body, leading to severe or life-threatening complications.",
+    },
+    {
+      name: "Tell your doctor if you may have symptoms during treatment in any part of your body.",
+    },
+    {
+      name: " Early management of immune-mediated side effects is really helpful in the safe use of pembrolizumab.",
+    },
+    {
+      name: "It mainly includes immune-mediated cardiac, neurological, respiratory, digestive and skin problems",
+    },
+  ]
+otherCommonSideEffects:
+  [
+    { name: "Red or orange urine (usually lasts up to 2 days)" },
+    { name: "Oedema (Swelling)" },
+    { name: "Weight gain" },
+    { name: "Low appetite" },
+    { name: "Mouth sores" },
+    { name: "Skin changes (dryness, itching, rash)" },
+    { name: "Liver dysfunction (Monitored by specific blood tests)" },
+    { name: "Heart dysfunction (Monitored by specific blood tests)" },
+    { name: "Headache" },
+    { name: "Pain" },
+    { name: "Hypothyroidism" },
+    { name: "Hand-Foot syndrome" },
+  ]
+occasionalSideEffects:
+  [
+    { name: "Lung/ breathing problems (Cough, shortness of breath)" },
+    { name: "Allergic reactions" },
+    { name: "Eyes & vision changes" },
+    { name: "Flu-like symptoms" },
+    { name: "Taste disorder" },
+    { name: "Hyperuricemia" },
+    { name: "Nail changes" },
+    { name: "Abdominal pain" },
+    { name: "Low sperm count in men" },
+    { name: "Chills" },
+    { name: "Dizziness" },
+    { name: "Insomnia" },
+    { name: "Peripheral neuropathy" },
+    { name: "Hyperthyroidism" },
+    { name: "Electrolyte imbalance (Monitored by specific blood tests)" },
+    { name: "Inflammation of the bowel" },
+  ]
+rareSideEffects:
+  [
+    { name: "Blood clots" },
+    { name: "Pericardial effusion" },
+    { name: "Hearing loss" },
+    { name: "Irregular or missing periods" },
+    { name: "Adrenal gland dysfunction (leads to low levels of cortisol)" },
+    { name: "Type 1 Diabetes" },
+    { name: "Hemolytic anaemia" },
+    { name: "Myasthenia gravis" },
+    { name: "Meningitis" },
+    { name: "Guillain-Barré syndrome" },
+    { name: "Seizures (Fits)" },
+    { name: "Risk of getting second cancer" },
+  ]
+---

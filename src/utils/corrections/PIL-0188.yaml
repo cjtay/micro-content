@@ -1,0 +1,90 @@
+---
+commonSideEffects:
+  [
+    {
+      name: "Hot flushes",
+      description: "You may feel sudden warmth in the upper body, especially over the face, neck and chest. You may also feel redness and sweating.",
+    },
+    {
+      name: "Fatigue",
+      description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion.",
+    },
+    {
+      name: "Nausea and/or vomiting",
+      description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication.",
+    },
+    {
+      name: "Low white blood cell count (Leukopenia or Neutropenia)",
+      description: "White blood cells (WBC) are crucial for fighting infection. While receiving treatment, your WBC count can drop, putting you at a higher risk of disease.",
+    },
+    {
+      name: "Low red blood cell count (anaemia)",
+      description: "Red blood cells (RBC) are responsible for carrying oxygen to the tissues in your body. When you have a low RBC count, you may feel tired or weak and have pale skin.",
+    },
+    {
+      name: "Low appetite",
+      description: "Appetite loss or poor appetite are common side effects of cancer and its treatment. This means you may eat less than usual, not feel hungry, or feel full after eating only a tiny amount.",
+    },
+    {
+      name: "High blood sugar (hyperglycemia)",
+      description: "This treatment can increase your blood sugar levels. If you have diabetes or a family history of diabetes, you must have frequent glucose screening tests.",
+    },
+    {
+      name: "Rash",
+      description: "Skin rash is one of the most common side effects of cancer treatment. It may appear on your face, neck, scalp, upper back, and chest. Although the rash can occur at any point during treatment, it is most common in the first two to three weeks.",
+    },
+    {
+      name: "Oedema (swelling)",
+      description: "Some patients will experience fluid build-up in their body tissues which chemotherapy, certain cancers, and conditions unrelated to cancer may cause.",
+    },
+    {
+      name: "Abdominal pain",
+      description: "Pain may be achy or cramp-like and is associated with increased flatulence (gas). Chemotherapy may also alter the normal bacterial flora in the intestines. This can affect digestion and cause abdominal pain, cramping or flatulence (gas).",
+    },
+    {
+      name: "Diarrhoea",
+      description: "This treatment may disturb the intestinal lining and cause loose, watery, and more frequent stools than usual. Certain medications have a higher chance of causing diarrhoea.",
+    },
+    {
+      name: "Mouth sores",
+      description: "Cancer medications can cause sores in the mouth and throat. These sores are painful and may become infected.",
+    },
+  ]
+otherCommonSideEffects:
+  [
+    { name: "Sweating" },
+    { name: "Liver dysfunction" },
+    { name: "Muscle/Joint pain" },
+    { name: "Depression" },
+    { name: "Skin problems" },
+    { name: "Lung/Breathing problems" },
+    { name: "High Cholesterol" },
+  ]
+occasionalSideEffects:
+  [
+    { name: "Dehydration" },
+    { name: "Hand-Foot Syndrome" },
+    { name: "Electrolyte imbalance" },
+    { name: "Kidney dysfunction" },
+    { name: "Numbness, tingling, burning sensation and pain in hand or wrist" },
+    { name: "Lymphoedema" },
+    { name: "High blood pressure" },
+    { name: "Dry mouth" },
+    { name: "Indigestion" },
+    { name: "Fever" },
+    { name: "Thinning of bones" },
+  ]
+rareSideEffects:
+  [
+    { name: "Heart dysfunction" },
+    { name: "Wound healing problem" },
+    { name: "Allergic reactions" },
+    { name: "Blood clots" },
+    { name: "Red/itchy eyes" },
+    { name: "Haemoptysis" },
+    { name: "Chest pain" },
+    { name: "Sleepy and drowsy" },
+    { name: "Inflammation of the liver" },
+  ]
+---
+

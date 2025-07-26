@@ -1,4 +1,11 @@
 ---
+otherCommonSideEffects:
+  [
+    { name: "Headache" },
+    { name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)" },
+    { name: "Red, itchy, watery eyes and blurred vision" },
+    { name: "Lung/Breathing problems (Cough, Shortness of breath, fever)" },
+  ]
 occasionalSideEffects:
   [
     { name: "Dehydration" },
@@ -7,18 +14,18 @@ occasionalSideEffects:
     { name: "Abdominal pain" },
     { name: "Taste changes" },
     { name: "Mood changes" },
-    { name: "Neurological disorder" },
+    { name: "Neurological disorder (Report to your oncology team about headache, confusion, vision changes, drooping eyelids, swallowing difficulty or difficult movements)" },
     { name: "Hearing problem" },
     { name: "Hot flushes and sweating" },
     { name: "Blood clots" },
-    { name: "Urine infection" },
+    { name: "Urine infection (pain or burning while urinating, frequent urge to urinate and dark or cloudy urine)" },
     { name: "Skin problems" },
   ]
 rareSideEffects:
   [
-    { name: "Poor kidney functioning" },
-    { name: "Pancreas inflammation" },
-    { name: "Severe skin problems" },
+    { name: "Poor kidney functioning (Monitored by specific blood tests)" },
+    { name: "Pancreas inflammation (Monitored by specific blood tests)" },
+    { name: "Severe skin problems (Redness, peeling and blister with or without fever)" },
   ]
 ---
 

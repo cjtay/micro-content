@@ -6,11 +6,18 @@ occasionalSideEffects:
     { name: "Blood pressure changes" },
     { name: "Joint pain" },
     { name: "Bone pain" },
-    { name: "Injection site reactions" },
-    { name: "Liver dysfunction" },
-    { name: "Heart dysfunction" },
+    {
+      name: "Injection site reactions (redness, swelling, itching, pain at the site of injection)",
+    },
+    { name: "Liver dysfunction (Monitored by specific blood tests)" },
+    { name: "Heart dysfunction (Chest pain/tightness, irregular heart rate)" },
   ]
 rareSideEffects:
-  [{ name: "Heart failure" }, { name: "Inflammation of the food pipe" }]
+  [
+    { name: "Heart failure" },
+    {
+      name: "Inflammation of the food pipe (heartburn and pain when swallowing)",
+    },
+  ]
 ---
 

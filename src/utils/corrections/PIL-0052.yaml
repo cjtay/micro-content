@@ -1,5 +1,5 @@
 ---
-otherCommonSideEffects: []
+otherCommonSideEffects: [ { name: "NIL" },]
 occasionalSideEffects: [
     { name: "Swelling" },
   { name: "Taste disorder" },

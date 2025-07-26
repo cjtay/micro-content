@@ -40,21 +40,21 @@ otherCommonSideEffects: [
   { name: "Thyroid hormone changes (Hypothyroidism)" },
   { name: "Pain (muscles/joint pain)" },
   { name: "Slow would healing" },
-  { name: "Liver dysfunction" },
-  { name: "Proteinuria" },
+  { name: "Liver dysfunction (Monitored by specific blood tests)" },
+  { name: "Proteinuria (Monitored by urine dipstick test)" },
   { name: "Constipation" },
   { name: "Dry mouth/Mouth sores" },
   { name: "Taste disorder" },
   { name: "Difficulty speaking/Hoarse voice" },
   { name: "Hair loss" },
-  { name: "Electrolyte imbalance" }
+  { name: "Electrolyte imbalance (Monitored by specific blood tests)" }
 ]
 occasionalSideEffects: [
     { name: "Inflammation of bowels (colitis)" },
   { name: "Lung/breathing problems (cough, shortness of breath, flu like symptoms)" },
   { name: "Thyroid hormone changes (Hyperthyroidism)" },
   { name: "Kidney dysfunction (Monitored by specific blood tests)" },
-  { name: "Cardiac problems" },
+  { name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)" },
   { name: "Dry eyes" },
   { name: "Peripheral neuropathy" },
   { name: "Allergic reactions" },
@@ -68,7 +68,7 @@ immuneSideEffects: [
 ]
 rareSideEffects: [
 
-  { name: "Inflammation in different organs" },
+  { name: "Inflammation in different organs (e.g. thyroid, pituitary gland, liver, kidneys and pancreas)" },
   { name: "Adrenal gland dysfunction  (reduced cortisol level)" },
   { name: "Type I Diabetes" },
   { name: "Seizures (Fits)" },

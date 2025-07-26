@@ -67,7 +67,7 @@ occasionalSideEffects:
     { name: "Mouth sores" },
     { name: "Lungs/breathing problems" },
     { name: "Dehydration" },
-    { name: "Electrolyte imbalance" },
+    { name: "Electrolyte imbalance (Monitored by specific blood tests)" },
     { name: "Sleeplessness (insomnia)" },
     { name: "Mood changes" },
     { name: "Headache" },

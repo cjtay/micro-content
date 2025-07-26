@@ -1,4 +1,17 @@
 ---
+otherCommonSideEffects: [
+  { name: "Electrolyte imbalance (Monitored by specific blood tests)" },
+  { name: "Oedema" },
+  { name: "Diarrhoea/Constipation" },
+  { name: "Skin & nail changes" },
+  { name: "Eye & vision changes" },
+  { name: "Taste disorder" },
+  { name: "Loss of appetite" },
+  { name: "Indigestion/Abdominal pain" },
+  { name: "Hot flushes" },
+  { name: "Insomnia" },
+  { name: "Difficulty in breathing (wheezing, coughing)" }
+]
 occasionalSideEffects: [
    { name: "Drowsiness" },
   { name: "Headache" },

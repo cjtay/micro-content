@@ -1,0 +1,149 @@
+---
+title: "PIL-0281"
+description: "Methotrexate (antimetabolite chemotherapy), along with hydrocortisone delivered through an ommaya shunt or reservoir. Ommaya reservoir is a small plastic device placed under the scalp of your head. This reservoir is inserted surgically in your head, and you will notice a small bump on your head where the reservoir is located. It is given to treat cancers developed there or that has spread to this area."
+slug: "PIL-0281"
+tags: ["treatment", "cancer", "pil"]
+category: "patient information"
+pubDate: 2025-07-02T08:25:24.564Z
+draft: false
+days: 7
+treatments:
+  [
+    {
+      "name": "Methotrexate and Hydrocortisone",
+      "cycle": "once or twice weekly",
+      "info": "administered intraventricularly (via ommaya shunt or reservoir)",
+    },
+  ]
+treatmentSchedule:
+  [
+    { "day": 1, "treatments": ["methotrexate and hydrocortisone"] },
+    { "day": 2, "treatments": ["rest"] },
+    { "day": 3, "treatments": ["rest"] },
+    { "day": 4, "treatments": ["rest"] },
+    { "day": 5, "treatments": ["rest"] },
+    { "day": 6, "treatments": ["rest"] },
+    { "day": 7, "treatments": ["rest"] },
+  ]
+commonSideEffects:
+  [
+    {
+      name: "Low platelet count (thrombocytopenia)",
+      description: "Platelets help your blood clot, so you are at a higher risk of bleeding when your platelet count decreases. Let your oncology care team know if you have any excess bruising or bleeding, including nose bleeds, sore gums or blood in your urine or stool.",
+    },
+    {
+      name: "Low white blood cell count (Leukopenia or Neutropenia)",
+      description: "White blood cells (WBC) are crucial for fighting infection. While receiving treatment, your WBC count can drop, putting you at a higher risk of disease.",
+    },
+    {
+      name: "Oedema (swelling)",
+      description: "Some patients will experience fluid build-up in their body tissues which chemotherapy, certain cancers, and conditions unrelated to cancer may cause.",
+    },
+    {
+      name: "Insomnia",
+      description: "People going through treatment for cancer may have changes in their sleep patterns or difficulty sleeping. Tell your nurse about any difficulties you are having, so you can get the help you need to sleep better at night.",
+    },
+    {
+      name: "Headaches",
+      description: "A headache is pain experienced in any part of your head. It is a common condition and, in most cases, is not a symptom of serious illness. There are many different types of headaches, and many other things can cause them.",
+    },
+    {
+      name: "Nausea and/or vomiting",
+      description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication.",
+    },
+  ]
+otherCommonSideEffects:
+  [
+    { name: "Increased/Decreased appetite" },
+    { name: "Weight gain/weight loss" },
+    { name: "Abdominal pain" },
+    { name: "Indigestion/Heartburn" },
+    { name: "Dizziness & vertigo" },
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+    { name: "Liver dysfunction (Monitored by typical blood tests)" },
+    { name: "Muscle wasting" },
+    { name: "Weaker bones" },
+  ]
+occasionalSideEffects:
+  [
+    { name: "Fatigue" },
+    { name: "Diarrhoea" },
+    { name: "Skin rash, itching or reddening of the skin" },
+    { name: "Lung/Breathing problems (Cough, Shortness of breath, fever)" },
+    { name: "Hair loss" },
+    { name: "Cushing Syndrome" },
+    { name: "High blood pressure" },
+  ]
+rareSideEffects:
+  [
+    { name: "Allergic reactions" },
+    { name: "Blood clots" },
+    { name: "Mood changes" },
+    { name: "Confusion" },
+    { name: "Feeling balance problem/ spinning" },
+    { name: "Diabetes" },
+    { name: "Bone loss, pain (Osteoporosis)" },
+    { name: "Irregular or missed periods" },
+    { name: "Muscle/Joint pain" },
+    { name: "Increased risk of second cancer" },
+    { name: "Speech disturbance" },
+    { name: "Slow wound healing" },
+  ]
+---
+
+export const days = frontmatter.days;
+export const treatments = frontmatter.treatments;
+export const treatmentSchedule = frontmatter.treatmentSchedule;
+export const commonSideEffects = frontmatter.commonSideEffects;
+export const otherCommonSideEffects = frontmatter.otherCommonSideEffects;
+export const occasionalSideEffects = frontmatter.occasionalSideEffects;
+export const rareSideEffects = frontmatter.rareSideEffects;
+import TreatmentCycleGrid from "../../components/TreatmentCycleGrid.astro";
+import LegendGrid from "../../components/LegendGrid.astro";
+import CommonSideEffects from "../../components/CommonSideEffects.astro";
+import OtherCommonSideEffects from "../../components/OtherCommonSideEffects.astro";
+import OccasionalSideEffects from "../../components/OccasionalSideEffects.astro";
+import RareSideEffects from "../../components/RareSideEffects.astro";
+import SafeHandlingAccordion from "../../components/SafeHandlingAccordion.astro";
+import GeneralPrecautionsAccordion from "../../components/GeneralPrecautionsAccordion.astro";
+import LifestyleSafetyAccordion from "../../components/LifestyleSafetyAccordion.astro";
+import HealthcareTeamContact from "../../components/HealthcareTeamContact.astro";
+import TreatmentHeader from "../../components/TreatmentHeader.astro";
+
+# Methotrexate (IV) and Hydrocortisone (via Ommaya shunt)
+
+<TreatmentHeader description={frontmatter.description} />
+
+## Treatment details
+
+<LegendGrid treatments={treatments} />
+
+## Treatment cycle
+
+<TreatmentCycleGrid treatmentSchedule={treatmentSchedule} />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+## Side Effects
+
+Chemotherapy is often linked to so many side effects. While it is true that chemotherapy drugs often cause a wide range of side effects, most of these side effects are temporary and can be minimised or prevented. Remember that different drugs cause different side effects, and each person experiences different side effects to varying degrees.
+
+<CommonSideEffects commonSideEffects={commonSideEffects} />
+<OtherCommonSideEffects otherCommonSideEffects={otherCommonSideEffects} />
+<OccasionalSideEffects occasionalSideEffects={occasionalSideEffects} />
+<RareSideEffects rareSideEffects={rareSideEffects} />
+<p>
+  <span class="font-bold">Patient Information Use and Disclaimer:</span> this is
+  not a complete list of side effects. Always consult your healthcare provider
+  to ensure the information displayed on this page applies to your personal
+  circumstances.
+</p>
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+<SafeHandlingAccordion />
+<GeneralPrecautionsAccordion />
+<LifestyleSafetyAccordion />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+<HealthcareTeamContact />

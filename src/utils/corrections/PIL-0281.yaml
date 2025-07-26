@@ -1,10 +1,22 @@
 ---
+otherCommonSideEffects:
+  [
+    { name: "Increased/Decreased appetite" },
+    { name: "Weight gain/weight loss" },
+    { name: "Abdominal pain" },
+    { name: "Indigestion/Heartburn" },
+    { name: "Dizziness & vertigo" },
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+    { name: "Liver dysfunction (Monitored by typical blood tests)" },
+    { name: "Muscle wasting" },
+    { name: "Weaker bones" },
+  ]
 occasionalSideEffects:
   [
     { name: "Fatigue" },
     { name: "Diarrhoea" },
     { name: "Skin rash, itching or reddening of the skin" },
-    { name: "Lung/Breathing problems" },
+    { name: "Lung/Breathing problems (Cough, Shortness of breath, fever)" },
     { name: "Hair loss" },
     { name: "Cushing Syndrome" },
     { name: "High blood pressure" },

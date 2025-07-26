@@ -1,13 +1,13 @@
 ---
 occasionalSideEffects:
   [
-    { name: "Kidney dysfunction" },
-    { name: "Liver dysfunction" },
-    { name: "Mood changes" },
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+    { name: "Liver dysfunction (Monitored by specific blood tests)" },
+    { name: "Mood changes (anxious/depressed)" },
     { name: "Constipation" },
     { name: "Swollen or sore breasts" },
     { name: "Changes in blood pressure" },
-    { name: "Haemorrhoids" },
+    { name: "Haemorrhoids (Piles)" },
     { name: "Allergic reactions" },
     { name: "Hearing problems" },
     { name: "Sore or painful muscles, joints and bones" },
@@ -21,7 +21,7 @@ rareSideEffects:
   [
     { name: "Heart failure" },
     { name: "Respiratory failure" },
-    { name: "Tumour lysis syndrome" },
+    { name: "Tumour lysis syndrome (severe electrolyte imbalance, kidney or urination problem, irregular heartbeat, muscles cramps or seizures as a response to treatment.)" },
     { name: "Stroke" },
     { name: "Blood clots" },
     { name: "Dehydration" },

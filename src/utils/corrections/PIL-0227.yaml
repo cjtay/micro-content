@@ -30,8 +30,8 @@ commonSideEffects: [
   }
 ]
 otherCommonSideEffects: [
-  { name: "Liver dysfunction" },
-  { name: "Kidney dysfunction" },
+  { name: "Liver dysfunction (Monitored by specific blood tests)" },
+  { name: "Kidney dysfunction (Monitored by typical blood tests)" },
   { name: "Hypothyroidism" },
   { name: "Fatigue" },
   { name: "Fever" },

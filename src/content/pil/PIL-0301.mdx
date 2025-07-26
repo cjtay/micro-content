@@ -1,0 +1,168 @@
+---
+title: "PIL-0301"
+description: "Olaparib is a poly ADP ribose polymerase (PARP) inhibitor that works as a targeted therapy. The specific types of PARP proteins help BRCA-mutated cancer cells grow and spread. Olaparib stops the growth of cancer cells by blocking the activity of PARP. It is given for breast, gynaecological, pancreatic, and prostate cancer."
+slug: "PIL-0301"
+tags: ["treatment", "cancer", "pil"]
+category: "patient information"
+pubDate: 2025-07-02T08:20:50.502Z
+draft: false
+days: 28
+treatments:
+  [
+    {
+      "name": "Olaparib",
+      "cycle": "days 1 to 28 of your 28-day cycle",
+      "info": "taken twice daily by mouth",
+    },
+  ]
+treatmentSchedule:
+  [
+    { "day": 1, "treatments": ["olaparib"] },
+    { "day": 2, "treatments": ["olaparib"] },
+    { "day": 3, "treatments": ["olaparib"] },
+    { "day": 4, "treatments": ["olaparib"] },
+    { "day": 5, "treatments": ["olaparib"] },
+    { "day": 6, "treatments": ["olaparib"] },
+    { "day": 7, "treatments": ["olaparib"] },
+    { "day": 8, "treatments": ["olaparib"] },
+    { "day": 9, "treatments": ["olaparib"] },
+    { "day": 10, "treatments": ["olaparib"] },
+    { "day": 11, "treatments": ["olaparib"] },
+    { "day": 12, "treatments": ["olaparib"] },
+    { "day": 13, "treatments": ["olaparib"] },
+    { "day": 14, "treatments": ["olaparib"] },
+    { "day": 15, "treatments": ["olaparib"] },
+    { "day": 16, "treatments": ["olaparib"] },
+    { "day": 17, "treatments": ["olaparib"] },
+    { "day": 18, "treatments": ["olaparib"] },
+    { "day": 19, "treatments": ["olaparib"] },
+    { "day": 20, "treatments": ["olaparib"] },
+    { "day": 21, "treatments": ["olaparib"] },
+    { "day": 22, "treatments": ["olaparib"] },
+    { "day": 23, "treatments": ["olaparib"] },
+    { "day": 24, "treatments": ["olaparib"] },
+    { "day": 25, "treatments": ["olaparib"] },
+    { "day": 26, "treatments": ["olaparib"] },
+    { "day": 27, "treatments": ["olaparib"] },
+    { "day": 28, "treatments": ["olaparib"] },
+  ]
+commonSideEffects:
+  [
+    {
+      name: "Nausea and/or vomiting",
+      description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication.",
+    },
+    {
+      name: "Low white blood cell count (Leukopenia or Neutropenia)",
+      description: "White blood cells (WBC) are crucial for fighting infection. While receiving treatment, your WBC count can drop, putting you at a higher risk of disease.",
+    },
+    {
+      name: "Diarrhoea",
+      description: "This treatment may disturb the intestinal lining and cause loose, watery, and more frequent stools than usual. Certain medications have a higher chance of causing diarrhoea.",
+    },
+    {
+      name: "Fatigue",
+      description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion.",
+    },
+    {
+      name: "Low platelet count (thrombocytopenia)",
+      description: "Platelets help your blood clot, so you are at a higher risk of bleeding when your platelet count decreases. Let your oncology care team know if you have any excess bruising or bleeding, including nose bleeds, sore gums or blood in your urine or stool.",
+    },
+    {
+      name: "Low red blood cell count (anaemia)",
+      description: "Red blood cells (RBC) are responsible for carrying oxygen to the tissues in your body. When you have a low RBC count, you may feel tired or weak and have pale skin.",
+    },
+    {
+      name: "Breathing problems",
+      description: "Breathing problems are when you feel you can't get enough air, your chest feels very tight, you are breathless, or you feel like you're being suffocated.",
+    },
+    {
+      name: "Low appetite",
+      description: "Appetite loss or poor appetite are common side effects of cancer and its treatment. This means you may eat less than usual, not feel hungry, or feel full after eating only a tiny amount.",
+    },
+    {
+      name: "Dizziness",
+      description: "It is a feeling of lightheadedness. There are many possible causes of dizziness. For cancer patients, the reason is often nausea and vomiting associated with chemotherapy. Treatment of nausea and vomiting with antiemetic drugs may help relieve dizziness. Dizziness and vertigo are not the same.",
+    },
+    {
+      name: "Headaches",
+      description: "A headache is pain experienced in any part of your head. It is a common condition and, in most cases, is not a symptom of serious illness. There are many different types of headaches, and many other things can cause them.",
+    },
+    {
+      name: "Taste | smell",
+      description: "Changes to the taste, smell or feeling of food are a common side effect for people before, during and after cancer treatment. This can affect what foods you are able to eat and enjoy eating, and may contribute to a loss of appetite and weight loss.",
+    },
+  ]
+otherCommonSideEffects: []
+occasionalSideEffects:
+  [
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+    { name: "Mouth sores" },
+    { name: "Abdominal pain" },
+    { name: "Rash, itchy, dry skin" },
+  ]
+rareSideEffects:
+  [
+    { name: "Increased risk of second cancer" },
+    { name: "Allergic reactions" },
+    { name: "Severe lung disease" },
+    { name: "Swelling under the skin" },
+  ]
+---
+
+export const days = frontmatter.days;
+export const treatments = frontmatter.treatments;
+export const treatmentSchedule = frontmatter.treatmentSchedule;
+export const commonSideEffects = frontmatter.commonSideEffects;
+export const otherCommonSideEffects = frontmatter.otherCommonSideEffects;
+export const occasionalSideEffects = frontmatter.occasionalSideEffects;
+export const rareSideEffects = frontmatter.rareSideEffects;
+import TreatmentCycleGrid from "../../components/TreatmentCycleGrid.astro";
+import LegendGrid from "../../components/LegendGrid.astro";
+import CommonSideEffects from "../../components/CommonSideEffects.astro";
+import OtherCommonSideEffects from "../../components/OtherCommonSideEffects.astro";
+import OccasionalSideEffects from "../../components/OccasionalSideEffects.astro";
+import RareSideEffects from "../../components/RareSideEffects.astro";
+import SafeHandlingAccordion from "../../components/SafeHandlingAccordion.astro";
+import GeneralPrecautionsAccordion from "../../components/GeneralPrecautionsAccordion.astro";
+import LifestyleSafetyAccordion from "../../components/LifestyleSafetyAccordion.astro";
+import HealthcareTeamContact from "../../components/HealthcareTeamContact.astro";
+import TreatmentHeader from "../../components/TreatmentHeader.astro";
+
+# Olaparib
+
+<TreatmentHeader description={frontmatter.description} />
+
+## Treatment details
+
+<LegendGrid treatments={treatments} />
+
+## Treatment cycle
+
+<TreatmentCycleGrid treatmentSchedule={treatmentSchedule} />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+## Side Effects
+
+Chemotherapy is often linked to so many side effects. While it is true that chemotherapy drugs often cause a wide range of side effects, most of these side effects are temporary and can be minimised or prevented. Remember that different drugs cause different side effects, and each person experiences different side effects to varying degrees.
+
+<CommonSideEffects commonSideEffects={commonSideEffects} />
+<OtherCommonSideEffects otherCommonSideEffects={otherCommonSideEffects} />
+<OccasionalSideEffects occasionalSideEffects={occasionalSideEffects} />
+<RareSideEffects rareSideEffects={rareSideEffects} />
+<p>
+  <span class="font-bold">Patient Information Use and Disclaimer:</span> this is
+  not a complete list of side effects. Always consult your healthcare provider
+  to ensure the information displayed on this page applies to your personal
+  circumstances.
+</p>
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+<SafeHandlingAccordion />
+<GeneralPrecautionsAccordion />
+<LifestyleSafetyAccordion />
+
+<hr class="py-0 border-t-[0.5px] border-gray-500" />
+
+<HealthcareTeamContact />

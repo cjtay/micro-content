@@ -38,7 +38,7 @@ otherCommonSideEffects: [{ name: "Electrolyte imbalance" }]
 occasionalSideEffects:
   [
     { name: "Nail changes" },
-    { name: "Kidney dysfunction" },
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
     { name: "Mood changes (depression)" },
     { name: "Blood clots" },
     { name: "Muscle pain or stiffness" },

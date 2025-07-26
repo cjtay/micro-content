@@ -53,26 +53,26 @@ commonSideEffects:
 otherCommonSideEffects:
   [
     { name: "Sweating" },
-    { name: "Liver dysfunction" },
+    { name: "Liver dysfunction (Monitored by specific blood tests)" },
     { name: "Muscle/Joint pain" },
     { name: "Depression" },
-    { name: "Skin problems" },
-    { name: "Lung/Breathing problems" },
+    { name: "Skin problems include a skin rash, dry skin and itching." },
+    { name: "Lung/Breathing problems (Cough, shortness of breath, fever)" },
     { name: "High Cholesterol" },
   ]
 occasionalSideEffects:
   [
     { name: "Dehydration" },
-    { name: "Hand-Foot Syndrome" },
-    { name: "Electrolyte imbalance" },
-    { name: "Kidney dysfunction" },
+    { name: "Hand-Foot Syndrome (Swelling, redness, burning sensation in the palms and soles)" },
+    { name: "Electrolyte imbalance (Monitored by specific blood tests)" },
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
     { name: "Numbness, tingling, burning sensation and pain in hand or wrist" },
     { name: "Lymphoedema" },
     { name: "High blood pressure" },
     { name: "Dry mouth" },
     { name: "Indigestion" },
     { name: "Fever" },
-    { name: "Thinning of bones" },
+    { name: "Thinning of bones (which can lead to fractures)" },
   ]
 rareSideEffects:
   [
@@ -81,7 +81,7 @@ rareSideEffects:
     { name: "Allergic reactions" },
     { name: "Blood clots" },
     { name: "Red/itchy eyes" },
-    { name: "Haemoptysis" },
+    { name: "Haemoptysis (coughing up blood)" },
     { name: "Chest pain" },
     { name: "Sleepy and drowsy" },
     { name: "Inflammation of the liver" },

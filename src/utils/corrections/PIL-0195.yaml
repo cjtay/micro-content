@@ -1,13 +1,13 @@
 ---
-occasionalSideEffects:
-  [
+occasionalSideEffects: [
     { name: "Indigestion/heartburn" },
-    { name: "Nail changes" },
-    { name: "Low sperm count in men" },
-    { name: "Liver dysfunction" },
-    { name: "Heart dysfunction" },
-    { name: "Difficulty in breathing" },
-  ]
+  { name: "Nail changes" },
+  { name: "Low sperm count in men" },
+  { name: "Liver dysfunction (Monitored by specific blood tests)" },
+  { name: "Heart dysfunction (Monitored by specific tests)" },
+  { name: "Difficulty in breathing (wheezing & cough)" },
+]
+rar
 rareSideEffects:
   [
     { name: "Tremors, stiffness & slow in movements" },

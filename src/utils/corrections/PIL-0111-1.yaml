@@ -1,9 +1,19 @@
 ---
+otherCommonSideEffects:
+  [
+    { name: "Blood and protein in the urine (Monitored by urine testing)" },
+    { name: "Hair loss" },
+    { name: "Taste disorder" },
+    { name: "Hearing problems" },
+    { name: "Loss of appetite" },
+    { name: "Oedema" },
+    { name: "Difficulty in breathing (wheezing, coughing)" },
+  ]
 occasionalSideEffects:
   [
     { name: "Blood clots" },
-    { name: "Heart dysfunction" },
-    { name: "Injection site reactions" },
+    { name: "Heart dysfunction (Monitored by specific tests)" },
+    { name: "Injection site reactions (Redness, swelling, itching, pain at the site of injection)" },
     { name: "Headache" },
     { name: "Drowsiness" },
     { name: "Insomnia" },

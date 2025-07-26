@@ -1,4 +1,15 @@
 ---
+otherCommonSideEffects:
+  [
+    { name: "Liver dysfunction (Monitored by specific blood tests)" },
+    { name: "Low red blood cells (Anaemia)" },
+    { name: "Swelling" },
+    { name: "Skin rash" },
+    { name: "Hair loss" },
+    { name: "Dizziness" },
+    { name: "Blood & protein in the urine (Monitored by urine testing)" },
+    { name: "Breathing difficulty (Notify your doctor)" },
+  ]
 occasionalSideEffects:
   [
     { name: "Diarrhoea" },
@@ -17,7 +28,7 @@ occasionalSideEffects:
 rareSideEffects:
   [
     { name: "Allergic reactions" },
-    { name: "Cardiac problems" },
+    { name: "Cardiac problems (Chest pain or tightness, irregular heart rate or blood pressure changes, shortness of breath)" },
     { name: "Severe rash, blisters, peeling, usually with fever" },
     { name: "Capillary leak syndrome (CLS)" },
     { name: "Hemolytic-uremic syndrome (HUS)" },

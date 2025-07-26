@@ -60,12 +60,12 @@ occasionalSideEffects:
     { name: "High levels of uric acids in blood" },
     { name: "Ulcers of the digestive system" },
     { name: "Chills" },
-    { name: "Injection site reactions" },
+    { name: "Injection site reactions (redness, swelling, itching, pain at the site of injection)" },
     { name: "Nail changes" },
     { name: "Abdominal pain" },
     { name: "Sore eyes" },
     { name: "Skin rash & itching" },
-    { name: "Cardiac problems" },
+    { name: "Cardiac problems (irregular heartbeat, shortness of breath, chest discomfort)" },
   ]
 rareSideEffects:
   [
@@ -73,7 +73,7 @@ rareSideEffects:
     { name: "Allergic reactions" },
     { name: "Blurred vision" },
     { name: "Hearing loss" },
-    { name: "Blood clots" },
+    { name: "Blood clots (Life-threatening)" },
     { name: "Inflammation of a vein in the leg" },
     { name: "Pericardial effusion" },
   ]

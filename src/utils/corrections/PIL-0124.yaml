@@ -183,6 +183,17 @@ treatmentSchedule: [
       ]
     }
   ]
+otherCommonSideEffects: [
+  { name: "Fatigue" },
+  { name: "Hyperuricemia" },
+  { name: "Indigestion" },
+  { name: "Abdominal pain" },
+  { name: "Difficulty in breathing" },
+  { name: "Hand-Foot Syndrome (Swelling, redness, burning sensation in the palms and soles)" },
+  { name: "Liver dysfunction (Monitored by specific tests)" },
+  { name: "Cardiac problems (Monitored by specific tests)" },
+  { name: "Kidney dysfunction (Monitored by specific tests)" }
+]
 occasionalSideEffects: [
    { name: "Headaches" },
   { name: "Dizziness" },
@@ -195,7 +206,7 @@ rareSideEffects: [
   { name: "Increased risk of second cancer" },
   { name: "Tumour lysis syndrome" },
   { name: "Dehydration" },
-  { name: "Electrolyte imbalance" },
+  { name: "Electrolyte imbalance (Monitored by specific blood tests)" },
   { name: "Memory & cognitive problems" },
   { name: "Peripheral neuropathy" },
   { name: "Muscle & joint pain" },

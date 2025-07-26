@@ -46,9 +46,9 @@ otherCommonSideEffects:
   [
     { name: "Headache" },
     { name: "Dizziness" },
-    { name: "Cardiac problems" },
+    { name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)" },
     { name: "Red, itchy, watery eyes and blurred vision" },
-    { name: "Lung/Breathing problems" },
+    { name: "Lung/Breathing problems (Cough, Shortness of breath, fever)" },
     { name: "Infusion reaction" },
   ]
 occasionalSideEffects:
@@ -75,8 +75,8 @@ occasionalSideEffects:
 rareSideEffects:
   [
     { name: "Heart failure" },
-    { name: "Pancreas inflammation" },
-    { name: "Severe skin problems" },
+    { name: "Pancreas inflammation (Monitored by specific blood tests)" },
+    { name: "Severe skin problems (Redness, peeling and blister with or without fever)" },
   ]
 ---
 

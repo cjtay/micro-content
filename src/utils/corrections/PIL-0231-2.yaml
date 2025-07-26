@@ -1,5 +1,15 @@
 ---
-treatmentSchedule: []
+treatmentSchedule:
+  [
+    { "day": 1, "treatments": ["goserelin"] },
+    { "day": 2, "treatments": ["rest"] },
+    { "day": 3, "treatments": ["rest"] },
+    { "day": 4, "treatments": ["rest"] },
+    { "day": 5, "treatments": ["rest"] },
+    { "day": 6, "treatments": ["rest"] },
+    { "day": 7, "treatments": ["rest"] },
+    { "week 2-12": 8, "treatments": ["rest"] },
+  ]
 occasionalSideEffects:
   [
     { name: "Peripheral oedema (Swelling in legs, feet, arms or hands)" },

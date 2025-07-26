@@ -1,4 +1,18 @@
 ---
+treatments: [
+    {
+      "name": "Fulvestrant",
+      "cycle": "Day 1 of your 28-day-cycle. Exception Cycle 1, fulvestrant will be given on days 1 and 15.",
+      "info": "administered ~5 min intramuscularly"
+    }
+  ]
+otherCommonSideEffects: [
+  { name: "Liver Dysfunction (Monitored by specific blood tests)" },
+  { name: "Redness or pain at the injection site (resolve within 1 or 2 days)" },
+  { name: "Allergic reaction" },
+  { name: "Pain" },
+
+]
 occasionalSideEffects:
   [
     { name: "Low appetite" },

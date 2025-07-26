@@ -1,2 +1,38 @@
 ---
+occasionalSideEffects: [
+  { name: "High levels of uric acids in the blood" },
+  { name: "Urinary tract infection" },
+  { name: "Ulcers of the digestive system" },
+  { name: "Chills" },
+  { name: "Injection site reactions (redness, swelling, itching, pain at the site of injection)" },
+  { name: "Nail changes" },
+  { name: "Abdominal pain" },
+  { name: "Pain in muscles/bones" },
+  { name: "Sore eyes with blurred vision" },
+  { name: "Electrolyte imbalance (Monitored by specific blood tests)" },
+  { name: "Thyroid disorders (Monitored by typical blood tests)" },
+  { name: "Low blood pressure" },
+  { name: "Inflammation of the lungs (shortness of breath, cough)" },
+  { name: "Blood sugar changes" },
+  { name: "Heart dysfunction (Monitored by specific tests)" }
+]
+immuneSideEffects: [
+  { name: "Atezolizumab stimulates your immune system." },
+  { name: "Your immune system can attack normal organs and tissues in your body, leading to severe or life-threatening complications." },
+  { name: "Tell your doctor if you may have worse symptoms during treatment in any part of your body." },
+  { name: "Early management of immune-mediated side effects is beneficial in the safe use of atezolizumab." },
+  { name: "It mainly includes immune-mediated cardiac, neurological, respiratory, digestive and skin problems and hormonal and electrolyte imbalance." }
+]
+rareSideEffects: [
+  { name: "Risk of secondary cancer" },
+  { name: "Hearing loss" },
+  { name: "Blood clots (Life-threatening)" },
+  { name: "Inflammation of a vein in the leg" },
+  { name: "Pericardial effusion" },
+  { name: "Inflammation of the pancreas (Monitored by specific blood tests)" },
+  { name: "Adrenal glands insufficiency" },
+  { name: "Guillain-Barre syndrome (attack of the nervous system by the immune system)" },
+  { name: "Severe skin reaction (may lead to peeling or blistering of skin)" }
+]
+
 ---

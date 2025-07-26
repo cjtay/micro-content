@@ -1,9 +1,35 @@
 ---
+otherCommonSideEffects:
+  [
+    { name: "Fever" },
+    { name: "Fatigue" },
+    { name: "Hearing loss" },
+    { name: "Taste changes" },
+    { name: "Electrolyte imbalance (Monitored by specific blood tests)" },
+    { name: "Hyperuricemia" },
+    { name: "Muscle spasms" },
+    { name: "Paraesthesia" },
+    { name: "Abdominal pain" },
+    { name: "Constipation" },
+    { name: "Mouth sores" },
+    { name: "Hand-foot syndrome" },
+    { name: "Heart dysfunction (Monitored by specific tests)" },
+    { name: "Skin & nail changes" },
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+    { name: "Eye & vision problems" },
+    { name: "Difficulty in breathing (wheezing & cough)" },
+    { name: "Dizziness" },
+    { name: "Headache" },
+    { name: "Insomnia" },
+    { name: "Oedema" },
+    { name: "Peripheral neuropathy" },
+    { name: "Flu-like symptoms" },
+  ]
 occasionalSideEffects:
   [
-    { name: "Liver dysfunction" },
+    { name: "Liver dysfunction (Monitored by specific blood tests)" },
     { name: "Dry mouth" },
-    { name: "Mood changes" },
+    { name: "Mood changes (anxious, depressed)" },
     { name: "Stiff arms or legs" },
     { name: "Drowsiness" },
     { name: "Sweating" },

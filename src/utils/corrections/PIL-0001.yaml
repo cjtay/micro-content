@@ -47,6 +47,6 @@ occasionalSideEffects:
   [
     { name: "Dehydration" },
     { name: "Blood clots" },
-    { name: "Lungs/breathing problems" },
+    { name: "Lungs/breathing problems (Chest pain, cough, shortness of breath, fever)" },
   ]
 ---

@@ -1,4 +1,9 @@
 ---
+otherCommonSideEffects: [
+  { name: "Electrolyte imbalance (Monitored by specific blood tests)" },
+  { name: "Diarrhoea/Constipation" },
+  { name: "Loss of appetite" }
+]
 occasionalSideEffects: [
     { name: "Headache" },
   { name: "Muscle pain and stiffness" },

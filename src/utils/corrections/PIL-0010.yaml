@@ -1,47 +1,57 @@
 ---
-commonSideEffects: [
-  {
-    name: "Hot flushes",
-    description: "You may feel sudden warmth in the upper body, especially over the face, neck and chest. You may also feel redness and sweating."
-  },
-  {
-    name: "Fatigue",
-    description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion."
-  },
-  {
-    name: "Rash",
-    description: "Skin rash is one of the most common side effects of cancer treatment. It may appear on your face, neck, scalp, upper back, and chest. Although the rash can occur at any point during treatment, it is most common in the first two to three weeks."
-  },
-  {
-    name: "Nausea and/or vomiting",
-    description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication."
-  },
-  {
-    name: "Weakening of the bones (Osteoporosis)",
-    description: "This treatment may cause bones to become brittle and weak, thereby increasing the risk of fractures (breakage)."
-  },
-  {
-    name: "Joint pain",
-    description: "Pain is a common side effect of chemotherapy, and joint pain is no exception. Although it can occur anytime during treatment, it often appears afterwards and is usually resolved in weeks to months."
-  },
-]
+commonSideEffects:
+  [
+    {
+      name: "Hot flushes",
+      description: "You may feel sudden warmth in the upper body, especially over the face, neck and chest. You may also feel redness and sweating.",
+    },
+    {
+      name: "Fatigue",
+      description: "You may feel tired and find it harder to do daily chores/activities that you usually do or want to do. It may be physical, emotional and mental exhaustion.",
+    },
+    {
+      name: "Rash",
+      description: "Skin rash is one of the most common side effects of cancer treatment. It may appear on your face, neck, scalp, upper back, and chest. Although the rash can occur at any point during treatment, it is most common in the first two to three weeks.",
+    },
+    {
+      name: "Nausea and/or vomiting",
+      description: "Every patient reacts differently to cancer medication. Many people feel nauseous, and some also experience vomiting. Nausea and vomiting can be managed or reduced with medication.",
+    },
+    {
+      name: "Weakening of the bones (Osteoporosis)",
+      description: "This treatment may cause bones to become brittle and weak, thereby increasing the risk of fractures (breakage).",
+    },
+    {
+      name: "Joint pain",
+      description: "Pain is a common side effect of chemotherapy, and joint pain is no exception. Although it can occur anytime during treatment, it often appears afterwards and is usually resolved in weeks to months.",
+    },
+  ]
 
-occasionalSideEffects: [
-   { name: "Swelling in legs and arms" },
-  { name: "Hair thinning" },
-  { name: "Liver dysfunction" },
-  { name: "Taste disorder" },
-  { name: "Diarrhoea" },
-  {
-    name: "Vaginal dryness or bleeding/discharge",
-
-  },
-  { name: "Dizziness" },
-  { name: "Numbness, weakness and pain in hands and forearm" },
-  { name: "Muscle pain" },
-  {
-    name: "Cardiac problems (chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)",
-
-  }
-]
+occasionalSideEffects:
+  [
+    { name: "Swelling in legs and arms" },
+    { name: "Hair thinning" },
+    { name: "Liver dysfunction" },
+    { name: "Taste disorder" },
+    { name: "Diarrhoea" },
+    {
+      name:
+        "Vaginal dryness or bleeding/discharge (usually seen during the first few weeks, if it continues,
+        then notify your doctor)",
+    },
+    { name: "Dizziness" },
+    { name: "Numbness, weakness and pain in hands and forearm" },
+    { name: "Muscle pain" },
+    {
+      name: "Cardiac problems (chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)",
+    },
+  ]
+rareSideEffects:
+  [
+    { name: "Skin sores or blisters" },
+    {
+      name: "Trigger fingers (Fingers struck in a bent or straight position, complex or stiff movements)",
+    },
+  ]
 ---
+

@@ -84,14 +84,14 @@ otherCommonSideEffects:
     { name: "Red, itchy, dry eyes and blurred vision" },
     { name: "Insomnia" },
     {
-      name: "Cardiac problems ((Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath))",
+      name: "Cardiac problems (Chest pain or tightness, irregular heartbeat or blood pressure changes, shortness of breath)",
     },
   ]
 occasionalSideEffects:
   [
     { name: "Nail changes" },
-    { name: "Kidney dysfunction" },
-    { name: "Liver dysfunction" },
+    { name: "Kidney dysfunction (Monitored by specific blood tests)" },
+    { name: "Liver dysfunction (Monitored by specific blood tests)" },
     { name: "Mood changes (depression)" },
     { name: "Blood clots" },
     { name: "Muscle pain or stiffness" },
